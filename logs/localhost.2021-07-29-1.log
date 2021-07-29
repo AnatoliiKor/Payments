@@ -1,0 +1,12 @@
+2021-07-29 22:10:22,718 [http-nio-8081-exec-10] INFO  org.anatkor.servlets.AdmServlet- Adm servlet called
+2021-07-29 22:10:22,732 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:10:23,049 [http-nio-8081-exec-7] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:10:42,191 [http-nio-8081-exec-1] INFO  org.anatkor.servlets.AdmServlet- Adm servlet called
+2021-07-29 22:10:42,196 [http-nio-8081-exec-11] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:10:42,334 [http-nio-8081-exec-2] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:10:43,576 [http-nio-8081-exec-13] INFO  org.anatkor.servlets.AdmServlet- Adm servlet called
+2021-07-29 22:10:43,579 [http-nio-8081-exec-6] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:10:43,692 [http-nio-8081-exec-12] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:10:50,075 [http-nio-8081-exec-14] INFO  org.anatkor.servlets.AdmServlet- Adm servlet called
+2021-07-29 22:10:50,079 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:10:50,194 [http-nio-8081-exec-7] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
