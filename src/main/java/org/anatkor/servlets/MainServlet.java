@@ -12,12 +12,12 @@ import org.apache.logging.log4j.Logger;
 @WebServlet(urlPatterns = "/")
 public class MainServlet extends HttpServlet {
 
-    final static Logger logger = LogManager.getLogger(MainServlet.class);
+    final static Logger log = LogManager.getLogger(MainServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("myVar", "Hello");
-        logger.info("MyServlet's doGet() called");
+//        log.info("MyServlet's doGet() called");
 //        req.setCharacterEncoding("UTF-8");
         req.getRequestDispatcher("/jsp/index.jsp").forward(req, resp);
 //        resp.sendRedirect("/redirect to another servlet");
@@ -35,6 +35,6 @@ public class MainServlet extends HttpServlet {
 
     @Override
     public void destroy() {
-        logger.info("Destroyd");
+        log.info("Main servlet Destroyed");
     }
 }

@@ -16,7 +16,7 @@
             <input class="button" type="submit" value="<fmt:message key="registration"/>">
         </form>
         <br/>
-        <a href="${pageContext.request.contextPath}/logout"><fmt:message key="home_page"/></a>
+        <a href="${pageContext.request.contextPath}/"><fmt:message key="home_page"/></a>
 
 </body>
 </html>

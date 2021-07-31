@@ -1,5 +1,5 @@
-2021-07-29 22:29:10,474 [http-nio-8081-exec-1] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
-2021-07-29 22:29:11,274 [http-nio-8081-exec-3] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
-2021-07-29 22:29:11,483 [http-nio-8081-exec-2] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
-2021-07-29 22:29:11,646 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
-2021-07-29 22:30:51,467 [main] INFO  org.anatkor.servlets.MainServlet- Destroyd
+2021-07-31 16:44:33,501 [http-nio-8081-exec-5] INFO  org.anatkor.servlets.UserServlet- User servlet called
+2021-07-31 16:44:33,511 [http-nio-8081-exec-5] INFO  org.anatkor.dao.UserDao- connection try
+2021-07-31 16:44:33,516 [http-nio-8081-exec-5] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-07-31 16:44:33,790 [http-nio-8081-exec-5] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-07-31 16:44:39,870 [main] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed

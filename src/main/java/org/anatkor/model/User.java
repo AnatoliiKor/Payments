@@ -1,7 +1,6 @@
 package org.anatkor.model;
 
-import java.time.LocalDate;
-import java.util.Collection;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -10,18 +9,72 @@ public class User {
 
     private String username;
     private String password;
-    private String password2;
     private String email;
-
+    private LocalDateTime registrationDateTime;
     private boolean active;
-    private LocalDate registrationDate;
-
-    private List<Cart> carts;
 
     private Set<Role> roles;
 
+    private List<Cart> carts;
+
+
     public User() {
     }
+
+    public static class UserBuilder {
+        private User newUser;
+
+        public UserBuilder() {
+            newUser = new User();
+        }
+
+        public UserBuilder withId(Long id){
+            newUser.id = id;
+            return this;
+        }
+
+        public UserBuilder withUsername(String username){
+            newUser.username = username;
+            return this;
+        }
+
+        public UserBuilder withPassword(String password){
+            newUser.password = password;
+            return this;
+        }
+        public UserBuilder withEmail(String email){
+            newUser.email = email;
+            return this;
+        }
+
+        public UserBuilder withRegistrationDateTime(LocalDateTime registrationDateTime){
+            newUser.registrationDateTime = registrationDateTime;
+            return this;
+        }
+
+        public UserBuilder withActive(Boolean active){
+            newUser.active = active;
+            return this;
+        }
+
+        public UserBuilder withRoles(Set<Role> roles){
+            newUser.roles = roles;
+            return this;
+        }
+
+        public UserBuilder withCarts(List<Cart> carts){
+            newUser.carts = carts;
+            return this;
+        }
+
+        public User build(){
+            return newUser;
+        }
+
+    }
+
+
+
 
     public boolean isAdmin() {
         return roles.contains(Role.ADMIN);
@@ -31,9 +84,8 @@ public class User {
         return id;
     }
 
-    public LocalDate getRegistrationDate() {
-        if (registrationDate==null) registrationDate = LocalDate.now();
-        return registrationDate;
+    public LocalDateTime getRegistrationDate() {
+        return registrationDateTime;
     }
 
     public String getEmail() {
@@ -46,7 +98,7 @@ public class User {
     }
 
     public void setRegistrationDate() {
-        this.registrationDate = LocalDate.now();
+        this.registrationDateTime = LocalDateTime.now();
     }
 
 
@@ -91,11 +143,4 @@ public class User {
         this.roles = roles;
     }
 
-    public String getPassword2() {
-        return password2;
-    }
-
-    public void setPassword2(String password2) {
-        this.password2 = password2;
-    }
 }
