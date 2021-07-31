@@ -1,6 +1,7 @@
 package org.anatkor.model;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -13,7 +14,6 @@ public class User {
     private LocalDateTime registrationDateTime;
     private boolean active;
 
-    private String role;
     private Set<Role> roles;
 
     private List<Cart> carts;
@@ -58,13 +58,11 @@ public class User {
             return this;
         }
 
-        public UserBuilder withRoles(Set<Role> roles){
+        public UserBuilder withRoles(String role){
+            Set<Role> roles = new HashSet<>();
+            Role roleEnam = Role.valueOf(role);
+            roles.add(roleEnam);
             newUser.roles = roles;
-            return this;
-        }
-
-        public UserBuilder withRole(String role){
-            newUser.role = role;
             return this;
         }
 
@@ -79,8 +77,9 @@ public class User {
 
     }
 
-
-
+    public void addRole (String role) {
+        if (this.roles != null) {roles.add(Role.valueOf(role));}
+    }
 
     public boolean isAdmin() {
         return roles.contains(Role.ADMIN);
@@ -88,10 +87,6 @@ public class User {
 
     public Long getId() {
         return id;
-    }
-
-    public LocalDateTime getRegistrationDate() {
-        return registrationDateTime;
     }
 
     public String getEmail() {
@@ -102,11 +97,6 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public void setRegistrationDate() {
-        this.registrationDateTime = LocalDateTime.now();
-    }
-
 
     public void setId(Long id) {
         this.id = id;
@@ -149,12 +139,5 @@ public class User {
         this.roles = roles;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
 }
 

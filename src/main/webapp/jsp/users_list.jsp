@@ -17,7 +17,6 @@
         <th><fmt:message key="registered"/></th>
         <th><fmt:message key="role"/></th>
 
-<%--        <th><fmt:message key="role"/></th>--%>
     </tr>
     </thead>
 
@@ -33,7 +32,15 @@
                     <%--                <td><input type="checkbox" ${user.active?string("checked","")} disabled></td>--%>
                 <td>${user.active}</td>
                 <td>${user.registrationDate}</td>
-                <td>${user.role}</td>
+
+                <td>
+<%--                        ${user.roles}--%>
+
+                    <c:forEach var="role" items="${user.roles}" >
+                        ${role}
+                    </c:forEach>
+                </td>
+<%--                <td>${user.role}</td>--%>
                 <td><a href="/user/${user.id}">edit</a></td>
                 <td>
                     <form method="post" action="/user/delete?id=${user.id}">

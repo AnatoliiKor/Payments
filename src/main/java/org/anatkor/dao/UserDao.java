@@ -11,7 +11,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class UserDao {
     private static final String FIND_ALL_USERS = "SELECT * FROM usr;";
@@ -24,25 +26,37 @@ public class UserDao {
         log.info("connection try");
         Connection connection = Utils.getConnection();
         ResultSet rs = null;
+        Set<Long> ids = new HashSet<>();
         try (Statement stm = connection.createStatement()) {
             rs = stm.executeQuery(FIND_ALL_USERS_AND_ROLES);
             while (rs.next()) {
                 long id = rs.getLong("id");
-                String username = rs.getString("username");
-                String email = rs.getString("email");
-                String password = rs.getString("password");
                 String role = rs.getString("role");
-                LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
-                boolean active = rs.getBoolean("active");
-                users.add(new User.UserBuilder()
-                        .withId(id)
-                        .withPassword(password)
-                        .withUsername(username)
-                        .withEmail(email)
-                        .withRegistrationDateTime(registrationDateTime)
-                        .withActive(active)
-                        .withRole(role)
-                        .build());
+
+                if(ids.add(id)) {
+                    String username = rs.getString("username");
+                    String email = rs.getString("email");
+                    String password = rs.getString("password");
+                    LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
+                    boolean active = rs.getBoolean("active");
+                    User user = new User.UserBuilder()
+                            .withId(id)
+                            .withPassword(password)
+                            .withUsername(username)
+                            .withEmail(email)
+                            .withRegistrationDateTime(registrationDateTime)
+                            .withActive(active)
+                            .withRoles(role)
+                            .build();
+                    users.add(user);
+                } else {
+                    for (User u:users) {
+                        if (u.getId() == id) {
+                            u.addRole(role);
+                            users.set(users.indexOf(u), u);
+                        }
+                    }
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
