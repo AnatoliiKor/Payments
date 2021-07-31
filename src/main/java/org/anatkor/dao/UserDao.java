@@ -15,6 +15,7 @@ import java.util.List;
 
 public class UserDao {
     private static final String FIND_ALL_USERS = "SELECT * FROM usr;";
+    private static final String FIND_ALL_USERS_AND_ROLES = "SELECT * From usr LEFT JOIN user_role ON usr.id = user_role.user_id;";
 
     final static Logger log = LogManager.getLogger(UserDao.class);
 
@@ -24,12 +25,13 @@ public class UserDao {
         Connection connection = Utils.getConnection();
         ResultSet rs = null;
         try (Statement stm = connection.createStatement()) {
-            rs = stm.executeQuery(FIND_ALL_USERS);
+            rs = stm.executeQuery(FIND_ALL_USERS_AND_ROLES);
             while (rs.next()) {
                 long id = rs.getLong("id");
                 String username = rs.getString("username");
                 String email = rs.getString("email");
                 String password = rs.getString("password");
+                String role = rs.getString("role");
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
                 users.add(new User.UserBuilder()
@@ -39,6 +41,7 @@ public class UserDao {
                         .withEmail(email)
                         .withRegistrationDateTime(registrationDateTime)
                         .withActive(active)
+                        .withRole(role)
                         .build());
             }
         } catch (SQLException e) {

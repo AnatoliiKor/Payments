@@ -13,6 +13,7 @@ public class User {
     private LocalDateTime registrationDateTime;
     private boolean active;
 
+    private String role;
     private Set<Role> roles;
 
     private List<Cart> carts;
@@ -59,6 +60,11 @@ public class User {
 
         public UserBuilder withRoles(Set<Role> roles){
             newUser.roles = roles;
+            return this;
+        }
+
+        public UserBuilder withRole(String role){
+            newUser.role = role;
             return this;
         }
 
@@ -143,4 +149,12 @@ public class User {
         this.roles = roles;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }
+
