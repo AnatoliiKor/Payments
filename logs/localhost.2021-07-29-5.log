@@ -1,0 +1,5 @@
+2021-07-29 22:29:10,474 [http-nio-8081-exec-1] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:29:11,274 [http-nio-8081-exec-3] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:29:11,483 [http-nio-8081-exec-2] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:29:11,646 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.MainServlet- MyServlet's doGet() called
+2021-07-29 22:30:51,467 [main] INFO  org.anatkor.servlets.MainServlet- Destroyd

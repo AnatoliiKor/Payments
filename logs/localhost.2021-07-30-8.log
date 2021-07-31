@@ -1,0 +1,2 @@
+2021-07-30 15:23:24,185 [http-nio-8081-exec-5] INFO  org.anatkor.servlets.AdmServlet- Adm servlet called
+2021-07-30 15:23:55,820 [main] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed
