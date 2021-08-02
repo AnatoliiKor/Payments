@@ -39,50 +39,61 @@ public class Utils {
         return dbProperties.getProperty("connection.url");
     }
 
-    public static void closeConnection(Connection connection) {
-        if (connection != null) {
+
+    public static void close(AutoCloseable ac) {
+        if (ac != null) {
             try {
-                connection.close();
-                log.debug("Connection is closed");
-            } catch (SQLException e) {
-                log.debug("SQLException during close connection from {}.", Utils.class, e);
-                try {
-                    throw new SQLException(e);
-                } catch (SQLException e1) {
-                    log.warn(e1.getMessage());
-                }
+                ac.close();
+            } catch (Exception e) {
+                log.debug("Exception during close {} from {}. {}", ac.toString(), Utils.class, e.getMessage());
             }
         }
     }
 
-    public static void closeResultSet(ResultSet rs) {
-        if (rs != null) {
-            try {
-                rs.close();
-            } catch (SQLException e) {
-                log.debug("SQLException during close ResultSet from {}.", Utils.class, e);
-                try {
-                    throw new SQLException(e);
-                } catch (SQLException e1) {
-                    log.warn(e1.getMessage());
-                }
-            }
-        }
-    }
-
-    public static void closeStatement(Statement statement) {
-        if (statement != null) {
-            try {
-                statement.close();
-            } catch (SQLException e) {
-                log.debug("SQLException during close Statement from {}.", Utils.class, e);
-                try {
-                    throw new SQLException(e);
-                } catch (SQLException e1) {
-                    log.warn(e1.getMessage());
-                }
-            }
-        }
-    }
+//    public static void closeConnection(Connection connection) {
+//        if (connection != null) {
+//            try {
+//                connection.close();
+//                log.debug("Connection is closed");
+//            } catch (SQLException e) {
+//                log.debug("SQLException during close connection from {}.", Utils.class, e);
+//                try {
+//                    throw new SQLException(e);
+//                } catch (SQLException e1) {
+//                    log.warn(e1.getMessage());
+//                }
+//            }
+//        }
+//    }
+//
+//    public static void closeResultSet(ResultSet rs) {
+//        if (rs != null) {
+//            try {
+//                rs.close();
+//            } catch (SQLException e) {
+//                log.debug("SQLException during close ResultSet from {}.", Utils.class, e);
+//                try {
+//                    throw new SQLException(e);
+//                } catch (SQLException e1) {
+//                    log.warn(e1.getMessage());
+//                }
+//            }
+//        }
+//    }
+//
+//    public static void closeStatement(Statement statement) {
+//        if (statement != null) {
+//            try {
+//                statement.close();
+//            } catch (SQLException e) {
+//                log.debug("SQLException during close Statement from {}.", Utils.class, e);
+//                try {
+//                    throw new SQLException(e);
+//                } catch (SQLException e1) {
+//                    log.warn(e1.getMessage());
+//                }
+//            }
+//        }
+//    }
 
 }

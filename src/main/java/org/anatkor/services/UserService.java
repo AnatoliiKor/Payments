@@ -1,6 +1,7 @@
 package org.anatkor.services;
 
 import org.anatkor.dao.UserDao;
+import org.anatkor.exceptions.DBException;
 import org.anatkor.model.User;
 
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ public class UserService {
         return userDao.findAll();
     }
 
-    public void addUser(String username, String email, String password) {
+    public void addUser(String username, String email, String password) throws DBException {
         User user = new User.UserBuilder()
                 .withPassword(password)
                 .withUsername(username)

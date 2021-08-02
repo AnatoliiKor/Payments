@@ -17,8 +17,6 @@
         <RollingFile name="LOCALHOST"
                      fileName="${logdir}/localhost.log"
                      filePattern="${logdir}/localhost.%d{yyyy-MM-dd}-%i.log">
-<!--       TODO     fileName="./logs/spring-boot-logger-log4j2.log"-->
-<!--            filePattern="./logs/$${date:yyyy-MM}/spring-boot-logger-log4j2-%d{-dd-MMMM-yyyy}-%i.log.gz">-->
             <PatternLayout pattern="${layout}"/>
             <Policies>
 <!--                <TimeBasedTriggeringPolicy/>-->

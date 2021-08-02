@@ -1,5 +1,6 @@
 package org.anatkor.dao;
 
+import org.anatkor.exceptions.DBException;
 import org.anatkor.model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,13 +23,17 @@ public class UserDao {
 
     public List<User> findAll() {
         List<User> users = new ArrayList<>();
-        Connection connection = Utils.getConnection();
+        Connection con = null;
+        Statement stm = null;
         ResultSet rs = null;
 //       Set ids is necessary to check for users with several roles
         Set<Long> ids = new HashSet<>();
-        try (Statement stm = connection.createStatement()) {
+        try  {
+            con = Utils.getConnection();
+            stm = con.createStatement();
             rs = stm.executeQuery(FIND_ALL_USERS_AND_ROLES);
             while (rs.next()) {
+
                 long id = rs.getLong("id");
                 String role = rs.getString("role");
 
@@ -60,19 +65,21 @@ public class UserDao {
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.", FIND_ALL_USERS_AND_ROLES, Utils.class, e);
         } finally {
-            Utils.closeResultSet(rs);
+            Utils.close(rs);
+            Utils.close(stm);
+            Utils.close(con);
         }
-        Utils.closeConnection(connection);
         return users;
     }
 
-    public void addUser(User user) {
+    public void addUser(User user) throws DBException {
         boolean result = false;
-        Connection connection = Utils.getConnection();
+        Connection con = null;
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
         try {
-            prepStatement = connection.prepareStatement(ADD_USER, new String[]{"id"});
+            con = Utils.getConnection();
+            prepStatement = con.prepareStatement(ADD_USER, new String[]{"id"});
             prepStatement.setString(1, user.getUsername());
             prepStatement.setString(2, user.getEmail());
             prepStatement.setString(3, user.getPassword());
@@ -84,17 +91,18 @@ public class UserDao {
                 generatedId = rs.getLong(1);
             }
             prepStatement = null;
-            prepStatement = connection.prepareStatement(ADD_USER_ROLE);
+            prepStatement = con.prepareStatement(ADD_USER_ROLE);
             prepStatement.setLong(1, generatedId);
             prepStatement.setString(2, "USER");
             result = (1 == prepStatement.executeUpdate());
             log.info("User {} with role  is added", user.getUsername());
         } catch (SQLException e) {
-            log.info("SQLException during Add user processing {}. {}", Utils.class, e.getMessage());
+            log.info("SQLException during Add {} processing {}. {}", user.getUsername(), Utils.class, e.getMessage());
+            throw new DBException("User is not added to the DB", e);
         } finally {
-            Utils.closeStatement(prepStatement);
-            Utils.closeResultSet(rs);
-            Utils.closeConnection(connection);
+            Utils.close(rs);
+            Utils.close(prepStatement);
+            Utils.close(con);
         }
     }
 

@@ -1,5 +1,6 @@
 package org.anatkor.servlets;
 
+import org.anatkor.exceptions.DBException;
 import org.anatkor.model.User;
 import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
@@ -26,7 +27,15 @@ public class AddUserServlet extends HttpServlet {
         String username = req.getParameter("username");
         String email = req.getParameter("email");
         String password =  req.getParameter("password");
-        userService.addUser(username, email, password);
+
+        try {
+            userService.addUser(username, email, password);
+        } catch (DBException e) {
+            req.setAttribute("error", e.getMessage());
+            req.setAttribute("error_reason", e.getCause().toString());
+            req.getRequestDispatcher("/jsp/error.jsp").forward(req, resp);
+//            resp.sendRedirect("/error");
+        }
         resp.sendRedirect("/users");
     }
 
