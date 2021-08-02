@@ -1,0 +1,33 @@
+package org.anatkor.servlets;
+
+import org.anatkor.model.User;
+import org.anatkor.services.UserService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
+@WebServlet("/registration")
+public class AddUserServlet extends HttpServlet {
+
+    final static Logger log = LogManager.getLogger(AddUserServlet.class);
+    UserService userService = new UserService();
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        log.debug("AddUser servlet called");
+        req.setCharacterEncoding("UTF-8");
+        String username = req.getParameter("username");
+        String email = req.getParameter("email");
+        String password =  req.getParameter("password");
+        userService.addUser(username, email, password);
+        resp.sendRedirect("/users");
+    }
+
+}

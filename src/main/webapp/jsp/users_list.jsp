@@ -4,6 +4,7 @@
 <head>
     <title>Users</title>
 </head>
+<div class="container mt-2">
 <h2><fmt:message key="users_list"/></h2>
 <body>
 
@@ -31,11 +32,9 @@
 
                     <%--                <td><input type="checkbox" ${user.active?string("checked","")} disabled></td>--%>
                 <td>${user.active}</td>
-                <td>${user.registrationDate}</td>
-
+                <td>${user.registrationDateTime}</td>
                 <td>
 <%--                        ${user.roles}--%>
-
                     <c:forEach var="role" items="${user.roles}" >
                         ${role}
                     </c:forEach>
@@ -65,4 +64,5 @@
 <a href="${pageContext.request.contextPath}/"><fmt:message key="home_page"/></a>
 
 </body>
+</div>
 </html>

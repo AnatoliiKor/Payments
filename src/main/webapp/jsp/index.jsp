@@ -13,8 +13,6 @@
 <a href="/users"><fmt:message key="users_list"/></a>
 <br/>
 
-${myVar}
-
 <a href="/adm?fr=56">adm</a>
 
 

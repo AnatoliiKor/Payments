@@ -110,6 +110,9 @@ public class User {
         return username;
     }
 
+    public LocalDateTime getRegistrationDateTime() {
+        return registrationDateTime;
+    }
 
     public void setUsername(String username) {
         this.username = username;

@@ -15,10 +15,10 @@ CREATE SEQUENCE bike_id_seq START WITH 1;
 
 CREATE TABLE usr
 (
-  id               INTEGER PRIMARY KEY DEFAULT nextval('usr_id_seq'),
-  username         VARCHAR                 NOT NULL,
-  email            VARCHAR                 NOT NULL,
-  password         VARCHAR                 NOT NULL,
+  id               BIGINT PRIMARY KEY DEFAULT nextval('usr_id_seq'),
+  username         VARCHAR(255)                 NOT NULL,
+  email            VARCHAR(255)                 NOT NULL,
+  password         VARCHAR(255)                 NOT NULL,
   registered       TIMESTAMP DEFAULT now() NOT NULL,
   active           BOOL DEFAULT TRUE       NOT NULL
 );
@@ -28,10 +28,10 @@ ALTER TABLE usr ADD CONSTRAINT U_unique UNIQUE (username);
 
 CREATE TABLE user_role
 (
-  user_id INTEGER NOT NULL,
+  user_id BIGINT NOT NULL,
   role    VARCHAR,
 --   CONSTRAINT user_roles_idx UNIQUE (user_id, role),
-  FOREIGN KEY (user_id) REFERENCES usr (id) ON DELETE CASCADE
+  FOREIGN KEY (user_id) REFERENCES usr (id) ON UPDATE CASCADE
 );
 
 CREATE TABLE car (

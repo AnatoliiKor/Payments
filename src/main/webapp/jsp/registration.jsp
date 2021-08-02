@@ -7,16 +7,20 @@
 
 </head>
 <body>
-
+<div class="container mt-5">
         <h1><fmt:message key="registration"/></h1><br/>
         <form method="post" action="${pageContext.request.contextPath}/registration">
-
-            <input type="text" name="name"><fmt:message key="login"/><br/>
-            <input type="password" name="pass"><fmt:message key="password"/><br/><br/>
-            <input class="button" type="submit" value="<fmt:message key="registration"/>">
+<%--TODO--%>
+            <input  type="text" name="username" required><label style="margin: 0px 3px;"> <fmt:message key="login"/> </label>
+            <br/>
+            <input class="mt-3"type="email" name="email" required><label style="margin: 0px 3px;"><fmt:message key="email"/></label>
+            <br/>
+            <input class="mt-3" type="password" name="password" required><label style="margin: 0px 3px;"><fmt:message key="password"/></label>
+            <br/>
+            <input class="button mt-3" type="submit" value="<fmt:message key="registration"/>">
         </form>
         <br/>
         <a href="${pageContext.request.contextPath}/"><fmt:message key="home_page"/></a>
-
+    </div>
 </body>
 </html>
