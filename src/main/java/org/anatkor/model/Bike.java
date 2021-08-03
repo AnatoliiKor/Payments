@@ -1,6 +1,7 @@
 package org.anatkor.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class Bike {
@@ -13,28 +14,16 @@ public class Bike {
     private String colour;
     private String description;
     private Integer price;
-    private Integer amount;
-    private LocalDate date;
-    private String filename;
+    private LocalDateTime registrationDateTime;
+//    private String filename;
 
 
 //    @OneToMany(mappedBy = "bike", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     private List<CartItem> cartItems;
 
-    public Bike() {
-        this.setDate();
-    }
 
     public long getId() {
         return id;
-    }
-
-    public String getFilename() {
-        return filename;
-    }
-
-    public void setFilename(String filename) {
-        this.filename = filename;
     }
 
     public void setId(long id) {
@@ -97,22 +86,13 @@ public class Bike {
         this.price = price;
     }
 
-    public Integer getAmount() {
-        return amount;
+    public LocalDateTime getRegistrationDateTime() {
+        return registrationDateTime;
     }
 
-    public void setAmount(Integer amount) {
-        this.amount = amount;
+    public void setRegistrationDateTime(LocalDateTime registrationDateTime) {
+        this.registrationDateTime = registrationDateTime;
     }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate() {
-        this.date = LocalDate.now();
-    }
-
 
     public static class Builder {
         private Bike newBike;
@@ -131,6 +111,10 @@ public class Bike {
             return this;
         }
 
+        public Builder withRegistrationDateTime(LocalDateTime registrationDateTime){
+            newBike.registrationDateTime = registrationDateTime;
+            return this;
+        }
         public Builder withName(String name){
             newBike.name = name;
             return this;
@@ -147,10 +131,6 @@ public class Bike {
 
         public Builder withPrice(Integer price){
             newBike.price = price;
-            return this;
-        }
-        public Builder withAmount(Integer amount){
-            newBike.amount = amount;
             return this;
         }
 

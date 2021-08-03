@@ -4,9 +4,10 @@
 <head>
     <title>Users</title>
 </head>
+<body>
 <div class="container mt-2">
 <h2><fmt:message key="users_list"/></h2>
-<body>
+
 
 <table class="table table-striped auto__table table-condensed text-center">
     <thead>
@@ -61,8 +62,9 @@
 </table>
 
 <br/>
-<a href="${pageContext.request.contextPath}/"><fmt:message key="home_page"/></a>
 
-</body>
+<a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/"><fmt:message key="home_page"/></a>
 </div>
+</body>
+
 </html>

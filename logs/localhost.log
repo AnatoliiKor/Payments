@@ -1,14 +1,13 @@
-2021-08-02 23:07:24,280 [http-nio-8081-exec-9] INFO  org.anatkor.dao.UserDao- SQLException during Add admin processing class org.anatkor.dao.Utils. ПОМИЛКА: повторювані значення ключа порушують обмеження унікальності "usr_username_key"
-  Detail: Ключ (username)=(admin) вже існує.
-2021-08-02 23:09:33,609 [http-nio-8081-exec-3] INFO  org.anatkor.dao.UserDao- SQLException during Add admin processing class org.anatkor.dao.Utils. ПОМИЛКА: повторювані значення ключа порушують обмеження унікальності "usr_username_key"
-  Detail: Ключ (username)=(admin) вже існує.
-2021-08-02 23:09:59,583 [http-nio-8081-exec-5] INFO  org.anatkor.dao.UserDao- SQLException during Add admin processing class org.anatkor.dao.Utils. ПОМИЛКА: повторювані значення ключа порушують обмеження унікальності "usr_username_key"
-  Detail: Ключ (username)=(admin) вже існує.
-2021-08-02 23:12:35,699 [http-nio-8081-exec-10] INFO  org.anatkor.dao.UserDao- SQLException during Add admin processing class org.anatkor.dao.Utils. ПОМИЛКА: повторювані значення ключа порушують обмеження унікальності "usr_username_key"
-  Detail: Ключ (username)=(admin) вже існує.
-2021-08-02 23:18:05,011 [http-nio-8081-exec-3] INFO  org.anatkor.dao.UserDao- SQLException during Add admin processing class org.anatkor.dao.Utils. ПОМИЛКА: повторювані значення ключа порушують обмеження унікальності "usr_username_key"
-  Detail: Ключ (username)=(admin) вже існує.
-2021-08-02 23:18:42,205 [RMI TCP Connection(6)-127.0.0.1] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed
-2021-08-02 23:18:46,159 [http-nio-8081-exec-2] INFO  org.anatkor.dao.UserDao- SQLException during Add admin processing class org.anatkor.dao.Utils. ПОМИЛКА: повторювані значення ключа порушують обмеження унікальності "usr_username_key"
-  Detail: Ключ (username)=(admin) вже існує.
-2021-08-02 23:23:02,356 [main] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed
+2021-08-03 19:16:23,256 [http-nio-8081-exec-17] INFO  org.anatkor.dao.BikeDao- SQLException during Add car processing class org.anatkor.dao.Utils. ERROR: null value in column "price" of relation "bike" violates not-null constraint
+  Detail: Failing row contains (1, Ardis, utility bicycle, red, 2021-08-03 19:16:23.243869,         No description, car, null, null).
+2021-08-03 19:21:46,457 [http-nio-8081-exec-18] INFO  org.anatkor.dao.BikeDao- SQLException during Add car processing class org.anatkor.dao.Utils. ERROR: null value in column "price" of relation "bike" violates not-null constraint
+  Detail: Failing row contains (2, Ardis, utility bicycle, red, 2021-08-03 19:21:46.453758,         No description, car, null, null).
+2021-08-03 19:22:26,450 [http-nio-8081-exec-12] INFO  org.anatkor.dao.BikeDao- SQLException during Add car processing class org.anatkor.dao.Utils. ERROR: null value in column "price" of relation "bike" violates not-null constraint
+  Detail: Failing row contains (3, Ardis, utility bicycle, red, 2021-08-03 19:22:26.447052,         No description, car, null, null).
+2021-08-03 19:24:15,848 [http-nio-8081-exec-16] INFO  org.anatkor.dao.BikeDao- Bike car is added
+2021-08-03 19:32:30,532 [http-nio-8081-exec-23] INFO  org.anatkor.dao.BikeDao- Bike MLK is added
+2021-08-03 19:33:19,949 [http-nio-8081-exec-21] INFO  org.anatkor.dao.BikeDao- Bike Slr8 is added
+2021-08-03 19:35:15,118 [http-nio-8081-exec-27] INFO  org.anatkor.dao.BikeDao- Bike car is added
+2021-08-03 19:38:41,834 [http-nio-8081-exec-23] INFO  org.anatkor.dao.BikeDao- Bike 06-04 is added
+2021-08-03 19:58:11,747 [http-nio-8081-exec-39] INFO  org.anatkor.dao.BikeDao- Bike fl5 is added
+2021-08-03 20:12:22,679 [http-nio-8081-exec-45] INFO  org.anatkor.dao.BikeDao- Bike car is added

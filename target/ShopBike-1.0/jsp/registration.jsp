@@ -20,6 +20,12 @@
             <input class="button mt-3" type="submit" value="<fmt:message key="registration"/>">
         </form>
         <br/>
+    <c:if test="${error!=null}">
+        <div class="alert alert-warning" role="alert">
+                ${error} because ${error_reason}
+        </div>
+    </c:if>
+
         <a href="${pageContext.request.contextPath}/"><fmt:message key="home_page"/></a>
     </div>
 </body>

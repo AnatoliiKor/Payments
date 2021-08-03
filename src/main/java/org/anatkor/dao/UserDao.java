@@ -79,23 +79,28 @@ public class UserDao {
         ResultSet rs = null;
         try {
             con = Utils.getConnection();
-            prepStatement = con.prepareStatement(ADD_USER, new String[]{"id"});
-            prepStatement.setString(1, user.getUsername());
-            prepStatement.setString(2, user.getEmail());
-            prepStatement.setString(3, user.getPassword());
-            prepStatement.executeUpdate();
-            log.info("User {} is added", user.getUsername());
-            rs = prepStatement.getGeneratedKeys();
-            long generatedId = 0L;
-            if (rs.next()) {
-                generatedId = rs.getLong(1);
+//            prepStatement = con.prepareStatement(ADD_USER, new String[]{"id"});
+            prepStatement = con.prepareStatement(ADD_USER, Statement.RETURN_GENERATED_KEYS);
+            int k = 1;
+            prepStatement.setString(k++, user.getUsername());
+            prepStatement.setString(k++, user.getEmail());
+            prepStatement.setString(k++, user.getPassword());
+            if(prepStatement.executeUpdate()> 0) {
+                log.info("User {} is added", user.getUsername());
+                result = true;
+                rs = prepStatement.getGeneratedKeys();
+                long generatedId = 0L;
+                if (rs.next()) {
+                    generatedId = rs.getLong(1);
+                    user.setId(generatedId);
+                }
+                prepStatement = null;
+                prepStatement = con.prepareStatement(ADD_USER_ROLE);
+                prepStatement.setLong(1, generatedId);
+                prepStatement.setString(2, "USER");
+                result = (1 == prepStatement.executeUpdate());
+                log.info("User {} with role  is added", user.getUsername());
             }
-            prepStatement = null;
-            prepStatement = con.prepareStatement(ADD_USER_ROLE);
-            prepStatement.setLong(1, generatedId);
-            prepStatement.setString(2, "USER");
-            result = (1 == prepStatement.executeUpdate());
-            log.info("User {} with role  is added", user.getUsername());
         } catch (SQLException e) {
             log.info("SQLException during Add {} processing {}. {}", user.getUsername(), Utils.class, e.getMessage());
             throw new DBException("User is not added to the DB", e);

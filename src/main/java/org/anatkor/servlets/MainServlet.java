@@ -26,13 +26,13 @@ public class MainServlet extends HttpServlet {
         super.service(req, resp);
     }
 
-    @Override
-    public void init() throws ServletException {
-        super.init();
-    }
+//    @Override
+//    public void init() throws ServletException {
+//        super.init();
+//    }
 
-    @Override
-    public void destroy() {
-        log.info("Main servlet Destroyed");
-    }
+//    @Override
+//    public void destroy() {
+//        log.info("Main servlet Destroyed");
+//    }
 }

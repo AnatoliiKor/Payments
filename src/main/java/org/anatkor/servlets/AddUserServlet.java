@@ -33,7 +33,7 @@ public class AddUserServlet extends HttpServlet {
         } catch (DBException e) {
             req.setAttribute("error", e.getMessage());
             req.setAttribute("error_reason", e.getCause().toString());
-            req.getRequestDispatcher("/jsp/error.jsp").forward(req, resp);
+            req.getRequestDispatcher("/jsp/registration.jsp").forward(req, resp);
 //            resp.sendRedirect("/error");
         }
         resp.sendRedirect("/users");
