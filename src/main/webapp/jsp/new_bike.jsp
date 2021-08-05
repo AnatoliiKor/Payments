@@ -1,14 +1,13 @@
 <%@include file="navbar.jsp" %>
 
-
-
 <div class="container mt-2">
     <h2> Add new BIKE</h2>
-    <form method="post" action="${pageContext.request.contextPath}/bike">
+    <form method="post" action="${pageContext.request.contextPath}/bike_edit">
 
         <div> model = <input type="text" name="name" value="<c:if test="${bike!=null}">${bike.name}</c:if>" required/>
         </div>
-        <div> brand = <select name="brand" size="1" value="<c:if test="${bike!=null}">${bike.brand}</c:if>">
+        <div> brand = <select name="brand" size="1">
+            <c:if test="${bike!=null}"><option selected>${bike.brand}</option></c:if>
             <option>Ardis</option>
             <option>Comanche</option>
             <option>Cube</option>
@@ -17,7 +16,8 @@
             <option>Santa Cruz</option>
             <option>other</option>
         </select></div>
-        <div> colour = <select name="colour" size="1" value="<c:if test="${bike!=null}">${bike.colour}</c:if>">
+        <div> colour = <select name="colour" size="1">
+            <c:if test="${bike!=null}"><option selected>${bike.colour}</option></c:if>
             <option>red</option>
             <option>blue</option>
             <option>green</option>
@@ -25,17 +25,30 @@
             <option>yellow</option>
             <option>white</option>
         </select></div>
-        <div>description <input type="text" name="description" value="<c:choose><c:when test="${bike!= null}">${bike.description}</c:when><c:otherwise>No description</c:otherwise></c:choose>" required/>
+        <div>description <input type="text" name="description"
+                                value="<c:choose><c:when test="${bike!= null}">${bike.description}</c:when><c:otherwise>No description</c:otherwise></c:choose>"
+                                required/>
         </div>
-        <div> category = <select name="category" size="1" value="<c:if test="${bike!=null}">${bike.category}</c:if>">
+        <div> category = <select name="category" size="1">
+            <c:if test="${bike!=null}"><option selected>${bike.category}</option></c:if>
             <option>utility bicycle</option>
             <option>mountain bicycle</option>
             <option>racing bicycle</option>
             <option>touring bicycle</option>
         </select></div>
         <div class="col-md-2">price <input type="number" name="price"
-                                           value="<c:if test="${bike!=null}">${bike.category}</c:if>" required/></div>
-        <button type="submit">Add</button>
+                                           value="<c:if test="${bike!=null}">${bike.price}</c:if>" required/></div>
+
+        <c:choose>
+            <c:when test="${bike!=null}">
+                <input type="hidden" name="id" value="${bike.id}"/>
+                <button type="submit">Update</button>
+            </c:when>
+
+            <c:otherwise>
+                <button type="submit">Add</button>
+            </c:otherwise>
+        </c:choose>
 
     </form>
 
@@ -45,7 +58,8 @@
         </div>
     </c:if>
 
-    <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/"><fmt:message key="home_page"/></a>
+    <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/"><fmt:message
+            key="home_page"/></a>
 
 </div>
 

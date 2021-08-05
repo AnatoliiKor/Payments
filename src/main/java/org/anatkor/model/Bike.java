@@ -6,8 +6,7 @@ import java.util.List;
 
 public class Bike {
 
-    private long id;
-
+    private Long id;
     private String category;
     private String brand;
     private String name;
@@ -101,6 +100,13 @@ public class Bike {
             newBike = new Bike();
         }
 
+        public Builder withId(Long id){
+//            if (id<0) {
+//                id=null;
+//            }
+            newBike.id = id;
+            return this;
+        }
         public Builder withCategory(String category){
             newBike.category = category;
             return this;

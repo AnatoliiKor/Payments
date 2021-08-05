@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/bike")
+@WebServlet("/bike_edit")
 public class BikeServlet extends HttpServlet {
 
     final static Logger log = LogManager.getLogger(BikeServlet.class);
@@ -24,16 +24,24 @@ public class BikeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.debug("Bike servlet called");
-        List<Bike> bikes = bikeService.findAll();
-        req.setAttribute("bikes", bikes);
-        req.getRequestDispatcher("/jsp/bikes_list.jsp").forward(req, resp);
+        log.debug("BikeServlet called");
+        String s = req.getParameter("id");
+        if (req.getParameter("id") != null) {
+            Long bikeId = Long.valueOf(req.getParameter("id"));
+            Bike bike = bikeService.findBikeById(bikeId);
+            req.setAttribute("bike", bike);
+        }
+        req.getRequestDispatcher("/jsp/new_bike.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.debug("NewBike servlet called");
+        log.debug("UpdateBike servlet called");
         req.setCharacterEncoding("UTF-8");
+        Long id;
+        if (req.getParameter("id") != null) {
+            id = Long.valueOf(req.getParameter("id"));
+        } else {id = -1L;}
         String name = req.getParameter("name");
         String brand = req.getParameter("brand");
         String category = req.getParameter("category");
@@ -41,7 +49,7 @@ public class BikeServlet extends HttpServlet {
         String description = req.getParameter("description");
         int price = Integer.valueOf(req.getParameter("price"));
         try {
-            bikeService.newBike(name, brand, category, colour, description, price);
+            bikeService.newBike(id, name, brand, category, colour, description, price);
         } catch (DBException e) {
             req.setAttribute("error", e.getMessage());
             req.setAttribute("error_reason", e.getCause().toString());
