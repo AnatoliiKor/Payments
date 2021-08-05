@@ -1,10 +1,8 @@
 package org.anatkor.services;
 
 import org.anatkor.dao.BikeDao;
-import org.anatkor.dao.UserDao;
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Bike;
-import org.anatkor.model.User;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -34,5 +32,10 @@ public class BikeService {
 
     public Bike findBikeById(Long bikeId) {
         return bikeDao.findBikeById(bikeId);
+    }
+
+    public boolean deleteBike(Long id) {
+        return bikeDao.deleteBike(id);
+
     }
 }

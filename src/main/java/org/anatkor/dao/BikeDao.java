@@ -2,21 +2,19 @@ package org.anatkor.dao;
 
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Bike;
-import org.anatkor.model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class BikeDao {
     private static final String FIND_ALL_BIKES = "SELECT * FROM bike;";
     private static final String FIND_ALL_BIKES_SORTED = "SELECT * FROM bike ORDER BY ";
     private static final String FIND_BIKE_BY_ID = "SELECT * FROM bike WHERE id=?";
+    private static final String DELETE_BIKE_BY_ID = "DELETE FROM bike WHERE id=?";
     //    private static final String FIND_ALL_BIKES_SORTED = "SELECT * FROM bike ORDER BY ? ?;";
     private static final String ADD_BIKE = "INSERT INTO bike (name, brand, category, colour, description, price)" +
             " VALUES (?,?,?,?,?,?)";
@@ -75,7 +73,7 @@ public class BikeDao {
         ResultSet rs = null;
         try {
             con = Utils.getConnection();
-            if (bike.getId()<0) {
+            if (bike.getId() < 0) {
                 prepStatement = con.prepareStatement(ADD_BIKE, Statement.RETURN_GENERATED_KEYS);
             } else {
                 prepStatement = con.prepareStatement(UPDATE_BIKE);
@@ -150,5 +148,26 @@ public class BikeDao {
             Utils.close(con);
         }
         return null;
+    }
+
+    public boolean deleteBike(Long id) {
+        Connection con = null;
+        PreparedStatement prepStatement = null;
+        boolean result = false;
+        try {
+            con = Utils.getConnection();
+            prepStatement = con.prepareStatement(DELETE_BIKE_BY_ID);
+            prepStatement.setLong(1, id);
+            if (prepStatement.executeUpdate() > 0) {
+                log.info("Bike with id={} is deleted", id);
+                return true;
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.", DELETE_BIKE_BY_ID, Utils.class, e);
+        } finally {
+            Utils.close(prepStatement);
+            Utils.close(con);
+        }
+        return result;
     }
 }

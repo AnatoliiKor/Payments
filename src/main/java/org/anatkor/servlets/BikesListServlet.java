@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/bike")
+@WebServlet("/bikes")
 public class BikesListServlet extends HttpServlet {
 
     final static Logger log = LogManager.getLogger(BikesListServlet.class);
@@ -23,7 +23,10 @@ public class BikesListServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.debug("Bike servlet called");
+        log.info("Bike servlet called");
+        if (req.getParameter("message")!=null) {
+            req.setAttribute("message", req.getParameter("message"));
+        }
         String sortBy = "price";
         String order = "ASC";
         if (req.getParameter("sort_by")!= null) {sortBy = req.getParameter("sort_by");}

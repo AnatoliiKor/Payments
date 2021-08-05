@@ -1,13 +1,29 @@
 <%@include file="navbar.jsp" %>
 
 <div class="container mt-2">
-    <h2> Add new BIKE</h2>
+    <h2>
+        <c:choose>
+            <c:when test="${bike!=null}"><fmt:message key="update_bike"/>
+                <input type="hidden" name="id" value="${bike.id}"/>
+                <form method="post" action="/bike_delete">
+                    <input type="hidden" name="id" value="${bike.id}"/>
+<%--                    <input type="hidden" name="action" value="delete"/>--%>
+                    <button type="submit" class="btn btn-secondary"><fmt:message key="delete"/></button>
+<%--                    <button type="submit"><fmt:message key="delete"/></button>--%>
+                </form>
+            </c:when>
+            <c:otherwise><fmt:message key="new_bike"/></c:otherwise>
+        </c:choose>
+
+    </h2>
     <form method="post" action="${pageContext.request.contextPath}/bike_edit">
 
         <div> model = <input type="text" name="name" value="<c:if test="${bike!=null}">${bike.name}</c:if>" required/>
         </div>
         <div> brand = <select name="brand" size="1">
-            <c:if test="${bike!=null}"><option selected>${bike.brand}</option></c:if>
+            <c:if test="${bike!=null}">
+                <option selected>${bike.brand}</option>
+            </c:if>
             <option>Ardis</option>
             <option>Comanche</option>
             <option>Cube</option>
@@ -17,7 +33,9 @@
             <option>other</option>
         </select></div>
         <div> colour = <select name="colour" size="1">
-            <c:if test="${bike!=null}"><option selected>${bike.colour}</option></c:if>
+            <c:if test="${bike!=null}">
+                <option selected>${bike.colour}</option>
+            </c:if>
             <option>red</option>
             <option>blue</option>
             <option>green</option>
@@ -30,7 +48,9 @@
                                 required/>
         </div>
         <div> category = <select name="category" size="1">
-            <c:if test="${bike!=null}"><option selected>${bike.category}</option></c:if>
+            <c:if test="${bike!=null}">
+                <option selected>${bike.category}</option>
+            </c:if>
             <option>utility bicycle</option>
             <option>mountain bicycle</option>
             <option>racing bicycle</option>
@@ -41,12 +61,11 @@
 
         <c:choose>
             <c:when test="${bike!=null}">
-                <input type="hidden" name="id" value="${bike.id}"/>
-                <button type="submit">Update</button>
+                <button type="submit" class="btn btn-primary"><fmt:message key="update"/></button>
             </c:when>
 
             <c:otherwise>
-                <button type="submit">Add</button>
+                <button type="submit" class="btn btn-primary"><fmt:message key="add"/></button>
             </c:otherwise>
         </c:choose>
 

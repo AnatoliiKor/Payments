@@ -2,7 +2,6 @@ package org.anatkor.servlets;
 
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Bike;
-import org.anatkor.model.User;
 import org.anatkor.services.BikeService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet("/bike_edit")
 public class BikeServlet extends HttpServlet {
@@ -25,7 +23,7 @@ public class BikeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.debug("BikeServlet called");
-        String s = req.getParameter("id");
+
         if (req.getParameter("id") != null) {
             Long bikeId = Long.valueOf(req.getParameter("id"));
             Bike bike = bikeService.findBikeById(bikeId);
@@ -39,9 +37,12 @@ public class BikeServlet extends HttpServlet {
         log.debug("UpdateBike servlet called");
         req.setCharacterEncoding("UTF-8");
         Long id;
+
         if (req.getParameter("id") != null) {
             id = Long.valueOf(req.getParameter("id"));
-        } else {id = -1L;}
+        } else {
+            id = -1L;
+        }
         String name = req.getParameter("name");
         String brand = req.getParameter("brand");
         String category = req.getParameter("category");
@@ -56,7 +57,7 @@ public class BikeServlet extends HttpServlet {
             req.getRequestDispatcher("/jsp/new_bike.jsp").forward(req, resp);
 //            resp.sendRedirect("/error");
         }
-        resp.sendRedirect("/bike");
+        resp.sendRedirect("/bikes");
     }
 
 }
