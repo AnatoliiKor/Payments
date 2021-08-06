@@ -16,7 +16,8 @@ public class BikeService {
     }
 
 
-    public boolean newBike(Long id, String name, String brand, String category, String colour, String description, int price) throws DBException {
+    public boolean newBike(Long id, String name, String brand, String category, String colour, String description, int price)
+            throws DBException {
         Bike bike = new Bike.Builder()
                 .withId(id)
                 .withName(name)
@@ -34,8 +35,7 @@ public class BikeService {
         return bikeDao.findBikeById(bikeId);
     }
 
-    public boolean deleteBike(Long id) {
+    public boolean deleteBike(Long id) throws DBException {
         return bikeDao.deleteBike(id);
-
     }
 }

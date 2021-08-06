@@ -152,7 +152,7 @@ public class BikeDao {
         return null;
     }
 
-    public boolean deleteBike(Long id) {
+    public boolean deleteBike(Long id) throws DBException {
         Connection con = null;
         PreparedStatement prepStatement = null;
         boolean result = false;
@@ -166,6 +166,7 @@ public class BikeDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.", DELETE_BIKE_BY_ID, Utils.class, e);
+            throw new DBException("Cannot delete a bike with id:" + id, e);
         } finally {
             Utils.close(prepStatement);
             Utils.close(con);

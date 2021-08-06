@@ -28,7 +28,7 @@ public class UserDao {
         ResultSet rs = null;
 //       Set ids is necessary to check for users with several roles
         Set<Long> ids = new HashSet<>();
-        try  {
+        try {
             con = Utils.getConnection();
             stm = con.createStatement();
             rs = stm.executeQuery(FIND_ALL_USERS_AND_ROLES);
@@ -72,38 +72,52 @@ public class UserDao {
         return users;
     }
 
-    public void addUser(User user) throws DBException {
+    public void addUser(User user) throws DBException, SQLException {
+//        Add bike with order look video 2:29
         boolean result = false;
         Connection con = null;
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
+        long generatedId = 0L;
         try {
             con = Utils.getConnection();
+            con.setAutoCommit(false);
+            con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 //            prepStatement = con.prepareStatement(ADD_USER, new String[]{"id"});
             prepStatement = con.prepareStatement(ADD_USER, Statement.RETURN_GENERATED_KEYS);
             int k = 1;
             prepStatement.setString(k++, user.getUsername());
             prepStatement.setString(k++, user.getEmail());
             prepStatement.setString(k++, user.getPassword());
-            if(prepStatement.executeUpdate()> 0) {
+            if (prepStatement.executeUpdate() > 0) {
                 log.info("User {} is added", user.getUsername());
                 result = true;
                 rs = prepStatement.getGeneratedKeys();
-                long generatedId = 0L;
                 if (rs.next()) {
                     generatedId = rs.getLong(1);
                     user.setId(generatedId);
                 }
-                prepStatement = null;
-                prepStatement = con.prepareStatement(ADD_USER_ROLE);
-                prepStatement.setLong(1, generatedId);
-                prepStatement.setString(2, "USER");
-                result = (1 == prepStatement.executeUpdate());
-                log.info("User {} with role  is added", user.getUsername());
             }
         } catch (SQLException e) {
             log.info("SQLException during Add {} processing {}. {}", user.getUsername(), Utils.class, e.getMessage());
             throw new DBException("User is not added to the DB", e);
+        } finally {
+            Utils.close(rs);
+            Utils.close(prepStatement);
+        }
+        try {
+            prepStatement = null;
+            prepStatement = con.prepareStatement(ADD_USER_ROLE);
+            prepStatement.setLong(1, generatedId);
+            prepStatement.setString(2, "USER");
+            result = (1 == prepStatement.executeUpdate());
+            log.info("User {} with role  is added", user.getUsername());
+            con.commit();
+        } catch (SQLException e) {
+            con.rollback();
+            log.info("SQLException during Add {} processing {}. {}", user.getUsername(), Utils.class, e.getMessage());
+            throw e;
+//            throw new DBException("User with a role is not added to the DB", e);
         } finally {
             Utils.close(rs);
             Utils.close(prepStatement);

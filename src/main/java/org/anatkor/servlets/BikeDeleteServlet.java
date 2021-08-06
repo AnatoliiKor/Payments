@@ -35,8 +35,17 @@ public class BikeDeleteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.debug("DeleteBike servlet called");
         Long id = Long.valueOf(req.getParameter("id"));
-        if (bikeService.deleteBike(id)) {
-           resp.sendRedirect("/bikes?message=Deletion is successful");
+
+        try {
+            if (bikeService.deleteBike(id)) {
+                resp.sendRedirect("/bikes?message=Deletion is successful");
+            }
+        } catch (DBException e) {
+            req.setAttribute("error", e.getMessage());
+            req.setAttribute("error_reason", e.getCause().toString());
+            req.getRequestDispatcher("/jsp/new_bike.jsp").forward(req, resp);
         }
+
+
     }
 }

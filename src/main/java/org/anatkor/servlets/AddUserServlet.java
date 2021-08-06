@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet("/registration")
@@ -26,7 +27,7 @@ public class AddUserServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         String username = req.getParameter("username");
         String email = req.getParameter("email");
-        String password =  req.getParameter("password");
+        String password = req.getParameter("password");
 
         try {
             userService.addUser(username, email, password);
@@ -35,6 +36,10 @@ public class AddUserServlet extends HttpServlet {
             req.setAttribute("error_reason", e.getCause().toString());
             req.getRequestDispatcher("/jsp/registration.jsp").forward(req, resp);
 //            resp.sendRedirect("/error");
+        } catch (SQLException e) {
+            req.setAttribute("error", e.getMessage());
+            req.setAttribute("error_reason", "Cannot create user with a role");
+            req.getRequestDispatcher("/jsp/registration.jsp").forward(req, resp);
         }
         resp.sendRedirect("/users");
     }

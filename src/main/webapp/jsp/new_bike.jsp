@@ -16,6 +16,13 @@
         </c:choose>
 
     </h2>
+
+    <c:if test="${error!=null}">
+        <div class="alert alert-warning" role="alert">
+                ${error} because ${error_reason}
+        </div>
+    </c:if>
+
     <form method="post" action="${pageContext.request.contextPath}/bike_edit">
 
         <div> model = <input type="text" name="name" value="<c:if test="${bike!=null}">${bike.name}</c:if>" required/>
