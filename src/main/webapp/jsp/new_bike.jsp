@@ -61,6 +61,7 @@
 
         <c:choose>
             <c:when test="${bike!=null}">
+                <input type="hidden" name="id" value="${bike.id}"/>
                 <button type="submit" class="btn btn-primary"><fmt:message key="update"/></button>
             </c:when>
 

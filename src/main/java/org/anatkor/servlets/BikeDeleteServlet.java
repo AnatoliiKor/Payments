@@ -36,10 +36,7 @@ public class BikeDeleteServlet extends HttpServlet {
         log.debug("DeleteBike servlet called");
         Long id = Long.valueOf(req.getParameter("id"));
         if (bikeService.deleteBike(id)) {
-//            req.setAttribute("error", "Deletion is successful");
+           resp.sendRedirect("/bikes?message=Deletion is successful");
         }
-//                    if ("delete".equals(req.getParameter("action"))) {            }
-        resp.sendRedirect("/bikes?message=Deletion is successful");
     }
-
 }

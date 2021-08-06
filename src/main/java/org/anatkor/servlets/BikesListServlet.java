@@ -27,8 +27,16 @@ public class BikesListServlet extends HttpServlet {
         if (req.getParameter("message")!=null) {
             req.setAttribute("message", req.getParameter("message"));
         }
-        String sortBy = "price";
-        String order = "ASC";
+        String sortBy = "date";
+        String order = "DESC";
+
+        String page = req.getParameter("pg");
+        if (page == null || page.equals("")) {
+            req.setAttribute("pg", 1);
+        } else {
+            req.setAttribute("pg", Integer.parseInt(page));
+        }
+
         if (req.getParameter("sort_by")!= null) {sortBy = req.getParameter("sort_by");}
         if (req.getParameter("order")!= null) {order = req.getParameter("order");}
         List<Bike> bikes = bikeService.findAll(sortBy, order);
@@ -37,27 +45,5 @@ public class BikesListServlet extends HttpServlet {
         req.setAttribute("bikes", bikes);
         req.getRequestDispatcher("/jsp/bikes_list.jsp").forward(req, resp);
     }
-
-//    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        log.debug("NewBike servlet called");
-//        req.setCharacterEncoding("UTF-8");
-//        Long id = null;
-//        String name = req.getParameter("name");
-//        String brand = req.getParameter("brand");
-//        String category = req.getParameter("category");
-//        String colour = req.getParameter("colour");
-//        String description = req.getParameter("description");
-//        int price = Integer.valueOf(req.getParameter("price"));
-//        try {
-//            bikeService.newBike(id, name, brand, category, colour, description, price);
-//        } catch (DBException e) {
-//            req.setAttribute("error", e.getMessage());
-//            req.setAttribute("error_reason", e.getCause().toString());
-//            req.getRequestDispatcher("/jsp/new_bike.jsp").forward(req, resp);
-////            resp.sendRedirect("/error");
-//        }
-//        resp.sendRedirect("/bike");
-//    }
 
 }

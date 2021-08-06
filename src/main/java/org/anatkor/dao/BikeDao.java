@@ -66,7 +66,7 @@ public class BikeDao {
         return bikes;
     }
 
-    public void newBike(Bike bike) throws DBException {
+    public boolean newBike(Bike bike) throws DBException {
         boolean result = false;
         Connection con = null;
         PreparedStatement prepStatement = null;
@@ -87,7 +87,8 @@ public class BikeDao {
             prepStatement.setString(k++, bike.getDescription());
             prepStatement.setInt(k++, bike.getPrice());
             if (prepStatement.executeUpdate() > 0) {
-                log.info("Bike {} is added", bike.getName());
+                result = true;
+                log.info("Bike {} is processed", bike.getName());
                 result = true;
                 rs = prepStatement.getGeneratedKeys();
                 long generatedId;
@@ -104,6 +105,7 @@ public class BikeDao {
             Utils.close(prepStatement);
             Utils.close(con);
         }
+        return result;
     }
 
     public Bike findBikeById(Long bikeId) {

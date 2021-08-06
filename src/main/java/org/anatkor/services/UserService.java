@@ -22,15 +22,10 @@ public class UserService {
                 .withEmail(email)
                 .withRegistrationDateTime(LocalDateTime.now())
                 .withActive(true)
-                .withRoles("BIKE")
+                .withRoles("USER")
                 .build();
 //        Long id = userDao.addUser(user);
         userDao.addUser(user);
 //        userDao.addUserRole(id);
-
-
-    }
-
-    public void newBike(String name, String brand, String category, String colour, String description, int price) {
     }
 }

@@ -40,6 +40,11 @@ public class BikeServlet extends HttpServlet {
 
         if (req.getParameter("id") != null) {
             id = Long.valueOf(req.getParameter("id"));
+            //TODO Doesn't interrupt the method like return
+            // if ("delete".equals(req.getParameter("action"))) {
+//           bikeService.deleteBike(id)
+//           req.setAttribute("error", "Deletion is successful");
+//            resp.sendRedirect("/bikes?message=Deletion is successful");
         } else {
             id = -1L;
         }
@@ -50,14 +55,16 @@ public class BikeServlet extends HttpServlet {
         String description = req.getParameter("description");
         int price = Integer.valueOf(req.getParameter("price"));
         try {
-            bikeService.newBike(id, name, brand, category, colour, description, price);
+            if (bikeService.newBike(id, name, brand, category, colour, description, price)) {
+                resp.sendRedirect("/bikes?message=Bike is processed");
+            }
+
         } catch (DBException e) {
             req.setAttribute("error", e.getMessage());
             req.setAttribute("error_reason", e.getCause().toString());
             req.getRequestDispatcher("/jsp/new_bike.jsp").forward(req, resp);
 //            resp.sendRedirect("/error");
         }
-        resp.sendRedirect("/bikes");
     }
 
 }
