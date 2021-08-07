@@ -58,13 +58,17 @@ public class User {
             return this;
         }
 
-        public UserBuilder withRoles(String role){
-            Set<Role> roles = new HashSet<>();
-            Role roleEnam = Role.valueOf(role);
-            roles.add(roleEnam);
+        public UserBuilder withRoles(Set<Role> roles){
             newUser.roles = roles;
             return this;
         }
+//        public UserBuilder withRoles(String role){
+//            Set<Role> roles = new HashSet<>();
+//            Role roleEnam = Role.valueOf(role);
+//            roles.add(roleEnam);
+//            newUser.roles = roles;
+//            return this;
+//        }
 
         public UserBuilder withCarts(List<Cart> carts){
             newUser.carts = carts;

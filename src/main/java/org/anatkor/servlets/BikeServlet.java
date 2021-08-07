@@ -58,7 +58,6 @@ public class BikeServlet extends HttpServlet {
             if (bikeService.newBike(id, name, brand, category, colour, description, price)) {
                 resp.sendRedirect("/bikes?message=Bike is processed");
             }
-
         } catch (DBException e) {
             req.setAttribute("error", e.getMessage());
             req.setAttribute("error_reason", e.getCause().toString());
