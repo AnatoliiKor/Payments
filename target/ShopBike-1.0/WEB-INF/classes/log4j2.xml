@@ -36,7 +36,7 @@
         </Root>
 
         <Logger name="org.anatkor"
-                level="info" additivity="false">
+                level="debug" additivity="false">
             <AppenderRef ref="LOCALHOST"/>
             <AppenderRef ref="Console"/>
         </Logger>

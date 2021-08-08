@@ -18,6 +18,7 @@ public class UserDao {
     private static final String ADD_USER = "INSERT INTO usr (username, email, password) VALUES (?,?,?)";
     private static final String ADD_USER_ROLE = "INSERT INTO user_role VALUES (?,?)";
     private static final String FIND_USER_BY_USERNAME = "SELECT * FROM usr WHERE username=?";
+    private static final String FIND_USER_BY_USERNAME_PASSWORD = "SELECT * FROM usr WHERE username=? AND password=?;";
     private static final String FIND_ROLES_BY_USERID = "SELECT * FROM user_role WHERE user_id=?";
     private static final String ADD_USER_AND_ROLE = "INSERT INTO usr (username, email, password)  VALUES (?,?,?); INSERT INTO user_role(user_id, role) VALUES ((SELECT id FROM usr WHERE login ='?'), 'USER')";
     private static final String FIND_ALL_USERS_AND_ROLES = "SELECT * From usr LEFT JOIN user_role ON usr.id = user_role.user_id;";
@@ -113,6 +114,43 @@ public class UserDao {
         return users;
     }
 
+    public User findUserByUsernamePassword(String username, String password) throws DBException{
+        Connection con = null;
+        PreparedStatement prepStatement = null;
+        ResultSet rs = null;
+        try {
+            con = Utils.getConnection();
+            prepStatement = con.prepareStatement(FIND_USER_BY_USERNAME_PASSWORD);
+            int k = 1;
+            prepStatement.setString(k++, username);
+            prepStatement.setString(k, password);
+            rs = prepStatement.executeQuery();
+            if (rs.next()) {
+                Long id = rs.getLong("id");
+                Set<Role> roles = findRolesByUsername(con, id);
+                String email = rs.getString("email");
+                LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
+                boolean active = rs.getBoolean("active");
+                return new User.UserBuilder()
+                        .withId(id)
+                        .withPassword(password)
+                        .withUsername(username)
+                        .withEmail(email)
+                        .withRegistrationDateTime(registrationDateTime)
+                        .withActive(active)
+                        .withRoles(roles)
+                        .build();
+            } else {throw new DBException("User with \"" + username + "\" not found or password is wrong");}
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.", FIND_USER_BY_USERNAME_PASSWORD, Utils.class, e);
+            throw new DBException("User with \"" + username + " \" is not found");
+        } finally {
+            Utils.close(rs);
+            Utils.close(prepStatement);
+            Utils.close(con);
+        }
+    }
+
     public User findUserByUsername(String username) throws DBException{
         Connection con = null;
         PreparedStatement prepStatement = null;
@@ -121,7 +159,7 @@ public class UserDao {
             con = Utils.getConnection();
             prepStatement = con.prepareStatement(FIND_USER_BY_USERNAME);
             int k = 1;
-            prepStatement.setString(k++, username);
+            prepStatement.setString(k, username);
             rs = prepStatement.executeQuery();
             if (rs.next()) {
                 Long id = rs.getLong("id");
@@ -131,7 +169,7 @@ public class UserDao {
                 String password = rs.getString("password");
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
-                User user = new User.UserBuilder()
+                return new User.UserBuilder()
                         .withId(id)
                         .withPassword(password)
                         .withUsername(username)
@@ -140,7 +178,6 @@ public class UserDao {
                         .withActive(active)
                         .withRoles(roles)
                         .build();
-                return user;
             } else {throw new DBException("User with \"" + username + "\" is not found");}
         } catch (SQLException e) {
             log.info("SQLException during Query {} processing from {}.", FIND_USER_BY_USERNAME, Utils.class, e);
@@ -159,7 +196,7 @@ public class UserDao {
         try {
             prepStatement = con.prepareStatement(FIND_ROLES_BY_USERID);
             int k = 1;
-            prepStatement.setLong(k++, user_id);
+            prepStatement.setLong(k, user_id);
             rs = prepStatement.executeQuery();
             while (rs.next()) {
                 Role role = Role.valueOf(rs.getString("role"));
@@ -173,26 +210,24 @@ public class UserDao {
     }
 
 
-    public void addUser(User user) throws DBException, SQLException {
+    public boolean addUser(User user) throws DBException {
 //        Add bike with order look video 2:29
-        boolean result = false;
-        Connection con = null;
-        PreparedStatement prepStatement = null;
+        boolean result;
+        Connection con;
+        PreparedStatement prepStatement;
         ResultSet rs = null;
         long generatedId = 0L;
         try {
             con = Utils.getConnection();
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
-//            prepStatement = con.prepareStatement(ADD_USER, new String[]{"id"});
             prepStatement = con.prepareStatement(ADD_USER, Statement.RETURN_GENERATED_KEYS);
             int k = 1;
             prepStatement.setString(k++, user.getUsername());
             prepStatement.setString(k++, user.getEmail());
-            prepStatement.setString(k++, user.getPassword());
+            prepStatement.setString(k, user.getPassword());
             if (prepStatement.executeUpdate() > 0) {
                 log.info("User {} is added", user.getUsername());
-                result = true;
                 rs = prepStatement.getGeneratedKeys();
                 if (rs.next()) {
                     generatedId = rs.getLong(1);
@@ -200,11 +235,8 @@ public class UserDao {
                 }
             }
         } catch (SQLException e) {
-            log.info("SQLException during Add {} processing {}. {}", user.getUsername(), Utils.class, e.getMessage());
-            throw new DBException("User is not added to the DB", e);
-        } finally {
-            Utils.close(rs);
-            Utils.close(prepStatement);
+            log.debug("SQLException during Add {} processing {}. {}", user.getUsername(), Utils.class, e.getMessage());
+            throw new DBException("User with username \"" + user.getUsername() + "\" already exist");
         }
         try {
             prepStatement = null;
@@ -212,18 +244,22 @@ public class UserDao {
             prepStatement.setLong(1, generatedId);
             prepStatement.setString(2, "USER");
             result = (1 == prepStatement.executeUpdate());
-            log.info("User {} with role  is added", user.getUsername());
             con.commit();
+            log.info("User {} with role  is added", user.getUsername());
+            return result;
         } catch (SQLException e) {
-            con.rollback();
-            log.info("SQLException during Add {} processing {}. {}", user.getUsername(), Utils.class, e.getMessage());
-            throw e;
-//            throw new DBException("User with a role is not added to the DB", e);
+            try {
+                con.rollback();
+            } catch (SQLException throwables) {
+                log.debug("SQLException during rollback add user {} processing {}. {}", user.getUsername(), Utils.class, throwables.getMessage());
+                throw new DBException("User with " + user.getUsername() + " is not registered. Try again");
+            }
+            log.debug("SQLException during Add user {} processing {}. {}", user.getUsername(), Utils.class, e.getMessage());
+            throw new DBException("User with " + user.getUsername() + " is not registered. Try again");
         } finally {
             Utils.close(rs);
             Utils.close(prepStatement);
             Utils.close(con);
         }
     }
-
 }

@@ -19,23 +19,20 @@ public class UserService {
         return userDao.findAll();
     }
 
-    public void addUser(String username, String email, String password) throws DBException, SQLException {
-        Set<Role> roles = new HashSet<>();
-        roles.add(Role.USER);
+    public boolean addUser(String username, String email, String password) throws DBException {
         User user = new User.UserBuilder()
                 .withPassword(password)
                 .withUsername(username)
                 .withEmail(email)
-                .withRegistrationDateTime(LocalDateTime.now())
-                .withActive(true)
-                .withRoles(roles)
                 .build();
-//        Long id = userDao.addUser(user);
-        userDao.addUser(user);
-//        userDao.addUserRole(id);
+        return userDao.addUser(user);
     }
 
     public User findUserByUsername(String username) throws DBException {
         return  userDao.findUserByUsername(username);
+    }
+
+    public User findUserByUsernamePassword(String username, String password) throws DBException {
+        return  userDao.findUserByUsernamePassword(username, password);
     }
 }
