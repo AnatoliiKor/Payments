@@ -46,11 +46,23 @@
             <a class="btn btn-outline-primary " href="?language=uk" role="button"><fmt:message key="uk_button"/></a>
             <a class="btn btn-outline-warning mx-1" href="?language=en" role="button"><fmt:message key="en_button"/></a>
 
-            <div class="navbar-text">name</div>
+
             <%--        <#if name !="Guest"><@l.logout/>--%>
             <%--        <#else>--%>
-            <a href="/jsp/login.jsp"><label style="margin: 0px 15px;"><fmt:message key="sign_in"/></label></a>
-            <%--      </#if>--%>
+            <c:choose>
+                <c:when test="${user_authenticated!=null}">
+                    <a class="btn btn-outline-secondary" href="/logout" role="button">
+                        ${user_authenticated.username}.<fmt:message key="logout"/>
+                    </a>
+                </c:when>
+                <c:otherwise>
+                    <a class="btn btn-outline-info" href="/jsp/login.jsp" role="button">
+                        Guest.<fmt:message key="sign_in"/>
+                    </a>
+                </c:otherwise>
+            </c:choose>
+
+
         </div>
     </div>
 </nav>

@@ -25,57 +25,6 @@ public class UserDao {
 
     final static Logger log = LogManager.getLogger(UserDao.class);
 
-//    public List<User> findAll() {
-//        List<User> users = new ArrayList<>();
-//        Connection con = null;
-//        Statement stm = null;
-//        ResultSet rs = null;
-////       Set ids is necessary to check for users with several roles
-//        Set<Long> ids = new HashSet<>();
-//        try {
-//            con = Utils.getConnection();
-//            stm = con.createStatement();
-//            rs = stm.executeQuery(FIND_ALL_USERS_AND_ROLES);
-//            while (rs.next()) {
-//
-//                long id = rs.getLong("id");
-//                String role = rs.getString("role");
-//
-//                if (ids.add(id)) {
-//                    String username = rs.getString("username");
-//                    String email = rs.getString("email");
-//                    String password = rs.getString("password");
-//                    LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
-//                    boolean active = rs.getBoolean("active");
-//                    User user = new User.UserBuilder()
-//                            .withId(id)
-//                            .withPassword(password)
-//                            .withUsername(username)
-//                            .withEmail(email)
-//                            .withRegistrationDateTime(registrationDateTime)
-//                            .withActive(active)
-//                            .withRoles(role)
-//                            .build();
-//                    users.add(user);
-//                } else {
-//                    for (User u : users) {
-//                        if (u.getId() == id) {
-//                            u.addRole(role);
-//                            users.set(users.indexOf(u), u);
-//                        }
-//                    }
-//                }
-//            }
-//        } catch (SQLException e) {
-//            log.debug("SQLException during Query {} processing from {}.", FIND_ALL_USERS_AND_ROLES, Utils.class, e);
-//        } finally {
-//            Utils.close(rs);
-//            Utils.close(stm);
-//            Utils.close(con);
-//        }
-//        return users;
-//    }
-
     public List<User> findAll() {
         List<User> users = new ArrayList<>();
         Connection con = null;
@@ -112,6 +61,29 @@ public class UserDao {
             Utils.close(con);
         }
         return users;
+    }
+
+    public boolean userIsExist (String username, String password) {
+        Connection con = null;
+        PreparedStatement prepStatement = null;
+        ResultSet rs = null;
+        try {
+            con = Utils.getConnection();
+            prepStatement = con.prepareStatement(FIND_USER_BY_USERNAME_PASSWORD);
+            int k = 1;
+            prepStatement.setString(k++, username);
+            prepStatement.setString(k, password);
+            rs = prepStatement.executeQuery();
+            return rs.next();
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.",
+                    FIND_USER_BY_USERNAME_PASSWORD, Utils.class, e);
+            return false;
+        } finally {
+            Utils.close(rs);
+            Utils.close(prepStatement);
+            Utils.close(con);
+        }
     }
 
     public User findUserByUsernamePassword(String username, String password) throws DBException{

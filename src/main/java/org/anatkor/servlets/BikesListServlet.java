@@ -36,7 +36,6 @@ public class BikesListServlet extends HttpServlet {
         } else {
             req.setAttribute("pg", Integer.parseInt(page));
         }
-
         if (req.getParameter("sort_by")!= null) {sortBy = req.getParameter("sort_by");}
         if (req.getParameter("order")!= null) {order = req.getParameter("order");}
         List<Bike> bikes = bikeService.findAll(sortBy, order);

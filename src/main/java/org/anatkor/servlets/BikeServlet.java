@@ -35,9 +35,7 @@ public class BikeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.debug("UpdateBike servlet called");
-        req.setCharacterEncoding("UTF-8");
         Long id;
-
         if (req.getParameter("id") != null) {
             id = Long.valueOf(req.getParameter("id"));
             //TODO Doesn't interrupt the method like return
@@ -62,7 +60,6 @@ public class BikeServlet extends HttpServlet {
             req.setAttribute("error", e.getMessage());
             req.setAttribute("error_reason", e.getCause().toString());
             req.getRequestDispatcher("/jsp/new_bike.jsp").forward(req, resp);
-//            resp.sendRedirect("/error");
         }
     }
 

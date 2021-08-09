@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet("/registration")
@@ -23,15 +24,18 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
         String username = req.getParameter("username");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
+
         try {
             if (userService.addUser(username, email, password)) {
                 req.setAttribute("message", "User with username \"" + username + "\" registered successfully. Sign in");
-                req.setAttribute("username", username);
-                resp.sendRedirect("/login?username=" + username);
+                final HttpSession session = req.getSession();
+                session.setAttribute("username", username);
+//                req.setAttribute("username", username);
+//                resp.sendRedirect("/login?username=" + username);
+                resp.sendRedirect("/login");
             }
         } catch (DBException e) {
             req.setAttribute("error", e.getMessage());

@@ -16,7 +16,6 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        req.setCharacterEncoding("UTF-8");
         req.getRequestDispatcher("/jsp/index.jsp").forward(req, resp);
 //        resp.sendRedirect("/redirect to another servlet");
     }
