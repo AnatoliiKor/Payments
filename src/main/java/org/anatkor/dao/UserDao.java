@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class UserDao {
     private static final String FIND_ALL_USERS = "SELECT * FROM usr;";
@@ -19,7 +21,7 @@ public class UserDao {
     private static final String ADD_USER_ROLE = "INSERT INTO user_role VALUES (?,?)";
     private static final String FIND_USER_BY_USERNAME = "SELECT * FROM usr WHERE username=?";
     private static final String FIND_USER_BY_USERNAME_PASSWORD = "SELECT * FROM usr WHERE username=? AND password=?;";
-    private static final String FIND_ROLES_BY_USERID = "SELECT * FROM user_role WHERE user_id=?";
+    private static final String FIND_ROLE_BY_USERID = "SELECT * FROM user_role WHERE user_id=?";
     private static final String ADD_USER_AND_ROLE = "INSERT INTO usr (username, email, password)  VALUES (?,?,?); INSERT INTO user_role(user_id, role) VALUES ((SELECT id FROM usr WHERE login ='?'), 'USER')";
     private static final String FIND_ALL_USERS_AND_ROLES = "SELECT * From usr LEFT JOIN user_role ON usr.id = user_role.user_id;";
 
@@ -36,7 +38,7 @@ public class UserDao {
             rs = stm.executeQuery(FIND_ALL_USERS);
             while (rs.next()) {
                     Long id = rs.getLong("id");
-                    Set<Role> roles = findRolesByUsername(con, id);
+                    Role role = findRoleByUsername(con, id);
                     String username = rs.getString("username");
                     String email = rs.getString("email");
                     String password = rs.getString("password");
@@ -49,7 +51,7 @@ public class UserDao {
                             .withEmail(email)
                             .withRegistrationDateTime(registrationDateTime)
                             .withActive(active)
-                            .withRoles(roles)
+                            .withRole(role)
                             .build();
                     users.add(user);
                 }
@@ -99,7 +101,7 @@ public class UserDao {
             rs = prepStatement.executeQuery();
             if (rs.next()) {
                 Long id = rs.getLong("id");
-                Set<Role> roles = findRolesByUsername(con, id);
+                Role role = findRoleByUsername(con, id);
                 String email = rs.getString("email");
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
@@ -110,7 +112,7 @@ public class UserDao {
                         .withEmail(email)
                         .withRegistrationDateTime(registrationDateTime)
                         .withActive(active)
-                        .withRoles(roles)
+                        .withRole(role)
                         .build();
             } else {throw new DBException("User with \"" + username + "\" not found or password is wrong");}
         } catch (SQLException e) {
@@ -135,7 +137,7 @@ public class UserDao {
             rs = prepStatement.executeQuery();
             if (rs.next()) {
                 Long id = rs.getLong("id");
-                Set<Role> roles = findRolesByUsername(con, id);
+                Role role = findRoleByUsername(con, id);
                 username = rs.getString("username");
                 String email = rs.getString("email");
                 String password = rs.getString("password");
@@ -148,7 +150,7 @@ public class UserDao {
                         .withEmail(email)
                         .withRegistrationDateTime(registrationDateTime)
                         .withActive(active)
-                        .withRoles(roles)
+                        .withRole(role)
                         .build();
             } else {throw new DBException("User with \"" + username + "\" is not found");}
         } catch (SQLException e) {
@@ -161,24 +163,22 @@ public class UserDao {
         }
     }
 
-    private Set<Role> findRolesByUsername(Connection con, Long user_id) throws SQLException {
-        Set<Role> roles = new HashSet<>();
+    private Role findRoleByUsername(Connection con, Long user_id) throws SQLException {
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
         try {
-            prepStatement = con.prepareStatement(FIND_ROLES_BY_USERID);
+            prepStatement = con.prepareStatement(FIND_ROLE_BY_USERID);
             int k = 1;
             prepStatement.setLong(k, user_id);
             rs = prepStatement.executeQuery();
-            while (rs.next()) {
-                Role role = Role.valueOf(rs.getString("role"));
-                roles.add(role);
+            if (rs.next()) {
+                return Role.valueOf(rs.getString("role"));
             }
         } finally {
             Utils.close(rs);
             Utils.close(prepStatement);
         }
-        return roles;
+        return null;
     }
 
 

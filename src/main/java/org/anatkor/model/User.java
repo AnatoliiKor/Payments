@@ -13,8 +13,7 @@ public class User {
     private String email;
     private LocalDateTime registrationDateTime;
     private boolean active;
-
-    private Set<Role> roles;
+    private Role role;
 
     private List<Cart> carts;
 
@@ -58,17 +57,10 @@ public class User {
             return this;
         }
 
-        public UserBuilder withRoles(Set<Role> roles){
-            newUser.roles = roles;
+        public UserBuilder withRole(Role role){
+            newUser.role = role;
             return this;
         }
-//        public UserBuilder withRoles(String role){
-//            Set<Role> roles = new HashSet<>();
-//            Role roleEnam = Role.valueOf(role);
-//            roles.add(roleEnam);
-//            newUser.roles = roles;
-//            return this;
-//        }
 
         public UserBuilder withCarts(List<Cart> carts){
             newUser.carts = carts;
@@ -81,12 +73,8 @@ public class User {
 
     }
 
-    public void addRole (String role) {
-        if (this.roles != null) {roles.add(Role.valueOf(role));}
-    }
-
     public boolean isAdmin() {
-        return roles.contains(Role.ADMIN);
+        return role.equals(Role.ADMIN);
     }
 
     public Long getId() {
@@ -94,7 +82,6 @@ public class User {
     }
 
     public String getEmail() {
-//        if (email == null) this.setEmail("No email");
         return email;
     }
 
@@ -138,13 +125,16 @@ public class User {
         this.active = active;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public Role getRole() {
+        return role;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setRole(Role role) {
+        this.role = role;
     }
 
+    public enum ROLE {
+        USER, ADMIN, UNKNOWN
+    }
 }
 

@@ -23,22 +23,17 @@
 
     <tbody>
     <c:choose>
-    <c:when test="${user != null}">
+    <c:when test="${user_authenticated != null}">
+
+        ${user = user_authenticated}
             <tr>
                 <td>${user.username}</td>
                 <td>${user.password}</td>
                 <td>${user.email}</td>
-
-                    <%--                <td><input type="checkbox" ${user.active?string("checked","")} disabled></td>--%>
-                <td>${user.active}</td>
+                <td><input type="checkbox" ${user.active?'checked':""}></td>
                 <td>${user.registrationDateTime}</td>
-                <td>
-<%--                        ${user.roles}--%>
-                    <c:forEach var="role" items="${user.roles}" >
-                        ${role}
-                    </c:forEach>
-                </td>
-<%--                <td>${user.role}</td>--%>
+                <td>${user.role}</td>
+
                 <td><a href="/user/${user.id}">edit</a></td>
                 <td>
                     <form method="post" action="/user/delete?id=${user.id}">
@@ -49,7 +44,6 @@
                 <td><a href="/user/orders/${user.id}">Show user`s oders</a></td>
             </tr>
     </c:when>
-
     <c:otherwise>
         No user
     </c:otherwise>

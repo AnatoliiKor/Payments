@@ -30,17 +30,9 @@
                 <td>${user.username}</td>
                 <td>${user.password}</td>
                 <td>${user.email}</td>
-
-                    <%--                <td><input type="checkbox" ${user.active?string("checked","")} disabled></td>--%>
-                <td>${user.active}</td>
+                <td><input type="checkbox" ${user.active?'checked':""} disabled></td>
                 <td>${user.registrationDateTime}</td>
-                <td>
-<%--                        ${user.roles}--%>
-                    <c:forEach var="role" items="${user.roles}" >
-                        ${role}
-                    </c:forEach>
-                </td>
-<%--                <td>${user.role}</td>--%>
+                <td>${user.role}</td>
                 <td><a href="/user/${user.id}">edit</a></td>
                 <td>
                     <form method="post" action="/user/delete?id=${user.id}">
