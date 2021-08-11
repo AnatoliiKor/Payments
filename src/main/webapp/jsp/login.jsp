@@ -1,4 +1,4 @@
-<%@include file="navbar.jsp"%>
+<%@include file="parts/navbar.jsp"%>
 
 
 <html>
@@ -7,23 +7,13 @@
 
 </head>
 <body>
-<c:if test="${error!=null}">
-    <div class="alert alert-warning" role="alert">
-            ${error}
-    </div>
-</c:if>
 
-<c:if test="${message!=null}">
-    <div class="alert alert-info" role="alert">
-            ${message}
-    </div>
-</c:if>
+<%@include file="parts/messages.jsp" %>
 
 <div class="container mt-5">
         <h1><fmt:message key="login_in"/></h1><br/>
 
         <form method="post" action="${pageContext.request.contextPath}/login">
-
             <input class="mt-3" type="text" name="username" value="<c:if test="${username!=null}">${username}</c:if>">
                 <label style="margin: 0 3px;"> <fmt:message key="login" /> </label>
             <br/>

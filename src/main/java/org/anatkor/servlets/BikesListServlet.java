@@ -27,6 +27,9 @@ public class BikesListServlet extends HttpServlet {
         if (req.getParameter("message")!=null) {
             req.setAttribute("message", req.getParameter("message"));
         }
+        if (req.getParameter("warn")!=null) {
+            req.setAttribute("warn", req.getParameter("warn"));
+        }
         String sortBy = "date";
         String order = "DESC";
 

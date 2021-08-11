@@ -31,9 +31,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/shop"><fmt:message key="home_nav"/></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin"><fmt:message key="admin_nav"/></a>
-                </li>
+                <c:if test="${role != null && role.equals('ADMIN')}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin"><fmt:message key="admin_nav"/></a>
+                    </li>
+                </c:if>
                 <li class="nav-item">
                     <a class="nav-link" href="/cart"><fmt:message key="cart_nav"/></a>
                 </li>
@@ -50,9 +52,9 @@
             <%--        <#if name !="Guest"><@l.logout/>--%>
             <%--        <#else>--%>
             <c:choose>
-                <c:when test="${user_authenticated!=null}">
+                <c:when test="${user_auth!=null}">
                     <a class="btn btn-outline-secondary" href="/logout" role="button">
-                        ${user_authenticated.username}.<fmt:message key="logout"/>
+                        ${user_auth.username}.<fmt:message key="logout"/>
                     </a>
                 </c:when>
                 <c:otherwise>

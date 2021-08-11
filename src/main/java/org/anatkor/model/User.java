@@ -133,8 +133,8 @@ public class User {
         this.role = role;
     }
 
-    public enum ROLE {
-        USER, ADMIN, UNKNOWN
-    }
+//    public enum ROLE {
+//        USER, ADMIN, UNKNOWN
+//    }
 }
 

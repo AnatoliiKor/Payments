@@ -1,4 +1,4 @@
-<%@include file="navbar.jsp" %>
+<%@include file="parts/navbar.jsp" %>
 
 <html>
 <head>
@@ -8,9 +8,7 @@
 <div class="container mt-2">
     <h2><fmt:message key="bikes_list"/></h2>
 
-    <c:if test="${message != null}">
-        <div class="p-3 mb-2 bg-info text-dark">${message}</div>
-    </c:if>
+    <%@include file="parts/messages.jsp" %>
 
     <form method="get" action="/bikes">
         <div>
@@ -60,17 +58,11 @@
                         <td <c:if test="${sort_by.equals('category')}">class="text-info fw-bold"</c:if>>${bike.category}</td>
                         <td <c:if test="${sort_by.equals('date')}">class="text-info fw-bold"</c:if>>${bike.registrationDateTime}</td>
                         <td <c:if test="${sort_by.equals('price')}">class="text-info fw-bold"</c:if>>${bike.price}</td>
-                        <td> <a href="/bike_edit?id=${bike.id}"><fmt:message key="edit"/></a></td>
-
-                            <%--                <td>--%>
-                            <%--                    <form method="post" action="/bike/delete?id=${bike.id}">--%>
-                            <%--                        <button type="submit"><fmt:message key="delete"/></button>--%>
-                            <%--                    </form>--%>
-                            <%--                </td>--%>
-
-                            <%--                <td>--%>
-                            <%--                        ${bike.id}--%>
-                            <%--                </td>--%>
+                        <c:choose>
+                            <c:when test="${role != null && role.equals('ADMIN')}"><td><a href="/admin/bike_edit?id=${bike.id}"><fmt:message key="edit"/></a></td></c:when>
+                            <c:otherwise><td><a href="/buy?id=${bike.id}"><fmt:message key="buy_main"/></a></td></c:otherwise>
+<%--                            TODO--%>
+                        </c:choose>
                     </tr>
                 </c:forEach>
             </c:when>

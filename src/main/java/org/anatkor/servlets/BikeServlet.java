@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/bike_edit")
+@WebServlet("/admin/bike_edit")
 public class BikeServlet extends HttpServlet {
 
     final static Logger log = LogManager.getLogger(BikeServlet.class);
@@ -51,14 +51,13 @@ public class BikeServlet extends HttpServlet {
         String category = req.getParameter("category");
         String colour = req.getParameter("colour");
         String description = req.getParameter("description");
-        int price = Integer.valueOf(req.getParameter("price"));
+        int price = Integer.parseInt(req.getParameter("price"));
         try {
             if (bikeService.newBike(id, name, brand, category, colour, description, price)) {
                 resp.sendRedirect("/bikes?message=Bike is processed");
             }
         } catch (DBException e) {
-            req.setAttribute("error", e.getMessage());
-            req.setAttribute("error_reason", e.getCause().toString());
+            req.setAttribute("warn", e.getMessage());
             req.getRequestDispatcher("/jsp/new_bike.jsp").forward(req, resp);
         }
     }

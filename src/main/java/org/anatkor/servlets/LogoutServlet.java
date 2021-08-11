@@ -1,8 +1,6 @@
 package org.anatkor.servlets;
 
-import org.anatkor.exceptions.DBException;
 import org.anatkor.model.User;
-import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,10 +19,13 @@ public class LogoutServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.debug("Logout servlet called");
         final HttpSession session = req.getSession();
-        if (session.getAttribute("user_authenticated") != null) {
-            session.removeAttribute("user_authenticated");
+        if (session.getAttribute("user_auth") != null) {
+            User user = (User) session.getAttribute("user_auth");
+            log.info("User {} Logout", user.getUsername());
+            session.removeAttribute("user_auth");
+            session.removeAttribute("user_auth_name");
+            session.removeAttribute("role");
         }
         resp.sendRedirect("/login");
     }

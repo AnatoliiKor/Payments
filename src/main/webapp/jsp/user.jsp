@@ -1,4 +1,4 @@
-<%@include file="navbar.jsp" %>
+<%@include file="parts/navbar.jsp" %>
 
 <html>
 <head>
@@ -23,9 +23,9 @@
 
     <tbody>
     <c:choose>
-    <c:when test="${user_authenticated != null}">
+    <c:when test="${user_auth != null}">
 
-        ${user = user_authenticated}
+        ${user = user_auth}
             <tr>
                 <td>${user.username}</td>
                 <td>${user.password}</td>

@@ -1,4 +1,4 @@
-<%@include file="navbar.jsp" %>
+<%@include file="parts/navbar.jsp" %>
 
 <html>
 <head>

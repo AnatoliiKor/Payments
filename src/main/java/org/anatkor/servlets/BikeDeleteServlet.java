@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/bike_delete")
+@WebServlet("/admin/bike_delete")
 public class BikeDeleteServlet extends HttpServlet {
 
     final static Logger log = LogManager.getLogger(BikeDeleteServlet.class);
@@ -41,8 +41,7 @@ public class BikeDeleteServlet extends HttpServlet {
                 resp.sendRedirect("/bikes?message=Deletion is successful");
             }
         } catch (DBException e) {
-            req.setAttribute("error", e.getMessage());
-            req.setAttribute("error_reason", e.getCause().toString());
+            req.setAttribute("warn", e.getMessage());
             req.getRequestDispatcher("/jsp/new_bike.jsp").forward(req, resp);
         }
 

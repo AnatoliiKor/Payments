@@ -1,11 +1,11 @@
-<%@include file="navbar.jsp" %>
+<%@include file="parts/navbar.jsp" %>
 
 <div class="container mt-2">
     <h2>
         <c:choose>
             <c:when test="${bike!=null}"><fmt:message key="update_bike"/>
                 <input type="hidden" name="id" value="${bike.id}"/>
-                <form method="post" action="/bike_delete">
+                <form method="post" action="/admin/bike_delete">
                     <input type="hidden" name="id" value="${bike.id}"/>
 <%--                    <input type="hidden" name="action" value="delete"/>--%>
                     <button type="submit" class="btn btn-secondary"><fmt:message key="delete"/></button>
@@ -17,13 +17,9 @@
 
     </h2>
 
-    <c:if test="${error!=null}">
-        <div class="alert alert-warning" role="alert">
-                ${error} because ${error_reason}
-        </div>
-    </c:if>
+    <%@include file="parts/messages.jsp" %>
 
-    <form method="post" action="${pageContext.request.contextPath}/bike_edit">
+    <form method="post" action="${pageContext.request.contextPath}/admin/bike_edit">
 
         <div> model = <input type="text" name="name" value="<c:if test="${bike!=null}">${bike.name}</c:if>" required/>
         </div>
@@ -51,9 +47,9 @@
             <option>white</option>
         </select></div>
         <div>description <input type="text" name="description"
-                                value="<c:choose><c:when test="${bike!= null}">${bike.description}</c:when><c:otherwise>No description</c:otherwise></c:choose>"
-                                required/>
-        </div>
+                                value="<c:choose><c:when test="${bike!= null}">${bike.description}</c:when>
+                                        <c:otherwise>No description</c:otherwise></c:choose>"
+                                required/></div>
         <div> category = <select name="category" size="1">
             <c:if test="${bike!=null}">
                 <option selected>${bike.category}</option>
@@ -64,8 +60,8 @@
             <option>touring bicycle</option>
         </select></div>
         <div class="col-md-2">price <input type="number" name="price"
-                                           value="<c:if test="${bike!=null}">${bike.price}</c:if>" required/></div>
-
+                                           value="<c:if test="${bike!=null}">${bike.price}</c:if>" required/>
+        </div>
         <c:choose>
             <c:when test="${bike!=null}">
                 <input type="hidden" name="id" value="${bike.id}"/>
@@ -79,9 +75,9 @@
 
     </form>
 
-    <c:if test="${error!=null}">
+    <c:if test="${warn!=null}">
         <div class="alert alert-warning" role="alert">
-                ${error} because ${error_reason}
+                ${warn}
         </div>
     </c:if>
 

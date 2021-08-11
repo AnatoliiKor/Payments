@@ -31,16 +31,23 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.debug("User servlet called");
-        final HttpSession session = req.getSession();
+        HttpSession session = req.getSession();
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         try {
-            User user = userService.findUserByUsernamePassword (username, password);
-            session.setAttribute("user_authenticated", user);
-            resp.sendRedirect("/user");
-
+            User user = userService.findUserByUsernamePassword(username, password);
+            session.setAttribute("user_auth", user);
+            session.setAttribute("user_auth_name", user);
+            session.setAttribute("role", (user.getRole()).name());
+            if (session.getAttribute("req_uri") != null) {
+                String uri = (String) session.getAttribute("req_uri");
+                session.removeAttribute("req_uri");
+                resp.sendRedirect(uri);
+            } else {
+                resp.sendRedirect("/user");
+            }
         } catch (DBException e) {
-            req.setAttribute("error", e.getMessage());
+            req.setAttribute("warn", e.getMessage());
             req.setAttribute("username", username);
             req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
         }
