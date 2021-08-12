@@ -35,4 +35,8 @@ public class UserService {
     public User findUserByUsernamePassword(String username, String password) throws DBException {
         return  userDao.findUserByUsernamePassword(username, password);
     }
+
+    public User findUserById(Long id) throws DBException {
+        return  userDao.findUserById(id);
+    }
 }

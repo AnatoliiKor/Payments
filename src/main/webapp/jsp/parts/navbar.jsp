@@ -29,24 +29,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/shop"><fmt:message key="home_nav"/></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/shop"><fmt:message key="home_nav"/></a>
                 </li>
                 <c:if test="${role != null && role.equals('ADMIN')}">
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin"><fmt:message key="admin_nav"/></a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/admin"><fmt:message key="admin_nav"/></a>
                     </li>
                 </c:if>
                 <li class="nav-item">
-                    <a class="nav-link" href="/cart"><fmt:message key="cart_nav"/></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/cart"><fmt:message key="cart_nav"/></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/profile"><fmt:message key="profile_nav"/></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/user?id=${user_auth.id}"><fmt:message key="profile_nav"/></a>
                 </li>
 
             </ul>
 
-            <a class="btn btn-outline-primary " href="?language=uk" role="button"><fmt:message key="uk_button"/></a>
-            <a class="btn btn-outline-warning mx-1" href="?language=en" role="button"><fmt:message key="en_button"/></a>
+            <a class="btn btn-outline-primary " href="${pageContext.request.contextPath}?language=uk" role="button"><fmt:message key="uk_button"/></a>
+            <a class="btn btn-outline-warning mx-1" href="${pageContext.request.contextPath}?language=en" role="button"><fmt:message key="en_button"/></a>
 
 
             <%--        <#if name !="Guest"><@l.logout/>--%>

@@ -9,11 +9,7 @@ import org.apache.logging.log4j.Logger;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class UserDao {
     private static final String FIND_ALL_USERS = "SELECT * FROM usr;";
@@ -24,6 +20,7 @@ public class UserDao {
     private static final String FIND_ROLE_BY_USERID = "SELECT * FROM user_role WHERE user_id=?";
     private static final String ADD_USER_AND_ROLE = "INSERT INTO usr (username, email, password)  VALUES (?,?,?); INSERT INTO user_role(user_id, role) VALUES ((SELECT id FROM usr WHERE login ='?'), 'USER')";
     private static final String FIND_ALL_USERS_AND_ROLES = "SELECT * From usr LEFT JOIN user_role ON usr.id = user_role.user_id;";
+    private static final String FIND_USER_BY_ID = "SELECT * FROM usr WHERE id=?";
 
     final static Logger log = LogManager.getLogger(UserDao.class);
 
@@ -38,7 +35,7 @@ public class UserDao {
             rs = stm.executeQuery(FIND_ALL_USERS);
             while (rs.next()) {
                     Long id = rs.getLong("id");
-                    Role role = findRoleByUsername(con, id);
+                    Role role = findRoleByUserId(con, id);
                     String username = rs.getString("username");
                     String email = rs.getString("email");
                     String password = rs.getString("password");
@@ -101,10 +98,11 @@ public class UserDao {
             rs = prepStatement.executeQuery();
             if (rs.next()) {
                 Long id = rs.getLong("id");
-                Role role = findRoleByUsername(con, id);
+                Role role = findRoleByUserId(con, id);
                 String email = rs.getString("email");
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
+                if (!active) {throw new DBException("User with \"" + username + "\" is not active. Contact to administrator");}
                 return new User.UserBuilder()
                         .withId(id)
                         .withPassword(password)
@@ -125,6 +123,44 @@ public class UserDao {
         }
     }
 
+    public User findUserById(Long userId) throws DBException{
+        Connection con = null;
+        PreparedStatement prepStatement = null;
+        ResultSet rs = null;
+        try {
+            con = Utils.getConnection();
+            prepStatement = con.prepareStatement(FIND_USER_BY_ID);
+            int k = 1;
+            prepStatement.setLong(k, userId);
+            rs = prepStatement.executeQuery();
+            if (rs.next()) {
+                Long id = rs.getLong("id");
+                Role role = findRoleByUserId(con, id);
+                String username = rs.getString("username");
+                String email = rs.getString("email");
+                String password = rs.getString("password");
+                LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
+                boolean active = rs.getBoolean("active");
+                return new User.UserBuilder()
+                        .withId(id)
+                        .withPassword(password)
+                        .withUsername(username)
+                        .withEmail(email)
+                        .withRegistrationDateTime(registrationDateTime)
+                        .withActive(active)
+                        .withRole(role)
+                        .build();
+            } else {throw new DBException("User  not found");}
+        } catch (SQLException e) {
+            log.info("SQLException during Query {} processing from {}.", FIND_USER_BY_ID, Utils.class, e);
+            throw new DBException("User not found");
+        } finally {
+            Utils.close(rs);
+            Utils.close(prepStatement);
+            Utils.close(con);
+        }
+    }
+
     public User findUserByUsername(String username) throws DBException{
         Connection con = null;
         PreparedStatement prepStatement = null;
@@ -137,7 +173,7 @@ public class UserDao {
             rs = prepStatement.executeQuery();
             if (rs.next()) {
                 Long id = rs.getLong("id");
-                Role role = findRoleByUsername(con, id);
+                Role role = findRoleByUserId(con, id);
                 username = rs.getString("username");
                 String email = rs.getString("email");
                 String password = rs.getString("password");
@@ -163,7 +199,7 @@ public class UserDao {
         }
     }
 
-    private Role findRoleByUsername(Connection con, Long user_id) throws SQLException {
+    private Role findRoleByUserId(Connection con, Long user_id) throws SQLException {
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
         try {

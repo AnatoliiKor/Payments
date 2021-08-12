@@ -1,6 +1,7 @@
 package org.anatkor.servlets;
 
 import org.anatkor.exceptions.DBException;
+import org.anatkor.model.Role;
 import org.anatkor.model.User;
 import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
@@ -39,12 +40,15 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("user_auth", user);
             session.setAttribute("user_auth_name", user);
             session.setAttribute("role", (user.getRole()).name());
-            if (session.getAttribute("req_uri") != null) {
-                String uri = (String) session.getAttribute("req_uri");
-                session.removeAttribute("req_uri");
-                resp.sendRedirect(uri);
+            if (user.getRole().equals(Role.ADMIN)) {
+                resp.sendRedirect("/admin");
             } else {
-                resp.sendRedirect("/user");
+//            if (session.getAttribute("req_uri") != null) {
+//                String uri = (String) session.getAttribute("req_uri");
+//                session.removeAttribute("req_uri");
+//                resp.sendRedirect(uri);
+//            } else {
+                resp.sendRedirect("/bikes");
             }
         } catch (DBException e) {
             req.setAttribute("warn", e.getMessage());

@@ -30,10 +30,16 @@
                 <td>${user.username}</td>
                 <td>${user.password}</td>
                 <td>${user.email}</td>
-                <td><input type="checkbox" ${user.active?'checked':""} disabled></td>
+                <td>
+<%--                    <input type="checkbox" ${user.active?'checked':""} disabled>--%>
+                    <form method="post" action="/user/?id=${user.id} action='active'">
+                        <input type="checkbox" ${user.active?'checked':""}>
+                        <button type="submit"><fmt:message key="apply"/></button>
+                    </form>
+                </td>
                 <td>${user.registrationDateTime}</td>
                 <td>${user.role}</td>
-                <td><a href="/user/${user.id}">edit</a></td>
+                <td><a href="/user?id=${user.id}">edit</a></td>
                 <td>
                     <form method="post" action="/user/delete?id=${user.id}">
                             <%--                        <input type="hidden" name="_csrf" value="${_csrf.token}"/>--%>

@@ -47,8 +47,7 @@
             <option>white</option>
         </select></div>
         <div>description <input type="text" name="description"
-                                value="<c:choose><c:when test="${bike!= null}">${bike.description}</c:when>
-                                        <c:otherwise>No description</c:otherwise></c:choose>"
+                                value="<c:choose><c:when test="${bike!= null}">${bike.description}</c:when><c:otherwise>No description</c:otherwise></c:choose>"
                                 required/></div>
         <div> category = <select name="category" size="1">
             <c:if test="${bike!=null}">

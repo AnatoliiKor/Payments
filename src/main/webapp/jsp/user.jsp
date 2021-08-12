@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="container mt-2">
-<h2><fmt:message key="user"/></h2>
+<h2><fmt:message key="user"/> ${user.username}</h2>
 
 
 <table class="table table-striped auto__table table-condensed text-center">
@@ -23,25 +23,22 @@
 
     <tbody>
     <c:choose>
-    <c:when test="${user_auth != null}">
-
-        ${user = user_auth}
+    <c:when test="${user!= null}">
             <tr>
                 <td>${user.username}</td>
                 <td>${user.password}</td>
                 <td>${user.email}</td>
-                <td><input type="checkbox" ${user.active?'checked':""}></td>
+                <td>
+                    ${user.email}
+                            <form method="post" action="/user/?id=${user.id} action='email'">
+                                <button type="submit">Change email or password</button>
+                            </form>
+                </td>
+                <c:if test="${role != null && role.equals('ADMIN')}">
                 <td>${user.registrationDateTime}</td>
                 <td>${user.role}</td>
-
-                <td><a href="/user/${user.id}">edit</a></td>
-                <td>
-                    <form method="post" action="/user/delete?id=${user.id}">
-                            <%--                        <input type="hidden" name="_csrf" value="${_csrf.token}"/>--%>
-                        <button type="submit">Delete</button>
-                    </form>
-                </td>
-                <td><a href="/user/orders/${user.id}">Show user`s oders</a></td>
+                </c:if>
+                <td><a href="/user/orders?orders=${user.id}">Show oders</a></td>
             </tr>
     </c:when>
     <c:otherwise>
