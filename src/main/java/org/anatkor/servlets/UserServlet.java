@@ -22,7 +22,6 @@ public class UserServlet extends HttpServlet {
 
     final static Logger log = LogManager.getLogger(UserServlet.class);
     UserService userService = new UserService();
-    String id;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

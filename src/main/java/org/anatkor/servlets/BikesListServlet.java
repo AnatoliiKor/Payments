@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -24,14 +25,27 @@ public class BikesListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.info("Bike servlet called");
-        if (req.getParameter("message")!=null) {
-            req.setAttribute("message", req.getParameter("message"));
+
+        HttpSession session = req.getSession();
+        String sortBy;
+        String order;
+        if (req.getParameter("sort_by") != null) {
+            sortBy = req.getParameter("sort_by");
+            session.setAttribute("sort_by", sortBy);
+        } else if (session.getAttribute("sort_by") != null) {
+            sortBy = (String) session.getAttribute("sort_by");
+        } else {
+            sortBy = "date";
         }
-        if (req.getParameter("warn")!=null) {
-            req.setAttribute("warn", req.getParameter("warn"));
+
+        if (req.getParameter("order") != null) {
+            order = req.getParameter("order");
+            session.setAttribute("order", order);
+        } else if (session.getAttribute("order") != null) {
+            order = (String) session.getAttribute("order");
+        } else {
+            order = "DESC";
         }
-        String sortBy = "date";
-        String order = "DESC";
 
         String page = req.getParameter("pg");
         if (page == null || page.equals("")) {
@@ -39,8 +53,7 @@ public class BikesListServlet extends HttpServlet {
         } else {
             req.setAttribute("pg", Integer.parseInt(page));
         }
-        if (req.getParameter("sort_by")!= null) {sortBy = req.getParameter("sort_by");}
-        if (req.getParameter("order")!= null) {order = req.getParameter("order");}
+
         List<Bike> bikes = bikeService.findAll(sortBy, order);
         req.setAttribute("sort_by", sortBy);
         req.setAttribute("order", order);

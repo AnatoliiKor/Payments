@@ -80,7 +80,7 @@
         </div>
     </c:if>
 
-    <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/"><fmt:message
+    <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/admin"><fmt:message
             key="home_page"/></a>
 
 </div>

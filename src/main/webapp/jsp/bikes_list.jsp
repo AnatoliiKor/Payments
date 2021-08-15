@@ -14,17 +14,31 @@
         <div>
             <th><fmt:message key="sort_by"/></th>
             <select name="sort_by" size="1">
-                <option value="" selected disabled hidden><fmt:message key="choose_here"/></option>
-                <option value="price"><th><fmt:message key="price_main"/></th></option>
-                <option value="name"><th><fmt:message key="model_main"/></th></option>
-                <option value="category"><th><fmt:message key="category_main"/></th></option>
-                <option value="colour"><th><fmt:message key="colour_main"/></th></option>
-                <option value="brand"><th><fmt:message key="brand_main"/></th></option>
-                <option value="date"><th><fmt:message key="date_main"/></th></option>
-            </select><th><fmt:message key="order_by"/></th><select name="order" size="1">
-            <option value="ASC"><th><fmt:message key="ascending"/></th></option>
-            <option value="DESC"><th><fmt:message key="descending"/></th></option>
-        </select>
+                <c:if test="${sort_by!=null}">
+                    <option selected>${sort_by}</option>
+                </c:if>
+<%--                <option value="" selected disabled hidden><fmt:message key="choose_here"/></option>--%>
+                <option value="price" <c:if test="${sort_by.equals('price')}">selected</c:if>>
+                    <th><fmt:message key="price_main"/></th></option>
+                <option value="name" <c:if test="${sort_by.equals('name')}">selected</c:if>>
+                    <th><fmt:message key="model_main"/></th></option>
+                <option value="category" <c:if test="${sort_by.equals('category')}">selected</c:if>>
+                    <th><fmt:message key="category_main"/></th></option>
+                <option value="colour" <c:if test="${sort_by.equals('colour')}">selected</c:if>>
+                    <th><fmt:message key="colour_main"/></th></option>
+                <option value="brand" <c:if test="${sort_by.equals('brand')}">selected</c:if>>
+                    <th><fmt:message key="brand_main"/></th></option>
+                <option value="date" <c:if test="${sort_by.equals('date')}">selected</c:if>>
+                    <th><fmt:message key="date_main"/></th></option>
+            </select>
+
+            <th><fmt:message key="order_by"/></th>
+            <select name="order" size="1">
+            <option value="ASC" <c:if test="${order.equals('ASC')}">selected</c:if>>
+                <th><fmt:message key="ascending"/></th></option>
+            <option value="DESC" <c:if test="${order.equals('DESC')}">selected</c:if>><th>
+                <fmt:message key="descending"/></th></option>
+            </select>
             <button type="submit"><fmt:message key="apply"/></button>
         </div>
     </form>
@@ -84,7 +98,7 @@
     </ul>
 
     <br/>
-    <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/"><fmt:message
+    <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/admin"><fmt:message
             key="home_page"/></a>
 
 </div>
