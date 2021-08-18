@@ -1,0 +1,20 @@
+2021-08-05 17:20:25,555 [http-nio-8081-exec-14] INFO  org.anatkor.dao.BikeDao- Bike id = 5 is taken from DB
+2021-08-05 17:21:05,504 [http-nio-8081-exec-12] INFO  org.anatkor.dao.BikeDao- Bike id = 5 is taken from DB
+2021-08-05 17:21:55,651 [http-nio-8081-exec-22] INFO  org.anatkor.dao.BikeDao- Bike id = 5 is taken from DB
+2021-08-05 17:23:06,261 [http-nio-8081-exec-21] INFO  org.anatkor.dao.BikeDao- Bike id = 5 is taken from DB
+2021-08-05 17:23:45,094 [http-nio-8081-exec-21] INFO  org.anatkor.dao.BikeDao- Bike id = 4 is taken from DB
+2021-08-05 17:24:44,199 [http-nio-8081-exec-22] INFO  org.anatkor.dao.BikeDao- Bike id = 4 is taken from DB
+2021-08-05 17:26:27,458 [http-nio-8081-exec-28] INFO  org.anatkor.dao.BikeDao- Bike id = 10 is taken from DB
+2021-08-05 17:26:34,473 [http-nio-8081-exec-29] INFO  org.anatkor.dao.BikeDao- Bike id = 5 is taken from DB
+2021-08-05 17:41:00,010 [http-nio-8081-exec-26] INFO  org.anatkor.dao.BikeDao- Bike car is added
+2021-08-05 17:42:01,980 [http-nio-8081-exec-34] INFO  org.anatkor.dao.BikeDao- Bike SuperBike is added
+2021-08-05 17:47:16,482 [http-nio-8081-exec-40] INFO  org.anatkor.dao.BikeDao- Bike car55 is added
+2021-08-05 17:47:25,081 [http-nio-8081-exec-36] INFO  org.anatkor.dao.BikeDao- Bike id = 4 is taken from DB
+2021-08-05 17:47:51,455 [http-nio-8081-exec-32] INFO  org.anatkor.dao.BikeDao- Bike rrrr is added
+2021-08-05 17:48:07,538 [http-nio-8081-exec-34] INFO  org.anatkor.dao.BikeDao- Bike id = 14 is taken from DB
+2021-08-05 17:48:15,976 [http-nio-8081-exec-35] INFO  org.anatkor.dao.BikeDao- Bike rrrr2 is added
+2021-08-05 18:04:09,020 [http-nio-8081-exec-39] INFO  org.anatkor.dao.BikeDao- Bike rrrr3 is added
+2021-08-05 18:04:14,254 [http-nio-8081-exec-37] INFO  org.anatkor.dao.BikeDao- Bike id = 16 is taken from DB
+2021-08-05 18:05:02,873 [http-nio-8081-exec-34] INFO  org.anatkor.dao.BikeDao- Bike rrrr3 is added
+2021-08-05 18:05:54,437 [http-nio-8081-exec-31] INFO  org.anatkor.dao.BikeDao- Bike id = 4 is taken from DB
+2021-08-05 18:06:09,788 [http-nio-8081-exec-32] INFO  org.anatkor.dao.BikeDao- Bike car is added

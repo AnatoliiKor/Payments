@@ -1,0 +1,699 @@
+2021-08-12 21:43:50,221 [http-nio-8081-exec-6] WARN  org.anatkor.servlets.filter.AdminFilter- attempt of unauthorized access to the Admin by null
+2021-08-12 21:43:50,232 [http-nio-8081-exec-6] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:43:50,364 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:43:50,369 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:44:10,628 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:44:10,628 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:44:10,629 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:44:10,682 [http-nio-8081-exec-9] WARN  org.anatkor.servlets.filter.AdminFilter- attempt of unauthorized access to the Admin by org.anatkor.model.User@5f40b246
+2021-08-12 21:44:10,683 [http-nio-8081-exec-9] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:44:10,691 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:44:10,691 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:44:31,313 [http-nio-8081-exec-3] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 21:46:10,055 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 21:46:39,925 [http-nio-8081-exec-3] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 21:46:39,925 [http-nio-8081-exec-3] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:46:39,926 [http-nio-8081-exec-3] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:47:47,381 [http-nio-8081-exec-9] INFO  org.anatkor.servlets.LogoutServlet- User nuser Logout
+2021-08-12 21:47:47,384 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:47:55,367 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 21:48:41,147 [http-nio-8081-exec-6] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 21:48:56,193 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 21:50:14,078 [http-nio-8081-exec-4] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:50:14,078 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:50:14,079 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:50:14,127 [http-nio-8081-exec-6] WARN  org.anatkor.servlets.filter.AdminFilter- attempt of unauthorized access to the Admin by org.anatkor.model.User@1783c4ce
+2021-08-12 21:50:14,127 [http-nio-8081-exec-6] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:50:14,128 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:50:14,128 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:50:20,638 [http-nio-8081-exec-8] INFO  org.anatkor.servlets.LogoutServlet- User nuser Logout
+2021-08-12 21:50:20,641 [http-nio-8081-exec-9] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:50:24,038 [http-nio-8081-exec-1] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:50:24,038 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:50:24,039 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:50:24,086 [http-nio-8081-exec-2] WARN  org.anatkor.servlets.filter.AdminFilter- attempt of unauthorized access to the Admin by org.anatkor.model.User@1f5604e
+2021-08-12 21:50:24,086 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:50:24,087 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:50:24,087 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:52:58,085 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.LogoutServlet- User nuser Logout
+2021-08-12 21:52:58,089 [http-nio-8081-exec-6] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:53:00,715 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:53:00,715 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:53:00,716 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:53:19,809 [http-nio-8081-exec-10] WARN  org.anatkor.servlets.filter.AdminFilter- attempt of unauthorized access to the Admin by org.anatkor.model.User@66e6d814
+2021-08-12 21:53:19,809 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:53:19,812 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:53:19,812 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:53:40,003 [http-nio-8081-exec-2] INFO  org.anatkor.servlets.LogoutServlet- User nuser Logout
+2021-08-12 21:53:40,005 [http-nio-8081-exec-3] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:53:49,269 [http-nio-8081-exec-4] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:53:49,269 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:53:49,270 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 21:55:25,853 [http-nio-8081-exec-7] WARN  org.anatkor.servlets.filter.AdminFilter- attempt of unauthorized access to the Admin by org.anatkor.model.User@2876715a
+2021-08-12 21:55:25,854 [http-nio-8081-exec-7] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 21:55:25,857 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 21:55:25,858 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:06:42,532 [http-nio-8081-exec-2] INFO  org.anatkor.servlets.LogoutServlet- User nuser Logout
+2021-08-12 22:06:42,535 [http-nio-8081-exec-3] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 22:06:46,079 [http-nio-8081-exec-6] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 22:06:46,080 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:06:46,080 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:06:46,129 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 22:06:46,129 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:06:46,129 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:06:49,149 [http-nio-8081-exec-9] INFO  org.anatkor.servlets.LogoutServlet- User nuser Logout
+2021-08-12 22:06:49,156 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 22:06:51,842 [http-nio-8081-exec-1] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 22:06:51,843 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:06:51,843 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:06:51,887 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 22:06:55,293 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:06:55,294 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:07:02,110 [http-nio-8081-exec-4] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:07:03,814 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:07:03,815 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:10:04,996 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:10:04,996 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:10:04,997 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:10:15,499 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:13:11,216 [http-nio-8081-exec-7] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:13:11,216 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:13:11,217 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:13:12,128 [http-nio-8081-exec-9] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:13:12,129 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:13:12,129 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:13:12,787 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:13:12,788 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:13:12,788 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:13:13,364 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:13:13,364 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:13:13,364 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:13:13,695 [http-nio-8081-exec-5] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:13:13,696 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:13:13,696 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:13:13,979 [http-nio-8081-exec-7] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:13:13,980 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:13:13,980 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:13:14,348 [http-nio-8081-exec-9] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:13:14,348 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:13:14,348 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:18:04,900 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 22:18:06,557 [http-nio-8081-exec-5] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 22:18:07,468 [http-nio-8081-exec-7] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 22:18:08,317 [http-nio-8081-exec-9] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 22:18:09,833 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 22:18:10,328 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 22:18:10,813 [http-nio-8081-exec-5] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 22:18:11,373 [http-nio-8081-exec-7] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 22:18:13,173 [http-nio-8081-exec-9] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:18:13,173 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:18:13,174 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:18:15,301 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:18:22,950 [http-nio-8081-exec-3] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:51:46,431 [http-nio-8081-exec-5] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:52:15,104 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 22:52:15,104 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:52:15,105 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:52:15,153 [http-nio-8081-exec-1] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 22:52:15,153 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:52:15,153 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:52:47,953 [http-nio-8081-exec-7] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:52:52,224 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:52:52,224 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:53:06,743 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:53:10,098 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:53:10,099 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:53:26,961 [http-nio-8081-exec-5] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:54:55,341 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:54:55,342 [http-nio-8081-exec-7] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:54:55,342 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:54:57,249 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:54:57,250 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:58:33,566 [http-nio-8081-exec-4] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:58:33,567 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:58:33,567 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:58:41,862 [http-nio-8081-exec-5] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 22:58:41,863 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 22:58:41,863 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 22:58:45,487 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:04:25,458 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:06:50,417 [http-nio-8081-exec-5] WARN  org.anatkor.servlets.filter.AdminFilter- attempt of unauthorized access to the Admin by org.anatkor.model.User@1d98f3b8
+2021-08-12 23:06:50,418 [http-nio-8081-exec-5] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:06:50,493 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:06:50,493 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:06:53,860 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:06:53,860 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:06:53,860 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:06:53,907 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:06:57,319 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:06:57,690 [http-nio-8081-exec-6] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:06:58,099 [http-nio-8081-exec-7] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:06:58,506 [http-nio-8081-exec-9] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:06:58,907 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:06:59,250 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:06:59,639 [http-nio-8081-exec-6] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:07:00,011 [http-nio-8081-exec-7] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:07:00,324 [http-nio-8081-exec-9] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:07:01,955 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:07:01,955 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:07:01,956 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:12:56,260 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:12:56,269 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:12:56,273 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:12:56,409 [http-nio-8081-exec-6] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 23:12:56,410 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:12:56,410 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:12:58,402 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:12:58,402 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:12:58,403 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:04,061 [http-nio-8081-exec-5] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:04,061 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:04,062 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:05,216 [http-nio-8081-exec-4] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:05,217 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:05,217 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:06,937 [http-nio-8081-exec-3] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:06,937 [http-nio-8081-exec-3] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:06,937 [http-nio-8081-exec-3] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:07,921 [http-nio-8081-exec-6] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:07,921 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:07,921 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:08,458 [http-nio-8081-exec-14] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:08,458 [http-nio-8081-exec-14] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:08,458 [http-nio-8081-exec-14] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:08,849 [http-nio-8081-exec-15] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:08,850 [http-nio-8081-exec-15] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:08,850 [http-nio-8081-exec-15] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:09,229 [http-nio-8081-exec-16] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:09,230 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:09,230 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:09,594 [http-nio-8081-exec-17] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:09,594 [http-nio-8081-exec-17] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:09,594 [http-nio-8081-exec-17] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:09,982 [http-nio-8081-exec-6] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:09,982 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:09,982 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:10,397 [http-nio-8081-exec-14] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:10,397 [http-nio-8081-exec-14] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:10,398 [http-nio-8081-exec-14] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:10,801 [http-nio-8081-exec-15] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:10,801 [http-nio-8081-exec-15] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:10,802 [http-nio-8081-exec-15] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:11,189 [http-nio-8081-exec-16] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:11,190 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:11,190 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:11,585 [http-nio-8081-exec-17] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:11,586 [http-nio-8081-exec-17] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:11,586 [http-nio-8081-exec-17] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:12,010 [http-nio-8081-exec-19] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:12,010 [http-nio-8081-exec-19] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:12,010 [http-nio-8081-exec-19] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:12,409 [http-nio-8081-exec-14] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:12,410 [http-nio-8081-exec-14] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:12,410 [http-nio-8081-exec-14] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:12,842 [http-nio-8081-exec-11] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:12,843 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:12,843 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:13,321 [http-nio-8081-exec-12] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:13,321 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:13,322 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:13,818 [http-nio-8081-exec-13] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:13,818 [http-nio-8081-exec-13] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:13,819 [http-nio-8081-exec-13] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:14,354 [http-nio-8081-exec-18] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:14,354 [http-nio-8081-exec-18] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:14,354 [http-nio-8081-exec-18] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:16,717 [http-nio-8081-exec-11] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:16,718 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:16,718 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:20,894 [http-nio-8081-exec-12] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:20,894 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:20,895 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:21,578 [http-nio-8081-exec-13] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:21,579 [http-nio-8081-exec-13] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:21,579 [http-nio-8081-exec-13] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:22,051 [http-nio-8081-exec-18] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:22,051 [http-nio-8081-exec-18] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:22,051 [http-nio-8081-exec-18] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:23,099 [http-nio-8081-exec-14] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:23,099 [http-nio-8081-exec-14] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:23,100 [http-nio-8081-exec-14] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:23,487 [http-nio-8081-exec-11] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:23,487 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:23,487 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:24,052 [http-nio-8081-exec-12] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:24,052 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:24,052 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:24,430 [http-nio-8081-exec-13] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:24,431 [http-nio-8081-exec-13] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:24,431 [http-nio-8081-exec-13] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:24,823 [http-nio-8081-exec-18] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:24,823 [http-nio-8081-exec-18] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:24,823 [http-nio-8081-exec-18] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:25,322 [http-nio-8081-exec-14] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:25,323 [http-nio-8081-exec-14] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:25,323 [http-nio-8081-exec-14] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:26,155 [http-nio-8081-exec-11] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:26,156 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:26,156 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:26,683 [http-nio-8081-exec-12] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:26,683 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:26,683 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:13:27,074 [http-nio-8081-exec-13] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:13:27,075 [http-nio-8081-exec-13] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:13:27,075 [http-nio-8081-exec-13] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:14:53,568 [http-nio-8081-exec-17] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:14:53,578 [http-nio-8081-exec-17] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:14:53,582 [http-nio-8081-exec-17] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:14:53,727 [http-nio-8081-exec-12] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:14:54,949 [http-nio-8081-exec-19] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:14:54,949 [http-nio-8081-exec-19] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:14:54,950 [http-nio-8081-exec-19] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:14:57,693 [http-nio-8081-exec-15] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:14:57,693 [http-nio-8081-exec-15] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:14:57,693 [http-nio-8081-exec-15] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:14:58,293 [http-nio-8081-exec-20] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:14:58,293 [http-nio-8081-exec-20] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:14:58,293 [http-nio-8081-exec-20] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:14:59,053 [http-nio-8081-exec-16] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:14:59,054 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:14:59,054 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:14:59,637 [http-nio-8081-exec-12] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:14:59,637 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:14:59,637 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:00,141 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:00,142 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:00,142 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:00,653 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:00,653 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:00,654 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:01,445 [http-nio-8081-exec-20] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:01,445 [http-nio-8081-exec-20] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:01,445 [http-nio-8081-exec-20] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:01,853 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:01,853 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:01,853 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:02,237 [http-nio-8081-exec-12] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:02,238 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:02,238 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:02,593 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:02,593 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:02,594 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:02,917 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:02,917 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:02,918 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:03,590 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:03,590 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:03,590 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:03,942 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:03,942 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:03,942 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:04,310 [http-nio-8081-exec-12] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:04,311 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:04,311 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:04,683 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:04,683 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:04,683 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:05,046 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:05,046 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:05,047 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:05,389 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:05,390 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:05,390 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:05,785 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:05,786 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:05,786 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:07,726 [http-nio-8081-exec-29] INFO  org.anatkor.servlets.LogoutServlet- User admin Logout
+2021-08-12 23:15:07,729 [http-nio-8081-exec-11] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:15:11,468 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:15:11,468 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:11,468 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:11,517 [http-nio-8081-exec-21] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 23:15:11,517 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:11,517 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:15,136 [http-nio-8081-exec-22] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:15,136 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:15,137 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:17,946 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:17,947 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:17,947 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:18,467 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:18,467 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:18,468 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:18,911 [http-nio-8081-exec-27] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:18,911 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:18,911 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:19,331 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:19,332 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:19,332 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:19,699 [http-nio-8081-exec-22] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:19,699 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:19,699 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:20,067 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:20,068 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:20,068 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:20,474 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:20,475 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:20,475 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:20,895 [http-nio-8081-exec-27] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:20,895 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:20,895 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:21,304 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:21,304 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:21,304 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:21,715 [http-nio-8081-exec-22] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:21,715 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:21,715 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:34,720 [http-nio-8081-exec-29] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:34,721 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:34,721 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:37,466 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:37,466 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:37,466 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:38,266 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:38,266 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:38,266 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:39,257 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:39,257 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:39,257 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:39,941 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:39,942 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:39,942 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:40,477 [http-nio-8081-exec-29] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:40,477 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:40,477 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:41,218 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:41,218 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:41,218 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:41,685 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:41,686 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:41,686 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:42,149 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:42,149 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:42,149 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:42,641 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:42,642 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:42,642 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:43,146 [http-nio-8081-exec-29] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:43,146 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:43,146 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:43,649 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:43,649 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:43,650 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:44,278 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:44,278 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:44,278 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:44,850 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:15:44,850 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:15:44,851 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:15:52,266 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:16:21,281 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:16:21,282 [http-nio-8081-exec-29] INFO  org.anatkor.servlets.LogoutServlet- User nuser Logout
+2021-08-12 23:16:21,282 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:16:21,286 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:16:25,904 [http-nio-8081-exec-27] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:16:25,904 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:16:25,905 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:16:25,951 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:16:28,294 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:17:13,773 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:17:13,774 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:17:17,484 [http-nio-8081-exec-29] INFO  org.anatkor.servlets.LogoutServlet- User admin Logout
+2021-08-12 23:17:17,486 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:17:24,759 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:17:24,759 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:17:24,759 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:17:24,808 [http-nio-8081-exec-27] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 23:17:24,808 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:17:24,808 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:17:26,549 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:18:11,231 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:18:11,232 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:19:24,298 [http-nio-8081-exec-29] INFO  org.anatkor.servlets.LogoutServlet- User leha Logout
+2021-08-12 23:19:24,301 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:19:27,211 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:19:27,211 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:19:27,212 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:19:27,255 [http-nio-8081-exec-27] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:19:44,203 [http-nio-8081-exec-27] INFO  org.anatkor.servlets.LogoutServlet- User admin Logout
+2021-08-12 23:19:44,205 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:19:52,117 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:19:52,118 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:19:52,118 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:19:52,165 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:19:55,260 [http-nio-8081-exec-30] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 23:19:55,260 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:19:55,261 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:19:57,090 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:19:57,091 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:19:57,091 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:19:57,133 [http-nio-8081-exec-24] INFO  org.anatkor.dao.BikeDao- Bike id = 34 is taken from DB
+2021-08-12 23:20:00,614 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:20:02,026 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:20:04,114 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:20:04,565 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:22:15,187 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:22:26,869 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:22:27,855 [http-nio-8081-exec-30] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 23:22:27,856 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:22:27,857 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:22:29,230 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:22:29,230 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:22:29,230 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:22:29,273 [http-nio-8081-exec-24] INFO  org.anatkor.dao.BikeDao- Bike id = 28 is taken from DB
+2021-08-12 23:22:34,798 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:24:15,352 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:24:15,352 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:24:15,353 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:24:17,229 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:24:17,229 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:24:17,229 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:24:17,576 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:24:17,576 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:24:17,576 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:24:18,128 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:24:18,129 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:24:18,129 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:26:32,806 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:26:34,307 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:26:34,308 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:26:38,130 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:26:38,130 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:27:40,324 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:27:40,325 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:27:44,066 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:27:44,067 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:27:44,067 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:27:48,642 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:27:48,643 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:27:48,643 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:27:49,358 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:27:49,358 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:27:49,359 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:27:49,926 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:27:49,926 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:27:49,926 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:27:50,739 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:27:50,739 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:27:50,739 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:27:51,335 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:27:51,335 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:27:51,335 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:27:51,983 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:27:51,983 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:27:51,983 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:27:52,375 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:27:52,375 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:27:52,375 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:27:52,834 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:27:52,835 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:27:52,835 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:37:55,607 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:37:57,762 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:37:57,763 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:37:57,764 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:38:11,208 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:38:12,696 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:38:12,697 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:38:20,673 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:38:20,673 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:38:20,674 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:38:56,533 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:38:56,533 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:38:56,534 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:39:00,702 [http-nio-8081-exec-23] INFO  org.anatkor.servlets.LogoutServlet- User admin Logout
+2021-08-12 23:39:00,705 [http-nio-8081-exec-29] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:39:04,686 [http-nio-8081-exec-27] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:39:04,687 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:39:04,688 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:39:04,735 [http-nio-8081-exec-22] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 23:39:04,735 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:39:04,735 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:39:05,818 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:39:05,819 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:39:05,819 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:39:15,462 [http-nio-8081-exec-24] INFO  org.anatkor.servlets.LogoutServlet- User nuser Logout
+2021-08-12 23:39:15,465 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:39:17,597 [http-nio-8081-exec-22] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:39:17,597 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:39:17,598 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:39:17,643 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-12 23:39:19,743 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:39:19,744 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:39:50,090 [http-nio-8081-exec-24] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:39:50,090 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:39:50,091 [http-nio-8081-exec-24] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:42:48,789 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:42:48,790 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:44:02,079 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:44:02,080 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:44:22,012 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:44:22,013 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:45:16,754 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:45:16,755 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:45:26,888 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:45:26,888 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:45:28,003 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:45:28,004 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:45:28,839 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:45:28,840 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:45:29,541 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:45:29,541 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:45:30,060 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:45:30,060 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:45:56,321 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:45:56,321 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:45:56,322 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:46:56,518 [http-nio-8081-exec-22] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:46:56,519 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:46:56,519 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:47:49,841 [http-nio-8081-exec-26] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 23:47:49,842 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:47:49,842 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:47:51,598 [http-nio-8081-exec-27] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:47:51,599 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:47:51,599 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:47:51,638 [http-nio-8081-exec-27] INFO  org.anatkor.dao.BikeDao- Bike id = 34 is taken from DB
+2021-08-12 23:47:54,966 [http-nio-8081-exec-22] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:47:55,687 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:47:56,214 [http-nio-8081-exec-29] DEBUG org.anatkor.servlets.BikeServlet- BikeServlet called
+2021-08-12 23:48:01,735 [http-nio-8081-exec-27] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 23:48:01,735 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:01,735 [http-nio-8081-exec-27] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:06,439 [http-nio-8081-exec-22] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:06,440 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:06,440 [http-nio-8081-exec-22] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:07,816 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:07,816 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:07,816 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:08,347 [http-nio-8081-exec-29] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:08,347 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:08,347 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:08,879 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:08,880 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:08,880 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:09,311 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:09,312 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:09,312 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:09,687 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:09,687 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:09,687 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:10,039 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:10,039 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:10,040 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:10,405 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:10,405 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:10,405 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:10,748 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:10,749 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:10,749 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:11,119 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:11,120 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:11,120 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:11,435 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:11,436 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:11,436 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:11,792 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:11,792 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:11,792 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:12,120 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:12,120 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:12,120 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:12,439 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:12,439 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:12,439 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:12,711 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:12,712 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:12,712 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:13,048 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:13,048 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:13,048 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:13,339 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:13,340 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:13,340 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:13,632 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:13,632 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:13,632 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:13,972 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:13,972 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:13,972 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:48:14,455 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:48:14,456 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:48:14,456 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:25,423 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:25,424 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:25,425 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:27,309 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:27,309 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:27,309 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:29,420 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:29,420 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:29,421 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:33,365 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:33,365 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:33,365 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:35,614 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:35,614 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:35,614 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:36,398 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:36,398 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:36,398 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:37,386 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:37,386 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:37,386 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:38,001 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:38,001 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:38,001 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:38,750 [http-nio-8081-exec-21] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:38,750 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:38,750 [http-nio-8081-exec-21] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:39,301 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:39,302 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:39,302 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:39,818 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:39,818 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:39,818 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:40,289 [http-nio-8081-exec-26] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:40,290 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:40,290 [http-nio-8081-exec-26] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:40,781 [http-nio-8081-exec-25] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:40,782 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:40,783 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:50,411 [http-nio-8081-exec-28] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:50,412 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:50,412 [http-nio-8081-exec-28] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:51:51,395 [http-nio-8081-exec-29] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:51:51,395 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:51:51,395 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:52:04,864 [http-nio-8081-exec-22] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:52:09,555 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-12 23:52:09,557 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:52:09,561 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:52:09,813 [http-nio-8081-exec-25] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-12 23:52:09,813 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:52:09,813 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:52:12,250 [http-nio-8081-exec-29] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:52:12,250 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-12 23:52:12,250 [http-nio-8081-exec-29] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-12 23:52:14,485 [http-nio-8081-exec-30] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-12 23:52:51,040 [http-nio-8081-exec-32] DEBUG org.anatkor.servlets.UserServlet- User servlet called

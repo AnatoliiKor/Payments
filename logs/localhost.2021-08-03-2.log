@@ -1,0 +1,4 @@
+2021-08-03 12:41:32,797 [http-nio-8081-exec-10] INFO  org.anatkor.dao.UserDao- SQLException during Add admin processing class org.anatkor.dao.Utils. ПОМИЛКА: повторювані значення ключа порушують обмеження унікальності "usr_username_key"
+  Detail: Ключ (username)=(admin) вже існує.
+2021-08-03 12:43:18,742 [http-nio-8081-exec-2] INFO  org.anatkor.dao.UserDao- SQLException during Add admin processing class org.anatkor.dao.Utils. ERROR: duplicate key value violates unique constraint "usr_username_key"
+  Detail: Key (username)=(admin) already exists.

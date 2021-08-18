@@ -1,0 +1,79 @@
+2021-08-02 12:09:33,705 [http-nio-8081-exec-9] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
+2021-08-02 12:09:43,854 [http-nio-8081-exec-9] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:09:49,570 [http-nio-8081-exec-9] INFO  org.anatkor.dao.UserDao- User nusercx is added
+2021-08-02 12:09:52,727 [http-nio-8081-exec-9] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:10:37,398 [http-nio-8081-exec-9] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:10:43,712 [http-nio-8081-exec-9] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:11:21,841 [http-nio-8081-exec-7] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
+2021-08-02 12:11:27,615 [http-nio-8081-exec-7] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:11:39,189 [http-nio-8081-exec-7] INFO  org.anatkor.dao.UserDao- User admindf is added
+2021-08-02 12:11:39,189 [http-nio-8081-exec-7] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:11:41,164 [http-nio-8081-exec-7] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:22:09,274 [http-nio-8081-exec-7] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:22:09,295 [RMI TCP Connection(6)-127.0.0.1] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed
+2021-08-02 12:22:28,460 [http-nio-8081-exec-10] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
+2021-08-02 12:22:28,476 [http-nio-8081-exec-10] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:22:28,603 [http-nio-8081-exec-10] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:22:28,603 [http-nio-8081-exec-10] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:22:34,190 [http-nio-8081-exec-10] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:23:37,007 [http-nio-8081-exec-15] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
+2021-08-02 12:23:37,008 [http-nio-8081-exec-15] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:23:37,159 [http-nio-8081-exec-15] INFO  org.anatkor.dao.UserDao- User nusertyhgj is added
+2021-08-02 12:23:37,159 [http-nio-8081-exec-15] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:23:37,159 [http-nio-8081-exec-15] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:24:58,527 [http-nio-8081-exec-15] INFO  org.anatkor.dao.UserDao- Role is added
+2021-08-02 12:24:58,528 [http-nio-8081-exec-15] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:43:38,495 [http-nio-8081-exec-12] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-02 12:43:38,495 [http-nio-8081-exec-12] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-02 12:43:38,496 [http-nio-8081-exec-12] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:43:38,540 [http-nio-8081-exec-12] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:44:16,889 [http-nio-8081-exec-19] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
+2021-08-02 12:44:16,890 [http-nio-8081-exec-19] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:44:16,935 [http-nio-8081-exec-19] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:44:16,935 [http-nio-8081-exec-19] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:48:54,550 [http-nio-8081-exec-19] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:49:50,035 [http-nio-8081-exec-12] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
+2021-08-02 12:49:50,036 [http-nio-8081-exec-12] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:49:50,075 [http-nio-8081-exec-12] INFO  org.anatkor.dao.UserDao- User admin is added
+2021-08-02 12:49:50,075 [http-nio-8081-exec-12] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:49:50,076 [http-nio-8081-exec-12] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:49:57,970 [http-nio-8081-exec-12] INFO  org.anatkor.dao.UserDao- Role is added
+2021-08-02 12:49:57,970 [http-nio-8081-exec-12] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:50:06,531 [http-nio-8081-exec-18] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-02 12:50:06,532 [http-nio-8081-exec-18] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-02 12:50:06,532 [http-nio-8081-exec-18] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:50:06,576 [http-nio-8081-exec-18] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:50:57,378 [http-nio-8081-exec-13] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
+2021-08-02 12:50:57,379 [http-nio-8081-exec-13] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:50:57,420 [http-nio-8081-exec-13] INFO  org.anatkor.dao.UserDao- User user is added
+2021-08-02 12:50:57,420 [http-nio-8081-exec-13] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:50:57,420 [http-nio-8081-exec-13] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:51:05,891 [http-nio-8081-exec-13] INFO  org.anatkor.dao.UserDao- Role is added
+2021-08-02 12:51:05,891 [http-nio-8081-exec-13] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:51:13,746 [http-nio-8081-exec-14] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-02 12:51:13,747 [http-nio-8081-exec-14] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-02 12:51:13,747 [http-nio-8081-exec-14] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:51:13,789 [http-nio-8081-exec-14] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:51:44,303 [http-nio-8081-exec-15] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-02 12:51:44,304 [http-nio-8081-exec-15] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-02 12:51:44,304 [http-nio-8081-exec-15] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:51:44,343 [http-nio-8081-exec-15] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:52:05,614 [http-nio-8081-exec-20] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-02 12:52:05,614 [http-nio-8081-exec-20] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-02 12:52:05,615 [http-nio-8081-exec-20] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 12:52:05,652 [http-nio-8081-exec-20] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-02 12:57:57,230 [RMI TCP Connection(9)-127.0.0.1] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed
+2021-08-02 12:58:27,374 [http-nio-8081-exec-16] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
+2021-08-02 12:58:27,514 [http-nio-8081-exec-16] INFO  org.anatkor.dao.UserDao- User user2 is added
+2021-08-02 12:58:27,552 [http-nio-8081-exec-16] INFO  org.anatkor.dao.UserDao- Role is added
+2021-08-02 12:58:38,855 [http-nio-8081-exec-11] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-02 13:00:44,188 [http-nio-8081-exec-24] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
+2021-08-02 13:00:44,228 [http-nio-8081-exec-24] INFO  org.anatkor.dao.UserDao- User admin is added
+2021-08-02 13:00:44,264 [http-nio-8081-exec-24] INFO  org.anatkor.dao.UserDao- Role is added
+2021-08-02 13:01:19,350 [http-nio-8081-exec-28] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-02 13:05:06,046 [http-nio-8081-exec-24] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
+2021-08-02 13:08:32,623 [RMI TCP Connection(14)-127.0.0.1] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed
+2021-08-02 13:09:23,146 [http-nio-8081-exec-28] INFO  org.anatkor.dao.UserDao- SQLException during Add user processing class org.anatkor.dao.Utils.
+2021-08-02 13:16:25,513 [http-nio-8081-exec-28] INFO  org.anatkor.dao.UserDao- SQLException during Query INSERT INTO user_role VALUES (?,?) processing from class org.anatkor.dao.Utils.
+2021-08-02 13:19:10,438 [http-nio-8081-exec-22] INFO  org.anatkor.dao.UserDao- SQLException during Add user processing class org.anatkor.dao.Utils.
+2021-08-02 13:19:10,485 [http-nio-8081-exec-22] INFO  org.anatkor.dao.UserDao- SQLException during Query INSERT INTO user_role VALUES (?,?) processing from class org.anatkor.dao.Utils.

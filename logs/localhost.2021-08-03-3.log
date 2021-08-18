@@ -1,0 +1,4 @@
+2021-08-03 16:12:38,251 [http-nio-8081-exec-1] INFO  org.anatkor.dao.UserDao- User admin2 is added
+2021-08-03 16:12:38,264 [http-nio-8081-exec-1] INFO  org.anatkor.dao.UserDao- User admin2 with role  is added
+2021-08-03 16:32:33,931 [http-nio-8081-exec-1] INFO  org.anatkor.dao.UserDao- User admin3 is added
+2021-08-03 16:32:33,940 [http-nio-8081-exec-1] INFO  org.anatkor.dao.UserDao- User admin3 with role  is added

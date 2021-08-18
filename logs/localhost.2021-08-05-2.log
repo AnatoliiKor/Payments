@@ -1,0 +1,31 @@
+2021-08-05 18:06:26,687 [http-nio-8081-exec-7] INFO  org.anatkor.dao.BikeDao- Bike id = 10 is taken from DB
+2021-08-05 18:06:58,245 [http-nio-8081-exec-9] INFO  org.anatkor.dao.BikeDao- Bike car is added
+2021-08-05 18:07:15,797 [http-nio-8081-exec-3] INFO  org.anatkor.dao.BikeDao- Bike id = 12 is taken from DB
+2021-08-05 18:07:28,230 [http-nio-8081-exec-5] INFO  org.anatkor.dao.BikeDao- Bike SuperBike!!! is added
+2021-08-05 18:08:10,707 [http-nio-8081-exec-9] INFO  org.anatkor.dao.BikeDao- Bike id = 12 is taken from DB
+2021-08-05 18:08:24,500 [http-nio-8081-exec-6] INFO  org.anatkor.dao.BikeDao- Bike id = 8 is taken from DB
+2021-08-05 18:08:36,661 [http-nio-8081-exec-9] INFO  org.anatkor.dao.BikeDao- Bike id = 7 is taken from DB
+2021-08-05 18:08:59,329 [http-nio-8081-exec-4] INFO  org.anatkor.dao.BikeDao- Bike id = 9 is taken from DB
+2021-08-05 18:09:36,578 [http-nio-8081-exec-10] INFO  org.anatkor.dao.BikeDao- Bike id = 6 is taken from DB
+2021-08-05 18:11:08,953 [http-nio-8081-exec-3] INFO  org.anatkor.dao.BikeDao- Bike id = 4 is taken from DB
+2021-08-05 18:13:32,230 [http-nio-8081-exec-1] INFO  org.anatkor.dao.BikeDao- Bike id = 12 is taken from DB
+2021-08-05 18:13:45,126 [http-nio-8081-exec-4] INFO  org.anatkor.dao.BikeDao- Bike SuperBike2 is added
+2021-08-05 18:27:51,428 [http-nio-8081-exec-18] INFO  org.anatkor.dao.BikeDao- Bike id = 21 is taken from DB
+2021-08-05 18:28:02,320 [http-nio-8081-exec-14] INFO  org.anatkor.dao.BikeDao- SQLException during Add SuperBike2 processing class org.anatkor.dao.Utils. ERROR: syntax error at or near ")"
+  Position: 96
+2021-08-05 18:30:47,556 [http-nio-8081-exec-21] INFO  org.anatkor.dao.BikeDao- Bike admin is added
+2021-08-05 18:32:08,363 [http-nio-8081-exec-21] INFO  org.anatkor.dao.BikeDao- Bike id = 21 is taken from DB
+2021-08-05 18:32:17,265 [http-nio-8081-exec-29] INFO  org.anatkor.dao.BikeDao- SQLException during Add SuperBike2 processing class org.anatkor.dao.Utils. ERROR: syntax error at or near ")"
+  Position: 96
+2021-08-05 18:32:53,255 [http-nio-8081-exec-23] INFO  org.anatkor.dao.BikeDao- Bike id = 14 is taken from DB
+2021-08-05 18:35:02,272 [http-nio-8081-exec-25] INFO  org.anatkor.dao.BikeDao- SQLException during Add rrrrtyytr processing class org.anatkor.dao.Utils. ERROR: syntax error at or near ")"
+  Position: 96
+2021-08-05 18:35:26,091 [http-nio-8081-exec-32] INFO  org.anatkor.dao.BikeDao- Bike id = 14 is taken from DB
+2021-08-05 18:37:36,810 [http-nio-8081-exec-24] INFO  org.anatkor.dao.BikeDao- SQLException during Add rrrriuy processing class org.anatkor.dao.Utils. ERROR: syntax error at or near ")"
+  Position: 96
+2021-08-05 18:37:55,221 [http-nio-8081-exec-35] INFO  org.anatkor.dao.BikeDao- Bike id = 20 is taken from DB
+2021-08-05 18:38:08,866 [http-nio-8081-exec-38] INFO  org.anatkor.dao.BikeDao- Bike !!!SuperBike!!! is added
+2021-08-05 18:38:27,288 [http-nio-8081-exec-36] INFO  org.anatkor.dao.BikeDao- Bike id = 6 is taken from DB
+2021-08-05 18:38:36,674 [http-nio-8081-exec-33] INFO  org.anatkor.dao.BikeDao- Bike Slr8 is added
+2021-08-05 18:38:48,111 [http-nio-8081-exec-42] INFO  org.anatkor.dao.BikeDao- Bike id = 6 is taken from DB
+2021-08-05 18:38:52,299 [http-nio-8081-exec-43] INFO  org.anatkor.dao.BikeDao- Bike Slr8 is added

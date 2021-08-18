@@ -1,0 +1,35 @@
+2021-08-02 22:29:01,297 [http-nio-8081-exec-9] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-02 22:29:01,306 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-02 22:29:01,310 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 22:29:01,431 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgResultSet@9c43dfc is closed
+2021-08-02 22:29:01,432 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgStatement@6c698fa6 is closed
+2021-08-02 22:29:01,432 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgConnection@27764a0d is closed
+2021-08-02 22:29:48,045 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.AddUserServlet- AddUser servlet called
+2021-08-02 22:29:48,046 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-02 22:29:48,046 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 22:29:48,091 [http-nio-8081-exec-8] INFO  org.anatkor.dao.UserDao- User nuser is added
+2021-08-02 22:29:48,093 [http-nio-8081-exec-8] INFO  org.anatkor.dao.UserDao- User nuser with role  is added
+2021-08-02 22:29:48,093 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgResultSet@26507057 is closed
+2021-08-02 22:29:48,093 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- INSERT INTO user_role VALUES (40,'USER') is closed
+2021-08-02 22:29:48,094 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgConnection@3e1d9556 is closed
+2021-08-02 22:29:48,097 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-02 22:29:48,098 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-02 22:29:48,098 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 22:29:48,138 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgResultSet@6f280600 is closed
+2021-08-02 22:29:48,138 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgStatement@6b179f3d is closed
+2021-08-02 22:29:48,138 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgConnection@2e150c3b is closed
+2021-08-02 22:34:18,976 [http-nio-8081-exec-11] DEBUG org.anatkor.servlets.AddUserServlet- AddUser servlet called
+2021-08-02 22:34:18,977 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-02 22:34:18,977 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 22:34:19,030 [http-nio-8081-exec-11] INFO  org.anatkor.dao.UserDao- SQLException during Add user processing class org.anatkor.dao.Utils. ПОМИЛКА: повторювані значення ключа порушують обмеження унікальності "usr_username_key"
+  Detail: Ключ (username)=(admin) вже існує.
+2021-08-02 22:34:19,031 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- INSERT INTO usr (username, email, password) VALUES ('admin','nau12@ukr.net','1')
+RETURNING "id" is closed
+2021-08-02 22:34:19,031 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgConnection@23c88a49 is closed
+2021-08-02 22:34:19,034 [http-nio-8081-exec-16] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-02 22:34:19,035 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-02 22:34:19,035 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-02 22:34:19,073 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgResultSet@4d5da994 is closed
+2021-08-02 22:34:19,073 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgStatement@439a5e4f is closed
+2021-08-02 22:34:19,073 [http-nio-8081-exec-16] DEBUG org.anatkor.dao.Utils- org.postgresql.jdbc.PgConnection@47a5c2e4 is closed
+2021-08-02 23:06:57,456 [main] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed

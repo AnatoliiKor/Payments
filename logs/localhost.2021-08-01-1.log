@@ -1,0 +1,26 @@
+2021-08-01 12:27:41,045 [http-nio-8081-exec-5] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-01 12:27:41,054 [http-nio-8081-exec-5] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-01 12:27:41,060 [http-nio-8081-exec-5] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-01 12:27:41,378 [http-nio-8081-exec-5] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-01 12:28:55,640 [http-nio-8081-exec-8] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-01 12:28:55,641 [http-nio-8081-exec-8] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-01 12:28:55,643 [http-nio-8081-exec-8] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-01 12:28:55,681 [http-nio-8081-exec-8] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-01 12:30:02,338 [http-nio-8081-exec-2] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-01 12:30:02,339 [http-nio-8081-exec-2] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-01 12:30:02,339 [http-nio-8081-exec-2] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-01 12:30:02,376 [http-nio-8081-exec-2] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-01 12:30:14,239 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-01 12:30:14,239 [http-nio-8081-exec-4] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-01 12:30:14,240 [http-nio-8081-exec-4] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-01 12:30:14,379 [http-nio-8081-exec-4] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-01 12:30:15,399 [http-nio-8081-exec-6] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-01 12:30:15,400 [http-nio-8081-exec-6] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-01 12:30:15,400 [http-nio-8081-exec-6] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-01 12:30:15,441 [http-nio-8081-exec-6] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-01 12:30:20,428 [RMI TCP Connection(6)-127.0.0.1] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed
+2021-08-01 12:30:24,466 [http-nio-8081-exec-5] INFO  org.anatkor.servlets.UsersServlet- User servlet called
+2021-08-01 12:30:24,476 [http-nio-8081-exec-5] INFO  org.anatkor.dao.UserDao- connection try
+2021-08-01 12:30:24,480 [http-nio-8081-exec-5] INFO  org.anatkor.dao.Utils- connection created succesfully
+2021-08-01 12:30:24,598 [http-nio-8081-exec-5] INFO  org.anatkor.dao.Utils- Connection is closed
+2021-08-01 12:46:06,191 [main] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed

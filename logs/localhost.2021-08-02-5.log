@@ -1,0 +1,6 @@
+2021-08-02 19:38:30,314 [http-nio-8081-exec-9] INFO  org.anatkor.dao.UserDao- User adminqq is added
+2021-08-02 19:38:30,326 [http-nio-8081-exec-9] INFO  org.anatkor.dao.UserDao- SQLException during Add user processing class org.anatkor.dao.Utils. No value specified for parameter 2.
+2021-08-02 19:41:45,572 [RMI TCP Connection(6)-127.0.0.1] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed
+2021-08-02 19:41:57,893 [http-nio-8081-exec-8] INFO  org.anatkor.dao.UserDao- User adminw is added
+2021-08-02 19:41:57,902 [http-nio-8081-exec-8] INFO  org.anatkor.dao.UserDao- User with role adminw is added
+2021-08-02 19:42:23,054 [main] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed

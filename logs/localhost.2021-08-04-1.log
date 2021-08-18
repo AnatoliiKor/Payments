@@ -1,0 +1,5 @@
+2021-08-05 17:08:15,773 [http-nio-8081-exec-8] INFO  org.anatkor.dao.BikeDao- SQLException during FindBikeById 4 processing class org.anatkor.dao.Utils. The column name id was not found in this ResultSet.
+2021-08-05 17:09:04,561 [http-nio-8081-exec-12] INFO  org.anatkor.dao.BikeDao- SQLException during FindBikeById 4 processing class org.anatkor.dao.Utils. The column name id was not found in this ResultSet.
+2021-08-05 17:11:12,151 [http-nio-8081-exec-18] INFO  org.anatkor.dao.BikeDao- SQLException during FindBikeById 8 processing class org.anatkor.dao.Utils. The column name id was not found in this ResultSet.
+2021-08-05 17:14:09,663 [http-nio-8081-exec-11] INFO  org.anatkor.dao.BikeDao- SQLException during FindBikeById 8 processing class org.anatkor.dao.Utils. The column name id was not found in this ResultSet.
+2021-08-05 17:17:02,429 [http-nio-8081-exec-12] INFO  org.anatkor.dao.BikeDao- SQLException during FindBikeById 8 processing class org.anatkor.dao.Utils. The column name id was not found in this ResultSet.

@@ -1,0 +1,8 @@
+2021-08-05 20:17:09,957 [http-nio-8081-exec-8] INFO  org.anatkor.dao.BikeDao- Bike id = 10 is taken from DB
+2021-08-05 20:17:20,426 [http-nio-8081-exec-9] INFO  org.anatkor.dao.BikeDao- Bike carcar is added
+2021-08-05 20:18:45,151 [http-nio-8081-exec-3] INFO  org.anatkor.dao.BikeDao- Bike id = 10 is taken from DB
+2021-08-05 20:43:14,097 [http-nio-8081-exec-20] INFO  org.anatkor.dao.BikeDao- Bike id = 10 is taken from DB
+2021-08-05 21:01:18,640 [http-nio-8081-exec-21] INFO  org.anatkor.dao.BikeDao- Bike id = 15 is taken from DB
+2021-08-05 21:04:33,210 [http-nio-8081-exec-26] INFO  org.anatkor.dao.BikeDao- Bike id = 15 is taken from DB
+2021-08-05 21:05:01,266 [http-nio-8081-exec-28] INFO  org.anatkor.dao.BikeDao- Bike id = 15 is taken from DB
+2021-08-05 21:05:32,723 [http-nio-8081-exec-26] INFO  org.anatkor.dao.BikeDao- Bike id = 15 is taken from DB
