@@ -1,5 +1,0 @@
-2021-07-30 15:13:22,881 [http-nio-8081-exec-5] INFO  org.anatkor.servlets.AdmServlet- Adm servlet called
-2021-07-30 15:13:22,892 [http-nio-8081-exec-5] INFO  org.anatkor.dao.Utils- connection created succesfully
-2021-07-30 15:13:22,892 [http-nio-8081-exec-5] INFO  org.anatkor.dao.Utils- connection created succesfully
-2021-07-30 15:13:22,893 [http-nio-8081-exec-5] INFO  org.anatkor.servlets.AdmServlet- connection try
-2021-07-30 15:15:17,907 [main] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed

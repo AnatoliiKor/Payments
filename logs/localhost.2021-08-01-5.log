@@ -1,2 +1,0 @@
-2021-08-01 20:04:54,889 [http-nio-8081-exec-6] INFO  org.anatkor.servlets.RegistrationServlet- AddUser servlet called
-2021-08-01 20:05:48,502 [main] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed

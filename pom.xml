@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>anatkor</groupId>
-    <artifactId>ShopBike</artifactId>
+    <artifactId>Payments</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
@@ -96,7 +96,6 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 

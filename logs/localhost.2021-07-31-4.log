@@ -1,5 +1,0 @@
-2021-07-31 16:44:33,501 [http-nio-8081-exec-5] INFO  org.anatkor.servlets.UsersServlet- User servlet called
-2021-07-31 16:44:33,511 [http-nio-8081-exec-5] INFO  org.anatkor.dao.UserDao- connection try
-2021-07-31 16:44:33,516 [http-nio-8081-exec-5] INFO  org.anatkor.dao.Utils- connection created succesfully
-2021-07-31 16:44:33,790 [http-nio-8081-exec-5] INFO  org.anatkor.dao.Utils- Connection is closed
-2021-07-31 16:44:39,870 [main] INFO  org.anatkor.servlets.MainServlet- Main servlet Destroyed
