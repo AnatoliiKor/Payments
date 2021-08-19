@@ -1,6 +1,5 @@
 package org.anatkor.servlets.filter;
 
-import org.anatkor.servlets.UsersServlet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,10 +20,10 @@ public class AdminFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse respond,
+    public void doFilter(ServletRequest request, ServletResponse response,
                          FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
-        HttpServletResponse resp = (HttpServletResponse) respond;
+        HttpServletResponse resp = (HttpServletResponse) response;
         HttpSession session = req.getSession();
         if (!"ADMIN".equals(session.getAttribute("role"))) {
             log.warn("Attempt of unauthorized access to the Admin by {}", session.getAttribute("user_auth"));
@@ -32,7 +31,7 @@ public class AdminFilter implements Filter {
 //            session.setAttribute("req_uri", req.getRequestURI());
             req.getRequestDispatcher("/login").forward(req, resp);
         }
-        chain.doFilter(request, respond);
+        chain.doFilter(request, response);
     }
 
     @Override

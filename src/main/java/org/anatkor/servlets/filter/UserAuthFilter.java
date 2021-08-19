@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter("/*")
-public class EncodingFilter implements Filter {
+@WebFilter("/payments/*")
+public class UserAuthFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -18,9 +18,12 @@ public class EncodingFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response,
                          FilterChain chain) throws IOException, ServletException {
 
-        request.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html");
-        response.setCharacterEncoding("UTF-8");
+        HttpServletRequest req = (HttpServletRequest) request;
+        HttpServletResponse resp = (HttpServletResponse) response;
+        HttpSession session = req.getSession();
+        if (session.getAttribute("role") == null) {
+            req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
+        }
         chain.doFilter(request, response);
     }
 

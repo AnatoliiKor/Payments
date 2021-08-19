@@ -19,13 +19,8 @@ public class UserService {
         return userDao.findAll();
     }
 
-    public boolean addUser(String lastName,
-                           String name,
-                           String middleName,
-                           String password,
-                           String email,
+    public boolean addUser(String lastName, String name, String middleName, String password, String email,
                            long phoneNumber) throws DBException {
-
         User user = new User.UserBuilder()
                 .withLastName(lastName)
                 .withName(name)
@@ -37,12 +32,8 @@ public class UserService {
         return userDao.addUser(user);
     }
 
-    public User findUserByUsername(String username) throws DBException {
-        return userDao.findUserByUsername(username);
-    }
-
-    public User findUserByUsernamePassword(String username, String password) throws DBException {
-        return userDao.findUserByUsernamePassword(username, password);
+    public User findUserByPhoneAndPassword(Long phoneNumber, String password) throws DBException {
+        return userDao.findUserByPhoneAndPassword(phoneNumber, password);
     }
 
     public User findUserById(Long id) throws DBException {

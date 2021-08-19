@@ -49,6 +49,8 @@
 
 </table>
 
+    <a class="btn btn-outline-primary mx-5" href="/bikes"><fmt:message key="my_payments"/></a>
+
 <br/>
 
 <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/"><fmt:message key="home_page"/></a>

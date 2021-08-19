@@ -23,7 +23,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.debug("User servlet called");
+//        log.debug("User servlet called");
 //        String username = req.getParameter("username");
 //        req.setAttribute("username", username);
         req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
@@ -31,14 +31,13 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.debug("User servlet called");
+        log.info("User servlet called");
         HttpSession session = req.getSession();
-        String username = req.getParameter("username");
+        Long phoneNumber = Long.parseLong("38" + req.getParameter("phone_number"));
         String password = req.getParameter("password");
         try {
-            User user = userService.findUserByUsernamePassword(username, password);
+            User user = userService.findUserByPhoneAndPassword(phoneNumber, password);
             session.setAttribute("user_auth", user);
-            session.setAttribute("user_auth_name", user);
             session.setAttribute("role", (user.getRole()).name());
             if (user.getRole().equals(Role.ADMIN)) {
                 resp.sendRedirect("/admin");
@@ -48,11 +47,10 @@ public class LoginServlet extends HttpServlet {
 //                session.removeAttribute("req_uri");
 //                resp.sendRedirect(uri);
 //            } else {
-                resp.sendRedirect("/bikes");
+                resp.sendRedirect("/payments");
             }
         } catch (DBException e) {
             req.setAttribute("warn", e.getMessage());
-            req.setAttribute("username", username);
             req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
         }
     }

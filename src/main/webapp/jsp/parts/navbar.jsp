@@ -54,13 +54,14 @@
             <c:choose>
                 <c:when test="${user_auth!=null}">
                     <a class="btn btn-outline-secondary" href="/logout" role="button">
-                        ${user_auth.username}.<fmt:message key="logout"/>
+                        <fmt:message key="logout"/>
                     </a>
                 </c:when>
                 <c:otherwise>
-                    <a class="btn btn-outline-info" href="/jsp/login.jsp" role="button">
-                        Guest.<fmt:message key="sign_in"/>
-                    </a>
+                    <fmt:message key="guest"/>
+<%--                    <a class="btn btn-outline-info" href="/jsp/login.jsp" role="button">--%>
+<%--                        <fmt:message key="sign_in"/>--%>
+<%--                    </a>--%>
                 </c:otherwise>
             </c:choose>
 

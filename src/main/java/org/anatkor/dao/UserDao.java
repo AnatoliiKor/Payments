@@ -15,8 +15,8 @@ public class UserDao {
     private static final String FIND_ALL_USERS = "SELECT * FROM usr;";
     private static final String ADD_USER = "INSERT INTO usr (last_name, name, middle_name, password, email, phone_number) VALUES (?,?,?,?,?,?)";
     private static final String ADD_USER_ROLE = "INSERT INTO user_role VALUES (?,?)";
-    private static final String FIND_USER_BY_USERNAME = "SELECT * FROM usr WHERE name=?";
-    private static final String FIND_USER_BY_USERNAME_PASSWORD = "SELECT * FROM usr WHERE name=? AND password=?;";
+    private static final String FIND_USER_BY_PHONE_NUMBER = "SELECT * FROM usr WHERE phone_number=?";
+    private static final String FIND_USER_BY_PHONE_NUMBER_AND_PASSWORD = "SELECT * FROM usr WHERE phone_number=? AND password=?;";
     private static final String FIND_ROLE_BY_USERID = "SELECT * FROM user_role WHERE user_id=?";
     private static final String ADD_USER_AND_ROLE = "INSERT INTO usr (username, email, password)  VALUES (?,?,?); INSERT INTO user_role(user_id, role) VALUES ((SELECT id FROM usr WHERE login ='?'), 'USER')";
     private static final String FIND_ALL_USERS_AND_ROLES = "SELECT * From usr LEFT JOIN user_role ON usr.id = user_role.user_id;";
@@ -62,70 +62,28 @@ public class UserDao {
         return users;
     }
 
-    public boolean userIsExist(String username, String password) {
-        Connection con = null;
-        PreparedStatement prepStatement = null;
-        ResultSet rs = null;
-        try {
-            con = Utils.getConnection();
-            prepStatement = con.prepareStatement(FIND_USER_BY_USERNAME_PASSWORD);
-            int k = 1;
-            prepStatement.setString(k++, username);
-            prepStatement.setString(k, password);
-            rs = prepStatement.executeQuery();
-            return rs.next();
-        } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.",
-                    FIND_USER_BY_USERNAME_PASSWORD, Utils.class, e);
-            return false;
-        } finally {
-            Utils.close(rs);
-            Utils.close(prepStatement);
-            Utils.close(con);
-        }
-    }
-
-    public User findUserByUsernamePassword(String username, String password) throws DBException {
-        Connection con = null;
-        PreparedStatement prepStatement = null;
-        ResultSet rs = null;
-        try {
-            con = Utils.getConnection();
-            prepStatement = con.prepareStatement(FIND_USER_BY_USERNAME_PASSWORD);
-            int k = 1;
-            prepStatement.setString(k++, username);
-            prepStatement.setString(k, password);
-            rs = prepStatement.executeQuery();
-            if (rs.next()) {
-                Long id = rs.getLong("id");
-                Role role = findRoleByUserId(con, id);
-                String email = rs.getString("email");
-                LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
-                boolean active = rs.getBoolean("active");
-                if (!active) {
-                    throw new DBException("User with \"" + username + "\" is not active. Contact to administrator");
-                }
-                return new User.UserBuilder()
-                        .withId(id)
-                        .withPassword(password)
-                        .withName(username)
-                        .withEmail(email)
-                        .withRegistrationDateTime(registrationDateTime)
-                        .withActive(active)
-                        .withRole(role)
-                        .build();
-            } else {
-                throw new DBException("User with \"" + username + "\" not found or password is wrong");
-            }
-        } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", FIND_USER_BY_USERNAME_PASSWORD, Utils.class, e);
-            throw new DBException("User with \"" + username + " \" is not found");
-        } finally {
-            Utils.close(rs);
-            Utils.close(prepStatement);
-            Utils.close(con);
-        }
-    }
+//    public boolean userIsExist(String username, String password) {
+//        Connection con = null;
+//        PreparedStatement prepStatement = null;
+//        ResultSet rs = null;
+//        try {
+//            con = Utils.getConnection();
+//            prepStatement = con.prepareStatement(FIND_USER_BY_USERNAME_PASSWORD);
+//            int k = 1;
+//            prepStatement.setString(k++, username);
+//            prepStatement.setString(k, password);
+//            rs = prepStatement.executeQuery();
+//            return rs.next();
+//        } catch (SQLException e) {
+//            log.debug("SQLException during Query {} processing from {}.",
+//                    FIND_USER_BY_USERNAME_PASSWORD, Utils.class, e);
+//            return false;
+//        } finally {
+//            Utils.close(rs);
+//            Utils.close(prepStatement);
+//            Utils.close(con);
+//        }
+//    }
 
     public User findUserById(Long userId) throws DBException {
         Connection con = null;
@@ -167,39 +125,48 @@ public class UserDao {
         }
     }
 
-    public User findUserByUsername(String username) throws DBException {
+    public User findUserByPhoneAndPassword(Long phoneNumber, String password) throws DBException {
         Connection con = null;
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
         try {
             con = Utils.getConnection();
-            prepStatement = con.prepareStatement(FIND_USER_BY_USERNAME);
+            prepStatement = con.prepareStatement(FIND_USER_BY_PHONE_NUMBER_AND_PASSWORD);
             int k = 1;
-            prepStatement.setString(k, username);
+            prepStatement.setLong(k++, phoneNumber);
+            prepStatement.setString(k, password);
             rs = prepStatement.executeQuery();
             if (rs.next()) {
                 Long id = rs.getLong("id");
-                Role role = findRoleByUserId(con, id);
-                username = rs.getString("username");
+                String lastName = rs.getString("last_name");
+                String name = rs.getString("name");
+                String middleName = rs.getString("middle_name");
+                password = rs.getString("password");
                 String email = rs.getString("email");
-                String password = rs.getString("password");
+                phoneNumber = rs.getLong("phone_number");
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
+                if (!active) {
+                    throw new DBException("User with phone number \"+" + phoneNumber + "\" is not active. Contact to administrator");
+                }
+                Role role = findRoleByUserId(con, id);
                 return new User.UserBuilder()
-                        .withId(id)
+                        .withLastName(lastName)
+                        .withName(name)
+                        .withMiddleName(middleName)
                         .withPassword(password)
-                        .withName(username)
                         .withEmail(email)
+                        .withPhoneNumber(phoneNumber)
                         .withRegistrationDateTime(registrationDateTime)
                         .withActive(active)
                         .withRole(role)
                         .build();
             } else {
-                throw new DBException("User with \"" + username + "\" is not found");
+                throw new DBException("User with phone number \"+" + phoneNumber + "\" is not found");
             }
         } catch (SQLException e) {
-            log.info("SQLException during Query {} processing from {}.", FIND_USER_BY_USERNAME, Utils.class, e);
-            throw new DBException("User with \"" + username + " \" is not found");
+            log.debug("SQLException during Query {} processing from {}.", FIND_USER_BY_PHONE_NUMBER, Utils.class, e);
+            throw new DBException("User with phone number \"+" + phoneNumber + "\" is not found");
         } finally {
             Utils.close(rs);
             Utils.close(prepStatement);

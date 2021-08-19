@@ -9,7 +9,7 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@WebServlet(urlPatterns = "/")
+@WebServlet(urlPatterns = "/payments")
 public class MainServlet extends HttpServlet {
 
     final static Logger log = LogManager.getLogger(MainServlet.class);
@@ -20,18 +20,9 @@ public class MainServlet extends HttpServlet {
 //        resp.sendRedirect("/redirect to another servlet");
     }
 
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.service(req, resp);
-    }
-
 //    @Override
-//    public void init() throws ServletException {
-//        super.init();
+//    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        super.service(req, resp);
 //    }
 
-//    @Override
-//    public void destroy() {
-//        log.info("Main servlet Destroyed");
-//    }
 }

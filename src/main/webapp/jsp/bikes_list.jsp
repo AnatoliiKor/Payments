@@ -96,7 +96,7 @@
     </ul>
 
     <br/>
-    <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/admin"><fmt:message
+    <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/payments"><fmt:message
             key="home_page"/></a>
 
 </div>

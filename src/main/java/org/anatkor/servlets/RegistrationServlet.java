@@ -36,10 +36,6 @@ public class RegistrationServlet extends HttpServlet {
         try {
             if (userService.addUser( lastName, name, middleName, password, email, phoneNumber)) {
                 req.setAttribute("message", "Client \"" + lastName + " " + name + " " + middleName + "\" registered successfully. Sign in");
-//                final HttpSession session = req.getSession();
-//                session.setAttribute("username", username);
-////                req.setAttribute("username", username);
-////                resp.sendRedirect("/login?username=" + username);
                 resp.sendRedirect("/login");
             }
         } catch (DBException e) {
