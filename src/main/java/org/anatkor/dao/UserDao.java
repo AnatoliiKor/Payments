@@ -13,10 +13,10 @@ import java.util.List;
 
 public class UserDao {
     private static final String FIND_ALL_USERS = "SELECT * FROM usr;";
-    private static final String ADD_USER = "INSERT INTO usr (username, email, password) VALUES (?,?,?)";
+    private static final String ADD_USER = "INSERT INTO usr (last_name, name, middle_name, password, email, phone_number) VALUES (?,?,?,?,?,?)";
     private static final String ADD_USER_ROLE = "INSERT INTO user_role VALUES (?,?)";
-    private static final String FIND_USER_BY_USERNAME = "SELECT * FROM usr WHERE username=?";
-    private static final String FIND_USER_BY_USERNAME_PASSWORD = "SELECT * FROM usr WHERE username=? AND password=?;";
+    private static final String FIND_USER_BY_USERNAME = "SELECT * FROM usr WHERE name=?";
+    private static final String FIND_USER_BY_USERNAME_PASSWORD = "SELECT * FROM usr WHERE name=? AND password=?;";
     private static final String FIND_ROLE_BY_USERID = "SELECT * FROM user_role WHERE user_id=?";
     private static final String ADD_USER_AND_ROLE = "INSERT INTO usr (username, email, password)  VALUES (?,?,?); INSERT INTO user_role(user_id, role) VALUES ((SELECT id FROM usr WHERE login ='?'), 'USER')";
     private static final String FIND_ALL_USERS_AND_ROLES = "SELECT * From usr LEFT JOIN user_role ON usr.id = user_role.user_id;";
@@ -34,24 +34,24 @@ public class UserDao {
             stm = con.createStatement();
             rs = stm.executeQuery(FIND_ALL_USERS);
             while (rs.next()) {
-                    Long id = rs.getLong("id");
-                    Role role = findRoleByUserId(con, id);
-                    String username = rs.getString("username");
-                    String email = rs.getString("email");
-                    String password = rs.getString("password");
-                    LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
-                    boolean active = rs.getBoolean("active");
-                    User user = new User.UserBuilder()
-                            .withId(id)
-                            .withPassword(password)
-                            .withUsername(username)
-                            .withEmail(email)
-                            .withRegistrationDateTime(registrationDateTime)
-                            .withActive(active)
-                            .withRole(role)
-                            .build();
-                    users.add(user);
-                }
+                Long id = rs.getLong("id");
+                Role role = findRoleByUserId(con, id);
+                String username = rs.getString("username");
+                String email = rs.getString("email");
+                String password = rs.getString("password");
+                LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
+                boolean active = rs.getBoolean("active");
+                User user = new User.UserBuilder()
+                        .withId(id)
+                        .withPassword(password)
+                        .withName(username)
+                        .withEmail(email)
+                        .withRegistrationDateTime(registrationDateTime)
+                        .withActive(active)
+                        .withRole(role)
+                        .build();
+                users.add(user);
+            }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.", FIND_ALL_USERS, Utils.class, e);
         } finally {
@@ -62,7 +62,7 @@ public class UserDao {
         return users;
     }
 
-    public boolean userIsExist (String username, String password) {
+    public boolean userIsExist(String username, String password) {
         Connection con = null;
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
@@ -85,7 +85,7 @@ public class UserDao {
         }
     }
 
-    public User findUserByUsernamePassword(String username, String password) throws DBException{
+    public User findUserByUsernamePassword(String username, String password) throws DBException {
         Connection con = null;
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
@@ -102,17 +102,21 @@ public class UserDao {
                 String email = rs.getString("email");
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
-                if (!active) {throw new DBException("User with \"" + username + "\" is not active. Contact to administrator");}
+                if (!active) {
+                    throw new DBException("User with \"" + username + "\" is not active. Contact to administrator");
+                }
                 return new User.UserBuilder()
                         .withId(id)
                         .withPassword(password)
-                        .withUsername(username)
+                        .withName(username)
                         .withEmail(email)
                         .withRegistrationDateTime(registrationDateTime)
                         .withActive(active)
                         .withRole(role)
                         .build();
-            } else {throw new DBException("User with \"" + username + "\" not found or password is wrong");}
+            } else {
+                throw new DBException("User with \"" + username + "\" not found or password is wrong");
+            }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.", FIND_USER_BY_USERNAME_PASSWORD, Utils.class, e);
             throw new DBException("User with \"" + username + " \" is not found");
@@ -123,7 +127,7 @@ public class UserDao {
         }
     }
 
-    public User findUserById(Long userId) throws DBException{
+    public User findUserById(Long userId) throws DBException {
         Connection con = null;
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
@@ -144,13 +148,15 @@ public class UserDao {
                 return new User.UserBuilder()
                         .withId(id)
                         .withPassword(password)
-                        .withUsername(username)
+                        .withName(username)
                         .withEmail(email)
                         .withRegistrationDateTime(registrationDateTime)
                         .withActive(active)
                         .withRole(role)
                         .build();
-            } else {throw new DBException("User  not found");}
+            } else {
+                throw new DBException("User  not found");
+            }
         } catch (SQLException e) {
             log.info("SQLException during Query {} processing from {}.", FIND_USER_BY_ID, Utils.class, e);
             throw new DBException("User not found");
@@ -161,7 +167,7 @@ public class UserDao {
         }
     }
 
-    public User findUserByUsername(String username) throws DBException{
+    public User findUserByUsername(String username) throws DBException {
         Connection con = null;
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
@@ -182,13 +188,15 @@ public class UserDao {
                 return new User.UserBuilder()
                         .withId(id)
                         .withPassword(password)
-                        .withUsername(username)
+                        .withName(username)
                         .withEmail(email)
                         .withRegistrationDateTime(registrationDateTime)
                         .withActive(active)
                         .withRole(role)
                         .build();
-            } else {throw new DBException("User with \"" + username + "\" is not found");}
+            } else {
+                throw new DBException("User with \"" + username + "\" is not found");
+            }
         } catch (SQLException e) {
             log.info("SQLException during Query {} processing from {}.", FIND_USER_BY_USERNAME, Utils.class, e);
             throw new DBException("User with \"" + username + " \" is not found");
@@ -231,11 +239,14 @@ public class UserDao {
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             prepStatement = con.prepareStatement(ADD_USER, Statement.RETURN_GENERATED_KEYS);
             int k = 1;
-            prepStatement.setString(k++, user.getUsername());
+            prepStatement.setString(k++, user.getLastName());
+            prepStatement.setString(k++, user.getName());
+            prepStatement.setString(k++, user.getMiddleName());
+            prepStatement.setString(k++, user.getPassword());
             prepStatement.setString(k++, user.getEmail());
-            prepStatement.setString(k, user.getPassword());
+            prepStatement.setLong(k, user.getPhoneNumber());
             if (prepStatement.executeUpdate() > 0) {
-                log.info("User {} is added", user.getUsername());
+                log.info("User with phone ={} is added", user.getPhoneNumber());
                 rs = prepStatement.getGeneratedKeys();
                 if (rs.next()) {
                     generatedId = rs.getLong(1);
@@ -243,27 +254,34 @@ public class UserDao {
                 }
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Add {} processing {}. {}", user.getUsername(), Utils.class, e.getMessage());
-            throw new DBException("User with username \"" + user.getUsername() + "\" already exist");
+            String exeption = e.getMessage();
+            log.debug("SQLException during Add user with phone {} processing {}. {}", user.getPhoneNumber(), Utils.class, e.getMessage());
+            if (exeption.contains("mail")) {
+                throw new DBException("User with this email already exist");
+            } else if (exeption.contains("phone")) {
+                throw new DBException("User with this phone number already exist");
+            } else {
+                throw new DBException("User is not registered. Try again");
+            }
         }
         try {
             prepStatement = null;
             prepStatement = con.prepareStatement(ADD_USER_ROLE);
             prepStatement.setLong(1, generatedId);
-            prepStatement.setString(2, "USER");
+            prepStatement.setString(2, "CLIENT");
             result = (1 == prepStatement.executeUpdate());
             con.commit();
-            log.info("User {} with role  is added", user.getUsername());
+            log.info("User with id {} with role  is added", user.getId());
             return result;
         } catch (SQLException e) {
             try {
                 con.rollback();
             } catch (SQLException throwables) {
-                log.debug("SQLException during rollback add user {} processing {}. {}", user.getUsername(), Utils.class, throwables.getMessage());
-                throw new DBException("User with " + user.getUsername() + " is not registered. Try again");
+                log.debug("SQLException during rollback add user_id={} processing {}. {}", user.getId(), Utils.class, throwables.getMessage());
+                throw new DBException("User with " + user.getPhoneNumber() + " is not registered. Try again");
             }
-            log.debug("SQLException during Add user {} processing {}. {}", user.getUsername(), Utils.class, e.getMessage());
-            throw new DBException("User with " + user.getUsername() + " is not registered. Try again");
+            log.debug("SQLException during Add user_id={} processing {}. {}", user.getId(), Utils.class, e.getMessage());
+            throw new DBException("User with " + user.getPhoneNumber() + " is not registered. Try again");
         } finally {
             Utils.close(rs);
             Utils.close(prepStatement);

@@ -17,7 +17,7 @@ public class Utils {
 
     public static Connection getConnection() {
         Connection connection = null;
-        log.debug("connection try");
+//        log.debug("connection try");
         try {
             Class.forName(driver);
             connection = DriverManager.getConnection(getUrl());
@@ -32,7 +32,7 @@ public class Utils {
         String filePropertiesName = "database.properties";
         try (InputStream in = Utils.class.getClassLoader().getResourceAsStream(filePropertiesName)) {
             dbProperties.load(in);
-            log.debug("connection created succesfully");
+//            log.debug("connection created succesfully");
         } catch (IOException e) {
             log.error("IOException during read {} from {}.", new File(filePropertiesName).getAbsolutePath(), e.toString());
         }
@@ -49,51 +49,5 @@ public class Utils {
             }
         }
     }
-
-//    public static void closeConnection(Connection connection) {
-//        if (connection != null) {
-//            try {
-//                connection.close();
-//                log.debug("Connection is closed");
-//            } catch (SQLException e) {
-//                log.debug("SQLException during close connection from {}.", Utils.class, e);
-//                try {
-//                    throw new SQLException(e);
-//                } catch (SQLException e1) {
-//                    log.warn(e1.getMessage());
-//                }
-//            }
-//        }
-//    }
-//
-//    public static void closeResultSet(ResultSet rs) {
-//        if (rs != null) {
-//            try {
-//                rs.close();
-//            } catch (SQLException e) {
-//                log.debug("SQLException during close ResultSet from {}.", Utils.class, e);
-//                try {
-//                    throw new SQLException(e);
-//                } catch (SQLException e1) {
-//                    log.warn(e1.getMessage());
-//                }
-//            }
-//        }
-//    }
-//
-//    public static void closeStatement(Statement statement) {
-//        if (statement != null) {
-//            try {
-//                statement.close();
-//            } catch (SQLException e) {
-//                log.debug("SQLException during close Statement from {}.", Utils.class, e);
-//                try {
-//                    throw new SQLException(e);
-//                } catch (SQLException e1) {
-//                    log.warn(e1.getMessage());
-//                }
-//            }
-//        }
-//    }
 
 }

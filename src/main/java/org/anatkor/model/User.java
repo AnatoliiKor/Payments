@@ -1,22 +1,21 @@
 package org.anatkor.model;
 
 import java.time.LocalDateTime;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class User {
     private Long id;
 
-    private String username;
+    private String lastName;
+    private String name;
+    private String middleName;
     private String password;
     private String email;
+    private long phoneNumber;
     private LocalDateTime registrationDateTime;
     private boolean active;
     private Role role;
-
-    private List<Cart> carts;
-
+    private List<Account> accounts;
 
     public User() {
     }
@@ -33,8 +32,18 @@ public class User {
             return this;
         }
 
-        public UserBuilder withUsername(String username){
-            newUser.username = username;
+        public UserBuilder withLastName(String lastName){
+            newUser.lastName = lastName;
+            return this;
+        }
+
+        public UserBuilder withName(String name){
+            newUser.name = name;
+            return this;
+        }
+
+        public UserBuilder withMiddleName(String middleName){
+            newUser.middleName = middleName;
             return this;
         }
 
@@ -42,6 +51,12 @@ public class User {
             newUser.password = password;
             return this;
         }
+
+        public UserBuilder withPhoneNumber(long phoneNumber){
+            newUser.phoneNumber = phoneNumber;
+            return this;
+        }
+
         public UserBuilder withEmail(String email){
             newUser.email = email;
             return this;
@@ -62,8 +77,8 @@ public class User {
             return this;
         }
 
-        public UserBuilder withCarts(List<Cart> carts){
-            newUser.carts = carts;
+        public UserBuilder withAccounts(List<Account> accounts){
+            newUser.accounts = accounts;
             return this;
         }
 
@@ -81,32 +96,32 @@ public class User {
         return id;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
 
-    public List<Cart> getCarts() {
-        return carts;
+    public String getName() {
+        return name;
     }
 
-    public String getUsername() {
-        return username;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public LocalDateTime getRegistrationDateTime() {
-        return registrationDateTime;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public String getPassword() {
@@ -115,6 +130,30 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public LocalDateTime getRegistrationDateTime() {
+        return registrationDateTime;
+    }
+
+    public void setRegistrationDateTime(LocalDateTime registrationDateTime) {
+        this.registrationDateTime = registrationDateTime;
     }
 
     public boolean isActive() {
@@ -133,8 +172,12 @@ public class User {
         this.role = role;
     }
 
-//    public enum ROLE {
-//        USER, ADMIN, UNKNOWN
-//    }
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
 }
 

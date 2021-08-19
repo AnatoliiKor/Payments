@@ -22,7 +22,7 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = req.getSession();
         if (session.getAttribute("user_auth") != null) {
             User user = (User) session.getAttribute("user_auth");
-            log.info("User {} Logout", user.getUsername());
+            log.info("User {} Logout", user.getName());
             session.invalidate();
 //            session.removeAttribute("user_auth");
 //            session.removeAttribute("user_auth_name");

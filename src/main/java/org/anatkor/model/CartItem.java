@@ -11,7 +11,7 @@ public class CartItem {
 
 //    @ManyToOne (cascade = CascadeType.ALL)
 //    @JoinColumn(name = "cart_id", nullable = false)
-    private Cart cart;
+    private CreditCard cart;
 
     private Integer amount;
     private Integer price;
@@ -35,7 +35,7 @@ public class CartItem {
 
     }
 
-    public void setCart(Cart cart) {
+    public void setCart(CreditCard cart) {
         this.cart = cart;
     }
 

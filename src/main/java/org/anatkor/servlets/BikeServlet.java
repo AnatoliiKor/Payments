@@ -38,11 +38,6 @@ public class BikeServlet extends HttpServlet {
         Long id;
         if (req.getParameter("id") != null) {
             id = Long.valueOf(req.getParameter("id"));
-            //TODO Doesn't interrupt the method like return
-            // if ("delete".equals(req.getParameter("action"))) {
-//           bikeService.deleteBike(id)
-//           req.setAttribute("error", "Deletion is successful");
-//            resp.sendRedirect("/bikes?message=Deletion is successful");
         } else {
             id = -1L;
         }

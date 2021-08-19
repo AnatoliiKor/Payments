@@ -20,7 +20,6 @@ public class AdminServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.debug("Admin servlet called");
         req.getRequestDispatcher("/jsp/admin.jsp").forward(req, resp);
-        //            TODO forward vs include
     }
 
 }
