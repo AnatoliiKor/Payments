@@ -1,13 +1,11 @@
-<%--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">--%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%--<%@ page language="java" pageEncoding="UTF-8"%>--%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<c:set var="language" value=
-        "${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
-       scope="session"/>
+<c:set var="language" scope="session"
+       value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"/>
 <fmt:setLocale value="${language}"/>
 <fmt:setBundle basename="i18n/messages"/>
 <html lang="${language}">
@@ -27,34 +25,40 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/shop"><fmt:message key="home_nav"/></a>
-                </li>
-                <c:if test="${role != null && role.equals('ADMIN')}">
+
+            <c:if test="${not empty role}">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/admin"><fmt:message key="admin_nav"/></a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/wallet">
+                            <fmt:message key="home_nav"/></a>
                     </li>
-                </c:if>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/cart"><fmt:message key="cart_nav"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/user?id=${user_auth.id}"><fmt:message key="profile_nav"/></a>
-                </li>
+                    <c:if test="${role != null && role.equals('ADMIN')}">
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/admin">
+                                <fmt:message key="admin_nav"/></a>
+                        </li>
+                    </c:if>
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/cart">
+                            <fmt:message key="cart_nav"/></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/user?id=${user_auth.id}">
+                            <fmt:message key="profile_nav"/></a>
+                    </li>
+                </ul>
+            </c:if>
 
-            </ul>
+            <a class="btn btn-outline-primary " href="${pageContext.request.contextPath}?language=uk" role="button">
+                <fmt:message key="uk_button"/></a>
+            <a class="btn btn-outline-warning mx-1" href="${pageContext.request.contextPath}?language=en" role="button">
+                <fmt:message key="en_button"/></a>
 
-            <a class="btn btn-outline-primary " href="${pageContext.request.contextPath}?language=uk" role="button"><fmt:message key="uk_button"/></a>
-            <a class="btn btn-outline-warning mx-1" href="${pageContext.request.contextPath}?language=en" role="button"><fmt:message key="en_button"/></a>
-
-
-            <%--        <#if name !="Guest"><@l.logout/>--%>
-            <%--        <#else>--%>
             <c:choose>
-                <c:when test="${user_auth!=null}">
+                <c:when test="${not empty user_auth}">
+
                     <a class="btn btn-outline-secondary" href="/logout" role="button">
-                        <fmt:message key="logout"/>
+                            ${user_auth.lastName}.<fmt:message key="logout"/>
                     </a>
                 </c:when>
                 <c:otherwise>
@@ -64,8 +68,6 @@
 <%--                    </a>--%>
                 </c:otherwise>
             </c:choose>
-
-
         </div>
     </div>
 </nav>

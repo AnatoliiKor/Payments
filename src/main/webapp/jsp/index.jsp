@@ -5,10 +5,13 @@
 
 <html>
 <head>
-    <title>Shop</title>
+    <title>Wallet</title>
 </head>
 <body>
 <div class="container mt-5">
+<a class="btn btn-outline-primary mx-5" href="/wallet/new_account"><fmt:message key="new_account"/></a>
+
+
 <a class="btn btn-outline-primary mx-5" href="/admin/users"><fmt:message key="users_list"/></a>
 <a class="btn btn-outline-primary mx-5" href="/bikes"><fmt:message key="bikes_list"/></a>
 

@@ -35,17 +35,22 @@ public class UserDao {
             rs = stm.executeQuery(FIND_ALL_USERS);
             while (rs.next()) {
                 Long id = rs.getLong("id");
-                Role role = findRoleByUserId(con, id);
-                String username = rs.getString("username");
-                String email = rs.getString("email");
+                String lastName = rs.getString("last_name");
+                String name = rs.getString("name");
+                String middleName = rs.getString("middle_name");
                 String password = rs.getString("password");
+                String email = rs.getString("email");
+                Long phoneNumber = rs.getLong("phone_number");
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
+                Role role = findRoleByUserId(con, id);
                 User user = new User.UserBuilder()
-                        .withId(id)
+                        .withLastName(lastName)
+                        .withName(name)
+                        .withMiddleName(middleName)
                         .withPassword(password)
-                        .withName(username)
                         .withEmail(email)
+                        .withPhoneNumber(phoneNumber)
                         .withRegistrationDateTime(registrationDateTime)
                         .withActive(active)
                         .withRole(role)

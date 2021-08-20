@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter("/payments/*")
+@WebFilter("/wallet/*")
 public class UserAuthFilter implements Filter {
 
     @Override

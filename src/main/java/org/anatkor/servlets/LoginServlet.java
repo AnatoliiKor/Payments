@@ -24,8 +24,6 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        log.debug("User servlet called");
-//        String username = req.getParameter("username");
-//        req.setAttribute("username", username);
         req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
     }
 
@@ -42,12 +40,7 @@ public class LoginServlet extends HttpServlet {
             if (user.getRole().equals(Role.ADMIN)) {
                 resp.sendRedirect("/admin");
             } else {
-//            if (session.getAttribute("req_uri") != null) {
-//                String uri = (String) session.getAttribute("req_uri");
-//                session.removeAttribute("req_uri");
-//                resp.sendRedirect(uri);
-//            } else {
-                resp.sendRedirect("/payments");
+                resp.sendRedirect("/wallet");
             }
         } catch (DBException e) {
             req.setAttribute("warn", e.getMessage());

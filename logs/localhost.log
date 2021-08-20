@@ -1,78 +1,94 @@
-2021-08-19 23:14:07,123 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:15:44,653 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:17:54,036 [http-nio-8081-exec-14] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:18:00,057 [http-nio-8081-exec-11] DEBUG org.anatkor.servlets.UserServlet- User servlet called
-2021-08-19 23:18:32,484 [http-nio-8081-exec-13] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-19 23:19:19,291 [http-nio-8081-exec-11] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:19:34,423 [http-nio-8081-exec-11] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:24:03,686 [http-nio-8081-exec-14] DEBUG org.anatkor.servlets.UserServlet- User servlet called
-2021-08-19 23:24:23,198 [http-nio-8081-exec-25] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:24:42,136 [http-nio-8081-exec-27] DEBUG org.anatkor.servlets.UserServlet- User servlet called
-2021-08-19 23:38:47,404 [http-nio-8081-exec-28] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:39:14,717 [http-nio-8081-exec-25] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:39:25,306 [http-nio-8081-exec-24] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:39:42,159 [http-nio-8081-exec-32] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:39:58,813 [http-nio-8081-exec-33] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:43:56,686 [http-nio-8081-exec-35] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:44:24,602 [http-nio-8081-exec-41] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:44:36,708 [http-nio-8081-exec-42] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:45:08,119 [http-nio-8081-exec-45] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-19 23:45:27,493 [http-nio-8081-exec-47] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:45:48,433 [http-nio-8081-exec-41] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:49:44,140 [http-nio-8081-exec-57] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:50:08,143 [http-nio-8081-exec-55] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:50:42,119 [http-nio-8081-exec-56] DEBUG org.anatkor.servlets.UserServlet- User servlet called
-2021-08-19 23:51:16,537 [http-nio-8081-exec-51] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@57c9f211
-2021-08-19 23:51:16,586 [http-nio-8081-exec-51] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-19 23:51:26,906 [http-nio-8081-exec-56] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:51:26,954 [http-nio-8081-exec-53] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-19 23:51:37,120 [http-nio-8081-exec-54] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-19 23:51:40,312 [http-nio-8081-exec-57] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:51:44,420 [http-nio-8081-exec-60] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-19 23:53:41,184 [http-nio-8081-exec-51] INFO  org.anatkor.servlets.LogoutServlet- User Петро Logout
-2021-08-19 23:53:44,422 [http-nio-8081-exec-53] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:53:54,743 [http-nio-8081-exec-54] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-19 23:54:13,981 [http-nio-8081-exec-58] DEBUG org.anatkor.servlets.UserServlet- User servlet called
-2021-08-19 23:54:29,482 [http-nio-8081-exec-57] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:54:36,110 [http-nio-8081-exec-55] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:54:38,024 [http-nio-8081-exec-52] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-19 23:55:43,582 [http-nio-8081-exec-60] DEBUG org.anatkor.servlets.UserServlet- User servlet called
-2021-08-19 23:55:47,858 [http-nio-8081-exec-58] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:55:50,310 [http-nio-8081-exec-51] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:56:05,089 [http-nio-8081-exec-56] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@5d2b112b
-2021-08-19 23:56:05,091 [http-nio-8081-exec-56] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-19 23:56:19,790 [http-nio-8081-exec-59] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:56:19,838 [http-nio-8081-exec-54] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-19 23:56:24,673 [http-nio-8081-exec-57] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-19 23:56:26,906 [http-nio-8081-exec-60] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-19 23:56:29,135 [http-nio-8081-exec-55] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-19 23:56:31,340 [http-nio-8081-exec-58] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:56:34,739 [http-nio-8081-exec-52] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-19 23:56:36,545 [http-nio-8081-exec-51] INFO  org.anatkor.servlets.LogoutServlet- User Петро Logout
-2021-08-19 23:56:39,576 [http-nio-8081-exec-53] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-19 23:56:41,716 [http-nio-8081-exec-57] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:57:24,803 [http-nio-8081-exec-58] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:57:34,062 [http-nio-8081-exec-51] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:57:42,117 [http-nio-8081-exec-57] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:57:42,990 [http-nio-8081-exec-60] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:57:43,651 [http-nio-8081-exec-55] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:57:44,096 [http-nio-8081-exec-58] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:57:44,555 [http-nio-8081-exec-52] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-19 23:57:50,363 [http-nio-8081-exec-53] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-19 23:57:57,156 [http-nio-8081-exec-54] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-20 00:04:27,133 [http-nio-8081-exec-69] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 00:04:30,409 [http-nio-8081-exec-63] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-20 00:04:37,906 [http-nio-8081-exec-65] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-20 00:04:42,279 [http-nio-8081-exec-72] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-20 00:05:07,545 [http-nio-8081-exec-78] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 00:05:07,590 [http-nio-8081-exec-71] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 00:05:10,130 [http-nio-8081-exec-72] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-20 00:05:17,090 [http-nio-8081-exec-74] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 00:05:53,064 [http-nio-8081-exec-75] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-20 00:06:11,938 [http-nio-8081-exec-77] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 00:06:13,201 [http-nio-8081-exec-71] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
-2021-08-20 00:06:19,353 [http-nio-8081-exec-82] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-20 00:06:22,257 [http-nio-8081-exec-84] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 00:06:22,305 [http-nio-8081-exec-85] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 00:06:29,743 [http-nio-8081-exec-88] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 00:06:30,930 [http-nio-8081-exec-79] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-20 17:24:56,618 [http-nio-8081-exec-18] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 17:24:56,764 [http-nio-8081-exec-20] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 17:25:00,037 [http-nio-8081-exec-19] INFO  org.anatkor.servlets.LogoutServlet- User Петро Logout
+2021-08-20 17:25:02,822 [http-nio-8081-exec-15] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 17:27:17,851 [http-nio-8081-exec-21] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 17:27:24,647 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-20 17:27:29,869 [http-nio-8081-exec-33] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
+2021-08-20 17:27:37,980 [http-nio-8081-exec-29] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 17:27:44,641 [http-nio-8081-exec-35] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@4e6e866d
+2021-08-20 17:27:44,688 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:28:38,932 [http-nio-8081-exec-31] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
+2021-08-20 17:29:07,797 [http-nio-8081-exec-31] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 17:29:52,640 [http-nio-8081-exec-38] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
+2021-08-20 17:30:28,922 [http-nio-8081-exec-40] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 17:31:57,857 [http-nio-8081-exec-37] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
+2021-08-20 17:32:06,701 [http-nio-8081-exec-32] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 17:33:39,949 [http-nio-8081-exec-37] INFO  org.anatkor.servlets.LogoutServlet- User Ivan Logout
+2021-08-20 17:33:45,365 [http-nio-8081-exec-32] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 17:33:50,045 [http-nio-8081-exec-39] INFO  org.anatkor.servlets.LogoutServlet- User Mal Logout
+2021-08-20 17:33:53,743 [http-nio-8081-exec-34] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 17:33:53,789 [http-nio-8081-exec-40] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 17:34:30,151 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:50:24,170 [http-nio-8081-exec-40] INFO  org.anatkor.servlets.LogoutServlet- User Петро Logout
+2021-08-20 17:50:26,988 [http-nio-8081-exec-31] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 17:50:27,036 [http-nio-8081-exec-32] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 17:50:29,817 [http-nio-8081-exec-33] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:10,513 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:51,064 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:51,585 [http-nio-8081-exec-37] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:52,473 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:53,011 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:53,537 [http-nio-8081-exec-33] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:53,985 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:54,388 [http-nio-8081-exec-39] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:54,778 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:55,232 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:55,712 [http-nio-8081-exec-40] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:56,415 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:56,946 [http-nio-8081-exec-37] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:57,449 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:58,011 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:58,994 [http-nio-8081-exec-33] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:51:59,846 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:52:00,466 [http-nio-8081-exec-39] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:52:01,042 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:52:01,675 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:52:02,196 [http-nio-8081-exec-40] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:52:02,930 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:54:30,005 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:01,113 [http-nio-8081-exec-39] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:02,529 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:03,256 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:04,382 [http-nio-8081-exec-40] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:05,008 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:05,628 [http-nio-8081-exec-37] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:06,369 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:14,348 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:14,946 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:15,389 [http-nio-8081-exec-33] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:20,635 [http-nio-8081-exec-34] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 17:56:22,221 [http-nio-8081-exec-40] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:24,627 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:25,025 [http-nio-8081-exec-37] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:25,497 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:26,174 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:26,695 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:27,127 [http-nio-8081-exec-33] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:27,497 [http-nio-8081-exec-39] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:48,057 [http-nio-8081-exec-40] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:50,649 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:51,201 [http-nio-8081-exec-37] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:51,609 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:52,309 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 17:56:53,058 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 18:02:55,734 [http-nio-8081-exec-38] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-20 18:02:55,854 [http-nio-8081-exec-38] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 18:03:00,663 [http-nio-8081-exec-32] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 18:03:00,805 [http-nio-8081-exec-36] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 18:06:07,712 [http-nio-8081-exec-43] INFO  org.anatkor.servlets.LogoutServlet- User Петро Logout
+2021-08-20 18:06:35,829 [http-nio-8081-exec-48] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 18:06:35,876 [http-nio-8081-exec-46] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 18:15:38,356 [http-nio-8081-exec-48] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-20 18:15:45,330 [http-nio-8081-exec-42] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 18:15:45,375 [http-nio-8081-exec-50] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 18:18:55,352 [http-nio-8081-exec-59] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-20 18:18:57,993 [http-nio-8081-exec-52] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 18:18:58,041 [http-nio-8081-exec-54] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 18:25:15,788 [http-nio-8081-exec-68] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 18:25:23,170 [http-nio-8081-exec-64] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@10e34cea
+2021-08-20 18:41:26,769 [http-nio-8081-exec-76] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-20 18:41:46,477 [http-nio-8081-exec-71] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
+2021-08-20 18:41:49,384 [http-nio-8081-exec-73] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 18:41:49,428 [http-nio-8081-exec-78] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 18:42:01,478 [http-nio-8081-exec-76] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called

@@ -1,6 +1,7 @@
 package org.anatkor.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class User {
@@ -179,5 +180,13 @@ public class User {
     public void setAccounts(List<Account> accounts) {
         this.accounts = accounts;
     }
+
+    public String getFormatedDate() {
+//        LocalDateTime registered=this.registrationDateTime;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm");
+        return this.registrationDateTime.format(formatter);
+    }
+
+
 }
 
