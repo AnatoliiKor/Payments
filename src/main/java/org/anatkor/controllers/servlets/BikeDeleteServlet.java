@@ -1,7 +1,6 @@
-package org.anatkor.servlets;
+package org.anatkor.controllers.servlets;
 
 import org.anatkor.exceptions.DBException;
-import org.anatkor.model.Bike;
 import org.anatkor.services.BikeService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

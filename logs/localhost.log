@@ -1,94 +1,48 @@
-2021-08-20 17:24:56,618 [http-nio-8081-exec-18] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:24:56,764 [http-nio-8081-exec-20] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 17:25:00,037 [http-nio-8081-exec-19] INFO  org.anatkor.servlets.LogoutServlet- User Петро Logout
-2021-08-20 17:25:02,822 [http-nio-8081-exec-15] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:27:17,851 [http-nio-8081-exec-21] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:27:24,647 [http-nio-8081-exec-23] DEBUG org.anatkor.servlets.UserServlet- User servlet called
-2021-08-20 17:27:29,869 [http-nio-8081-exec-33] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-20 17:27:37,980 [http-nio-8081-exec-29] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:27:44,641 [http-nio-8081-exec-35] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@4e6e866d
-2021-08-20 17:27:44,688 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:28:38,932 [http-nio-8081-exec-31] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-20 17:29:07,797 [http-nio-8081-exec-31] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:29:52,640 [http-nio-8081-exec-38] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-20 17:30:28,922 [http-nio-8081-exec-40] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:31:57,857 [http-nio-8081-exec-37] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-20 17:32:06,701 [http-nio-8081-exec-32] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:33:39,949 [http-nio-8081-exec-37] INFO  org.anatkor.servlets.LogoutServlet- User Ivan Logout
-2021-08-20 17:33:45,365 [http-nio-8081-exec-32] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:33:50,045 [http-nio-8081-exec-39] INFO  org.anatkor.servlets.LogoutServlet- User Mal Logout
-2021-08-20 17:33:53,743 [http-nio-8081-exec-34] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:33:53,789 [http-nio-8081-exec-40] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 17:34:30,151 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:50:24,170 [http-nio-8081-exec-40] INFO  org.anatkor.servlets.LogoutServlet- User Петро Logout
-2021-08-20 17:50:26,988 [http-nio-8081-exec-31] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:50:27,036 [http-nio-8081-exec-32] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 17:50:29,817 [http-nio-8081-exec-33] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:10,513 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:51,064 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:51,585 [http-nio-8081-exec-37] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:52,473 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:53,011 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:53,537 [http-nio-8081-exec-33] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:53,985 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:54,388 [http-nio-8081-exec-39] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:54,778 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:55,232 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:55,712 [http-nio-8081-exec-40] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:56,415 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:56,946 [http-nio-8081-exec-37] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:57,449 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:58,011 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:58,994 [http-nio-8081-exec-33] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:51:59,846 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:52:00,466 [http-nio-8081-exec-39] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:52:01,042 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:52:01,675 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:52:02,196 [http-nio-8081-exec-40] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:52:02,930 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:54:30,005 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:01,113 [http-nio-8081-exec-39] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:02,529 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:03,256 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:04,382 [http-nio-8081-exec-40] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:05,008 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:05,628 [http-nio-8081-exec-37] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:06,369 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:14,348 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:14,946 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:15,389 [http-nio-8081-exec-33] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:20,635 [http-nio-8081-exec-34] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 17:56:22,221 [http-nio-8081-exec-40] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:24,627 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:25,025 [http-nio-8081-exec-37] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:25,497 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:26,174 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:26,695 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:27,127 [http-nio-8081-exec-33] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:27,497 [http-nio-8081-exec-39] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:48,057 [http-nio-8081-exec-40] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:50,649 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:51,201 [http-nio-8081-exec-37] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:51,609 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:52,309 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 17:56:53,058 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
-2021-08-20 18:02:55,734 [http-nio-8081-exec-38] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
-2021-08-20 18:02:55,854 [http-nio-8081-exec-38] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 18:03:00,663 [http-nio-8081-exec-32] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 18:03:00,805 [http-nio-8081-exec-36] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 18:06:07,712 [http-nio-8081-exec-43] INFO  org.anatkor.servlets.LogoutServlet- User Петро Logout
-2021-08-20 18:06:35,829 [http-nio-8081-exec-48] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 18:06:35,876 [http-nio-8081-exec-46] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 18:15:38,356 [http-nio-8081-exec-48] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
-2021-08-20 18:15:45,330 [http-nio-8081-exec-42] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 18:15:45,375 [http-nio-8081-exec-50] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 18:18:55,352 [http-nio-8081-exec-59] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
-2021-08-20 18:18:57,993 [http-nio-8081-exec-52] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 18:18:58,041 [http-nio-8081-exec-54] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 18:25:15,788 [http-nio-8081-exec-68] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 18:25:23,170 [http-nio-8081-exec-64] WARN  org.anatkor.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@10e34cea
-2021-08-20 18:41:26,769 [http-nio-8081-exec-76] DEBUG org.anatkor.servlets.UserServlet- User servlet called
-2021-08-20 18:41:46,477 [http-nio-8081-exec-71] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-20 18:41:49,384 [http-nio-8081-exec-73] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 18:41:49,428 [http-nio-8081-exec-78] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 18:42:01,478 [http-nio-8081-exec-76] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-21 16:01:54,254 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-21 16:01:54,264 [http-nio-8081-exec-4] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-21 16:01:54,264 [http-nio-8081-exec-4] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-21 16:01:54,551 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-21 16:01:54,551 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-21 16:02:30,840 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-21 16:02:30,840 [http-nio-8081-exec-8] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-21 16:02:30,841 [http-nio-8081-exec-8] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-21 16:02:37,762 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-21 16:02:37,762 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-21 16:02:37,766 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-21 16:02:37,767 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-21 16:02:37,767 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-21 16:02:37,767 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-21 16:02:37,769 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-21 16:02:41,387 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-21 16:02:41,387 [http-nio-8081-exec-10] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-21 16:02:41,388 [http-nio-8081-exec-10] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-21 16:02:41,430 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-21 16:02:41,430 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
+2021-08-21 16:02:41,435 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.servlets.AdminServlet- Admin servlet called
+2021-08-21 16:03:09,657 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-21 16:03:09,657 [http-nio-8081-exec-6] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-21 16:03:09,657 [http-nio-8081-exec-6] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-21 16:03:13,341 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-21 16:03:13,342 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-21 16:03:13,345 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-21 16:03:13,346 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-21 16:03:13,346 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-21 16:03:13,346 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-21 16:03:13,346 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-21 16:03:42,976 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-21 16:03:42,976 [http-nio-8081-exec-4] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-21 16:03:42,976 [http-nio-8081-exec-4] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-21 16:03:43,021 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-21 16:03:43,021 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
+2021-08-21 16:03:43,025 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.servlets.AdminServlet- Admin servlet called
+2021-08-21 16:04:05,050 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.servlets.UserServlet- User servlet called
+2021-08-21 16:05:06,845 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-21 16:07:56,288 [http-nio-8081-exec-3] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-21 16:07:56,289 [http-nio-8081-exec-3] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-21 16:07:56,289 [http-nio-8081-exec-3] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-21 16:07:56,289 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-21 16:07:56,293 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-21 16:07:56,294 [http-nio-8081-exec-5] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-21 16:07:56,294 [http-nio-8081-exec-5] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-21 16:07:56,294 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-21 16:07:56,294 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp

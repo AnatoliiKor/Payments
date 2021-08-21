@@ -1,4 +1,4 @@
-package org.anatkor.servlets;
+package org.anatkor.controllers.servlets;
 
 import org.anatkor.model.User;
 import org.anatkor.services.UserService;
@@ -10,7 +10,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 

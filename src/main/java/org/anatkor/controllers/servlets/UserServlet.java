@@ -1,7 +1,6 @@
-package org.anatkor.servlets;
+package org.anatkor.controllers.servlets;
 
 import org.anatkor.exceptions.DBException;
-import org.anatkor.model.Role;
 import org.anatkor.model.User;
 import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
@@ -15,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet("/user")
 public class UserServlet extends HttpServlet {

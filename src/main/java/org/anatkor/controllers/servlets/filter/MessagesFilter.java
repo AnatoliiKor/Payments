@@ -1,4 +1,4 @@
-package org.anatkor.servlets.filter;
+package org.anatkor.controllers.servlets.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

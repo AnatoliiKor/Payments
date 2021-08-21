@@ -8,7 +8,7 @@
 
    <!-- <servlet>
         <servlet-name>dispatcher</servlet-name>
-        <servlet-class>org.anatkor.servlets.MainServlet</servlet-class>
+        <servlet-class>org.anatkor.controllers.servlets.MainServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>

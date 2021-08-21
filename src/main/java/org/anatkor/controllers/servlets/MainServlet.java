@@ -1,4 +1,4 @@
-package org.anatkor.servlets;
+package org.anatkor.controllers.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

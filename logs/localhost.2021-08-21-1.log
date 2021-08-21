@@ -1,0 +1,6 @@
+2021-08-21 12:23:53,924 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.servlets.LoginServlet- User servlet called
+2021-08-21 12:23:57,926 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@4a31fb31
+2021-08-21 12:24:02,038 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.servlets.LogoutServlet- User Semen Logout
+2021-08-21 12:24:04,470 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.servlets.LoginServlet- User servlet called
+2021-08-21 12:24:04,515 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.servlets.AdminServlet- Admin servlet called
+2021-08-21 12:24:10,635 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.servlets.AdminServlet- Admin servlet called
