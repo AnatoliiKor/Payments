@@ -182,7 +182,6 @@ public class User {
     }
 
     public String getFormatedDate() {
-//        LocalDateTime registered=this.registrationDateTime;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm");
         return this.registrationDateTime.format(formatter);
     }

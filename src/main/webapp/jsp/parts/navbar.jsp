@@ -28,22 +28,26 @@
 
             <c:if test="${not empty role}">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <c:choose>
+                        <c:when test="${role.equals('ADMIN')}">
+                            <li class="nav-item">
+                                <a class="nav-link" href="${pageContext.request.contextPath}/admin">
+                                    <fmt:message key="admin_nav"/></a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="nav-item">
+                                <a class="nav-link" href="${pageContext.request.contextPath}/wallet">
+                                    <fmt:message key="home_nav"/></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">
+                                    <fmt:message key="cart_nav"/></a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/wallet">
-                            <fmt:message key="home_nav"/></a>
-                    </li>
-                    <c:if test="${role != null && role.equals('ADMIN')}">
-                        <li class="nav-item">
-                            <a class="nav-link" href="${pageContext.request.contextPath}/admin">
-                                <fmt:message key="admin_nav"/></a>
-                        </li>
-                    </c:if>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/cart">
-                            <fmt:message key="cart_nav"/></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/user?id=${user_auth.id}">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/wallet/user">
                             <fmt:message key="profile_nav"/></a>
                     </li>
                 </ul>
@@ -56,16 +60,12 @@
 
             <c:choose>
                 <c:when test="${not empty user_auth}">
-
                     <a class="btn btn-outline-secondary" href="/logout" role="button">
                             ${user_auth.lastName}.<fmt:message key="logout"/>
                     </a>
                 </c:when>
                 <c:otherwise>
                     <fmt:message key="guest"/>
-<%--                    <a class="btn btn-outline-info" href="/jsp/login.jsp" role="button">--%>
-<%--                        <fmt:message key="sign_in"/>--%>
-<%--                    </a>--%>
                 </c:otherwise>
             </c:choose>
         </div>

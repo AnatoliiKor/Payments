@@ -1,4 +1,4 @@
-package org.anatkor.controllers.servlets.filter;
+package org.anatkor.controllers.command.filter;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

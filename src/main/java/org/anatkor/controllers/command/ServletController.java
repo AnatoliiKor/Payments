@@ -25,9 +25,10 @@ public class ServletController extends HttpServlet{
         commands.put("registration", new RegistrationCommand());
         commands.put("admin", new AdminCommand());
         commands.put("wallet", new WalletCommand());
-//        commands.put("user", new UserCommand());
+        commands.put("user", new UserCommand());
         commands.put("users", new UsersCommand());
         commands.put("exception", new ExceptionCommand());
+        commands.put("new_account", new ExceptionCommand());
     }
 
     @Override
@@ -45,9 +46,7 @@ public class ServletController extends HttpServlet{
     private void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String path = req.getRequestURI();
-        log.warn("before" + path);
         path = path.replaceAll(".*(/wallet)?(/admin)?/", "");
-        log.warn("after" + path);
         Command command = commands.getOrDefault(path, (r)->"/jsp/login.jsp");
         String urlPage = command.execute(req);
         if (urlPage.contains("redirect:")) {

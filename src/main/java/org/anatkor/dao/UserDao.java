@@ -14,6 +14,7 @@ import java.util.List;
 public class UserDao {
     private static final String FIND_ALL_USERS = "SELECT * FROM usr;";
     private static final String ADD_USER = "INSERT INTO usr (last_name, name, middle_name, password, email, phone_number) VALUES (?,?,?,?,?,?)";
+    private static final String UPDATE_USER_STATUS = "UPDATE usr SET active=? WHERE id=?";
     private static final String ADD_USER_ROLE = "INSERT INTO user_role VALUES (?,?)";
     private static final String FIND_USER_BY_PHONE_NUMBER = "SELECT * FROM usr WHERE phone_number=?";
     private static final String FIND_USER_BY_PHONE_NUMBER_AND_PASSWORD = "SELECT * FROM usr WHERE phone_number=? AND password=?;";
@@ -45,6 +46,7 @@ public class UserDao {
                 boolean active = rs.getBoolean("active");
                 Role role = findRoleByUserId(con, id);
                 User user = new User.UserBuilder()
+                        .withId(id)
                         .withLastName(lastName)
                         .withName(name)
                         .withMiddleName(middleName)
@@ -102,17 +104,26 @@ public class UserDao {
             rs = prepStatement.executeQuery();
             if (rs.next()) {
                 Long id = rs.getLong("id");
-                Role role = findRoleByUserId(con, id);
-                String username = rs.getString("username");
-                String email = rs.getString("email");
+                String lastName = rs.getString("last_name");
+                String name = rs.getString("name");
+                String middleName = rs.getString("middle_name");
                 String password = rs.getString("password");
+                String email = rs.getString("email");
+                Long phoneNumber = rs.getLong("phone_number");
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
+//                if (!active) {
+//                    throw new DBException("User with phone number \"+" + phoneNumber + "\" is not active. Contact to administrator");
+//                }
+                Role role = findRoleByUserId(con, id);
                 return new User.UserBuilder()
                         .withId(id)
+                        .withLastName(lastName)
+                        .withName(name)
+                        .withMiddleName(middleName)
                         .withPassword(password)
-                        .withName(username)
                         .withEmail(email)
+                        .withPhoneNumber(phoneNumber)
                         .withRegistrationDateTime(registrationDateTime)
                         .withActive(active)
                         .withRole(role)
@@ -156,6 +167,7 @@ public class UserDao {
                 }
                 Role role = findRoleByUserId(con, id);
                 return new User.UserBuilder()
+                        .withId(id)
                         .withLastName(lastName)
                         .withName(name)
                         .withMiddleName(middleName)
@@ -259,5 +271,28 @@ public class UserDao {
             Utils.close(prepStatement);
             Utils.close(con);
         }
+    }
+
+    public boolean updateUserStatus(User user) {
+        Connection con = null;
+        PreparedStatement prepStatement = null;
+        try {
+            con = Utils.getConnection();
+            prepStatement = con.prepareStatement(UPDATE_USER_STATUS);
+            int k = 1;
+            prepStatement.setBoolean(k++, user.isActive());
+            prepStatement.setLong(k, user.getId());
+            if (prepStatement.executeUpdate() > 0) {
+                log.info("Status of user with phone={} is updated to {}", user.getPhoneNumber(), user.isActive());
+                return true;
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during update status of user with phone {} processing {}. {}",
+                    user.getPhoneNumber(), Utils.class, e.getMessage());
+            } finally {
+            Utils.close(prepStatement);
+            Utils.close(con);
+        }
+        return false;
     }
 }

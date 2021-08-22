@@ -39,4 +39,8 @@ public class UserService {
     public User findUserById(Long id) throws DBException {
         return userDao.findUserById(id);
     }
+
+    public boolean updateUserStatus(User user) {
+        return userDao.updateUserStatus(user);
+    }
 }

@@ -38,14 +38,9 @@
                 <td>${user.getFormatedDate()}</td>
                 <td>${user.role}</td>
                 <td>
-<%--                    <input type="checkbox" ${user.active?'checked':""} disabled>--%>
-                    <form method="post" action="/user/?id=${user.id} action='active'">
-                        <input type="checkbox" ${user.active?'checked':""}>
-                        <button type="submit"><fmt:message key="apply"/></button>
-                    </form>
+                    <input type="checkbox" ${user.active?'checked':""} disabled>
                 </td>
-                <td><a href="/user?id=${user.id}">Details</a></td>
-                <td><form method="post" action="/user/delete?id=${user.id}"><button type="submit">Delete</button></form></td>
+                <td><a href="${pageContext.request.contextPath}/user?id=${user.id}"><fmt:message key="profile_nav"/></a></td>
                 <td><a href="/user/orders/${user.id}">Show user`s oders</a></td>
             </tr>
         </c:forEach>
@@ -57,7 +52,7 @@
     </tbody>
 
 </table>
-
+    <%@include file="parts/messages.jsp" %>
 <br/>
 
 <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/admin"><fmt:message key="home_page"/></a>
