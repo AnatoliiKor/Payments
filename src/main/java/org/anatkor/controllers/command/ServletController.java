@@ -22,9 +22,11 @@ public class ServletController extends HttpServlet{
 //        commands.put("lang", new Language());
         commands.put("login", new LoginCommand());
         commands.put("logout", new LogoutCommand());
-//        commands.put("registration", new Registration());
-//        commands.put("admin", new AdminCommand());
+        commands.put("registration", new RegistrationCommand());
+        commands.put("admin", new AdminCommand());
+        commands.put("wallet", new WalletCommand());
 //        commands.put("user", new UserCommand());
+        commands.put("users", new UsersCommand());
         commands.put("exception", new ExceptionCommand());
     }
 
@@ -44,7 +46,7 @@ public class ServletController extends HttpServlet{
 
         String path = req.getRequestURI();
         log.warn("before" + path);
-        path = path.replaceAll(".*(/app)?/", "");
+        path = path.replaceAll(".*(/wallet)?(/admin)?/", "");
         log.warn("after" + path);
         Command command = commands.getOrDefault(path, (r)->"/jsp/login.jsp");
         String urlPage = command.execute(req);

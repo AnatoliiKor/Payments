@@ -28,7 +28,6 @@ public class AdminFilter implements Filter {
         if (!"ADMIN".equals(session.getAttribute("role"))) {
             log.warn("Attempt of unauthorized access to the Admin by {}", session.getAttribute("user_auth"));
             req.setAttribute("warn", "Access is forbidden. Log in as Admin ");
-//            session.setAttribute("req_uri", req.getRequestURI());
             req.getRequestDispatcher("/login").forward(req, resp);
         }
         chain.doFilter(request, response);

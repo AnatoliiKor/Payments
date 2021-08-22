@@ -1,48 +1,487 @@
-2021-08-21 16:01:54,254 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
-2021-08-21 16:01:54,264 [http-nio-8081-exec-4] WARN  org.anatkor.controllers.command.ServletController- before/login
-2021-08-21 16:01:54,264 [http-nio-8081-exec-4] WARN  org.anatkor.controllers.command.ServletController- afterlogin
-2021-08-21 16:01:54,551 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-21 16:01:54,551 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
-2021-08-21 16:02:30,840 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
-2021-08-21 16:02:30,840 [http-nio-8081-exec-8] WARN  org.anatkor.controllers.command.ServletController- before/logout
-2021-08-21 16:02:30,841 [http-nio-8081-exec-8] WARN  org.anatkor.controllers.command.ServletController- afterlogout
-2021-08-21 16:02:37,762 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-21 16:02:37,762 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
-2021-08-21 16:02:37,766 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
-2021-08-21 16:02:37,767 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- before/login
-2021-08-21 16:02:37,767 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- afterlogin
-2021-08-21 16:02:37,767 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-21 16:02:37,769 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-08-21 16:02:41,387 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
-2021-08-21 16:02:41,387 [http-nio-8081-exec-10] WARN  org.anatkor.controllers.command.ServletController- before/login
-2021-08-21 16:02:41,388 [http-nio-8081-exec-10] WARN  org.anatkor.controllers.command.ServletController- afterlogin
-2021-08-21 16:02:41,430 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-21 16:02:41,430 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
-2021-08-21 16:02:41,435 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.servlets.AdminServlet- Admin servlet called
-2021-08-21 16:03:09,657 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
-2021-08-21 16:03:09,657 [http-nio-8081-exec-6] WARN  org.anatkor.controllers.command.ServletController- before/logout
-2021-08-21 16:03:09,657 [http-nio-8081-exec-6] WARN  org.anatkor.controllers.command.ServletController- afterlogout
-2021-08-21 16:03:13,341 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-21 16:03:13,342 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
-2021-08-21 16:03:13,345 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
-2021-08-21 16:03:13,346 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- before/login
-2021-08-21 16:03:13,346 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- afterlogin
-2021-08-21 16:03:13,346 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-21 16:03:13,346 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-08-21 16:03:42,976 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
-2021-08-21 16:03:42,976 [http-nio-8081-exec-4] WARN  org.anatkor.controllers.command.ServletController- before/login
-2021-08-21 16:03:42,976 [http-nio-8081-exec-4] WARN  org.anatkor.controllers.command.ServletController- afterlogin
-2021-08-21 16:03:43,021 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-21 16:03:43,021 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
-2021-08-21 16:03:43,025 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.servlets.AdminServlet- Admin servlet called
-2021-08-21 16:04:05,050 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.servlets.UserServlet- User servlet called
-2021-08-21 16:05:06,845 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
-2021-08-21 16:07:56,288 [http-nio-8081-exec-3] WARN  org.anatkor.controllers.command.ServletController- before/logout
-2021-08-21 16:07:56,289 [http-nio-8081-exec-3] WARN  org.anatkor.controllers.command.ServletController- afterlogout
-2021-08-21 16:07:56,289 [http-nio-8081-exec-3] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-21 16:07:56,289 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
-2021-08-21 16:07:56,293 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
-2021-08-21 16:07:56,294 [http-nio-8081-exec-5] WARN  org.anatkor.controllers.command.ServletController- before/login
-2021-08-21 16:07:56,294 [http-nio-8081-exec-5] WARN  org.anatkor.controllers.command.ServletController- afterlogin
-2021-08-21 16:07:56,294 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-21 16:07:56,294 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 10:59:49,208 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-22 10:59:49,219 [http-nio-8081-exec-5] WARN  org.anatkor.controllers.command.ServletController- before/favicon.ico
+2021-08-22 10:59:49,220 [http-nio-8081-exec-5] WARN  org.anatkor.controllers.command.ServletController- afterfavicon.ico
+2021-08-22 10:59:49,220 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 10:59:52,949 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 10:59:52,949 [http-nio-8081-exec-6] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 10:59:52,950 [http-nio-8081-exec-6] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 10:59:52,950 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 10:59:52,958 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-22 10:59:52,958 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 10:59:52,959 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 10:59:52,959 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 10:59:52,959 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 10:59:52,959 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 10:59:52,959 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 10:59:52,960 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 10:59:52,960 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.AdminCommand- Not enough login data
+2021-08-22 10:59:52,963 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 10:59:53,046 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-22 10:59:53,047 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- before/favicon.ico
+2021-08-22 10:59:53,047 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- afterfavicon.ico
+2021-08-22 10:59:53,047 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 10:59:59,975 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-22 10:59:59,976 [http-nio-8081-exec-10] WARN  org.anatkor.controllers.command.ServletController- before/favicon.ico
+2021-08-22 10:59:59,976 [http-nio-8081-exec-10] WARN  org.anatkor.controllers.command.ServletController- afterfavicon.ico
+2021-08-22 10:59:59,976 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:00:02,712 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:00:02,713 [http-nio-8081-exec-1] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:00:02,713 [http-nio-8081-exec-1] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:00:02,713 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:00:02,716 [http-nio-8081-exec-2] WARN  org.anatkor.controllers.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-22 11:00:02,717 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:00:02,717 [http-nio-8081-exec-2] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:00:02,717 [http-nio-8081-exec-2] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:00:02,717 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:00:02,718 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:00:02,718 [http-nio-8081-exec-2] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:00:02,718 [http-nio-8081-exec-2] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:00:02,718 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.AdminCommand- Not enough login data
+2021-08-22 11:00:02,718 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:00:02,775 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-22 11:00:02,775 [http-nio-8081-exec-3] WARN  org.anatkor.controllers.command.ServletController- before/favicon.ico
+2021-08-22 11:00:02,776 [http-nio-8081-exec-3] WARN  org.anatkor.controllers.command.ServletController- afterfavicon.ico
+2021-08-22 11:00:02,776 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:00:58,966 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-22 11:00:58,966 [http-nio-8081-exec-6] WARN  org.anatkor.controllers.command.ServletController- before/favicon.ico
+2021-08-22 11:00:58,966 [http-nio-8081-exec-6] WARN  org.anatkor.controllers.command.ServletController- afterfavicon.ico
+2021-08-22 11:00:58,966 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:01:04,726 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:01:04,726 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:01:04,726 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:01:04,727 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:01:04,729 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-22 11:01:04,730 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:01:04,730 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:01:04,730 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:01:04,730 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:01:04,731 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:01:04,731 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:01:04,731 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:01:04,731 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.AdminCommand- Not enough login data
+2021-08-22 11:01:04,731 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:01:04,790 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-22 11:01:04,790 [http-nio-8081-exec-8] WARN  org.anatkor.controllers.command.ServletController- before/favicon.ico
+2021-08-22 11:01:04,790 [http-nio-8081-exec-8] WARN  org.anatkor.controllers.command.ServletController- afterfavicon.ico
+2021-08-22 11:01:04,791 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:01:41,122 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-22 11:01:50,827 [http-nio-8081-exec-2] WARN  org.anatkor.controllers.command.ServletController- before/favicon.ico
+2021-08-22 11:01:58,815 [http-nio-8081-exec-2] WARN  org.anatkor.controllers.command.ServletController- afterfavicon.ico
+2021-08-22 11:01:58,815 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:02:02,606 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-22 11:02:32,721 [http-nio-8081-exec-5] WARN  org.anatkor.controllers.command.ServletController- before/favicon.ico
+2021-08-22 11:02:34,517 [http-nio-8081-exec-5] WARN  org.anatkor.controllers.command.ServletController- afterfavicon.ico
+2021-08-22 11:02:34,518 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:02:46,718 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:02:54,100 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:03:01,255 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:03:01,255 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:03:01,259 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-22 11:03:01,260 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:03:08,024 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:03:10,048 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:03:10,048 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:03:10,049 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:03:13,768 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:03:17,861 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:03:17,861 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.AdminCommand- Not enough login data
+2021-08-22 11:03:17,861 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:03:17,960 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-22 11:04:23,731 [http-nio-8081-exec-10] WARN  org.anatkor.controllers.command.ServletController- before/favicon.ico
+2021-08-22 11:04:24,821 [http-nio-8081-exec-10] WARN  org.anatkor.controllers.command.ServletController- afterfavicon.ico
+2021-08-22 11:04:24,821 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:04:28,974 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:04:31,736 [http-nio-8081-exec-5] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:04:32,773 [http-nio-8081-exec-5] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:04:33,052 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-22 11:04:33,053 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
+2021-08-22 11:04:33,056 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:04:36,023 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:04:37,270 [http-nio-8081-exec-7] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:04:37,271 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:04:37,277 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:04:38,318 [http-nio-8081-exec-1] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:04:39,215 [http-nio-8081-exec-1] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:04:39,215 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:04:39,219 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:04:40,447 [http-nio-8081-exec-10] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:04:41,355 [http-nio-8081-exec-10] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:04:41,355 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:04:41,359 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:04:42,226 [http-nio-8081-exec-6] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:04:42,939 [http-nio-8081-exec-6] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:04:42,939 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:04:42,943 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:04:43,539 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:04:44,074 [http-nio-8081-exec-9] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:04:44,074 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:04:44,078 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:04:45,139 [http-nio-8081-exec-3] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:04:45,795 [http-nio-8081-exec-3] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:04:45,796 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:04:45,799 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:04:46,039 [http-nio-8081-exec-2] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:04:46,824 [http-nio-8081-exec-2] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:04:46,824 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:04:46,827 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:04:47,079 [http-nio-8081-exec-11] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:04:47,547 [http-nio-8081-exec-11] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:04:47,547 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:04:47,551 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:04:48,111 [http-nio-8081-exec-12] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:04:50,687 [http-nio-8081-exec-12] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:04:50,687 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin
+2021-08-22 11:04:50,691 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/admin
+2021-08-22 11:04:54,425 [http-nio-8081-exec-13] WARN  org.anatkor.controllers.command.ServletController- before/admin/admin
+2021-08-22 11:05:56,928 [http-nio-8081-exec-13] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:05:56,929 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:05:59,741 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-22 11:06:02,779 [http-nio-8081-exec-14] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-22 11:06:03,808 [http-nio-8081-exec-14] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-22 11:06:03,808 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-22 11:06:03,809 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-22 11:06:03,813 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:06:08,108 [http-nio-8081-exec-15] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:06:09,013 [http-nio-8081-exec-15] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:06:09,013 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:06:09,015 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:06:12,258 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:06:15,009 [http-nio-8081-exec-16] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:06:16,770 [http-nio-8081-exec-16] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:06:16,813 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-22 11:06:16,814 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
+2021-08-22 11:06:16,818 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:06:18,381 [http-nio-8081-exec-17] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:06:20,613 [http-nio-8081-exec-17] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:06:20,614 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:06:33,465 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:06:38,872 [http-nio-8081-exec-11] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:06:40,379 [http-nio-8081-exec-11] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:06:40,380 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:06:46,210 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:07:06,890 [http-nio-8081-exec-12] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:07:10,975 [http-nio-8081-exec-12] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:07:10,976 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:07:20,825 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:07:53,419 [http-nio-8081-exec-13] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:07:55,092 [http-nio-8081-exec-13] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:07:55,092 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:08:07,593 [http-nio-8081-exec-18] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:08:40,267 [http-nio-8081-exec-18] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:08:41,070 [http-nio-8081-exec-18] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:08:41,071 [http-nio-8081-exec-18] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:08:57,048 [http-nio-8081-exec-19] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-22 11:09:21,679 [http-nio-8081-exec-19] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-22 11:09:23,700 [http-nio-8081-exec-19] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-22 11:09:23,700 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-22 11:09:23,701 [http-nio-8081-exec-19] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-22 11:09:23,704 [http-nio-8081-exec-20] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:09:25,096 [http-nio-8081-exec-20] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:09:27,532 [http-nio-8081-exec-20] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:09:27,532 [http-nio-8081-exec-20] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:09:27,532 [http-nio-8081-exec-20] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:09:33,949 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:09:37,665 [http-nio-8081-exec-12] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:09:38,681 [http-nio-8081-exec-12] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:09:38,726 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-22 11:09:38,726 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-22 11:09:38,730 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:09:40,673 [http-nio-8081-exec-14] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:09:42,156 [http-nio-8081-exec-14] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:09:42,156 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:09:53,065 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:09:56,215 [http-nio-8081-exec-16] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:09:57,155 [http-nio-8081-exec-16] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:09:57,156 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:10:18,724 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:10:22,137 [http-nio-8081-exec-11] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:10:23,470 [http-nio-8081-exec-11] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:10:23,470 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:12:00,999 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:12:06,578 [http-nio-8081-exec-14] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:12:07,659 [http-nio-8081-exec-14] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:12:07,660 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:12:45,819 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:12:48,666 [http-nio-8081-exec-17] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:12:49,143 [http-nio-8081-exec-17] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:12:49,143 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:13:02,784 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:13:05,191 [http-nio-8081-exec-16] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:13:05,775 [http-nio-8081-exec-16] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:13:05,909 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-22 11:13:05,909 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
+2021-08-22 11:13:05,913 [http-nio-8081-exec-20] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:13:07,885 [http-nio-8081-exec-20] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:13:08,615 [http-nio-8081-exec-20] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:13:08,615 [http-nio-8081-exec-20] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:13:10,770 [http-nio-8081-exec-19] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-22 11:13:13,212 [http-nio-8081-exec-19] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-22 11:13:13,848 [http-nio-8081-exec-19] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-22 11:13:13,848 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-22 11:13:13,848 [http-nio-8081-exec-19] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-22 11:13:13,852 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:13:14,576 [http-nio-8081-exec-14] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:13:15,348 [http-nio-8081-exec-14] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:13:15,349 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:13:15,351 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:13:19,000 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:13:21,961 [http-nio-8081-exec-15] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:13:22,473 [http-nio-8081-exec-15] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:13:22,626 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-22 11:13:22,627 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-22 11:13:22,630 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:13:24,809 [http-nio-8081-exec-11] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:13:25,505 [http-nio-8081-exec-11] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:13:25,505 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:13:28,396 [http-nio-8081-exec-13] WARN  org.anatkor.controllers.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@6a61e88b
+2021-08-22 11:13:28,396 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:13:42,994 [http-nio-8081-exec-13] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:13:44,211 [http-nio-8081-exec-13] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:13:44,212 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:13:44,212 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:16:09,330 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:16:14,076 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:16:14,076 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:16:14,076 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:16:21,891 [http-nio-8081-exec-22] WARN  org.anatkor.controllers.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@6a61e88b
+2021-08-22 11:16:27,941 [http-nio-8081-exec-22] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:16:27,941 [http-nio-8081-exec-22] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:16:27,942 [http-nio-8081-exec-22] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:16:27,942 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:16:27,942 [http-nio-8081-exec-22] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:18:26,553 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:18:26,553 [http-nio-8081-exec-24] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:18:26,554 [http-nio-8081-exec-24] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:18:26,554 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:18:39,273 [http-nio-8081-exec-25] WARN  org.anatkor.controllers.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@6a61e88b
+2021-08-22 11:18:39,274 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:18:39,275 [http-nio-8081-exec-25] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:18:39,275 [http-nio-8081-exec-25] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:18:39,275 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:18:52,379 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:19:09,012 [http-nio-8081-exec-27] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:19:09,013 [http-nio-8081-exec-27] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:19:09,013 [http-nio-8081-exec-27] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:19:09,013 [http-nio-8081-exec-27] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:19:15,633 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:19:15,633 [http-nio-8081-exec-29] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:19:15,633 [http-nio-8081-exec-29] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:19:15,633 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:19:18,981 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:19:18,982 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:19:18,982 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:19:18,982 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:20:00,090 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-22 11:20:00,090 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-22 11:20:00,091 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-22 11:20:00,091 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-22 11:20:00,091 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-22 11:20:00,094 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:20:00,095 [http-nio-8081-exec-25] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:20:00,095 [http-nio-8081-exec-25] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:20:00,095 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:20:54,240 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:21:24,105 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:21:24,105 [http-nio-8081-exec-29] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:21:24,105 [http-nio-8081-exec-29] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:21:27,373 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-22 11:21:27,373 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-22 11:21:27,377 [http-nio-8081-exec-30] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:21:27,377 [http-nio-8081-exec-30] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:21:27,377 [http-nio-8081-exec-30] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:21:27,377 [http-nio-8081-exec-30] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:21:29,012 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@9f8ca62
+2021-08-22 11:21:29,012 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:21:29,012 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:21:29,013 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:21:29,013 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:22:16,345 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:22:22,023 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:22:22,023 [http-nio-8081-exec-23] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:22:22,023 [http-nio-8081-exec-23] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:22:22,023 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:22:33,519 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:22:33,519 [http-nio-8081-exec-24] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:22:33,519 [http-nio-8081-exec-24] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:22:33,519 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:22:34,939 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:22:34,939 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:22:34,940 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:22:34,940 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:22:35,135 [http-nio-8081-exec-27] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:22:35,135 [http-nio-8081-exec-27] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:22:35,135 [http-nio-8081-exec-27] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:22:35,135 [http-nio-8081-exec-27] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:22:35,327 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:22:35,327 [http-nio-8081-exec-25] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:22:35,327 [http-nio-8081-exec-25] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:22:35,327 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:22:35,507 [http-nio-8081-exec-28] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:22:35,507 [http-nio-8081-exec-28] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:22:35,508 [http-nio-8081-exec-28] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:22:35,508 [http-nio-8081-exec-28] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:22:35,695 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:22:35,695 [http-nio-8081-exec-29] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:22:35,695 [http-nio-8081-exec-29] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:22:35,695 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:22:35,907 [http-nio-8081-exec-30] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:22:35,907 [http-nio-8081-exec-30] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:22:35,907 [http-nio-8081-exec-30] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:22:35,907 [http-nio-8081-exec-30] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:22:38,455 [http-nio-8081-exec-22] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-22 11:22:38,456 [http-nio-8081-exec-22] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-22 11:22:38,456 [http-nio-8081-exec-22] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-22 11:22:38,456 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-22 11:22:38,456 [http-nio-8081-exec-22] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-22 11:22:38,459 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:22:38,459 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:22:38,459 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:22:38,459 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:23:13,130 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:23:18,121 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:23:18,121 [http-nio-8081-exec-24] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:23:18,121 [http-nio-8081-exec-24] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:23:20,423 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-22 11:23:20,424 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
+2021-08-22 11:23:20,427 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:23:20,427 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:23:20,427 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:23:20,427 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:23:24,611 [http-nio-8081-exec-27] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:23:24,611 [http-nio-8081-exec-27] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:23:24,611 [http-nio-8081-exec-27] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:23:24,612 [http-nio-8081-exec-27] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:24:39,045 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:24:39,046 [http-nio-8081-exec-29] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:24:39,046 [http-nio-8081-exec-29] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:24:39,047 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:24:39,968 [http-nio-8081-exec-30] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:24:39,968 [http-nio-8081-exec-30] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:24:39,968 [http-nio-8081-exec-30] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:24:39,969 [http-nio-8081-exec-30] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:24:43,276 [http-nio-8081-exec-22] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:24:43,277 [http-nio-8081-exec-22] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:24:43,277 [http-nio-8081-exec-22] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:24:43,277 [http-nio-8081-exec-22] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:24:48,821 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:24:48,821 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:24:48,822 [http-nio-8081-exec-21] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:24:48,822 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:24:51,253 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-22 11:24:51,253 [http-nio-8081-exec-24] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-22 11:24:51,253 [http-nio-8081-exec-24] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-22 11:24:51,254 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-22 11:24:51,254 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-22 11:24:51,257 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:24:51,257 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:24:51,257 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:24:51,257 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:25:02,246 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:25:05,589 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:25:05,589 [http-nio-8081-exec-25] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:25:05,589 [http-nio-8081-exec-25] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:25:08,386 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-22 11:25:08,386 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-22 11:25:08,390 [http-nio-8081-exec-28] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:25:08,390 [http-nio-8081-exec-28] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:25:08,390 [http-nio-8081-exec-28] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:25:08,390 [http-nio-8081-exec-28] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:25:29,746 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:25:29,755 [http-nio-8081-exec-23] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:25:29,756 [http-nio-8081-exec-23] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:25:29,883 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-22 11:25:29,883 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-22 11:25:29,886 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:25:29,887 [http-nio-8081-exec-24] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:25:29,887 [http-nio-8081-exec-24] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:25:34,545 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-22 11:25:39,277 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.servlets.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@7c9fd5f0
+2021-08-22 11:25:39,277 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:25:39,278 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:25:39,278 [http-nio-8081-exec-26] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:25:39,278 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:26:06,081 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:26:19,646 [http-nio-8081-exec-31] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-22 11:26:19,646 [http-nio-8081-exec-31] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-22 11:26:19,647 [http-nio-8081-exec-31] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-22 11:26:19,647 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-22 11:26:19,647 [http-nio-8081-exec-31] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-22 11:26:19,650 [http-nio-8081-exec-32] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:26:19,650 [http-nio-8081-exec-32] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:26:19,650 [http-nio-8081-exec-32] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:26:19,650 [http-nio-8081-exec-32] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:26:27,517 [http-nio-8081-exec-32] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:32:49,170 [http-nio-8081-exec-36] DEBUG org.anatkor.dao.UserDao- SQLException during Add user with phone 382222222222 processing class org.anatkor.dao.Utils. ERROR: duplicate key value violates unique constraint "usr_email_key"
+  Detail: Key (email)=(email@c.com) already exists.
+2021-08-22 11:32:55,096 [http-nio-8081-exec-31] DEBUG org.anatkor.dao.UserDao- SQLException during Add user with phone 381111111111 processing class org.anatkor.dao.Utils. ERROR: duplicate key value violates unique constraint "usr_email_key"
+  Detail: Key (email)=(email@c.com) already exists.
+2021-08-22 11:33:01,765 [http-nio-8081-exec-32] DEBUG org.anatkor.dao.UserDao- SQLException during Add user with phone 382222222222 processing class org.anatkor.dao.Utils. ERROR: duplicate key value violates unique constraint "usr_phone_number_key"
+  Detail: Key (phone_number)=(382222222222) already exists.
+2021-08-22 11:40:14,459 [http-nio-8081-exec-39] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /registration
+2021-08-22 11:40:14,469 [http-nio-8081-exec-39] WARN  org.anatkor.controllers.command.ServletController- before/registration
+2021-08-22 11:40:14,469 [http-nio-8081-exec-39] WARN  org.anatkor.controllers.command.ServletController- afterregistration
+2021-08-22 11:40:14,598 [http-nio-8081-exec-39] DEBUG org.anatkor.dao.UserDao- SQLException during Add user with phone 382222222222 processing class org.anatkor.dao.Utils. ERROR: duplicate key value violates unique constraint "usr_email_key"
+  Detail: Key (email)=(email@c.com) already exists.
+2021-08-22 11:40:14,599 [http-nio-8081-exec-39] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/registration.jsp
+2021-08-22 11:40:25,796 [http-nio-8081-exec-38] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /registration
+2021-08-22 11:40:25,796 [http-nio-8081-exec-38] WARN  org.anatkor.controllers.command.ServletController- before/registration
+2021-08-22 11:40:25,796 [http-nio-8081-exec-38] WARN  org.anatkor.controllers.command.ServletController- afterregistration
+2021-08-22 11:40:25,837 [http-nio-8081-exec-38] DEBUG org.anatkor.dao.UserDao- SQLException during Add user with phone 382222222222 processing class org.anatkor.dao.Utils. ERROR: duplicate key value violates unique constraint "usr_phone_number_key"
+  Detail: Key (phone_number)=(382222222222) already exists.
+2021-08-22 11:40:25,838 [http-nio-8081-exec-38] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/registration.jsp
+2021-08-22 11:40:42,584 [http-nio-8081-exec-32] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /registration
+2021-08-22 11:40:42,584 [http-nio-8081-exec-32] WARN  org.anatkor.controllers.command.ServletController- before/registration
+2021-08-22 11:40:42,584 [http-nio-8081-exec-32] WARN  org.anatkor.controllers.command.ServletController- afterregistration
+2021-08-22 11:40:42,638 [http-nio-8081-exec-32] INFO  org.anatkor.dao.UserDao- User with phone =385555555555 is added
+2021-08-22 11:40:42,640 [http-nio-8081-exec-32] INFO  org.anatkor.dao.UserDao- User with id 37 with role  is added
+2021-08-22 11:40:42,640 [http-nio-8081-exec-32] DEBUG org.anatkor.controllers.command.ServletController- forward to=/login
+2021-08-22 11:40:42,641 [http-nio-8081-exec-32] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:40:42,641 [http-nio-8081-exec-32] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:40:42,641 [http-nio-8081-exec-32] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:40:42,680 [http-nio-8081-exec-32] INFO  org.anatkor.controllers.command.LoginCommand- Client '385555555555' is logged in
+2021-08-22 11:40:42,680 [http-nio-8081-exec-32] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-22 11:40:42,684 [http-nio-8081-exec-33] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:40:42,684 [http-nio-8081-exec-33] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:40:42,684 [http-nio-8081-exec-33] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:40:42,684 [http-nio-8081-exec-33] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-22 11:40:50,249 [http-nio-8081-exec-35] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /logout
+2021-08-22 11:40:50,249 [http-nio-8081-exec-35] WARN  org.anatkor.controllers.command.ServletController- before/logout
+2021-08-22 11:40:50,250 [http-nio-8081-exec-35] WARN  org.anatkor.controllers.command.ServletController- afterlogout
+2021-08-22 11:40:50,250 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.command.LogoutCommand- User 385555555555 is Logged out
+2021-08-22 11:40:50,250 [http-nio-8081-exec-35] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-08-22 11:40:50,253 [http-nio-8081-exec-40] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-22 11:40:50,253 [http-nio-8081-exec-40] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:40:50,254 [http-nio-8081-exec-40] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:40:50,254 [http-nio-8081-exec-40] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-22 11:40:50,254 [http-nio-8081-exec-40] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-22 11:40:53,006 [http-nio-8081-exec-41] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:40:53,006 [http-nio-8081-exec-41] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:40:53,007 [http-nio-8081-exec-41] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:40:53,051 [http-nio-8081-exec-41] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-22 11:40:53,051 [http-nio-8081-exec-41] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
+2021-08-22 11:40:53,054 [http-nio-8081-exec-42] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:40:53,055 [http-nio-8081-exec-42] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:40:53,055 [http-nio-8081-exec-42] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:40:53,055 [http-nio-8081-exec-42] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:41:47,660 [http-nio-8081-exec-46] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:41:52,276 [http-nio-8081-exec-46] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:41:54,053 [http-nio-8081-exec-46] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:41:54,054 [http-nio-8081-exec-46] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:45:38,631 [http-nio-8081-exec-41] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-22 11:45:42,999 [http-nio-8081-exec-41] WARN  org.anatkor.controllers.command.ServletController- before/wallet
+2021-08-22 11:45:43,587 [http-nio-8081-exec-41] WARN  org.anatkor.controllers.command.ServletController- afterwallet
+2021-08-22 11:45:43,588 [http-nio-8081-exec-41] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-22 11:45:50,691 [http-nio-8081-exec-44] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-22 11:45:53,246 [http-nio-8081-exec-44] WARN  org.anatkor.controllers.command.ServletController- before/login
+2021-08-22 11:45:53,750 [http-nio-8081-exec-44] WARN  org.anatkor.controllers.command.ServletController- afterlogin
+2021-08-22 11:45:53,883 [http-nio-8081-exec-44] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-22 11:45:53,884 [http-nio-8081-exec-44] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
+2021-08-22 11:45:53,888 [http-nio-8081-exec-42] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin
+2021-08-22 11:45:54,610 [http-nio-8081-exec-42] WARN  org.anatkor.controllers.command.ServletController- before/admin
+2021-08-22 11:45:55,222 [http-nio-8081-exec-42] WARN  org.anatkor.controllers.command.ServletController- afteradmin
+2021-08-22 11:45:55,222 [http-nio-8081-exec-42] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-08-22 11:45:57,237 [http-nio-8081-exec-48] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/users
+2021-08-22 11:45:59,965 [http-nio-8081-exec-48] WARN  org.anatkor.controllers.command.ServletController- before/admin/users
+2021-08-22 11:46:01,548 [http-nio-8081-exec-48] WARN  org.anatkor.controllers.command.ServletController- afterusers
+2021-08-22 11:46:01,548 [http-nio-8081-exec-48] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-22 11:46:01,693 [http-nio-8081-exec-48] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/users_list.jsp

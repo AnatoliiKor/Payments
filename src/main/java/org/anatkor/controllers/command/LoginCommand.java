@@ -21,7 +21,7 @@ class LoginCommand implements Command {
 
         if ((phone == null || phone.isEmpty()) && (password == null || password.isEmpty())) {
             log.info("Not enough login data");
-            CommandUtils.addBackUrl(req);
+//            CommandUtils.addBackUrl(req);
             return "/jsp/login.jsp";
         } else {
             try {
