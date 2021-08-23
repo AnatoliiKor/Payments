@@ -71,7 +71,7 @@
                         <td>${bike.description}</td>
                         <td <c:if test="${sort_by.equals('category')}">class="text-info fw-bold"</c:if>>${bike.category}</td>
                         <td <c:if test="${sort_by.equals('date')}">class="text-info fw-bold"</c:if>>${bike.registrationDateTime}</td>
-                        <td <c:if test="${sort_by.equals('price')}">class="text-info fw-bold"</c:if>>${bike.price}</td>
+                        <td <c:if test="${sort_by.equals('price')}">class="text-info fw-bold"</c:if>>${bike.price/100}</td>
                         <c:choose>
                             <c:when test="${role != null && role.equals('ADMIN')}"><td><a href="/admin/bike_edit?id=${bike.id}"><fmt:message key="edit"/></a></td></c:when>
                             <c:otherwise><td><a href="/buy?id=${bike.id}"><fmt:message key="buy_main"/></a></td></c:otherwise>

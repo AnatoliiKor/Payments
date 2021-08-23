@@ -28,18 +28,19 @@ public class ServletController extends HttpServlet{
         commands.put("user", new UserCommand());
         commands.put("users", new UsersCommand());
         commands.put("exception", new ExceptionCommand());
-        commands.put("new_account", new ExceptionCommand());
+        commands.put("account", new AccountCommand());
+        commands.put("accounts", new AccountsCommand());
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.debug("Do GET request to {}", req.getRequestURI());
+//        log.debug("Do GET request to {}", req.getRequestURI());
         processRequest(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.debug("Do POST request to {}", req.getRequestURI());
+//        log.debug("Do POST request to {}", req.getRequestURI());
         processRequest(req, resp);
     }
 
@@ -50,10 +51,10 @@ public class ServletController extends HttpServlet{
         Command command = commands.getOrDefault(path, (r)->"/jsp/login.jsp");
         String urlPage = command.execute(req);
         if (urlPage.contains("redirect:")) {
-            log.debug("redirect to=" + urlPage.replaceAll("redirect:", ""));
+//            log.debug("redirect to=" + urlPage.replaceAll("redirect:", ""));
             resp.sendRedirect(urlPage.replaceAll("redirect:", "")); //replaceAll("redirect:", "/app")
         } else {
-            log.debug("forward to=" + urlPage);
+//            log.debug("forward to=" + urlPage);
             req.getRequestDispatcher(urlPage).forward(req, resp);
         }
     }

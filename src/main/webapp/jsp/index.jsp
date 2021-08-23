@@ -1,6 +1,3 @@
-<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
-<%--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">--%>
 <%@include file="parts/navbar.jsp"%>
 
 <html>
@@ -8,13 +5,56 @@
     <title>Wallet</title>
 </head>
 <body>
+
+<%@include file="parts/messages.jsp" %>
+
 <div class="container mt-5">
-<a class="btn btn-outline-primary mx-5" href="/wallet/new_account"><fmt:message key="new_account"/></a>
+    <div class="row">
+        <div class="col">
+            <c:choose>
+                <c:when test="${not empty account}">
+                    <c:forEach var="account" items="accounts">
 
 
-<a class="btn btn-outline-primary mx-5" href="/admin/users"><fmt:message key="users_list"/></a>
-<a class="btn btn-outline-primary mx-5" href="/bikes"><fmt:message key="bikes_list"/></a>
+                    </c:forEach>
+                </c:when>
+                <c:otherwise><fmt:message key="no_accounts"/></c:otherwise>
+            </c:choose>
+        </div>
 
+        <div class="col">
+            <div><a class="btn btn-outline-primary m-2" href="/admin/users"><fmt:message key="my_payments"/></a></div>
+            <div><a class="btn btn-outline-primary m-2" href="/wallet/accounts?user_id=${user_auth.id}"><fmt:message key="my_accounts"/></a></div>
+            <div>
+                <button class="btn btn-outline-primary m-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseNewAccount" aria-expanded="false" aria-controls="collapseNewAccount">
+                    <fmt:message key="new_account"/>
+                </button>
+                <div style="min-height: 120px;">
+                    <div class="collapse collapse-horizontal" id="collapseNewAccount">
+                        <div class="card card-body" style="width: 300px;">
+                            <form method="post" action="${pageContext.request.contextPath}/wallet/account">
+                                <fmt:message key="account_name"/>
+                                <input type="hidden" name="action" value="new">
+                                <input type="hidden" name="id" value=${user_auth.id}>
+                                <input type="text" name="account_name" required>
+                                <br/>
+                                <div class="m-1"><fmt:message key="currency"/>
+                                    <select name="currency" size="1" required>
+                                        <option value="UAH" selected><fmt:message key="uah"/></option>
+                                        <option value="USD"><fmt:message key="usd"/></option>
+                                        <option value="EURO"><fmt:message key="euro"/></option>
+                                    </select>
+                                </div>
+                                    <br/>
+                                <button class="mt-1" type="submit"><fmt:message key="send_request"/></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
