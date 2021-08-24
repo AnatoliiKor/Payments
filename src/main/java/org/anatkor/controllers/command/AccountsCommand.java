@@ -18,25 +18,30 @@ class AccountsCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {
-        log.info("account list requested");
-//        HttpSession session = req.getSession();
-        Long user_id = Long.parseLong(req.getParameter("user_id"));
         String sortBy;
         String order;
+        Long user_id;
+        HttpSession session = req.getSession();
+        if (req.getParameter("user_id")==null){
+            user_id = (Long) session.getAttribute("user_auth_id");
+        } else {
+            user_id = Long.parseLong(req.getParameter("user_id"));
+        }
+        log.info("account list requested for uder with id= {}", user_id);
         if (req.getParameter("sort_by") != null) {
             sortBy = req.getParameter("sort_by");
-//            session.setAttribute("sort_by", sortBy);
-//        } else if (session.getAttribute("sort_by") != null) {
-//            sortBy = (String) session.getAttribute("sort_by");
+            session.setAttribute("sort_by", sortBy);
+        } else if (session.getAttribute("sort_by") != null) {
+            sortBy = (String) session.getAttribute("sort_by");
         } else {
             sortBy = "balance";
         }
 
         if (req.getParameter("order") != null) {
             order = req.getParameter("order");
-//            session.setAttribute("order", order);
-//        } else if (session.getAttribute("order") != null) {
-//            order = (String) session.getAttribute("order");
+            session.setAttribute("order", order);
+        } else if (session.getAttribute("order") != null) {
+            order = (String) session.getAttribute("order");
         } else {
             order = "DESC";
         }

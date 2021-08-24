@@ -41,7 +41,7 @@
                     <input type="checkbox" ${user.active?'checked':""} disabled>
                 </td>
                 <td><a href="${pageContext.request.contextPath}/user?id=${user.id}"><fmt:message key="profile_nav"/></a></td>
-                <td><a href="/user/orders/${user.id}">Show user`s oders</a></td>
+                <td><a href="${pageContext.request.contextPath}/wallet/accounts?user_id=${user.id}"><fmt:message key="accounts"/></a></td>
             </tr>
         </c:forEach>
     </c:when>

@@ -1,0 +1,408 @@
+2021-08-23 11:14:58,060 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:14:58,073 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:05,469 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-23 11:15:05,794 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 11:15:05,795 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-23 11:15:05,798 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:15:05,799 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:15:06,005 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:06,006 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:39,911 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:15:39,911 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:15:40,017 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:40,018 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:42,822 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:15:42,822 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:15:42,889 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:42,890 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:43,642 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:15:43,643 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:15:43,705 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:43,706 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:44,638 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:15:44,639 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:15:44,705 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:44,705 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:45,427 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:15:45,427 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:15:45,494 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:45,494 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:46,090 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:15:46,091 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:15:46,151 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:46,151 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:46,599 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:15:46,599 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:15:46,662 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:46,662 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:47,540 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:47,540 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:49,771 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:15:49,772 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:15:49,834 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:49,834 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:51,341 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet/user
+2021-08-23 11:15:51,341 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.UserCommand- User 382222222222 profile called
+2021-08-23 11:15:51,341 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/user.jsp
+2021-08-23 11:15:51,526 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:51,527 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:15:54,868 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:15:54,869 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:00,284 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:16:00,285 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:16:00,351 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:00,351 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:03,629 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:16:03,629 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:16:03,690 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:03,691 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:04,422 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:04,423 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:07,705 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:16:07,705 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:16:07,768 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:07,768 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:11,236 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:11,237 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:13,309 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:16:13,310 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:16:13,369 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:13,370 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:14,090 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:14,091 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:17,542 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:16:17,543 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:16:17,602 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:17,602 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:18,664 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:18,665 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:19,122 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:16:19,123 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:16:19,186 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:19,187 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:20,040 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:20,040 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:20,663 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:16:20,663 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:16:20,723 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:20,724 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:22,128 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:22,129 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:22,982 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:16:22,983 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:16:23,043 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:23,044 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:24,008 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:24,008 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:29,191 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:16:29,192 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:16:29,254 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:29,254 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:29,975 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:29,975 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:16:30,444 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:16:30,444 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:16:30,506 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:16:30,506 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:18:20,597 [http-nio-8081-exec-4] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@57a52a1e
+2021-08-23 11:18:20,597 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /login
+2021-08-23 11:18:20,598 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-23 11:18:20,598 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:18:20,601 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /admin/users
+2021-08-23 11:18:20,601 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-23 11:18:20,648 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/users_list.jsp
+2021-08-23 11:18:20,740 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:18:20,741 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:18:22,450 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:18:22,450 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:18:23,293 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.servlets.BikesListServlet- Bike servlet called
+2021-08-23 11:18:23,573 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:18:23,574 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:19:05,865 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:19:05,865 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:19:05,965 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:19:05,965 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:47:40,085 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:47:40,086 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:47:40,298 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:47:40,299 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:49:22,063 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:49:22,063 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:49:22,267 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:49:22,268 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:49:36,100 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:49:36,100 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:49:36,287 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:49:36,288 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 11:50:14,636 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 11:50:14,637 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 11:50:14,835 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 11:50:14,836 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:05:37,490 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet/new_account
+2021-08-23 12:05:37,599 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:05:37,600 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:05:39,154 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:05:39,154 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:13:22,013 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:13:22,013 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:13:22,222 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:13:22,222 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:13:31,052 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:13:31,053 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:13:31,123 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:13:31,124 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:16:52,583 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:16:52,584 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:16:52,763 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:16:52,764 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:17:10,248 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:17:10,248 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:17:10,440 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:17:10,440 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:19:01,425 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:19:01,426 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:19:01,601 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:19:01,601 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:19:53,538 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:19:53,538 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:19:53,714 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:19:53,714 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:19:57,820 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:19:57,821 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:19:57,893 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:19:57,893 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:00,705 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:00,706 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:00,777 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:00,778 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:01,652 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:01,652 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:01,719 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:01,719 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:02,288 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:02,288 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:02,356 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:02,356 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:23,644 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:23,645 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:23,744 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:23,744 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:27,040 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:27,041 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:27,113 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:27,113 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:29,190 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:29,190 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:29,259 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:29,259 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:30,613 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:30,613 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:30,681 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:30,681 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:31,719 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:31,719 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:31,786 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:31,787 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:42,177 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:42,186 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:42,291 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:42,292 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:44,779 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-23 12:20:44,915 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 12:20:44,915 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-23 12:20:44,919 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:44,919 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:45,070 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:45,071 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:20:47,882 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:20:47,882 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:20:47,956 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:20:47,956 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 12:21:09,858 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 12:21:09,859 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 12:21:10,038 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 12:21:10,038 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:06:46,996 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:06:46,997 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:06:47,106 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:06:47,107 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:06:49,515 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-23 13:06:49,558 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 13:06:49,558 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-23 13:06:49,562 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:06:49,562 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:06:49,701 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:06:49,701 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:06:57,259 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:06:57,259 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:06:57,328 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:06:57,329 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:06:57,847 [http-nio-8081-exec-18] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:06:57,847 [http-nio-8081-exec-18] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:06:57,913 [http-nio-8081-exec-19] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:06:57,914 [http-nio-8081-exec-19] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:10:49,303 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:10:49,303 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:10:49,478 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:10:49,479 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:12:30,822 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:12:30,822 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:12:31,006 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:12:31,007 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:13:12,878 [http-nio-8081-exec-20] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:13:12,878 [http-nio-8081-exec-20] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:13:13,062 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:13:13,062 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:15:02,934 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:15:02,934 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:15:03,108 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:15:03,109 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:15:26,911 [http-nio-8081-exec-18] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:15:26,911 [http-nio-8081-exec-18] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:15:27,094 [http-nio-8081-exec-19] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:15:27,095 [http-nio-8081-exec-19] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:15:30,113 [http-nio-8081-exec-20] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:15:30,114 [http-nio-8081-exec-20] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:15:30,184 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:15:30,184 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:15:31,225 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:15:31,226 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:15:31,297 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:15:31,297 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:15:31,948 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:15:31,949 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:15:32,018 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:15:32,019 [http-nio-8081-exec-16] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 13:15:38,974 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 13:15:38,975 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 13:15:39,046 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 13:15:39,047 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 14:33:44,417 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /HNAP1/
+2021-08-23 14:33:44,418 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:25:22,913 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:25:22,922 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:25:23,027 [http-nio-8081-exec-18] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:25:23,027 [http-nio-8081-exec-18] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:26:23,000 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /login
+2021-08-23 15:26:23,162 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 15:26:23,162 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-08-23 15:26:23,165 [http-nio-8081-exec-22] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:26:23,166 [http-nio-8081-exec-22] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:26:23,357 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:26:23,357 [http-nio-8081-exec-17] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:27:14,422 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:27:14,423 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:27:14,602 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:27:14,603 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:27:36,852 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:27:36,852 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:27:37,035 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:27:37,036 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:29:42,174 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:29:42,174 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:29:42,343 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:29:42,344 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:29:45,515 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:29:45,515 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:29:45,587 [http-nio-8081-exec-27] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:29:45,588 [http-nio-8081-exec-27] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:30:20,257 [http-nio-8081-exec-28] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:30:20,257 [http-nio-8081-exec-28] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:30:20,433 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:30:20,433 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:30:46,227 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /wallet/account
+2021-08-23 15:30:46,228 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account
+2021-08-23 15:30:46,279 [http-nio-8081-exec-26] INFO  org.anatkor.dao.AccountDao- SQLException during Add account processing class org.anatkor.dao.Utils. The column name number was not found in this ResultSet.
+2021-08-23 15:30:46,280 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet?warn=Account is not opened
+2021-08-23 15:30:46,283 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:30:46,284 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:30:46,386 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:30:46,387 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:31:26,483 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /wallet/account
+2021-08-23 15:32:04,802 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account
+2021-08-23 15:32:04,846 [http-nio-8081-exec-21] INFO  org.anatkor.dao.AccountDao- SQLException during Add account processing class org.anatkor.dao.Utils. The column name number was not found in this ResultSet.
+2021-08-23 15:32:04,846 [http-nio-8081-exec-21] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet?warn=Account is not opened
+2021-08-23 15:32:04,850 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:32:04,850 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:32:04,954 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:32:04,955 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:33:47,087 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /wallet/account
+2021-08-23 15:33:50,000 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account
+2021-08-23 15:33:50,149 [http-nio-8081-exec-26] INFO  org.anatkor.dao.AccountDao- SQLException during Add account processing class org.anatkor.dao.Utils. ERROR: duplicate key value violates unique constraint "account_number_key"
+  Detail: Key (number)=(1000000000) already exists.
+2021-08-23 15:33:50,149 [http-nio-8081-exec-26] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet?warn=Account is not opened
+2021-08-23 15:33:50,153 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:33:50,153 [http-nio-8081-exec-23] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:33:50,257 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:33:50,257 [http-nio-8081-exec-24] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:35:19,260 [http-nio-8081-exec-28] DEBUG org.anatkor.controllers.command.ServletController- Do POST request to /wallet/account
+2021-08-23 15:36:34,686 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account
+2021-08-23 15:37:14,248 [http-nio-8081-exec-28] INFO  org.anatkor.dao.AccountDao- SQLException during Add account processing class org.anatkor.dao.Utils. ERROR: duplicate key value violates unique constraint "account_number_key"
+  Detail: Key (number)=(1000000000) already exists.
+2021-08-23 15:37:14,248 [http-nio-8081-exec-28] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet?warn=Account is not opened
+2021-08-23 15:37:14,252 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /wallet
+2021-08-23 15:37:14,252 [http-nio-8081-exec-25] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-08-23 15:37:14,364 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- Do GET request to /favicon.ico
+2021-08-23 15:37:14,365 [http-nio-8081-exec-29] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-08-23 15:37:33,110 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account
+2021-08-23 15:37:33,154 [http-nio-8081-exec-30] INFO  org.anatkor.dao.AccountDao- Account 1000000001 is added to DB
+2021-08-23 15:39:27,731 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account
+2021-08-23 15:39:27,775 [http-nio-8081-exec-28] INFO  org.anatkor.dao.AccountDao- Account 1000000002 is added to DB
+2021-08-23 15:54:26,938 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-23 15:54:37,819 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.LoginCommand- Client '385555555555' is logged in
+2021-08-23 15:54:58,768 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account
+2021-08-23 15:54:58,815 [http-nio-8081-exec-31] INFO  org.anatkor.dao.AccountDao- Account 1000000003 is added to DB
+2021-08-23 16:12:02,977 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.servlets.BikesListServlet- Bike servlet called
+2021-08-23 16:55:51,230 [http-nio-8081-exec-37] INFO  org.anatkor.controllers.servlets.BikesListServlet- Bike servlet called
+2021-08-23 16:55:53,075 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.servlets.BikesListServlet- Bike servlet called
+2021-08-23 16:56:48,043 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.servlets.BikesListServlet- Bike servlet called
+2021-08-23 17:22:29,601 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 17:22:33,748 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.servlets.BikesListServlet- Bike servlet called
+2021-08-23 17:24:36,839 [http-nio-8081-exec-41] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 17:24:38,091 [http-nio-8081-exec-50] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:26:14,115 [http-nio-8081-exec-55] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:26:14,165 [http-nio-8081-exec-55] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY  processing from class org.anatkor.dao.Utils.
+2021-08-23 17:26:37,386 [http-nio-8081-exec-52] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:26:40,696 [http-nio-8081-exec-52] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY  processing from class org.anatkor.dao.Utils.
+2021-08-23 17:27:09,669 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:28:33,828 [http-nio-8081-exec-58] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY  processing from class org.anatkor.dao.Utils.
+2021-08-23 17:33:49,497 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 17:33:50,325 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:35:41,197 [http-nio-8081-exec-65] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:36:17,954 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:37:14,196 [http-nio-8081-exec-70] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 17:37:15,135 [http-nio-8081-exec-69] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:37:31,190 [http-nio-8081-exec-66] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:40:25,699 [http-nio-8081-exec-61] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 17:40:26,764 [http-nio-8081-exec-65] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:40:31,502 [http-nio-8081-exec-65] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY  processing from class org.anatkor.dao.Utils.
+2021-08-23 17:41:39,342 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:41:49,532 [http-nio-8081-exec-73] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY  processing from class org.anatkor.dao.Utils.
+2021-08-23 17:41:52,710 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:43:19,821 [http-nio-8081-exec-76] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY  processing from class org.anatkor.dao.Utils.
+2021-08-23 17:43:29,897 [http-nio-8081-exec-81] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 17:43:31,319 [http-nio-8081-exec-82] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:45:02,661 [http-nio-8081-exec-82] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
+2021-08-23 17:47:00,690 [http-nio-8081-exec-83] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:48:01,708 [http-nio-8081-exec-83] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
+2021-08-23 17:54:38,702 [http-nio-8081-exec-87] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 17:54:39,650 [http-nio-8081-exec-91] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:55:54,689 [http-nio-8081-exec-93] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 17:55:55,621 [http-nio-8081-exec-97] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:58:46,186 [http-nio-8081-exec-99] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 17:59:20,697 [http-nio-8081-exec-101] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 18:01:19,257 [http-nio-8081-exec-105] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account
+2021-08-23 18:01:19,307 [http-nio-8081-exec-105] INFO  org.anatkor.dao.AccountDao- Account 1000000004 is added to DB
+2021-08-23 18:01:21,494 [http-nio-8081-exec-106] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 18:01:31,529 [http-nio-8081-exec-89] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 18:01:39,969 [http-nio-8081-exec-89] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
+2021-08-23 18:01:55,776 [http-nio-8081-exec-107] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 18:03:07,028 [http-nio-8081-exec-107] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
+2021-08-23 18:04:11,823 [http-nio-8081-exec-102] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 18:04:12,875 [http-nio-8081-exec-101] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 18:04:36,761 [http-nio-8081-exec-101] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
+2021-08-23 18:05:24,018 [http-nio-8081-exec-114] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-23 18:05:25,127 [http-nio-8081-exec-111] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 18:07:14,123 [http-nio-8081-exec-117] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 18:07:30,091 [http-nio-8081-exec-121] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested
+2021-08-23 18:11:34,126 [http-nio-8081-exec-123] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested

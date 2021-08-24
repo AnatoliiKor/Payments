@@ -30,13 +30,12 @@
                         data-bs-target="#collapseNewAccount" aria-expanded="false" aria-controls="collapseNewAccount">
                     <fmt:message key="new_account"/>
                 </button>
-                <div style="min-height: 120px;">
-                    <div class="collapse collapse-horizontal" id="collapseNewAccount">
+                <div class="collapse collapse-horizontal" id="collapseNewAccount">
                         <div class="card card-body" style="width: 300px;">
                             <form method="post" action="${pageContext.request.contextPath}/wallet/account">
                                 <fmt:message key="account_name"/>
                                 <input type="hidden" name="action" value="new">
-                                <input type="hidden" name="id" value=${user_auth.id}>
+<%--                                <input type="hidden" name="id" value=${user_auth.id}>--%>
                                 <input type="text" name="account_name" required>
                                 <br/>
                                 <div class="m-1"><fmt:message key="currency"/>
@@ -50,7 +49,6 @@
                                 <button class="mt-1" type="submit"><fmt:message key="send_request"/></button>
                             </form>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

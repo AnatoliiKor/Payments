@@ -1,10 +1,12 @@
 package org.anatkor.controllers.command;
 
+import org.anatkor.model.User;
 import org.anatkor.services.AccountService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 class AccountCommand implements Command {
     private static final Logger log = LogManager.getLogger(AccountCommand.class);
@@ -13,11 +15,14 @@ class AccountCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         String action = req.getParameter("action");
+        HttpSession session = req.getSession();
+
         if (action != null && "new".equals(action)) {
-            log.info("request for a new account");
+            Long user_id = (Long) session.getAttribute("user_auth_id");
+            log.info("request for a new account by user id={}", user_id);
             String accountName = req.getParameter("account_name");
             String currency = req.getParameter("currency");
-            Long user_id = Long.parseLong(req.getParameter("id"));
+
             if (accountName != null && !"".equals(accountName)) {
                 if (accountService.newAccount(accountName, currency, user_id)) {
                     return "redirect:/wallet/accounts?message=Account is opened";

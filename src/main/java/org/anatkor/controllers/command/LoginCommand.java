@@ -29,6 +29,7 @@ class LoginCommand implements Command {
                 User user = userService.findUserByPhoneAndPassword(phoneNumber, password);
                 HttpSession session = req.getSession();
                 session.setAttribute("user_auth", user);
+                session.setAttribute("user_auth_id", user.getId());
                 session.setAttribute("role", (user.getRole()).name());
                 if (user.getRole().equals(Role.ADMIN)) {
                     log.info("Admin '{}' is logged in", phoneNumber);

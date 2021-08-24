@@ -13,7 +13,7 @@ public class User {
     private String password;
     private String email;
     private long phoneNumber;
-    private LocalDateTime registrationDateTime;
+    private LocalDateTime registered;
     private boolean active;
     private Role role;
     private List<Account> accounts;
@@ -64,7 +64,7 @@ public class User {
         }
 
         public UserBuilder withRegistrationDateTime(LocalDateTime registrationDateTime){
-            newUser.registrationDateTime = registrationDateTime;
+            newUser.registered = registrationDateTime;
             return this;
         }
 
@@ -149,12 +149,12 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public LocalDateTime getRegistrationDateTime() {
-        return registrationDateTime;
+    public LocalDateTime getRegistered() {
+        return registered;
     }
 
-    public void setRegistrationDateTime(LocalDateTime registrationDateTime) {
-        this.registrationDateTime = registrationDateTime;
+    public void setRegistered(LocalDateTime registered) {
+        this.registered = registered;
     }
 
     public boolean isActive() {
@@ -183,7 +183,7 @@ public class User {
 
     public String getFormatedDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm");
-        return this.registrationDateTime.format(formatter);
+        return this.registered.format(formatter);
     }
 
 

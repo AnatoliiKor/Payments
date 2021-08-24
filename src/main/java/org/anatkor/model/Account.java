@@ -2,7 +2,6 @@ package org.anatkor.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Currency;
 import java.util.List;
 
 public class Account {
@@ -11,8 +10,8 @@ public class Account {
     private long balance;
     private String accountName;
     private CURRENCY currency;
-    private LocalDateTime registrationDateTime;
-    private boolean state;
+    private LocalDateTime registered;
+    private boolean active;
     private Long userId;
     private CreditCard creditCard;
     private List<Payment> payment;
@@ -53,12 +52,12 @@ public class Account {
         this.balance = balance;
     }
 
-    public boolean isState() {
-        return state;
+    public boolean isActive() {
+        return active;
     }
 
-    public void setState(boolean state) {
-        this.state = state;
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     public CURRENCY getCurrency() {
@@ -77,12 +76,12 @@ public class Account {
         this.creditCard = creditCard;
     }
 
-    public LocalDateTime getRegistrationDateTime() {
-        return registrationDateTime;
+    public LocalDateTime getRegistered() {
+        return registered;
     }
 
-    public void setRegistrationDateTime(LocalDateTime registrationDateTime) {
-        this.registrationDateTime = registrationDateTime;
+    public void setRegistered(LocalDateTime registered) {
+        this.registered = registered;
     }
 
     public List<Payment> getPayment() {
@@ -103,7 +102,7 @@ public class Account {
 
     public String getFormatedDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm");
-        return this.registrationDateTime.format(formatter);
+        return this.registered.format(formatter);
     }
 
     public enum CURRENCY {

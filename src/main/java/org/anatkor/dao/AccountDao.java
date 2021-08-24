@@ -1,17 +1,11 @@
 package org.anatkor.dao;
 
-import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
-import org.anatkor.model.Bike;
-import org.anatkor.model.CreditCard;
-import org.anatkor.model.Role;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Currency;
 import java.util.List;
 
 public class AccountDao {
@@ -91,8 +85,8 @@ public class AccountDao {
                 account.setBalance(rs.getLong("balance"));
                 account.setAccountName(rs.getString("account_name"));
                 account.setCurrency(Account.CURRENCY.valueOf(rs.getString("currency")));
-                account.setRegistrationDateTime(rs.getTimestamp("registered").toLocalDateTime());
-                account.setState(rs.getBoolean("active"));
+                account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
+                account.setActive(rs.getBoolean("active"));
                 accounts.add(account);
 
 //                long id = rs.getLong("id");

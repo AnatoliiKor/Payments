@@ -66,7 +66,7 @@
             </td>
 
         </tr>
-        <tr><a href="/user/orders/${user.id}">Show user`s oders</a></tr>
+        <tr><a href="${pageContext.request.contextPath}/wallet/accounts?user_id=${user.id}"><fmt:message key="accounts"/></tr>
         <tr><a class="btn btn-outline-primary mx-5" href="/bikes"><fmt:message key="my_payments"/></a></tr>
     </c:if>
     </tbody>
