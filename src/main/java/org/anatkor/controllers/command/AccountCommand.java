@@ -1,6 +1,5 @@
 package org.anatkor.controllers.command;
 
-import org.anatkor.model.User;
 import org.anatkor.services.AccountService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,15 +24,30 @@ class AccountCommand implements Command {
 
             if (accountName != null && !"".equals(accountName)) {
                 if (accountService.newAccount(accountName, currency, user_id)) {
-                    return "redirect:/wallet/accounts?message=Account is opened";
+                    return "redirect:/wallet/accounts?message=Account is opened and is waiting for administrator unblock";
                 } else return "redirect:/wallet?warn=Account is not opened";
             }
         }
+
+        if (action != null && "refill".equals(action)) {
+        }
+
+        if (action != null && "active".equals(action)) {
+            Boolean accountActive = Boolean.parseBoolean(req.getParameter("is_active"));
+            Long account_id = Long.parseLong(req.getParameter("id_to_do"));
+            if (accountService.updateAccountActiveById (account_id, accountActive)) {
+                return "redirect:admin?message=Account is updated";
+            } else return "redirect:admin?warn=Account is not updated";
+            }
+
+        if (req.getParameter("id") != null) {
+            Long account_id = Long.parseLong(req.getParameter("id"));
+            req.setAttribute("account", accountService.findById(account_id));
+            return "/jsp/account.jsp";
+        }
+
         return "redirect:/wallet";
     }
-
-
-
 
 
 //

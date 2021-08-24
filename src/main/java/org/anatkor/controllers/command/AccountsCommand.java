@@ -27,7 +27,7 @@ class AccountsCommand implements Command {
         } else {
             user_id = Long.parseLong(req.getParameter("user_id"));
         }
-        log.info("account list requested for uder with id= {}", user_id);
+        log.info("account list requested for user with id= {}", user_id);
         if (req.getParameter("sort_by") != null) {
             sortBy = req.getParameter("sort_by");
             session.setAttribute("sort_by", sortBy);

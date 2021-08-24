@@ -10,9 +10,11 @@ import java.util.List;
 
 public class AccountDao {
     private static final String FIND_MAX_ACCOUNT_NUMBER = "SELECT MAX(number) FROM account";
-    private static final String ADD_ACCOUNT = "INSERT INTO account (number, balance, account_name, currency, user_id) VALUES (?,0,?,?,?);";
+    private static final String ADD_ACCOUNT = "INSERT INTO account (number, balance, account_name, currency, user_id, action) VALUES (?,0,?,?,?,1);";
     private static final String FIND_ACCOUNTS_BY_USER_ID_SORTED = "SELECT * FROM account WHERE user_id=? ORDER BY ? ?";
-
+    private static final String FIND_ACCOUNT_BY_ID = "SELECT * FROM account WHERE id=?";
+    private static final String FIND_ALL_ACCOUNTS_TO_DO = "SELECT * FROM account WHERE action>0";
+    private static final String UPDATE_ACCOUNT_ACTIVE_BY_ID = "UPDATE account SET active=?, action=0 WHERE id=?";
 
     private static final String FIND_ALL_BIKES_SORTED = "SELECT * FROM bike ORDER BY ";
 
@@ -20,12 +22,11 @@ public class AccountDao {
     private static final String DELETE_BIKE_BY_ID = "DELETE FROM bike WHERE id=?";
     private static final String ADD_BIKE = "INSERT INTO bike (name, brand, category, colour, description, price)" +
             " VALUES (?,?,?,?,?,?)";
-    private static final String UPDATE_BIKE = "UPDATE bike SET name = ?, brand = ?, category = ?, colour = ?, description = ?, price = ?" +
-            " WHERE id = ?";
+
 
     final static Logger log = LogManager.getLogger(AccountDao.class);
 
-    public boolean NewAccount (Account account) {
+    public boolean newAccount(Account account) {
         Connection con = null;
         Statement statement;
         PreparedStatement prepStatement = null;
@@ -109,9 +110,91 @@ public class AccountDao {
         return accounts;
     }
 
+    public Account findById(Long id) {
+        Connection con = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet rs = null;
+        try {
+            con = Utils.getConnection();
+            preparedStatement = con.prepareStatement(FIND_ACCOUNT_BY_ID);
+            int k = 1;
+            preparedStatement.setLong(k, id);
+            rs = preparedStatement.executeQuery();
+            if (rs.next()) {
+                Account account = new Account();
+                account.setId(rs.getLong("id"));
+                account.setNumber(rs.getLong("number"));
+                account.setBalance(rs.getLong("balance"));
+                account.setAccountName(rs.getString("account_name"));
+                account.setCurrency(Account.CURRENCY.valueOf(rs.getString("currency")));
+                account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
+                account.setActive(rs.getBoolean("active"));
+                return account;
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.", FIND_ACCOUNT_BY_ID, Utils.class, e);
+        } finally {
+            Utils.close(rs);
+            Utils.close(preparedStatement);
+            Utils.close(con);
+        }
+        return null;
+    }
 
+    public List<Account> findAllAccountsToDo() {
+        Connection con = null;
+        Statement statement=null;
+        ResultSet rs = null;
+        try {
+            con = Utils.getConnection();
+            statement = con.createStatement();
+            rs = statement.executeQuery(FIND_ALL_ACCOUNTS_TO_DO);
+            List<Account> accounts = new ArrayList<>();
+            while (rs.next()) {
+                Account account = new Account();
+                account.setId(rs.getLong("id"));
+                account.setNumber(rs.getLong("number"));
+                account.setBalance(rs.getLong("balance"));
+                account.setAccountName(rs.getString("account_name"));
+                account.setCurrency(Account.CURRENCY.valueOf(rs.getString("currency")));
+                account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
+                account.setActive(rs.getBoolean("active"));
+                account.setAction(rs.getInt("action"));
+                accounts.add(account);
+            }
+            return accounts;
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.", FIND_ALL_ACCOUNTS_TO_DO, Utils.class, e);
+        } finally {
+            Utils.close(rs);
+            Utils.close(statement);
+            Utils.close(con);
+        }
+        return null;
+    }
 
-//
+    public boolean updateAccountActiveById(Long account_id, Boolean accountActive) {
+        Connection con = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            con = Utils.getConnection();
+            preparedStatement = con.prepareStatement(UPDATE_ACCOUNT_ACTIVE_BY_ID);
+            int k = 1;
+            preparedStatement.setBoolean(k++, accountActive);
+            preparedStatement.setLong(k, account_id);
+            if (preparedStatement.executeUpdate() > 0) {
+                log.info("Status of account with id={} is updated to {}", account_id, accountActive);
+                return true;
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}. {}",
+                    FIND_ACCOUNT_BY_ID, Utils.class, e.getMessage());
+        } finally {
+            Utils.close(preparedStatement);
+            Utils.close(con);
+        }
+        return false;
+    }
 //
 //
 //

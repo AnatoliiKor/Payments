@@ -13,11 +13,25 @@ public class Account {
     private LocalDateTime registered;
     private boolean active;
     private Long userId;
+    /*
+    * if 0 - nothing to do
+    * if 1 - unblock request
+    * if 2 - block request
+    * */
+    private int action;
     private CreditCard creditCard;
     private List<Payment> payment;
 
 
     public Account() {
+    }
+
+    public int getAction() {
+        return action;
+    }
+
+    public void setAction(int action) {
+        this.action = action;
     }
 
     public Long getId() {

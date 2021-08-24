@@ -28,8 +28,8 @@
                     <th><fmt:message key="currency"/></th></option>
                 <option value="active" <c:if test="${sort_by.equals('active')}">selected</c:if>>
                     <th><fmt:message key="is_active"/></th></option>
-                <option value="registered" <c:if test="${sort_by.equals('registered')}">selected</c:if>>
-                    <th><fmt:message key="date_main"/></th></option>
+<%--                <option value="registered" <c:if test="${sort_by.equals('registered')}">selected</c:if>>--%>
+<%--                    <th><fmt:message key="date_main"/></th></option>--%>
             </select>
 
             <th><fmt:message key="order_by"/></th>
@@ -51,7 +51,7 @@
             <th><fmt:message key="account_name"/></th>
             <th><fmt:message key="currency"/></th>
             <th><fmt:message key="is_active"/></th>
-            <th><fmt:message key="opened"/></th>
+<%--            <th><fmt:message key="opened"/></th>--%>
         </tr>
         </thead>
 
@@ -68,36 +68,14 @@
                         <td <c:if test="${sort_by.equals('balance')}">class="text-info fw-bold"</c:if>>${account.balance/100}</td>
                         <td <c:if test="${sort_by.equals('account_name')}">class="text-info fw-bold"</c:if>>${account.accountName}</td>
                         <td <c:if test="${sort_by.equals('currency')}">class="text-info fw-bold"</c:if>>${account.currency}</td>
-                        <td <c:if test="${sort_by.equals('active')}">class="text-info fw-bold"</c:if>><input type="checkbox" ${user.active?'checked':""} disabled></td>
-                        <td <c:if test="${sort_by.equals('registered')}">class="text-info fw-bold"</c:if>>${account.getFormatedDate()}</td>
+                        <td <c:if test="${sort_by.equals('active')}">class="text-info fw-bold"</c:if>><input type="checkbox" ${account.active?'checked':""} disabled></td>
+<%--                        <td <c:if test="${sort_by.equals('registered')}">class="text-info fw-bold"</c:if>>${account.getFormatedDate()}</td>--%>
+                        <td> <a href="/wallet/account?id=${account.id}"><fmt:message key="refill_balance"/></a></td>
                         <c:choose>
                             <c:when test="${role != null && role.equals('ADMIN')}"><td><a href="/admin/bike_edit?id=${account.id}"><fmt:message key="edit"/></a></td></c:when>
                             <c:otherwise>
                                 <td>
-                                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseRefillBalance" aria-expanded="false" aria-controls="collapseRefillBalance">
-                                        <fmt:message key="refill_balance"/>
-                                    </button>
-                                    <div class="collapse collapse-horizontal" id="collapseRefillBalance">
-                                            <div class="card card-body" style="width: 300px;">
-                                                <form method="post" action="${pageContext.request.contextPath}/wallet/account">
-                                                    <fmt:message key="amount"/>
-                                                    <input type="hidden" name="action" value="refill">
-                                                        <%--                                <input type="hidden" name="id" value=${user_auth.id}>--%>
-                                                    <input type="number" step=".01" name="amount" required>
-                                                    <br/>
-                                                    <div class="m-1"><fmt:message key="currency"/>
-                                                        <select name="currency" size="1" required>
-                                                            <option value="UAH" selected><fmt:message key="uah"/></option>
-                                                            <option value="USD"><fmt:message key="usd"/></option>
-                                                            <option value="EURO"><fmt:message key="euro"/></option>
-                                                        </select>
-                                                    </div>
-                                                    <br/>
-                                                    <button class="mt-1" type="submit"><fmt:message key="refill_balance"/></button>
-                                                </form>
-                                            </div>
-                                        </div>
+
                                 </td>
                             </c:otherwise>
                         </c:choose>

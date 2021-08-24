@@ -19,12 +19,24 @@ public class AccountService {
         account.setAccountName(accountName);
         account.setCurrency(Account.CURRENCY.valueOf(currency));
         account.setUserId(user_id);
-        return accountDao.NewAccount(account);
+        return accountDao.newAccount(account);
     }
 
     public List<Account> findAllByUserId(Long user_id, String sortBy, String order) {
             return accountDao.findAllByUserId(user_id, sortBy, order);
         }
+
+    public Account findById(Long id) {
+        return accountDao.findById(id);
+    }
+
+    public List<Account> findAllAccountsToDo() {
+        return accountDao.findAllAccountsToDo();
+    }
+
+    public boolean updateAccountActiveById(Long account_id, Boolean accountActive) {
+        return accountDao.updateAccountActiveById(account_id, accountActive);
+    }
 
 //    public List<Bike> findAll(String sortBy, String order) {
 //        return bikeDao.findAll(sortBy, order);
