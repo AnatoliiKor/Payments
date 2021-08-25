@@ -15,6 +15,8 @@ public class AccountDao {
     private static final String FIND_ACCOUNT_BY_ID = "SELECT * FROM account WHERE id=?";
     private static final String FIND_ALL_ACCOUNTS_TO_DO = "SELECT * FROM account WHERE action>0";
     private static final String UPDATE_ACCOUNT_ACTIVE_BY_ID = "UPDATE account SET active=?, action=0 WHERE id=?";
+    private static final String UPDATE_ACCOUNT_BALANCE_BY_ID = "UPDATE account SET balance=balance+? WHERE id=?";
+    private static final String UPDATE_ACCOUNT_ACTION_BY_ID = "UPDATE account SET action=? WHERE id=?";
 
     private static final String FIND_ALL_BIKES_SORTED = "SELECT * FROM bike ORDER BY ";
 
@@ -129,6 +131,7 @@ public class AccountDao {
                 account.setCurrency(Account.CURRENCY.valueOf(rs.getString("currency")));
                 account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
                 account.setActive(rs.getBoolean("active"));
+                account.setAction(rs.getInt("action"));
                 return account;
             }
         } catch (SQLException e) {
@@ -173,6 +176,29 @@ public class AccountDao {
         return null;
     }
 
+    public boolean updateAccountBalanceById(Long account_id, int amount) {
+        Connection con = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            con = Utils.getConnection();
+            preparedStatement = con.prepareStatement(UPDATE_ACCOUNT_BALANCE_BY_ID);
+            int k = 1;
+            preparedStatement.setInt(k++, amount);
+            preparedStatement.setLong(k, account_id);
+            if (preparedStatement.executeUpdate() > 0) {
+                log.info("Account (id={}) is replenished with {}", account_id, amount);
+                return true;
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}. {}",
+                    UPDATE_ACCOUNT_BALANCE_BY_ID, Utils.class, e.getMessage());
+        } finally {
+            Utils.close(preparedStatement);
+            Utils.close(con);
+        }
+        return false;
+    }
+
     public boolean updateAccountActiveById(Long account_id, Boolean accountActive) {
         Connection con = null;
         PreparedStatement preparedStatement = null;
@@ -188,13 +214,39 @@ public class AccountDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}. {}",
-                    FIND_ACCOUNT_BY_ID, Utils.class, e.getMessage());
+                    UPDATE_ACCOUNT_ACTIVE_BY_ID, Utils.class, e.getMessage());
         } finally {
             Utils.close(preparedStatement);
             Utils.close(con);
         }
         return false;
     }
+
+    public boolean updateAccountActionById(Long account_id, int accountAction) {
+        Connection con = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            con = Utils.getConnection();
+            preparedStatement = con.prepareStatement(UPDATE_ACCOUNT_ACTION_BY_ID);
+            int k = 1;
+            preparedStatement.setInt(k++, accountAction);
+            preparedStatement.setLong(k, account_id);
+            if (preparedStatement.executeUpdate() > 0) {
+                log.info("Action flag of account with id={} is updated to {}", account_id, accountAction);
+                return true;
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}. {}",
+                    UPDATE_ACCOUNT_ACTION_BY_ID, Utils.class, e.getMessage());
+        } finally {
+            Utils.close(preparedStatement);
+            Utils.close(con);
+        }
+        return false;
+    }
+
+
+
 //
 //
 //

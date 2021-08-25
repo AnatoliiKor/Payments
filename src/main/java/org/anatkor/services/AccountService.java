@@ -38,6 +38,14 @@ public class AccountService {
         return accountDao.updateAccountActiveById(account_id, accountActive);
     }
 
+    public boolean updateAccountActionById(Long account_id,int accountAction) {
+        return accountDao.updateAccountActionById(account_id, accountAction);
+    }
+
+    public boolean updateAccountBalanceById(Long account_id, int amount) {
+        return accountDao.updateAccountBalanceById(account_id, amount);
+    }
+
 //    public List<Bike> findAll(String sortBy, String order) {
 //        return bikeDao.findAll(sortBy, order);
 //    }
