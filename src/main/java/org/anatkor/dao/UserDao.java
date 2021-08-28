@@ -163,7 +163,9 @@ public class UserDao {
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
                 if (!active) {
-                    throw new DBException("User with phone number \"+" + phoneNumber + "\" is not active. Contact to administrator");
+                    log.info("Attempt to log in. User with phone number \"+" + phoneNumber + "\" is not active.");
+                    throw new DBException("User with phone number \"+" + phoneNumber
+                            + "\" is not active. Contact to administrator. Email: admin@g.mail");
                 }
                 Role role = findRoleByUserId(con, id);
                 return new User.UserBuilder()
@@ -179,10 +181,13 @@ public class UserDao {
                         .withRole(role)
                         .build();
             } else {
-                throw new DBException("User with phone number \"+" + phoneNumber + "\" is not found");
+                log.info("User with phone number \"+" + phoneNumber + "\" is not found");
+                throw new DBException("User with phone number \"+" + phoneNumber
+                        + "\" is not found. Check login and password");
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", FIND_USER_BY_PHONE_NUMBER, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.",
+                    FIND_USER_BY_PHONE_NUMBER, Utils.class, e);
             throw new DBException("User with phone number \"+" + phoneNumber + "\" is not found");
         } finally {
             Utils.close(rs);
@@ -239,7 +244,8 @@ public class UserDao {
             }
         } catch (SQLException e) {
             String exeption = e.getMessage();
-            log.debug("SQLException during Add user with phone {} processing {}. {}", user.getPhoneNumber(), Utils.class, e.getMessage());
+            log.debug("SQLException during Add user with phone {} processing {}. {}",
+                    user.getPhoneNumber(), Utils.class, e.getMessage());
             if (exeption.contains("mail")) {
                 throw new DBException("User with this email already exist");
             } else if (exeption.contains("phone")) {
@@ -261,10 +267,12 @@ public class UserDao {
             try {
                 con.rollback();
             } catch (SQLException throwables) {
-                log.debug("SQLException during rollback add user_id={} processing {}. {}", user.getId(), Utils.class, throwables.getMessage());
+                log.debug("SQLException during rollback add user_id={} processing {}. {}",
+                        user.getId(), Utils.class, throwables.getMessage());
                 throw new DBException("User with " + user.getPhoneNumber() + " is not registered. Try again");
             }
-            log.debug("SQLException during Add user_id={} processing {}. {}", user.getId(), Utils.class, e.getMessage());
+            log.debug("SQLException during Add user_id={} processing {}. {}",
+                    user.getId(), Utils.class, e.getMessage());
             throw new DBException("User with " + user.getPhoneNumber() + " is not registered. Try again");
         } finally {
             Utils.close(rs);
@@ -289,7 +297,7 @@ public class UserDao {
         } catch (SQLException e) {
             log.debug("SQLException during update status of user with phone {} processing {}. {}",
                     user.getPhoneNumber(), Utils.class, e.getMessage());
-            } finally {
+        } finally {
             Utils.close(prepStatement);
             Utils.close(con);
         }

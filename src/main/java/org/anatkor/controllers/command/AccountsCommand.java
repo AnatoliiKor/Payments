@@ -2,6 +2,7 @@ package org.anatkor.controllers.command;
 
 import org.anatkor.model.Account;
 import org.anatkor.model.Bike;
+import org.anatkor.model.Role;
 import org.anatkor.model.User;
 import org.anatkor.services.AccountService;
 import org.anatkor.services.UserService;
@@ -22,20 +23,7 @@ class AccountsCommand implements Command {
         String order;
         Long user_id;
         HttpSession session = req.getSession();
-        if (req.getParameter("user_id")==null){
-            user_id = (Long) session.getAttribute("user_auth_id");
-        } else {
-            user_id = Long.parseLong(req.getParameter("user_id"));
-        }
-        log.info("account list requested for user with id= {}", user_id);
-        if (req.getParameter("sort_by") != null) {
-            sortBy = req.getParameter("sort_by");
-            session.setAttribute("sort_by", sortBy);
-        } else if (session.getAttribute("sort_by") != null) {
-            sortBy = (String) session.getAttribute("sort_by");
-        } else {
-            sortBy = "balance";
-        }
+        Role role  = Role.valueOf((String) session.getAttribute("role"));
 
         if (req.getParameter("order") != null) {
             order = req.getParameter("order");
@@ -45,7 +33,28 @@ class AccountsCommand implements Command {
         } else {
             order = "DESC";
         }
-        List<Account> accounts = accountService.findAllByUserId(user_id, sortBy, order);
+
+        if (req.getParameter("sort_by") != null) {
+            sortBy = req.getParameter("sort_by");
+            session.setAttribute("sort_by", sortBy);
+        } else if (session.getAttribute("sort_by") != null) {
+            sortBy = (String) session.getAttribute("sort_by");
+        } else {
+            sortBy = "balance";
+        }
+
+        if (role==Role.ADMIN && req.getParameter("user_id")==null) {
+            log.info("account list requested by ADMIN");
+            user_id = -1L;
+        } else if (req.getParameter("user_id") == null){
+            User user = (User) session.getAttribute("user_auth");
+            user_id = user.getId();
+        } else {
+            user_id = Long.parseLong(req.getParameter("user_id"));
+            log.info("account list requested for user with id= {}", user_id);
+        }
+        List<Account> accounts = accountService.findAllAccountsByUserId(user_id, sortBy, order);
+        req.setAttribute("user_id", user_id);
         req.setAttribute("accounts", accounts);
         req.setAttribute("sort_by", sortBy);
         req.setAttribute("order", order);

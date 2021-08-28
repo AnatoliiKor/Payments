@@ -22,8 +22,8 @@ public class AccountService {
         return accountDao.newAccount(account);
     }
 
-    public List<Account> findAllByUserId(Long user_id, String sortBy, String order) {
-            return accountDao.findAllByUserId(user_id, sortBy, order);
+    public List<Account> findAllAccountsByUserId(Long user_id, String sortBy, String order) {
+            return accountDao.findAllAccountsByUserId(user_id, sortBy, order);
         }
 
     public Account findById(Long id) {

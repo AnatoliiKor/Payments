@@ -19,7 +19,7 @@ public class ServletController extends HttpServlet{
 
     @Override
     public void init() {
-//        commands.put("lang", new Language());
+        commands.put("lang", new Language());
         commands.put("login", new LoginCommand());
         commands.put("logout", new LogoutCommand());
         commands.put("registration", new RegistrationCommand());

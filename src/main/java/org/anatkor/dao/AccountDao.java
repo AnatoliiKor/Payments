@@ -61,26 +61,21 @@ public class AccountDao {
         return false;
     }
 
-    public List<Account> findAllByUserId(Long userId, String sortBy, String order) {
+    public List<Account> findAllAccountsByUserId(Long id, String sortBy, String order) {
         List<Account> accounts = new ArrayList<>();
         Connection con = null;
         Statement statement = null;
-//        PreparedStatement preparedStatement = null;
         ResultSet rs = null;
+        String sqlId = "";
+        String sql;
         try {
             con = Utils.getConnection();
-//            statement = con.createStatement();
-            String sql = "SELECT * FROM account WHERE user_id=" + userId + " ORDER BY " + sortBy + " " + order;
-//            preparedStatement = con.prepareStatement(FIND_ACCOUNTS_BY_USER_ID_SORTED);
-//            preparedStatement = con.prepareStatement(FIND_ACCOUNTS_BY_USER_ID_SORTED);
-//            int k=1;
-//            preparedStatement.setLong(k++, userId);
-//            preparedStatement.setString(k++, sortBy);
-//            preparedStatement.setString(k, order);
-//            String sql = FIND_ACCOUNTS_BY_USER_ID_SORTED + sortBy + " " + order;
+            if (id>0) {
+                sqlId = " WHERE user_id=" + id;
+            }
+            sql = "SELECT * FROM account" + sqlId + " ORDER BY " + sortBy + " " + order;
             statement = con.createStatement();
             rs = statement.executeQuery(sql);
-//            preparedStatement.executeQuery();
             while (rs.next()) {
                 Account account = new Account();
                 account.setId(rs.getLong("id"));
@@ -91,16 +86,6 @@ public class AccountDao {
                 account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
                 account.setActive(rs.getBoolean("active"));
                 accounts.add(account);
-
-//                long id = rs.getLong("id");
-//                long number = rs.getLong("number");
-//                long balance = rs.getLong("balance");
-//                String accountName = rs.getString("account_name");
-//                Account.CURRENCY currency = Account.CURRENCY.valueOf(rs.getString("currency"));
-//                LocalDateTime registrationDateTime = rs.getTimestamp("date").toLocalDateTime();
-//                Boolean state = rs.getBoolean("active");
-//                CreditCard creditCard = ;
-
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.", FIND_ACCOUNTS_BY_USER_ID_SORTED, Utils.class, e);

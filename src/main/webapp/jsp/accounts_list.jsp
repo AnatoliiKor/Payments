@@ -6,42 +6,11 @@
 </head>
 <body>
 <div class="container mt-2">
-    <h2><fmt:message key="my_accounts"/></h2>
+    <h3><fmt:message key="accounts"/></h3>
 
     <%@include file="parts/messages.jsp" %>
 
-    <form method="get" action="/wallet/accounts">
-        <div>
-            <th><fmt:message key="sort_by"/></th>
-            <select name="sort_by" size="1">
-                <c:if test="${sort_by!=null}">
-                    <option selected>${sort_by}</option>
-                </c:if>
-<%--                <option value="" selected disabled hidden><fmt:message key="choose_here"/></option>--%>
-                <option value="number" <c:if test="${sort_by.equals('number')}">selected</c:if>>
-                    <th><fmt:message key="number"/></th></option>
-                <option value="balance" <c:if test="${sort_by.equals('balance')}">selected</c:if>>
-                    <th><fmt:message key="balance"/></th></option>
-                <option value="account_name" <c:if test="${sort_by.equals('account_name')}">selected</c:if>>
-                    <th><fmt:message key="account_name"/></th></option>
-                <option value="currency" <c:if test="${sort_by.equals('currency')}">selected</c:if>>
-                    <th><fmt:message key="currency"/></th></option>
-                <option value="active" <c:if test="${sort_by.equals('active')}">selected</c:if>>
-                    <th><fmt:message key="is_active"/></th></option>
-<%--                <option value="registered" <c:if test="${sort_by.equals('registered')}">selected</c:if>>--%>
-<%--                    <th><fmt:message key="date_main"/></th></option>--%>
-            </select>
-
-            <th><fmt:message key="order_by"/></th>
-            <select name="order" size="1">
-            <option value="ASC" <c:if test="${order.equals('ASC')}">selected</c:if>>
-                <th><fmt:message key="ascending"/></th></option>
-            <option value="DESC" <c:if test="${order.equals('DESC')}">selected</c:if>><th>
-                <fmt:message key="descending"/></th></option>
-            </select>
-            <button type="submit"><fmt:message key="apply"/></button>
-        </div>
-    </form>
+    <%@include file="account/sort.jsp" %>
 
     <table class="table table-striped auto__table table-condensed text-center">
         <thead>
