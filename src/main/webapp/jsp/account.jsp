@@ -73,11 +73,8 @@
                                     </c:choose>
                                 </form>
                             </td>
-
                         </tr>
                         <%--        <tr><a href="${pageContext.request.contextPath}/wallet/accounts?user_id=${user.id}"><fmt:message key="accounts"/></tr>--%>
-                        <tr><a class="btn btn-outline-primary mx-5" href="/bikes"><fmt:message key="my_payments"/></a>
-                        </tr>
                     </c:if>
                     </tbody>
                 </table>
@@ -120,7 +117,7 @@
 
                     <c:if test="${account.action==2}"><fmt:message key="wait_to_block"/></c:if>
                     <c:if test="${account.action==1}"><fmt:message key="wait_to_unblock"/></c:if>
-                    <c:if test="${account.action==0}">
+                    <c:if test="${account.action==0 && 'CLIENT'.equals(role)}">
                         <div class="text-info fw-bold">${account.accountName} - <fmt:message
                                 key="${account.active?'is_active':'blocked'}"/></div>
                         <form method="post" action="${pageContext.request.contextPath}/wallet/account">
@@ -140,14 +137,37 @@
                             </c:if>
                         </form>
                     </c:if>
+                    <c:if test="${'ADMIN'.equals(role)}">
+                        <div class="text-info fw-bold">${account.accountName} - <fmt:message
+                                key="${account.active?'is_active':'blocked'}"/></div>
+                        <form method="post" action="${pageContext.request.contextPath}/admin/user">
+                            <input type="hidden" name="id" value="${user.id}"/>
+                            <c:choose>
+                                <c:when test="${user.active}">
+                                    <input type="hidden" name="status" value="false"/>
+                                    <button class="btn btn-outline-success mt-2"
+                                            type="submit"><fmt:message key="block"/>
+                                    </button>
+                                    <button type="submit"><fmt:message key="block"/></button>
+                                </c:when>
+                                <c:otherwise>
+                                    <input type="hidden" name="status" value="true"/>
+                                    <button class="btn btn-outline-success mt-2"
+                                            type="submit"><fmt:message key="unblock"/>
+                                    </button>
+                                </c:otherwise>
+                            </c:choose>
+                        </form>
+                    </c:if>
 
 
                 </div>
             </div>
+            <div><a class="btn btn-outline-success mt-4" href="wallet/payments"><fmt:message key="payments"/></a></div>
+
 
         </div>
     </div>
-
 
     <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/wallet/"><fmt:message
             key="home_page"/></a>

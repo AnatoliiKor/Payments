@@ -23,7 +23,7 @@ class AccountsCommand implements Command {
         String order;
         Long user_id;
         HttpSession session = req.getSession();
-        Role role  = Role.valueOf((String) session.getAttribute("role"));
+        Role role = Role.valueOf((String) session.getAttribute("role"));
 
         if (req.getParameter("order") != null) {
             order = req.getParameter("order");
@@ -43,34 +43,31 @@ class AccountsCommand implements Command {
             sortBy = "balance";
         }
 
-        if (role==Role.ADMIN && req.getParameter("user_id")==null) {
+        if (role == Role.ADMIN && req.getParameter("user_id") == null) {
             log.info("account list requested by ADMIN");
             user_id = -1L;
-        } else if (req.getParameter("user_id") == null){
-            User user = (User) session.getAttribute("user_auth");
-            user_id = user.getId();
+//        } else if (req.getParameter("user_id") == null){
+//            User user = (User) session.getAttribute("user_auth");
+//            user_id = user.getId();
         } else {
             user_id = Long.parseLong(req.getParameter("user_id"));
             log.info("account list requested for user with id= {}", user_id);
         }
+
+        String page = req.getParameter("pg");
+        if (page == null || page.equals("")) {
+            req.setAttribute("pg", 1);
+        } else {
+            req.setAttribute("pg", Integer.parseInt(page));
+        }
+
         List<Account> accounts = accountService.findAllAccountsByUserId(user_id, sortBy, order);
+        int pgMax = 1 + accounts.size()/10;
+        req.setAttribute("pg_max", pgMax);
         req.setAttribute("user_id", user_id);
         req.setAttribute("accounts", accounts);
         req.setAttribute("sort_by", sortBy);
         req.setAttribute("order", order);
         return "/jsp/accounts_list.jsp";
-
-//        String page = req.getParameter("pg");
-//        if (page == null || page.equals("")) {
-//            req.setAttribute("pg", 1);
-//        } else {
-//            req.setAttribute("pg", Integer.parseInt(page));
-//        }
-//
-//        List<Bike> bikes = bikeService.findAll(sortBy, order);
-//        req.setAttribute("bikes", bikes);
-//        req.getRequestDispatcher("/jsp/bikes_list.jsp").forward(req, resp);
-//    }
-
     }
 }
