@@ -30,10 +30,10 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <c:choose>
                         <c:when test="${role.equals('ADMIN')}">
-                            <li class="nav-item">
-                                <a class="nav-link" href="${pageContext.request.contextPath}/admin">
-                                    <fmt:message key="admin_nav"/></a>
-                            </li>
+                            <a class="btn btn-outline-primary mx-1" href="/admin"><fmt:message key="admin_nav"/></a>
+                            <a class="btn btn-outline-primary mx-1" href="/admin/users"><fmt:message key="users_list"/></a>
+                            <a class="btn btn-outline-primary mx-1" href="/admin/accounts"><fmt:message key="accounts"/></a>
+                            <a class="btn btn-outline-primary mx-1" href="/admin/payments"><fmt:message key="payments"/></a>
                         </c:when>
                         <c:otherwise>
                             <li class="nav-item">
@@ -46,10 +46,6 @@
                             </li>
                         </c:otherwise>
                     </c:choose>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/wallet/user">
-                            <fmt:message key="profile_nav"/></a>
-                    </li>
                 </ul>
             </c:if>
 
@@ -66,6 +62,9 @@
 
             <c:choose>
                 <c:when test="${not empty user_auth}">
+                    <a class="btn btn-outline-secondary mx-2" href="${pageContext.request.contextPath}/wallet/user" role="button">
+                            <fmt:message key="profile_nav"/>
+                    </a>
                     <a class="btn btn-outline-secondary" href="/logout" role="button">
                             ${user_auth.lastName}.<fmt:message key="logout"/>
                     </a>

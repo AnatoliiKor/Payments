@@ -11,8 +11,18 @@ DROP SEQUENCE IF EXISTS account_id_seq;
 CREATE SEQUENCE usr_id_seq START WITH 1;
 CREATE SEQUENCE cart_id_seq START WITH 1;
 CREATE SEQUENCE cart_id_id_seq START WITH 1;
-CREATE SEQUENCE account_id_seq START WITH 1;
+CREATE SEQUENCE card_id_seq START WITH 1000000000000000;
 
+DROP TABLE credit_card;
+
+CREATE TABLE credit_card
+(
+    id      BIGINT PRIMARY KEY DEFAULT nextval('card_id_seq'),
+    account_id bigint
+    constraint credit_card_account_id_fkey not null
+    references account
+    on delete cascade
+);
 CREATE TABLE usr
 (
   id               BIGINT PRIMARY KEY DEFAULT nextval('usr_id_seq'),

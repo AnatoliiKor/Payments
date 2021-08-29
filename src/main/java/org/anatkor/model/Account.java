@@ -19,7 +19,7 @@ public class Account {
     * if 2 - block request
     * */
     private int action;
-    private CreditCard creditCard;
+    private long cardNumber;
     private List<Payment> payment;
 
 
@@ -82,12 +82,12 @@ public class Account {
         this.currency = currency;
     }
 
-    public CreditCard getCreditCard() {
-        return creditCard;
+    public long getCardNumber() {
+        return cardNumber;
     }
 
-    public void setCreditCard(CreditCard creditCard) {
-        this.creditCard = creditCard;
+    public void setCardNumber(long cardNumber) {
+        this.cardNumber = cardNumber;
     }
 
     public LocalDateTime getRegistered() {

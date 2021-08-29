@@ -22,9 +22,13 @@ public class AccountService {
         return accountDao.newAccount(account);
     }
 
-    public List<Account> findAllAccountsByUserId(Long user_id, String sortBy, String order) {
-            return accountDao.findAllAccountsByUserId(user_id, sortBy, order);
+    public List<Account> findAllAccountsByUserIdSorted(Long user_id, String sortBy, String order) {
+            return accountDao.findAllAccountsByUserIdSorted(user_id, sortBy, order);
         }
+
+    public List<Account> findAllAccountsByUserId(Long user_id) {
+        return accountDao.findAllAccountsByUserId(user_id);
+    }
 
     public Account findById(Long id) {
         return accountDao.findById(id);

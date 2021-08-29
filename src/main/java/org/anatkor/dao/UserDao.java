@@ -69,29 +69,6 @@ public class UserDao {
         return users;
     }
 
-//    public boolean userIsExist(String username, String password) {
-//        Connection con = null;
-//        PreparedStatement prepStatement = null;
-//        ResultSet rs = null;
-//        try {
-//            con = Utils.getConnection();
-//            prepStatement = con.prepareStatement(FIND_USER_BY_USERNAME_PASSWORD);
-//            int k = 1;
-//            prepStatement.setString(k++, username);
-//            prepStatement.setString(k, password);
-//            rs = prepStatement.executeQuery();
-//            return rs.next();
-//        } catch (SQLException e) {
-//            log.debug("SQLException during Query {} processing from {}.",
-//                    FIND_USER_BY_USERNAME_PASSWORD, Utils.class, e);
-//            return false;
-//        } finally {
-//            Utils.close(rs);
-//            Utils.close(prepStatement);
-//            Utils.close(con);
-//        }
-//    }
-
     public User findUserById(Long userId) throws DBException {
         Connection con = null;
         PreparedStatement prepStatement = null;

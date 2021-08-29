@@ -5,34 +5,24 @@ import java.util.List;
 
 public class CreditCard {
     private Long id;
-    private Long cardNumber;
-    private String cardName;
-    private boolean active;
+    private Long account_id;
 
     public CreditCard() {
     }
 
-    public Long getCardNumber() {
-        return cardNumber;
+    public Long getId() {
+        return id;
     }
 
-    public void setCardNumber(Long cardNumber) {
-        this.cardNumber = cardNumber;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getCardName() {
-        return cardName;
+    public Long getAccount_id() {
+        return account_id;
     }
 
-    public void setCardName(String cardName) {
-        this.cardName = cardName;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setAccount_id(Long account_id) {
+        this.account_id = account_id;
     }
 }

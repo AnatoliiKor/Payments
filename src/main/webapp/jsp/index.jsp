@@ -11,15 +11,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col">
-            <c:choose>
-                <c:when test="${not empty account}">
-                    <c:forEach var="account" items="accounts">
-
-
-                    </c:forEach>
-                </c:when>
-                <c:otherwise><fmt:message key="no_accounts"/></c:otherwise>
-            </c:choose>
+            <%@include file="account/cards.jsp" %>
         </div>
 
         <div class="col">

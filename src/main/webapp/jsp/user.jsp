@@ -46,7 +46,7 @@
 
             </c:if>
 
-            <c:if test="${role.equals('ADMIN')}">
+            <c:if test="${role.equals('ADMIN') && user.id != user_auth.id}">
                 <tr>
                     <td><fmt:message key="role"/></td>
                     <td>${user.role}</td>

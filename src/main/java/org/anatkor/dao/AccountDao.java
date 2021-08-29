@@ -1,5 +1,6 @@
 package org.anatkor.dao;
 
+import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,17 +14,12 @@ public class AccountDao {
     private static final String ADD_ACCOUNT = "INSERT INTO account (number, balance, account_name, currency, user_id, action) VALUES (?,0,?,?,?,1);";
     private static final String FIND_ACCOUNTS_BY_USER_ID_SORTED = "SELECT * FROM account WHERE user_id=? ORDER BY ? ?";
     private static final String FIND_ACCOUNT_BY_ID = "SELECT * FROM account WHERE id=?";
+    private static final String FIND_ACCOUNT_WITH_CARD_BY_ID = "SELECT * FROM account LEFT JOIN credit_card cc on account.id = cc.account_id where account.id=?";
     private static final String FIND_ALL_ACCOUNTS_TO_DO = "SELECT * FROM account WHERE action>0";
     private static final String UPDATE_ACCOUNT_ACTIVE_BY_ID = "UPDATE account SET active=?, action=0 WHERE id=?";
     private static final String UPDATE_ACCOUNT_BALANCE_BY_ID = "UPDATE account SET balance=balance+? WHERE id=?";
     private static final String UPDATE_ACCOUNT_ACTION_BY_ID = "UPDATE account SET action=? WHERE id=?";
-
-    private static final String FIND_ALL_BIKES_SORTED = "SELECT * FROM bike ORDER BY ";
-
-    private static final String FIND_BIKE_BY_ID = "SELECT * FROM bike WHERE id=?";
-    private static final String DELETE_BIKE_BY_ID = "DELETE FROM bike WHERE id=?";
-    private static final String ADD_BIKE = "INSERT INTO bike (name, brand, category, colour, description, price)" +
-            " VALUES (?,?,?,?,?,?)";
+    private static final String ADD_CREDIT_CARD_ACCOUNT = "INSERT INTO credit_card(account_id) VALUES (?)";
 
 
     final static Logger log = LogManager.getLogger(AccountDao.class);
@@ -33,14 +29,19 @@ public class AccountDao {
         Statement statement;
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
+        long generatedId = 0L;
+        boolean result;
         try {
             con = Utils.getConnection();
+            con.setAutoCommit(false);
+            con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             statement = con.createStatement();
             rs = statement.executeQuery(FIND_MAX_ACCOUNT_NUMBER);
             if (rs.next()) {
                 long number = rs.getLong("max");
+                rs=null;
                 number++;
-                prepStatement = con.prepareStatement(ADD_ACCOUNT);
+                prepStatement = con.prepareStatement(ADD_ACCOUNT, Statement.RETURN_GENERATED_KEYS);
                 int k = 1;
                 prepStatement.setLong(k++, number);
                 prepStatement.setString(k++, account.getAccountName());
@@ -48,12 +49,29 @@ public class AccountDao {
                 prepStatement.setLong(k++, account.getUserId());
                 if (prepStatement.executeUpdate() > 0) {
                     log.info("Account {} is added to DB", number);
-                    return true;
+                    rs = prepStatement.getGeneratedKeys();
+                    if (rs.next()) {
+                        generatedId = rs.getLong(1);
+                        account.setId(generatedId);
+                        prepStatement=null;
+                        prepStatement = con.prepareStatement(ADD_CREDIT_CARD_ACCOUNT);
+                        prepStatement.setLong(1, generatedId);
+                        result = (1 == prepStatement.executeUpdate());
+                        con.commit();
+                        log.info("Credit card is added to account id={}", account.getId());
+                        return result;
+                    }
                 }
             }
         } catch (SQLException e) {
-            log.info("SQLException during Add account processing {}. {}", Utils.class, e.getMessage());
-        } finally {
+            log.debug("SQLException during Add account processing {}. {}", Utils.class, e.getMessage());
+            try {
+                con.rollback();
+            } catch (SQLException throwables) {
+                log.debug("SQLException during rollback Add account processing {}. {}", Utils.class, throwables.getMessage());
+            }
+        }
+        finally {
             Utils.close(rs);
             Utils.close(prepStatement);
             Utils.close(con);
@@ -61,7 +79,7 @@ public class AccountDao {
         return false;
     }
 
-    public List<Account> findAllAccountsByUserId(Long id, String sortBy, String order) {
+    public List<Account> findAllAccountsByUserIdSorted(Long id, String sortBy, String order) {
         List<Account> accounts = new ArrayList<>();
         Connection con = null;
         Statement statement = null;
@@ -97,13 +115,48 @@ public class AccountDao {
         return accounts;
     }
 
+    public List<Account> findAllAccountsByUserId(Long id) {
+        List<Account> accounts = new ArrayList<>();
+        Connection con = null;
+        Statement statement = null;
+        ResultSet rs = null;
+        String sql;
+        try {
+            con = Utils.getConnection();
+            sql = "SELECT * FROM account LEFT JOIN credit_card cc on account.id = cc.account_id WHERE user_id=" + id;
+            statement = con.createStatement();
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                Account account = new Account();
+                account.setId(rs.getLong("id"));
+                account.setNumber(rs.getLong("number"));
+                account.setBalance(rs.getLong("balance"));
+                account.setAccountName(rs.getString("account_name"));
+                account.setCurrency(Account.CURRENCY.valueOf(rs.getString("currency")));
+                account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
+                account.setActive(rs.getBoolean("active"));
+                account.setCardNumber(rs.getLong("card_id"));
+                accounts.add(account);
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.", FIND_ACCOUNTS_BY_USER_ID_SORTED, Utils.class, e);
+        } finally {
+            Utils.close(rs);
+            Utils.close(statement);
+            Utils.close(con);
+        }
+        return accounts;
+    }
+
+
+
     public Account findById(Long id) {
         Connection con = null;
         PreparedStatement preparedStatement = null;
         ResultSet rs = null;
         try {
             con = Utils.getConnection();
-            preparedStatement = con.prepareStatement(FIND_ACCOUNT_BY_ID);
+            preparedStatement = con.prepareStatement(FIND_ACCOUNT_WITH_CARD_BY_ID);
             int k = 1;
             preparedStatement.setLong(k, id);
             rs = preparedStatement.executeQuery();
@@ -117,6 +170,8 @@ public class AccountDao {
                 account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
                 account.setActive(rs.getBoolean("active"));
                 account.setAction(rs.getInt("action"));
+                account.setUserId(rs.getLong("user_id"));
+                account.setCardNumber(rs.getLong("card_id"));
                 return account;
             }
         } catch (SQLException e) {

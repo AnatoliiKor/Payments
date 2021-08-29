@@ -24,7 +24,7 @@ class AccountCommand implements Command {
                 String currency = req.getParameter("currency");
                 if (accountName != null && !"".equals(accountName)) {
                     if (accountService.newAccount(accountName, currency, user_id)) {
-                        return "redirect:/wallet/accounts?message=Account is opened and is waiting for administrator unblock";
+                        return "redirect:/wallet/accounts?message=Account is opened and is waiting for administrator unblock&&user_id=" + user_id;
                     } else return "redirect:/wallet?warn=Account is not opened";
                 }
             }
