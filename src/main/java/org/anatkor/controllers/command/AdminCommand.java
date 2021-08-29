@@ -1,16 +1,11 @@
 package org.anatkor.controllers.command;
 
-import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
-import org.anatkor.model.Role;
-import org.anatkor.model.User;
 import org.anatkor.services.AccountService;
-import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 class AdminCommand implements Command {

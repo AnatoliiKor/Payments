@@ -2,14 +2,9 @@ package org.anatkor.services;
 
 import org.anatkor.dao.UserDao;
 import org.anatkor.exceptions.DBException;
-import org.anatkor.model.Role;
 import org.anatkor.model.User;
 
-import java.sql.SQLException;
-import java.time.LocalDateTime;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class UserService {
 

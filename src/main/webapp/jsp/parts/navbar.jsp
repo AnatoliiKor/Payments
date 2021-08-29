@@ -49,11 +49,6 @@
                 </ul>
             </c:if>
 
-<%--            <a class="btn btn-outline-primary " href="${pageContext.request.contextPath}?language=uk" role="button">--%>
-<%--                <fmt:message key="uk_button"/></a>--%>
-<%--            <a class="btn btn-outline-warning mx-1" href="${pageContext.request.contextPath}?language=en" role="button">--%>
-<%--                <fmt:message key="en_button"/></a>--%>
-
             <a class="btn btn-outline-primary " href="${pageContext.request.contextPath}/lang?language=uk" role="button">
                 <fmt:message key="uk_button"/></a>
             <a class="btn btn-outline-warning mx-1" href="${pageContext.request.contextPath}/lang?language=en" role="button">

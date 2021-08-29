@@ -1,7 +1,7 @@
 package org.anatkor.dao;
 
 import org.anatkor.exceptions.DBException;
-import org.anatkor.model.Role;
+import org.anatkor.model.enam.Role;
 import org.anatkor.model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

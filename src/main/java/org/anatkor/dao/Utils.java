@@ -17,6 +17,7 @@ public class Utils {
 
     public static Connection getConnection() {
         Connection connection = null;
+//        TODO pull connections
 //        log.debug("connection try");
         try {
             Class.forName(driver);

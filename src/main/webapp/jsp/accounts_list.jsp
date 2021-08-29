@@ -27,11 +27,11 @@
 
         <tbody>
         <c:choose>
-            <c:when test="${accounts != null}">
+            <c:when test="${not empty accounts}">
                 <c:forEach var="account" items="${accounts}"
-                    varStatus="position" begin="${10 * (pg - 1)}" end="${10 * (pg - 1) + 9}">
-                    <tr>
-                        <td scope="row"><c:out value="${10 * (pg - 1) + position.count}"/>
+                    varStatus="position" begin="${5 * (pg - 1)}" end="${5 * (pg - 1) + 4}">
+                    <tr >
+                        <td scope="row" ><c:out value="${5 * (pg - 1) + position.count}"/>
                         </td>
                         <td <c:if test="${sort_by.equals('number')}">class="text-info fw-bold"</c:if>>UA${account.number}</td>
                         <td <c:if test="${sort_by.equals('balance')}">class="text-info fw-bold"</c:if>>${account.balance/100}</td>
@@ -54,9 +54,9 @@
     </table>
 
     <ul class="pagination">
-        <li class="page-item ${pg == 1 ? 'disabled' : ''}"><a class="page-link" href="/accounts?pg=${pg-1}"><fmt:message key="previous_main"/></a></li>
+        <li class="page-item ${pg == 1 ? 'disabled' : ''}"><a class="page-link" href="/accounts?pg=${pg-1}&user_id=${user_id}"><fmt:message key="previous_main"/></a></li>
         <li class="page-item active"><a class="page-link">${pg}</a></li>
-        <li class="page-item ${pg == pg_max? 'disabled' : ''}"><a class="page-link" href="/accounts?pg=${pg+1}"><fmt:message key="next_main"/></a></li>
+        <li class="page-item ${pg == pg_max? 'disabled' : ''}"><a class="page-link" href="/accounts?pg=${pg+1}&user_id=${user_id}"><fmt:message key="next_main"/></a></li>
     </ul>
 
     <c:if test="${'CLIENT'.equals(role)}">

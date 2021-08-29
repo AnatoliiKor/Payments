@@ -12,6 +12,7 @@
 <table class="table table-striped auto__table table-condensed text-center">
     <thead>
     <tr>
+        <th>#</th>
         <th><fmt:message key="name"/></th>
         <th><fmt:message key="last_name"/>,<fmt:message key="middle_name"/></th>
         <th>Password</th>
@@ -26,8 +27,10 @@
     <tbody>
     <c:choose>
     <c:when test="${not empty users}">
-        <c:forEach var="user" items="${users}">
+        <c:forEach var="user" items="${users}" varStatus="position" begin="${5 * (pg - 1)}" end="${5 * (pg - 1) + 4}">
             <tr>
+                <td scope="row" ><c:out value="${5 * (pg - 1) + position.count}"/>
+                </td>
                 <td>${user.lastName}</td>
                 <td>${user.name}
                     ${not empty user.middleName ? user.middleName : ''}
@@ -52,6 +55,13 @@
     </tbody>
 
 </table>
+
+    <ul class="pagination">
+        <li class="page-item ${pg == 1 ? 'disabled' : ''}"><a class="page-link" href="/users?pg=${pg-1}"><fmt:message key="previous_main"/></a></li>
+        <li class="page-item active"><a class="page-link">${pg}</a></li>
+        <li class="page-item ${pg == pg_max? 'disabled' : ''}"><a class="page-link" href="/users?pg=${pg+1}"><fmt:message key="next_main"/></a></li>
+    </ul>
+
     <%@include file="parts/messages.jsp" %>
 <br/>
 

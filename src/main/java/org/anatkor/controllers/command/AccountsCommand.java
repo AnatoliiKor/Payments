@@ -1,11 +1,8 @@
 package org.anatkor.controllers.command;
 
 import org.anatkor.model.Account;
-import org.anatkor.model.Bike;
-import org.anatkor.model.Role;
-import org.anatkor.model.User;
+import org.anatkor.model.enam.Role;
 import org.anatkor.services.AccountService;
-import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -62,7 +59,7 @@ class AccountsCommand implements Command {
         }
 
         List<Account> accounts = accountService.findAllAccountsByUserIdSorted(user_id, sortBy, order);
-        int pgMax = 1 + accounts.size()/10;
+        int pgMax = 1 + accounts.size()/5;
         req.setAttribute("pg_max", pgMax);
         req.setAttribute("user_id", user_id);
         req.setAttribute("accounts", accounts);

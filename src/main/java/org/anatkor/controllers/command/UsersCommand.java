@@ -15,7 +15,15 @@ class UsersCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         log.info("users list requested");
+        String page = req.getParameter("pg");
+        if (page == null || page.equals("")) {
+            req.setAttribute("pg", 1);
+        } else {
+            req.setAttribute("pg", Integer.parseInt(page));
+        }
         List<User> users = userService.findAll();
+        int pgMax = 1 + users.size()/5;
+        req.setAttribute("pg_max", pgMax);
         req.setAttribute("users", users);
         return "/jsp/users_list.jsp";
     }

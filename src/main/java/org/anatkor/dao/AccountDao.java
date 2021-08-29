@@ -2,6 +2,7 @@ package org.anatkor.dao;
 
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
+import org.anatkor.model.enam.Currency;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -100,9 +101,10 @@ public class AccountDao {
                 account.setNumber(rs.getLong("number"));
                 account.setBalance(rs.getLong("balance"));
                 account.setAccountName(rs.getString("account_name"));
-                account.setCurrency(Account.CURRENCY.valueOf(rs.getString("currency")));
+                account.setCurrency(Currency.valueOf(rs.getString("currency")));
                 account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
                 account.setActive(rs.getBoolean("active"));
+                account.setUserId(rs.getLong("user_id"));
                 accounts.add(account);
             }
         } catch (SQLException e) {
@@ -132,7 +134,7 @@ public class AccountDao {
                 account.setNumber(rs.getLong("number"));
                 account.setBalance(rs.getLong("balance"));
                 account.setAccountName(rs.getString("account_name"));
-                account.setCurrency(Account.CURRENCY.valueOf(rs.getString("currency")));
+                account.setCurrency(Currency.valueOf(rs.getString("currency")));
                 account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
                 account.setActive(rs.getBoolean("active"));
                 account.setCardNumber(rs.getLong("card_id"));
@@ -166,7 +168,7 @@ public class AccountDao {
                 account.setNumber(rs.getLong("number"));
                 account.setBalance(rs.getLong("balance"));
                 account.setAccountName(rs.getString("account_name"));
-                account.setCurrency(Account.CURRENCY.valueOf(rs.getString("currency")));
+                account.setCurrency(Currency.valueOf(rs.getString("currency")));
                 account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
                 account.setActive(rs.getBoolean("active"));
                 account.setAction(rs.getInt("action"));
@@ -199,7 +201,7 @@ public class AccountDao {
                 account.setNumber(rs.getLong("number"));
                 account.setBalance(rs.getLong("balance"));
                 account.setAccountName(rs.getString("account_name"));
-                account.setCurrency(Account.CURRENCY.valueOf(rs.getString("currency")));
+                account.setCurrency(Currency.valueOf(rs.getString("currency")));
                 account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
                 account.setActive(rs.getBoolean("active"));
                 account.setAction(rs.getInt("action"));

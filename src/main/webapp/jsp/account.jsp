@@ -34,7 +34,7 @@
                     </tr>
                     <tr>
                         <td><fmt:message key="credit_card"/></td>
-                        <td>${account.cardNumber}</td>
+                        <td>${account.getCardNumberSpaces()}</td>
                     </tr>
                     <tr>
                         <td><fmt:message key="opened"/></td>
@@ -140,18 +140,11 @@
                             </c:choose>
                         </form>
                     </c:if>
-
-
                 </div>
             </div>
             <div><a class="btn btn-outline-success mt-4" href="wallet/payments"><fmt:message key="payments"/></a></div>
-
-
         </div>
     </div>
-
-    <a class="btn btn-outline-primary mx-5" href="${pageContext.request.contextPath}/wallet/"><fmt:message
-            key="home_page"/></a>
 </div>
 </body>
 

@@ -1,336 +1,369 @@
-2021-08-29 13:04:43,934 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 13:05:03,721 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=9
-2021-08-29 13:05:03,772 [http-nio-8081-exec-2] INFO  org.anatkor.dao.AccountDao- Account 1000000015 is added to DB
-2021-08-29 13:05:03,783 [http-nio-8081-exec-2] INFO  org.anatkor.dao.AccountDao- SQLException during Add account processing class org.anatkor.dao.Utils. ERROR: null value in column "account_id" of relation "credit_card" violates not-null constraint
-  Detail: Failing row contains (18, null).
-2021-08-29 13:05:31,520 [http-nio-8081-exec-1] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=9
-2021-08-29 13:07:44,317 [http-nio-8081-exec-1] INFO  org.anatkor.dao.AccountDao- Account 1000000015 is added to DB
-2021-08-29 13:07:45,602 [http-nio-8081-exec-1] INFO  org.anatkor.dao.AccountDao- SQLException during Add account processing class org.anatkor.dao.Utils. ERROR: null value in column "account_id" of relation "credit_card" violates not-null constraint
-  Detail: Failing row contains (19, null).
-2021-08-29 13:09:10,238 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 13:09:10,244 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 13:09:14,780 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 13:09:19,231 [http-nio-8081-exec-7] INFO  org.anatkor.dao.AccountDao- Status of account with id=9 is updated to true
-2021-08-29 13:13:24,702 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 13:13:51,527 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 13:13:51,531 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 13:13:54,825 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 13:13:57,848 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=9
-2021-08-29 13:14:23,226 [http-nio-8081-exec-15] INFO  org.anatkor.dao.AccountDao- Account 1000000015 is added to DB
-2021-08-29 13:15:14,491 [http-nio-8081-exec-15] INFO  org.anatkor.dao.AccountDao- SQLException during Add account processing class org.anatkor.dao.Utils. ERROR: null value in column "account_id" of relation "credit_card" violates not-null constraint
-  Detail: Failing row contains (20, null).
-2021-08-29 13:47:27,120 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=null
-2021-08-29 13:47:45,335 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 13:47:48,405 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=9
-2021-08-29 13:47:48,449 [http-nio-8081-exec-16] INFO  org.anatkor.dao.AccountDao- Account 1 is added to DB
-2021-08-29 13:47:48,453 [http-nio-8081-exec-16] INFO  org.anatkor.dao.AccountDao- SQLException during Add account processing class org.anatkor.dao.Utils. ERROR: null value in column "account_id" of relation "credit_card" violates not-null constraint
-  Detail: Failing row contains (21, null).
-2021-08-29 13:58:32,324 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 13:58:33,188 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 13:58:39,781 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 13:58:39,787 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 13:58:45,189 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 13:59:04,443 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 13:59:26,678 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 13:59:32,931 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 13:59:41,043 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:00:06,110 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 14:00:42,654 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:00:47,463 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 14:00:52,680 [http-nio-8081-exec-23] INFO  org.anatkor.dao.AccountDao- Status of account with id=22 is updated to true
-2021-08-29 14:00:56,827 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:01:08,489 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:01:20,813 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 14:01:20,816 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:01:23,296 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 14:01:28,020 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=9
-2021-08-29 14:01:28,067 [http-nio-8081-exec-30] INFO  org.anatkor.dao.AccountDao- Account 10000000002 is added to DB
-2021-08-29 14:01:33,067 [http-nio-8081-exec-30] DEBUG org.anatkor.dao.AccountDao- SQLException during Add account processing class org.anatkor.dao.Utils. ERROR: null value in column "account_id" of relation "credit_card" violates not-null constraint
-  Detail: Failing row contains (23, null).
-2021-08-29 14:02:32,175 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:02:34,575 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 14:02:35,389 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:02:40,581 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=9
-2021-08-29 14:02:40,624 [http-nio-8081-exec-31] INFO  org.anatkor.dao.AccountDao- Account 10000000002 is added to DB
-2021-08-29 14:02:44,015 [http-nio-8081-exec-31] INFO  org.anatkor.dao.AccountDao- Credit card is added to account id=24
-2021-08-29 14:04:15,364 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 14:04:15,367 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:04:17,326 [http-nio-8081-exec-36] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 14:04:19,615 [http-nio-8081-exec-37] INFO  org.anatkor.dao.AccountDao- Status of account with id=24 is updated to true
-2021-08-29 14:04:21,113 [http-nio-8081-exec-34] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 14:04:25,926 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:04:31,047 [http-nio-8081-exec-36] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 14:04:31,050 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:04:35,667 [http-nio-8081-exec-38] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 14:04:37,354 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:04:44,233 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=9
-2021-08-29 14:04:44,390 [http-nio-8081-exec-39] INFO  org.anatkor.dao.AccountDao- Account 10000000003 is added to DB
-2021-08-29 14:04:48,758 [http-nio-8081-exec-39] INFO  org.anatkor.dao.AccountDao- Credit card is added to account id=25
-2021-08-29 14:06:49,489 [http-nio-8081-exec-34] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:08:04,362 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 14:08:08,610 [http-nio-8081-exec-37] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=9
-2021-08-29 14:08:08,774 [http-nio-8081-exec-37] INFO  org.anatkor.dao.AccountDao- Account 10000000004 is added to DB
-2021-08-29 14:08:13,895 [http-nio-8081-exec-37] INFO  org.anatkor.dao.AccountDao- Credit card is added to account id=26
-2021-08-29 14:09:44,543 [http-nio-8081-exec-47] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 14:09:48,505 [http-nio-8081-exec-34] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=9
-2021-08-29 14:09:48,552 [http-nio-8081-exec-34] INFO  org.anatkor.dao.AccountDao- Account 10000000005 is added to DB
-2021-08-29 14:09:48,554 [http-nio-8081-exec-34] INFO  org.anatkor.dao.AccountDao- Credit card is added to account id=27
-2021-08-29 14:09:50,752 [http-nio-8081-exec-44] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:09:59,165 [http-nio-8081-exec-45] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:10:02,284 [http-nio-8081-exec-46] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:15:12,081 [http-nio-8081-exec-50] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 14:15:12,085 [http-nio-8081-exec-51] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:15:15,333 [http-nio-8081-exec-52] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 14:15:17,523 [http-nio-8081-exec-54] INFO  org.anatkor.dao.AccountDao- Status of account with id=25 is updated to true
-2021-08-29 14:15:18,379 [http-nio-8081-exec-55] INFO  org.anatkor.dao.AccountDao- Status of account with id=26 is updated to true
-2021-08-29 14:15:19,048 [http-nio-8081-exec-57] INFO  org.anatkor.dao.AccountDao- Status of account with id=27 is updated to true
-2021-08-29 14:15:33,108 [http-nio-8081-exec-51] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:15:38,384 [http-nio-8081-exec-49] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:15:43,546 [http-nio-8081-exec-56] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 14:18:58,706 [http-nio-8081-exec-51] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 14:19:04,219 [http-nio-8081-exec-53] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:19:12,426 [http-nio-8081-exec-49] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 14:19:16,395 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:19:22,284 [http-nio-8081-exec-50] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 14:19:52,307 [http-nio-8081-exec-54] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:20:00,964 [http-nio-8081-exec-55] INFO  org.anatkor.dao.AccountDao- Status of account with id=27 is updated to false
-2021-08-29 14:20:03,520 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:20:10,466 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 14:20:10,469 [http-nio-8081-exec-50] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:20:12,395 [http-nio-8081-exec-52] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 14:20:13,313 [http-nio-8081-exec-54] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:20:17,053 [http-nio-8081-exec-55] INFO  org.anatkor.dao.AccountDao- Action flag of account with id=25 is updated to 2
-2021-08-29 14:20:19,513 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 14:20:19,516 [http-nio-8081-exec-50] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:20:21,972 [http-nio-8081-exec-51] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 14:20:26,894 [http-nio-8081-exec-53] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:20:53,389 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:20:59,841 [http-nio-8081-exec-50] INFO  org.anatkor.dao.AccountDao- Status of account with id=24 is updated to false
-2021-08-29 14:21:02,719 [http-nio-8081-exec-52] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:21:18,904 [http-nio-8081-exec-56] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:22:25,700 [http-nio-8081-exec-52] INFO  org.anatkor.dao.AccountDao- Status of account with id=25 is updated to false
-2021-08-29 14:22:27,343 [http-nio-8081-exec-54] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 14:22:29,615 [http-nio-8081-exec-55] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:22:38,741 [http-nio-8081-exec-58] INFO  org.anatkor.dao.AccountDao- Status of account with id=25 is updated to false
-2021-08-29 14:22:39,952 [http-nio-8081-exec-51] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:22:50,885 [http-nio-8081-exec-53] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 14:22:50,888 [http-nio-8081-exec-54] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:22:53,183 [http-nio-8081-exec-49] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 14:22:54,190 [http-nio-8081-exec-56] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:23:00,714 [http-nio-8081-exec-50] INFO  org.anatkor.dao.AccountDao- Action flag of account with id=25 is updated to 1
-2021-08-29 14:23:02,623 [http-nio-8081-exec-52] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 14:23:02,626 [http-nio-8081-exec-53] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:23:04,829 [http-nio-8081-exec-54] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 14:23:06,591 [http-nio-8081-exec-55] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:23:24,437 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 14:23:24,440 [http-nio-8081-exec-50] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:23:26,217 [http-nio-8081-exec-51] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 14:23:27,097 [http-nio-8081-exec-53] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:23:33,132 [http-nio-8081-exec-49] INFO  org.anatkor.dao.AccountDao- Action flag of account with id=26 is updated to 2
-2021-08-29 14:24:29,608 [http-nio-8081-exec-51] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 14:24:29,610 [http-nio-8081-exec-52] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:24:32,138 [http-nio-8081-exec-53] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 14:24:34,057 [http-nio-8081-exec-49] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:25:00,567 [http-nio-8081-exec-52] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:35:41,947 [http-nio-8081-exec-53] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 14:35:41,950 [http-nio-8081-exec-54] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:35:43,873 [http-nio-8081-exec-49] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 14:35:45,727 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:35:49,072 [http-nio-8081-exec-56] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:36:03,890 [http-nio-8081-exec-52] INFO  org.anatkor.controllers.command.AccountCommand- request to refill account id=26 with amount=5050{}
-2021-08-29 14:36:03,933 [http-nio-8081-exec-52] INFO  org.anatkor.dao.AccountDao- Account (id=26) is replenished with 5050
-2021-08-29 14:36:18,150 [http-nio-8081-exec-55] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 14:36:18,153 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 14:36:20,183 [http-nio-8081-exec-56] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 14:36:25,967 [http-nio-8081-exec-50] INFO  org.anatkor.dao.AccountDao- Status of account with id=25 is updated to true
-2021-08-29 14:36:29,368 [http-nio-8081-exec-53] INFO  org.anatkor.dao.AccountDao- Status of account with id=26 is updated to false
-2021-08-29 14:36:33,973 [http-nio-8081-exec-49] INFO  org.anatkor.controllers.servlets.BikesListServlet- Bike servlet called
-2021-08-29 14:49:48,126 [http-nio-8081-exec-51] INFO  org.anatkor.controllers.servlets.BikesListServlet- Bike servlet called
-2021-08-29 14:49:49,422 [http-nio-8081-exec-50] INFO  org.anatkor.controllers.servlets.BikesListServlet- Bike servlet called
-2021-08-29 14:49:52,808 [http-nio-8081-exec-53] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 14:50:01,118 [http-nio-8081-exec-54] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
-2021-08-29 14:50:41,961 [http-nio-8081-exec-56] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 14:50:43,760 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 14:50:53,574 [http-nio-8081-exec-52] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 14:50:56,887 [http-nio-8081-exec-53] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 14:52:03,415 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 15:00:45,837 [http-nio-8081-exec-50] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 15:06:23,892 [http-nio-8081-exec-49] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 15:06:27,434 [http-nio-8081-exec-53] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 15:07:50,702 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 15:08:01,470 [http-nio-8081-exec-56] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 15:08:03,663 [http-nio-8081-exec-65] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 15:08:47,007 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 15:09:03,213 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 15:09:09,141 [http-nio-8081-exec-59] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 15:09:32,544 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 13
-2021-08-29 15:09:54,327 [http-nio-8081-exec-66] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 13
-2021-08-29 15:10:11,196 [http-nio-8081-exec-64] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 15:18:58,216 [http-nio-8081-exec-60] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 13
-2021-08-29 15:21:53,095 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 15:21:53,099 [http-nio-8081-exec-63] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 15:21:55,025 [http-nio-8081-exec-66] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 15:21:57,787 [http-nio-8081-exec-64] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 15:27:42,761 [http-nio-8081-exec-60] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 15:30:26,607 [http-nio-8081-exec-60] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 15:30:29,489 [http-nio-8081-exec-63] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 15:30:35,716 [http-nio-8081-exec-64] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 15:30:58,966 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 15:31:01,967 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 15:31:54,309 [http-nio-8081-exec-71] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 15:31:56,007 [http-nio-8081-exec-72] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 15:34:09,248 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 15:34:10,399 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 15:34:41,622 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 15:34:45,265 [http-nio-8081-exec-78] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 15:34:53,564 [http-nio-8081-exec-69] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 15:34:57,599 [http-nio-8081-exec-80] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 15:59:49,300 [http-nio-8081-exec-87] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
-2021-08-29 15:59:49,311 [http-nio-8081-exec-87] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 16:00:27,974 [http-nio-8081-exec-79] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 16:00:29,034 [http-nio-8081-exec-83] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:00:30,849 [http-nio-8081-exec-82] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE id=? processing from class org.anatkor.dao.Utils.
-2021-08-29 16:02:01,657 [http-nio-8081-exec-88] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE id=? processing from class org.anatkor.dao.Utils.
-2021-08-29 16:14:52,252 [http-nio-8081-exec-92] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE id=? processing from class org.anatkor.dao.Utils.
-2021-08-29 16:15:36,491 [http-nio-8081-exec-97] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 16:15:37,425 [http-nio-8081-exec-92] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:17:07,960 [http-nio-8081-exec-99] INFO  org.anatkor.dao.AccountDao- Action flag of account with id=26 is updated to 1
-2021-08-29 16:17:10,783 [http-nio-8081-exec-102] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:17:15,707 [http-nio-8081-exec-105] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:19:18,600 [http-nio-8081-exec-105] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:19:31,059 [http-nio-8081-exec-106] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:19:33,547 [http-nio-8081-exec-107] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:19:37,594 [http-nio-8081-exec-101] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:19:49,439 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.UserCommand- User 382222222222 profile called
-2021-08-29 16:19:51,816 [http-nio-8081-exec-103] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 16:19:51,820 [http-nio-8081-exec-104] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 16:19:53,898 [http-nio-8081-exec-105] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 16:20:38,422 [http-nio-8081-exec-101] INFO  org.anatkor.dao.AccountDao- Status of account with id=26 is updated to true
-2021-08-29 16:20:40,665 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 16:21:41,191 [http-nio-8081-exec-99] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 16:21:46,359 [http-nio-8081-exec-101] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 16:24:05,838 [http-nio-8081-exec-106] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:30:05,592 [http-nio-8081-exec-102] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:30:06,301 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 16:30:07,628 [http-nio-8081-exec-104] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:30:09,168 [http-nio-8081-exec-106] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:30:46,106 [http-nio-8081-exec-99] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:30:48,876 [http-nio-8081-exec-101] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:32:50,669 [http-nio-8081-exec-103] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:34:10,892 [http-nio-8081-exec-106] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:34:47,412 [http-nio-8081-exec-99] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:12,254 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:32,108 [http-nio-8081-exec-103] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:39,659 [http-nio-8081-exec-105] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:40,755 [http-nio-8081-exec-106] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:42,425 [http-nio-8081-exec-100] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:43,079 [http-nio-8081-exec-101] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:44,863 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:45,542 [http-nio-8081-exec-104] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:47,758 [http-nio-8081-exec-106] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:48,526 [http-nio-8081-exec-100] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 16:35:50,440 [http-nio-8081-exec-101] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:35:51,652 [http-nio-8081-exec-102] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 16:35:52,689 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:35:54,132 [http-nio-8081-exec-104] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 16:35:54,728 [http-nio-8081-exec-105] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:35:56,752 [http-nio-8081-exec-107] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:35:58,685 [http-nio-8081-exec-99] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:35:59,917 [http-nio-8081-exec-102] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 16:36:33,469 [http-nio-8081-exec-100] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:36:35,877 [http-nio-8081-exec-101] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 16:36:35,879 [http-nio-8081-exec-102] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 16:36:39,571 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 16:36:40,830 [http-nio-8081-exec-104] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:36:44,728 [http-nio-8081-exec-106] INFO  org.anatkor.dao.AccountDao- Action flag of account with id=27 is updated to 1
-2021-08-29 16:36:55,651 [http-nio-8081-exec-102] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:37:16,469 [http-nio-8081-exec-107] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by org.anatkor.model.User@68e3501f
-2021-08-29 16:37:16,469 [http-nio-8081-exec-107] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 16:37:16,471 [http-nio-8081-exec-107] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 16:37:18,934 [http-nio-8081-exec-99] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:37:41,936 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:38:44,842 [http-nio-8081-exec-100] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:38:59,804 [http-nio-8081-exec-102] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:41:30,173 [http-nio-8081-exec-100] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 16:42:05,168 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:01:41,723 [http-nio-8081-exec-103] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 17:01:41,726 [http-nio-8081-exec-104] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 17:01:44,995 [http-nio-8081-exec-107] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 17:01:46,959 [http-nio-8081-exec-106] INFO  org.anatkor.dao.AccountDao- Status of account with id=27 is updated to true
-2021-08-29 17:04:16,475 [http-nio-8081-exec-105] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 17:04:34,807 [http-nio-8081-exec-100] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 17:04:45,862 [http-nio-8081-exec-102] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 17:04:45,865 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 17:04:49,225 [http-nio-8081-exec-103] INFO  org.anatkor.dao.UserDao- Attempt to log in. User with phone number "+383333333333" is not active.
-2021-08-29 17:04:54,710 [http-nio-8081-exec-104] INFO  org.anatkor.controllers.command.LoginCommand- Client '384444444444' is logged in
-2021-08-29 17:05:08,667 [http-nio-8081-exec-106] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=14
-2021-08-29 17:05:08,714 [http-nio-8081-exec-106] INFO  org.anatkor.dao.AccountDao- Account 10000000006 is added to DB
-2021-08-29 17:05:08,716 [http-nio-8081-exec-106] INFO  org.anatkor.dao.AccountDao- Credit card is added to account id=28
-2021-08-29 17:05:08,719 [http-nio-8081-exec-100] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 14
-2021-08-29 17:05:19,646 [http-nio-8081-exec-102] INFO  org.anatkor.controllers.command.LogoutCommand- User 384444444444 is Logged out
-2021-08-29 17:05:19,649 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 17:05:21,679 [http-nio-8081-exec-103] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 17:05:30,290 [http-nio-8081-exec-99] INFO  org.anatkor.dao.AccountDao- Status of account with id=28 is updated to true
-2021-08-29 17:05:35,163 [http-nio-8081-exec-108] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 17:05:35,166 [http-nio-8081-exec-103] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 17:05:38,110 [http-nio-8081-exec-104] INFO  org.anatkor.controllers.command.LoginCommand- Client '384444444444' is logged in
-2021-08-29 17:05:42,677 [http-nio-8081-exec-105] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=14
-2021-08-29 17:05:42,720 [http-nio-8081-exec-105] INFO  org.anatkor.dao.AccountDao- Account 10000000007 is added to DB
-2021-08-29 17:05:42,721 [http-nio-8081-exec-105] INFO  org.anatkor.dao.AccountDao- Credit card is added to account id=29
-2021-08-29 17:05:42,725 [http-nio-8081-exec-106] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 14
-2021-08-29 17:05:44,193 [http-nio-8081-exec-100] INFO  org.anatkor.controllers.command.LogoutCommand- User 384444444444 is Logged out
-2021-08-29 17:05:44,196 [http-nio-8081-exec-101] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 17:05:46,392 [http-nio-8081-exec-99] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 17:05:48,009 [http-nio-8081-exec-108] INFO  org.anatkor.dao.AccountDao- Status of account with id=29 is updated to true
-2021-08-29 17:05:50,009 [http-nio-8081-exec-104] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 17:06:05,183 [http-nio-8081-exec-106] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
-2021-08-29 17:08:47,886 [http-nio-8081-exec-99] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
-2021-08-29 17:08:47,896 [http-nio-8081-exec-99] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 17:09:40,992 [http-nio-8081-exec-109] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 17:12:38,280 [http-nio-8081-exec-118] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 17:20:03,134 [http-nio-8081-exec-126] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 17:24:32,468 [http-nio-8081-exec-131] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:24:32,519 [http-nio-8081-exec-131] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:36:40,368 [http-nio-8081-exec-138] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=9
-2021-08-29 17:36:40,415 [http-nio-8081-exec-138] INFO  org.anatkor.dao.AccountDao- Account 10000000008 is added to DB
-2021-08-29 17:36:40,417 [http-nio-8081-exec-138] INFO  org.anatkor.dao.AccountDao- Credit card is added to account id=30
-2021-08-29 17:36:40,421 [http-nio-8081-exec-132] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:36:40,461 [http-nio-8081-exec-132] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:37:01,890 [http-nio-8081-exec-133] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:37:01,941 [http-nio-8081-exec-133] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:37:15,691 [http-nio-8081-exec-129] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-08-29 17:37:15,696 [http-nio-8081-exec-131] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 17:37:18,038 [http-nio-8081-exec-134] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 17:37:21,524 [http-nio-8081-exec-138] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:37:21,566 [http-nio-8081-exec-138] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:37:43,958 [http-nio-8081-exec-137] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:37:44,000 [http-nio-8081-exec-137] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:37:52,733 [http-nio-8081-exec-129] INFO  org.anatkor.controllers.command.AccountCommand- request to refill account id=26 with amount=15000{}
-2021-08-29 17:37:52,778 [http-nio-8081-exec-129] INFO  org.anatkor.dao.AccountDao- Account (id=26) is replenished with 15000
-2021-08-29 17:38:12,450 [http-nio-8081-exec-136] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:38:12,492 [http-nio-8081-exec-136] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:38:38,324 [http-nio-8081-exec-130] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:38:38,367 [http-nio-8081-exec-130] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:38:59,722 [http-nio-8081-exec-134] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:39:03,335 [http-nio-8081-exec-134] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:39:19,587 [http-nio-8081-exec-135] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:40:43,642 [http-nio-8081-exec-135] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:41:12,183 [http-nio-8081-exec-136] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:44:22,916 [http-nio-8081-exec-136] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:44:35,314 [http-nio-8081-exec-137] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 17:44:37,940 [http-nio-8081-exec-136] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 17:44:41,086 [http-nio-8081-exec-132] INFO  org.anatkor.dao.AccountDao- Status of account with id=30 is updated to true
-2021-08-29 17:44:42,922 [http-nio-8081-exec-135] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 17:44:46,300 [http-nio-8081-exec-135] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:45:33,462 [http-nio-8081-exec-139] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 17:45:35,160 [http-nio-8081-exec-137] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 17:46:15,739 [http-nio-8081-exec-137] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:46:49,904 [http-nio-8081-exec-142] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-08-29 17:46:51,477 [http-nio-8081-exec-143] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-08-29 17:47:01,136 [http-nio-8081-exec-143] DEBUG org.anatkor.dao.AccountDao- SQLException during Query SELECT * FROM account WHERE user_id=? ORDER BY ? ? processing from class org.anatkor.dao.Utils.
-2021-08-29 17:48:04,846 [http-nio-8081-exec-143] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-08-29 17:48:09,961 [http-nio-8081-exec-147] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-08-29 17:48:19,994 [http-nio-8081-exec-139] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
-2021-08-29 17:48:19,998 [http-nio-8081-exec-141] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-08-29 17:48:22,412 [http-nio-8081-exec-144] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-08-29 17:48:24,770 [http-nio-8081-exec-149] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 20:56:34,511 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 21:16:55,735 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 21:19:20,921 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 21:19:33,206 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.UserCommand- User 382222222222 profile called
+2021-08-29 21:19:40,747 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 21:19:46,803 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 21:20:08,511 [http-nio-8081-exec-20] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 21:20:44,410 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 21:20:47,824 [http-nio-8081-exec-20] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 21:20:55,067 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-29 21:20:55,071 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:20:57,649 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 21:20:59,967 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:21:01,107 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:21:01,808 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:21:03,104 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:21:11,974 [http-nio-8081-exec-20] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:21:13,749 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:29:26,620 [http-nio-8081-exec-14] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-29 21:29:26,630 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:29:26,740 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:29:35,367 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 21:29:36,585 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:31:04,045 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:31:06,547 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:32:58,055 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 21:32:59,309 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:33:11,896 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-29 21:33:11,900 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:33:54,379 [http-nio-8081-exec-30] INFO  org.anatkor.dao.UserDao- User with phone =387777777777 is added
+2021-08-29 21:33:54,381 [http-nio-8081-exec-30] INFO  org.anatkor.dao.UserDao- User with id 40 with role  is added
+2021-08-29 21:33:54,426 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.LoginCommand- Client '387777777777' is logged in
+2021-08-29 21:33:58,706 [http-nio-8081-exec-32] INFO  org.anatkor.controllers.command.LogoutCommand- User 387777777777 is Logged out
+2021-08-29 21:33:58,709 [http-nio-8081-exec-33] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:34:19,323 [http-nio-8081-exec-35] INFO  org.anatkor.dao.UserDao- User with phone =388888888888 is added
+2021-08-29 21:34:19,324 [http-nio-8081-exec-35] INFO  org.anatkor.dao.UserDao- User with id 41 with role  is added
+2021-08-29 21:34:19,365 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.command.LoginCommand- Client '388888888888' is logged in
+2021-08-29 21:34:22,564 [http-nio-8081-exec-36] INFO  org.anatkor.controllers.command.LogoutCommand- User 388888888888 is Logged out
+2021-08-29 21:34:22,568 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:34:57,742 [http-nio-8081-exec-33] INFO  org.anatkor.dao.UserDao- User with phone =389999999999 is added
+2021-08-29 21:34:57,743 [http-nio-8081-exec-33] INFO  org.anatkor.dao.UserDao- User with id 42 with role  is added
+2021-08-29 21:34:57,782 [http-nio-8081-exec-33] INFO  org.anatkor.controllers.command.LoginCommand- Client '389999999999' is logged in
+2021-08-29 21:35:01,004 [http-nio-8081-exec-34] INFO  org.anatkor.controllers.command.LogoutCommand- User 389999999999 is Logged out
+2021-08-29 21:35:01,007 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:36:01,150 [http-nio-8081-exec-31] INFO  org.anatkor.dao.UserDao- User with phone =381011111111 is added
+2021-08-29 21:36:01,151 [http-nio-8081-exec-31] INFO  org.anatkor.dao.UserDao- User with id 43 with role  is added
+2021-08-29 21:36:01,192 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.LoginCommand- Client '381011111111' is logged in
+2021-08-29 21:36:04,995 [http-nio-8081-exec-32] INFO  org.anatkor.controllers.command.LogoutCommand- User 381011111111 is Logged out
+2021-08-29 21:36:04,999 [http-nio-8081-exec-33] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:36:08,315 [http-nio-8081-exec-38] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 21:36:10,035 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:36:14,579 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:36:17,052 [http-nio-8081-exec-36] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:36:18,611 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-29 21:36:18,614 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:37:58,336 [http-nio-8081-exec-34] INFO  org.anatkor.dao.UserDao- User with phone =381101111111 is added
+2021-08-29 21:37:58,337 [http-nio-8081-exec-34] INFO  org.anatkor.dao.UserDao- User with id 44 with role  is added
+2021-08-29 21:37:58,499 [http-nio-8081-exec-34] INFO  org.anatkor.controllers.command.LoginCommand- Client '381101111111' is logged in
+2021-08-29 21:38:03,801 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=44
+2021-08-29 21:38:03,848 [http-nio-8081-exec-39] INFO  org.anatkor.dao.AccountDao- Account 10000000012 is added to DB
+2021-08-29 21:38:03,849 [http-nio-8081-exec-39] INFO  org.anatkor.dao.AccountDao- Credit card is added to account id=34
+2021-08-29 21:38:03,853 [http-nio-8081-exec-36] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 44
+2021-08-29 21:38:06,711 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.LogoutCommand- User 381101111111 is Logged out
+2021-08-29 21:38:06,715 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:38:10,629 [http-nio-8081-exec-37] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 21:38:11,949 [http-nio-8081-exec-38] INFO  org.anatkor.dao.AccountDao- Status of account with id=34 is updated to true
+2021-08-29 21:38:13,747 [http-nio-8081-exec-34] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:38:15,513 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:38:18,412 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:38:24,885 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:38:26,014 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:38:26,858 [http-nio-8081-exec-37] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:38:33,946 [http-nio-8081-exec-32] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:38:35,358 [http-nio-8081-exec-38] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:39:10,056 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:39:17,655 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:39:37,277 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:39:37,361 [http-nio-8081-exec-30] INFO  org.anatkor.dao.UserDao- Status of user with phone=385555555555 is updated to true
+2021-08-29 21:39:37,365 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:39:40,833 [http-nio-8081-exec-32] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:39:47,038 [http-nio-8081-exec-38] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:39:49,266 [http-nio-8081-exec-33] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:39:49,348 [http-nio-8081-exec-33] INFO  org.anatkor.dao.UserDao- Status of user with phone=383333333333 is updated to true
+2021-08-29 21:39:49,351 [http-nio-8081-exec-34] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:39:52,794 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:39:54,090 [http-nio-8081-exec-36] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:39:56,195 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:39:56,396 [http-nio-8081-exec-30] INFO  org.anatkor.dao.UserDao- Status of user with phone=388888888888 is updated to false
+2021-08-29 21:39:56,401 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:40:01,035 [http-nio-8081-exec-38] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:40:07,580 [http-nio-8081-exec-33] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:40:08,721 [http-nio-8081-exec-34] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:40:08,805 [http-nio-8081-exec-34] INFO  org.anatkor.dao.UserDao- Status of user with phone=389999999999 is updated to false
+2021-08-29 21:40:08,809 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:40:09,852 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:40:12,488 [http-nio-8081-exec-36] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:40:17,678 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:40:18,577 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:41:11,786 [http-nio-8081-exec-34] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:41:53,967 [http-nio-8081-exec-36] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:42:06,962 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:42:25,234 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:42:26,403 [http-nio-8081-exec-32] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:42:27,527 [http-nio-8081-exec-38] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:43:44,816 [http-nio-8081-exec-39] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-29 21:43:44,825 [http-nio-8081-exec-39] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:43:46,830 [http-nio-8081-exec-33] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-29 21:43:46,830 [http-nio-8081-exec-33] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:43:51,282 [http-nio-8081-exec-31] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-29 21:43:51,283 [http-nio-8081-exec-31] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:43:56,138 [http-nio-8081-exec-38] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 21:43:57,476 [http-nio-8081-exec-37] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:44:01,180 [http-nio-8081-exec-36] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:44:02,501 [http-nio-8081-exec-35] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:44:03,228 [http-nio-8081-exec-32] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:05,929 [http-nio-8081-exec-40] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:08,030 [http-nio-8081-exec-41] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:09,966 [http-nio-8081-exec-42] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:11,086 [http-nio-8081-exec-43] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:12,085 [http-nio-8081-exec-44] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:12,486 [http-nio-8081-exec-34] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:13,419 [http-nio-8081-exec-45] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:14,494 [http-nio-8081-exec-47] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:15,630 [http-nio-8081-exec-32] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:16,566 [http-nio-8081-exec-40] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:17,774 [http-nio-8081-exec-41] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:19,478 [http-nio-8081-exec-42] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:20,351 [http-nio-8081-exec-43] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:21,319 [http-nio-8081-exec-44] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:22,151 [http-nio-8081-exec-48] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:33,264 [http-nio-8081-exec-45] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:34,129 [http-nio-8081-exec-46] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:35,324 [http-nio-8081-exec-49] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:36,017 [http-nio-8081-exec-40] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:37,033 [http-nio-8081-exec-41] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:39,889 [http-nio-8081-exec-42] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 21:44:41,460 [http-nio-8081-exec-43] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:42,973 [http-nio-8081-exec-44] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:44,606 [http-nio-8081-exec-48] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:46,170 [http-nio-8081-exec-45] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:44:50,787 [http-nio-8081-exec-47] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 21:44:53,825 [http-nio-8081-exec-49] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 14
+2021-08-29 21:47:07,691 [http-nio-8081-exec-45] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-29 21:47:07,701 [http-nio-8081-exec-45] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:47:23,241 [http-nio-8081-exec-43] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-29 21:47:23,242 [http-nio-8081-exec-43] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:47:35,293 [http-nio-8081-exec-40] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:50:26,867 [http-nio-8081-exec-52] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 21:50:57,318 [http-nio-8081-exec-51] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-29 21:51:26,723 [http-nio-8081-exec-51] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:51:38,378 [http-nio-8081-exec-51] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:53:17,021 [http-nio-8081-exec-57] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-29 21:53:22,426 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 21:54:03,681 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:54:49,057 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 21:54:50,628 [http-nio-8081-exec-50] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:54:53,929 [http-nio-8081-exec-56] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:54:56,097 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:55:07,054 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:55:08,643 [http-nio-8081-exec-59] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:55:38,275 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:55:39,640 [http-nio-8081-exec-64] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:55:41,055 [http-nio-8081-exec-65] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:55:45,637 [http-nio-8081-exec-66] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:55:48,391 [http-nio-8081-exec-63] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:55:49,927 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:55:51,228 [http-nio-8081-exec-59] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:56:30,003 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:56:54,021 [http-nio-8081-exec-65] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:56:55,554 [http-nio-8081-exec-66] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:56:57,657 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:56:59,138 [http-nio-8081-exec-63] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:01,246 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:02,242 [http-nio-8081-exec-59] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:03,466 [http-nio-8081-exec-60] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:04,902 [http-nio-8081-exec-61] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:14,524 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:16,292 [http-nio-8081-exec-65] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:17,304 [http-nio-8081-exec-66] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:18,368 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:20,600 [http-nio-8081-exec-63] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:23,992 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:57:36,346 [http-nio-8081-exec-59] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:57:37,687 [http-nio-8081-exec-61] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:57:38,502 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:57:39,571 [http-nio-8081-exec-64] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:57:40,455 [http-nio-8081-exec-65] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:57:42,062 [http-nio-8081-exec-66] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 21:57:42,939 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:58:16,704 [http-nio-8081-exec-59] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:58:18,279 [http-nio-8081-exec-60] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:58:19,087 [http-nio-8081-exec-61] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:58:20,519 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 21:58:21,579 [http-nio-8081-exec-64] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 22:45:48,787 [http-nio-8081-exec-59] WARN  org.anatkor.controllers.command.filter.AdminFilter- Attempt of unauthorized access to the Admin by null
+2021-08-29 22:45:48,788 [http-nio-8081-exec-59] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 22:58:41,562 [http-nio-8081-exec-63] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 22:59:04,598 [http-nio-8081-exec-60] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:02:07,506 [http-nio-8081-exec-58] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 23:02:09,878 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:02:11,105 [http-nio-8081-exec-62] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:02:13,185 [http-nio-8081-exec-64] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:02:14,154 [http-nio-8081-exec-59] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:02:15,208 [http-nio-8081-exec-60] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:02:20,767 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:02:22,990 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:02:25,547 [http-nio-8081-exec-61] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:02:28,875 [http-nio-8081-exec-57] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 23:02:31,099 [http-nio-8081-exec-71] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 39
+2021-08-29 23:02:34,696 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:02:35,836 [http-nio-8081-exec-60] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:02:36,804 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:02:37,862 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:02:39,821 [http-nio-8081-exec-69] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:02:40,560 [http-nio-8081-exec-74] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:02:42,269 [http-nio-8081-exec-70] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-29 23:02:42,272 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:02:44,958 [http-nio-8081-exec-71] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 23:02:47,614 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:02:59,688 [http-nio-8081-exec-69] INFO  org.anatkor.controllers.command.AccountCommand- request to refill account id=27 with amount=400{}
+2021-08-29 23:02:59,737 [http-nio-8081-exec-69] INFO  org.anatkor.dao.AccountDao- Account (id=27) is replenished with 400
+2021-08-29 23:03:04,470 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:03:20,817 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-29 23:03:20,821 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:03:23,476 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 23:03:28,637 [http-nio-8081-exec-74] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:03:30,354 [http-nio-8081-exec-70] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:03:32,847 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:03:34,570 [http-nio-8081-exec-72] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:03:36,610 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:03:38,271 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-29 23:03:38,274 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:03:41,372 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 23:03:43,043 [http-nio-8081-exec-74] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:04:09,398 [http-nio-8081-exec-71] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-29 23:04:09,401 [http-nio-8081-exec-72] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:04:11,940 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 23:04:14,114 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:04:16,247 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:04:18,439 [http-nio-8081-exec-69] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:04:20,027 [http-nio-8081-exec-74] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:04:21,771 [http-nio-8081-exec-70] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:04:23,472 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:04:25,952 [http-nio-8081-exec-71] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:04:28,632 [http-nio-8081-exec-72] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:04:29,664 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:04:30,480 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:04:31,673 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:04:32,884 [http-nio-8081-exec-69] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:04:35,309 [http-nio-8081-exec-74] INFO  org.anatkor.controllers.command.UserCommand- User 381111111111 profile called
+2021-08-29 23:04:36,545 [http-nio-8081-exec-70] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-29 23:04:36,547 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:04:39,006 [http-nio-8081-exec-71] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 23:04:40,593 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:08:04,158 [http-nio-8081-exec-72] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-29 23:08:04,162 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:08:06,884 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 23:08:08,342 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:08:46,125 [http-nio-8081-exec-69] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:09:00,007 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:09:06,208 [http-nio-8081-exec-70] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:09:10,401 [http-nio-8081-exec-72] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:09:24,957 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:09:28,464 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-29 23:09:28,467 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:09:30,945 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 23:09:36,094 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:11:07,602 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-29 23:11:07,605 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:11:09,911 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 23:11:45,611 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:11:53,627 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:12:03,831 [http-nio-8081-exec-71] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:12:12,470 [http-nio-8081-exec-70] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:12:18,719 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:12:27,980 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:12:53,506 [http-nio-8081-exec-74] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:13:40,111 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:14:26,863 [http-nio-8081-exec-72] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:15:31,519 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:16:29,276 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:16:39,897 [http-nio-8081-exec-69] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:16:41,165 [http-nio-8081-exec-74] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:16:41,925 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:16:46,422 [http-nio-8081-exec-71] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:17:21,224 [http-nio-8081-exec-72] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:17:37,172 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:17:41,636 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:17:47,628 [http-nio-8081-exec-69] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:17:51,392 [http-nio-8081-exec-74] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:17:52,316 [http-nio-8081-exec-68] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:17:53,684 [http-nio-8081-exec-71] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:17:54,933 [http-nio-8081-exec-75] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:21:18,359 [http-nio-8081-exec-76] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-29 23:21:18,363 [http-nio-8081-exec-73] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:21:21,438 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 23:21:22,833 [http-nio-8081-exec-74] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:25:26,441 [http-nio-8081-exec-71] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 23:25:34,078 [http-nio-8081-exec-69] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:25:47,827 [http-nio-8081-exec-67] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:25:55,771 [http-nio-8081-exec-72] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:26:38,349 [http-nio-8081-exec-79] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:28:29,642 [http-nio-8081-exec-82] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 23:28:36,079 [http-nio-8081-exec-85] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:31:05,007 [http-nio-8081-exec-89] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:35:10,064 [http-nio-8081-exec-92] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:37:35,013 [http-nio-8081-exec-95] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:37:50,003 [http-nio-8081-exec-88] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:38:17,563 [http-nio-8081-exec-91] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:38:19,634 [http-nio-8081-exec-92] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:38:21,606 [http-nio-8081-exec-93] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:38:22,774 [http-nio-8081-exec-94] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:38:23,621 [http-nio-8081-exec-95] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:38:26,046 [http-nio-8081-exec-88] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-29 23:38:26,051 [http-nio-8081-exec-90] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:38:28,415 [http-nio-8081-exec-96] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 23:38:29,883 [http-nio-8081-exec-91] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:38:31,079 [http-nio-8081-exec-92] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:32,284 [http-nio-8081-exec-93] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:35,299 [http-nio-8081-exec-94] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:36,612 [http-nio-8081-exec-95] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:38,188 [http-nio-8081-exec-88] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:39,188 [http-nio-8081-exec-90] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:40,443 [http-nio-8081-exec-96] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:41,496 [http-nio-8081-exec-89] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:43,109 [http-nio-8081-exec-91] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:44,064 [http-nio-8081-exec-92] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:45,010 [http-nio-8081-exec-93] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:38:46,861 [http-nio-8081-exec-94] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:38:51,256 [http-nio-8081-exec-95] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:38:52,533 [http-nio-8081-exec-87] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:38:53,818 [http-nio-8081-exec-88] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:38:58,810 [http-nio-8081-exec-90] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:39:03,382 [http-nio-8081-exec-89] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:39:05,827 [http-nio-8081-exec-91] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:39:07,091 [http-nio-8081-exec-92] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:39:24,692 [http-nio-8081-exec-94] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:39:43,953 [http-nio-8081-exec-95] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-08-29 23:39:43,956 [http-nio-8081-exec-87] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:39:46,867 [http-nio-8081-exec-90] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-29 23:39:48,194 [http-nio-8081-exec-89] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:39:50,976 [http-nio-8081-exec-91] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:39:55,713 [http-nio-8081-exec-92] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:39:56,840 [http-nio-8081-exec-93] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:39:57,756 [http-nio-8081-exec-94] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:39:58,588 [http-nio-8081-exec-95] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:40:06,385 [http-nio-8081-exec-87] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:40:07,386 [http-nio-8081-exec-88] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:40:08,265 [http-nio-8081-exec-96] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:40:09,249 [http-nio-8081-exec-89] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:40:09,901 [http-nio-8081-exec-91] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:40:11,321 [http-nio-8081-exec-92] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-08-29 23:40:11,324 [http-nio-8081-exec-93] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-08-29 23:40:14,034 [http-nio-8081-exec-94] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-08-29 23:40:16,665 [http-nio-8081-exec-87] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:40:18,153 [http-nio-8081-exec-90] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:40:18,962 [http-nio-8081-exec-88] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:40:19,534 [http-nio-8081-exec-96] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:40:19,842 [http-nio-8081-exec-89] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:40:21,262 [http-nio-8081-exec-91] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:40:22,898 [http-nio-8081-exec-92] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:40:24,243 [http-nio-8081-exec-93] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:40:25,979 [http-nio-8081-exec-94] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:40:27,091 [http-nio-8081-exec-95] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= -1
+2021-08-29 23:40:28,700 [http-nio-8081-exec-87] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
+2021-08-29 23:40:29,503 [http-nio-8081-exec-90] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-08-29 23:40:32,003 [http-nio-8081-exec-96] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:40:33,348 [http-nio-8081-exec-89] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-29 23:40:35,244 [http-nio-8081-exec-91] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9

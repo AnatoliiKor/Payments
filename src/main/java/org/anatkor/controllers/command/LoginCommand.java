@@ -1,7 +1,7 @@
 package org.anatkor.controllers.command;
 
 import org.anatkor.exceptions.DBException;
-import org.anatkor.model.Role;
+import org.anatkor.model.enam.Role;
 import org.anatkor.model.User;
 import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;

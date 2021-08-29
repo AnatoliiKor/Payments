@@ -14,7 +14,7 @@
             <%@include file="account/cards.jsp" %>
         </div>
 
-        <div class="col">
+        <div class="col-sm-3">
             <div><a class="btn btn-outline-primary m-2" href="/admin/users"><fmt:message key="my_payments"/></a></div>
             <div><a class="btn btn-outline-primary m-2" href="/wallet/accounts?user_id=${user_auth.id}"><fmt:message key="my_accounts"/></a></div>
             <div>

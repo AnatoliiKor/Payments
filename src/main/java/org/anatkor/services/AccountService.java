@@ -1,12 +1,8 @@
 package org.anatkor.services;
 
 import org.anatkor.dao.AccountDao;
-import org.anatkor.dao.BikeDao;
-import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
-import org.anatkor.model.Bike;
-
-import java.time.LocalDateTime;
+import org.anatkor.model.enam.Currency;
 import java.util.List;
 
 public class AccountService {
@@ -17,7 +13,7 @@ public class AccountService {
     public boolean newAccount(String accountName, String currency, Long user_id) {
         Account account = new Account();
         account.setAccountName(accountName);
-        account.setCurrency(Account.CURRENCY.valueOf(currency));
+        account.setCurrency(Currency.valueOf(currency));
         account.setUserId(user_id);
         return accountDao.newAccount(account);
     }

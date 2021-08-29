@@ -1,5 +1,7 @@
 package org.anatkor.model;
 
+import org.anatkor.model.enam.Currency;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -9,7 +11,7 @@ public class Account {
     private Long number;
     private long balance;
     private String accountName;
-    private CURRENCY currency;
+    private Currency currency;
     private LocalDateTime registered;
     private boolean active;
     private Long userId;
@@ -74,11 +76,11 @@ public class Account {
         this.active = active;
     }
 
-    public CURRENCY getCurrency() {
+    public Currency getCurrency() {
         return currency;
     }
 
-    public void setCurrency(CURRENCY currency) {
+    public void setCurrency(Currency currency) {
         this.currency = currency;
     }
 
@@ -119,8 +121,15 @@ public class Account {
         return this.registered.format(formatter);
     }
 
-    public enum CURRENCY {
-        UAH, USD, EURO
+    public String getCardNumberSpaces() {
+        String number = String.valueOf(this.cardNumber);
+        if (number == null) return null;
+        char delimiter = ' ';
+        return number.replaceAll(".{4}(?!$)", "$0" + delimiter);
     }
+
+//    public enum CURRENCY {
+//        UAH, USD, EURO
+//    }
 
 }
