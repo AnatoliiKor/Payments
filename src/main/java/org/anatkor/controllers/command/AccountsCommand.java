@@ -1,7 +1,7 @@
 package org.anatkor.controllers.command;
 
 import org.anatkor.model.Account;
-import org.anatkor.model.enam.Role;
+import org.anatkor.model.enums.Role;
 import org.anatkor.services.AccountService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,7 +18,7 @@ class AccountsCommand implements Command {
     public String execute(HttpServletRequest req) {
         String sortBy;
         String order;
-        Long user_id;
+        long user_id;
         HttpSession session = req.getSession();
         Role role = Role.valueOf((String) session.getAttribute("role"));
 
@@ -43,9 +43,6 @@ class AccountsCommand implements Command {
         if (role == Role.ADMIN && req.getParameter("user_id") == null) {
             log.info("account list requested by ADMIN");
             user_id = -1L;
-//        } else if (req.getParameter("user_id") == null){
-//            User user = (User) session.getAttribute("user_auth");
-//            user_id = user.getId();
         } else {
             user_id = Long.parseLong(req.getParameter("user_id"));
             log.info("account list requested for user with id= {}", user_id);

@@ -1,6 +1,6 @@
 package org.anatkor.model;
 
-import org.anatkor.model.enam.Role;
+import org.anatkor.model.enums.Role;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

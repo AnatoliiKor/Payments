@@ -1,3 +1,4 @@
+<%@include file="parts/header.jsp"%>
 <%@include file="parts/navbar.jsp"%>
 
 <html>

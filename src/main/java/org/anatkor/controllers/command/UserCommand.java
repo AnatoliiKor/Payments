@@ -26,12 +26,12 @@ class UserCommand implements Command {
                 req.setAttribute("warn", e.getMessage());
             }
             if (req.getParameter("status") != null && !user.getRole().name().equals("ADMIN")) {
-                Boolean profileStatus = Boolean.parseBoolean(req.getParameter("status"));
+                boolean profileStatus = Boolean.parseBoolean(req.getParameter("status"));
                 if (Boolean.compare(user.isActive(), profileStatus)!=0) {
                     user.setActive(profileStatus);
                     if (userService.updateUserStatus(user)) {
-                        return "redirect:/admin/user?id="+ id + "&message=Status is updated";
-                    } else return "redirect:/admin/user?id="+ id + "&warn=Status is not updated";
+                        return "redirect:/admin/user?id="+ id + "&message=updated";
+                    } else return "redirect:/admin/user?id="+ id + "&warn=not_updated";
                 }
             }
         }

@@ -1,0 +1,3 @@
+2021-08-30 19:43:30,121 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-08-30 19:43:36,293 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-08-30 19:43:46,000 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9

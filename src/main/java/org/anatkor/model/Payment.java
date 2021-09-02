@@ -1,6 +1,6 @@
 package org.anatkor.model;
 
-import org.anatkor.model.enam.Currency;
+import org.anatkor.model.enums.Currency;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

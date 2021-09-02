@@ -1,7 +1,7 @@
 package org.anatkor.controllers.command;
 
 import org.anatkor.exceptions.DBException;
-import org.anatkor.model.enam.Role;
+import org.anatkor.model.enums.Role;
 import org.anatkor.model.User;
 import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
@@ -21,7 +21,6 @@ class LoginCommand implements Command {
 
         if ((phone == null || phone.isEmpty()) && (password == null || password.isEmpty())) {
             log.info("Not enough login data");
-//            CommandUtils.addBackUrl(req);
             return "/jsp/login.jsp";
         } else {
             try {

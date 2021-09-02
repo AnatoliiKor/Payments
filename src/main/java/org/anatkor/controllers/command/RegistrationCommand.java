@@ -13,28 +13,32 @@ class RegistrationCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {
+        /*TODO if all req.getParameter !=null???? validation*/
         String lastName = req.getParameter("last_name");
         String name = req.getParameter("name");
         String middleName = req.getParameter("middle_name");
-        if (middleName==null) {middleName="";}
+        if (middleName == null) {
+            middleName = "";
+        }
         String password = req.getParameter("password");
         String email = req.getParameter("email");
-        long phoneNumber = Long.parseLong("38" + req.getParameter("phone_number"));
-
-        try {
-            if (userService.addUser( lastName, name, middleName, password, email, phoneNumber)) {
-                req.setAttribute("message", "Client \"" + lastName + " " + name + " " + middleName + "\" registered successfully. Sign in");
-                return "/login";
+        if (req.getParameter("phone_number") != null) {
+            long phoneNumber = Long.parseLong("38" + req.getParameter("phone_number"));
+            try {
+                if (userService.addUser(lastName, name, middleName, password, email, phoneNumber)) {
+                    req.setAttribute("message", "registered");
+                    return "/login";
+                }
+                req.setAttribute("warn", "not_registered");
+                return "/jsp/registration.jsp";
+            } catch (DBException e) {
+                req.setAttribute("warn", e.getMessage());
+                req.setAttribute("last_name", lastName);
+                req.setAttribute("name", name);
+                req.setAttribute("middle_name", middleName);
+                req.setAttribute("email", email);
             }
-            req.setAttribute("message", "Client is not registered. Try again");
-            return "/jsp/registration.jsp";
-        } catch (DBException e) {
-            req.setAttribute("warn", e.getMessage());
-            req.setAttribute("last_name", lastName);
-            req.setAttribute("name", name);
-            req.setAttribute("middle_name", middleName);
-            req.setAttribute("email", email);
-            return "/jsp/registration.jsp";
         }
+        return "/jsp/registration.jsp";
     }
 }

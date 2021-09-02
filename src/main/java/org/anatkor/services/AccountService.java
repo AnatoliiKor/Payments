@@ -2,7 +2,7 @@ package org.anatkor.services;
 
 import org.anatkor.dao.AccountDao;
 import org.anatkor.model.Account;
-import org.anatkor.model.enam.Currency;
+import org.anatkor.model.enums.Currency;
 import java.util.List;
 
 public class AccountService {

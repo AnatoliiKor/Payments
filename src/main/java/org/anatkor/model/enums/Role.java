@@ -1,4 +1,4 @@
-package org.anatkor.model.enam;
+package org.anatkor.model.enums;
 
 public enum Role {
     CLIENT,

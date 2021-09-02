@@ -25,18 +25,6 @@ class Language implements Command {
         } catch (MalformedURLException e) {
             log.debug(e.getMessage());
         }
-
-
-//        User user = (User) session.getAttribute("user");
-//        if (user != null) {
-//            try {
-//                String path = new URL(request.getHeader("Referer")).getFile();
-//                return "redirect:" + path;
-//
-//            } catch (MalformedURLException e) {
-//                e.printStackTrace();
-//            }
-//        }
         return "jsp/index.jsp";
     }
 }

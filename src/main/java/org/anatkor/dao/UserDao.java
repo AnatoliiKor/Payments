@@ -1,7 +1,7 @@
 package org.anatkor.dao;
 
 import org.anatkor.exceptions.DBException;
-import org.anatkor.model.enam.Role;
+import org.anatkor.model.enums.Role;
 import org.anatkor.model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -35,13 +35,13 @@ public class UserDao {
             stm = con.createStatement();
             rs = stm.executeQuery(FIND_ALL_USERS);
             while (rs.next()) {
-                Long id = rs.getLong("id");
+                long id = rs.getLong("id");
                 String lastName = rs.getString("last_name");
                 String name = rs.getString("name");
                 String middleName = rs.getString("middle_name");
                 String password = rs.getString("password");
                 String email = rs.getString("email");
-                Long phoneNumber = rs.getLong("phone_number");
+                long phoneNumber = rs.getLong("phone_number");
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
                 Role role = findRoleByUserId(con, id);
@@ -80,18 +80,15 @@ public class UserDao {
             prepStatement.setLong(k, userId);
             rs = prepStatement.executeQuery();
             if (rs.next()) {
-                Long id = rs.getLong("id");
+                long id = rs.getLong("id");
                 String lastName = rs.getString("last_name");
                 String name = rs.getString("name");
                 String middleName = rs.getString("middle_name");
                 String password = rs.getString("password");
                 String email = rs.getString("email");
-                Long phoneNumber = rs.getLong("phone_number");
+                long phoneNumber = rs.getLong("phone_number");
                 LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
                 boolean active = rs.getBoolean("active");
-//                if (!active) {
-//                    throw new DBException("User with phone number \"+" + phoneNumber + "\" is not active. Contact to administrator");
-//                }
                 Role role = findRoleByUserId(con, id);
                 return new User.UserBuilder()
                         .withId(id)
@@ -106,11 +103,11 @@ public class UserDao {
                         .withRole(role)
                         .build();
             } else {
-                throw new DBException("User  not found");
+                throw new DBException("user_not_found");
             }
         } catch (SQLException e) {
             log.info("SQLException during Query {} processing from {}.", FIND_USER_BY_ID, Utils.class, e);
-            throw new DBException("User not found");
+            throw new DBException("user_not_found");
         } finally {
             Utils.close(rs);
             Utils.close(prepStatement);
@@ -141,8 +138,7 @@ public class UserDao {
                 boolean active = rs.getBoolean("active");
                 if (!active) {
                     log.info("Attempt to log in. User with phone number \"+" + phoneNumber + "\" is not active.");
-                    throw new DBException("User with phone number \"+" + phoneNumber
-                            + "\" is not active. Contact to administrator. Email: admin@g.mail");
+                    throw new DBException("user_not_active");
                 }
                 Role role = findRoleByUserId(con, id);
                 return new User.UserBuilder()
@@ -159,13 +155,12 @@ public class UserDao {
                         .build();
             } else {
                 log.info("User with phone number \"+" + phoneNumber + "\" is not found");
-                throw new DBException("User with phone number \"+" + phoneNumber
-                        + "\" is not found. Check login and password");
+                throw new DBException("user_not_found_check");
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.",
                     FIND_USER_BY_PHONE_NUMBER, Utils.class, e);
-            throw new DBException("User with phone number \"+" + phoneNumber + "\" is not found");
+            throw new DBException("user_not_found");
         } finally {
             Utils.close(rs);
             Utils.close(prepStatement);
@@ -224,11 +219,11 @@ public class UserDao {
             log.debug("SQLException during Add user with phone {} processing {}. {}",
                     user.getPhoneNumber(), Utils.class, e.getMessage());
             if (exeption.contains("mail")) {
-                throw new DBException("User with this email already exist");
+                throw new DBException("registration_email_exist");
             } else if (exeption.contains("phone")) {
-                throw new DBException("User with this phone number already exist");
+                throw new DBException("registration_phone_exist");
             } else {
-                throw new DBException("User is not registered. Try again");
+                throw new DBException("not_registered");
             }
         }
         try {
@@ -246,11 +241,11 @@ public class UserDao {
             } catch (SQLException throwables) {
                 log.debug("SQLException during rollback add user_id={} processing {}. {}",
                         user.getId(), Utils.class, throwables.getMessage());
-                throw new DBException("User with " + user.getPhoneNumber() + " is not registered. Try again");
+                throw new DBException("not_registered");
             }
             log.debug("SQLException during Add user_id={} processing {}. {}",
                     user.getId(), Utils.class, e.getMessage());
-            throw new DBException("User with " + user.getPhoneNumber() + " is not registered. Try again");
+            throw new DBException("not_registered");
         } finally {
             Utils.close(rs);
             Utils.close(prepStatement);

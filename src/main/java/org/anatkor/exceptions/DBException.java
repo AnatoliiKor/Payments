@@ -1,6 +1,6 @@
 package org.anatkor.exceptions;
 
-public class DBException extends Exception{
+public class DBException extends RuntimeException{
     public DBException(String message, String eMessage) {
     }
 
