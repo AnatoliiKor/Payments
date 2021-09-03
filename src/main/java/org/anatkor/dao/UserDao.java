@@ -31,7 +31,7 @@ public class UserDao {
         Statement stm = null;
         ResultSet rs = null;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             stm = con.createStatement();
             rs = stm.executeQuery(FIND_ALL_USERS);
             while (rs.next()) {
@@ -74,7 +74,7 @@ public class UserDao {
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             prepStatement = con.prepareStatement(FIND_USER_BY_ID);
             int k = 1;
             prepStatement.setLong(k, userId);
@@ -120,7 +120,7 @@ public class UserDao {
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             prepStatement = con.prepareStatement(FIND_USER_BY_PHONE_NUMBER_AND_PASSWORD);
             int k = 1;
             prepStatement.setLong(k++, phoneNumber);
@@ -195,7 +195,7 @@ public class UserDao {
         ResultSet rs = null;
         long generatedId = 0L;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             prepStatement = con.prepareStatement(ADD_USER, Statement.RETURN_GENERATED_KEYS);
@@ -257,7 +257,7 @@ public class UserDao {
         Connection con = null;
         PreparedStatement prepStatement = null;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             prepStatement = con.prepareStatement(UPDATE_USER_STATUS);
             int k = 1;
             prepStatement.setBoolean(k++, user.isActive());

@@ -32,7 +32,7 @@ public class AccountDao {
         long generatedId;
         boolean result;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             statement = con.createStatement();
@@ -87,7 +87,7 @@ public class AccountDao {
         String sqlId = "";
         String sql;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             if (id>0) {
                 sqlId = " WHERE user_id=" + id;
             }
@@ -123,7 +123,7 @@ public class AccountDao {
         ResultSet rs = null;
         String sql;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             sql = "SELECT * FROM account LEFT JOIN credit_card cc on account.id = cc.account_id WHERE user_id=" + id;
             statement = con.createStatement();
             rs = statement.executeQuery(sql);
@@ -149,14 +149,12 @@ public class AccountDao {
         return accounts;
     }
 
-
-
     public Account findById(Long id) {
         Connection con = null;
         PreparedStatement preparedStatement = null;
         ResultSet rs = null;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             preparedStatement = con.prepareStatement(FIND_ACCOUNT_WITH_CARD_BY_ID);
             int k = 1;
             preparedStatement.setLong(k, id);
@@ -190,7 +188,7 @@ public class AccountDao {
         Statement statement=null;
         ResultSet rs = null;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             statement = con.createStatement();
             rs = statement.executeQuery(FIND_ALL_ACCOUNTS_TO_DO);
             List<Account> accounts = new ArrayList<>();
@@ -221,7 +219,7 @@ public class AccountDao {
         Connection con = null;
         PreparedStatement preparedStatement = null;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             preparedStatement = con.prepareStatement(UPDATE_ACCOUNT_BALANCE_BY_ID);
             int k = 1;
             preparedStatement.setInt(k++, amount);
@@ -244,7 +242,7 @@ public class AccountDao {
         Connection con = null;
         PreparedStatement preparedStatement = null;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             preparedStatement = con.prepareStatement(UPDATE_ACCOUNT_ACTIVE_BY_ID);
             int k = 1;
             preparedStatement.setBoolean(k++, accountActive);
@@ -267,7 +265,7 @@ public class AccountDao {
         Connection con = null;
         PreparedStatement preparedStatement = null;
         try {
-            con = Utils.getConnection();
+            con = ConnectionPool.getConnection();
             preparedStatement = con.prepareStatement(UPDATE_ACCOUNT_ACTION_BY_ID);
             int k = 1;
             preparedStatement.setInt(k++, accountAction);
