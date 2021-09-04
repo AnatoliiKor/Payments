@@ -3,8 +3,10 @@ DROP TABLE IF EXISTS usr;
 DROP TABLE IF EXISTS credit_card;
 DROP SEQUENCE IF EXISTS usr_id_seq;
 DROP SEQUENCE IF EXISTS account_id_seq;
+DROP SEQUENCE IF EXISTS payment_id_seq;
 
 CREATE SEQUENCE usr_id_seq START WITH 1;
+CREATE SEQUENCE payment_id_seq START WITH 1;
 CREATE SEQUENCE card_id_seq START WITH 1000000000000000;
 
 create table usr
@@ -28,8 +30,9 @@ create table usr
 
 create table user_role
 (
-    user_id bigint not null,
-    role    varchar(255) not null
+    user_id bigint       not null,
+    role    varchar(255) not null,
+    FOREIGN KEY (user_id) REFERENCES usr (id) ON DELETE CASCADE
 );
 
 create table account
@@ -47,6 +50,7 @@ create table account
     active       boolean   default false                               not null,
     user_id      bigint,
     action       integer
+--     , FOREIGN KEY (user_id) REFERENCES usr (id) ON DELETE CASCADE
 );
 
 create table credit_card
@@ -58,4 +62,17 @@ create table credit_card
         constraint credit_card_account_id_fkey
             references account
             on delete cascade
+);
+
+create table payment
+(
+    id             BIGINT                  NOT NULL PRIMARY KEY DEFAULT nextval('payment_id_seq'),
+    account_number BIGINT                  not null,
+    account_name   varchar(255)            not null,
+    receiver       BIGINT                  not null,
+    registered     timestamp default now() not null,
+    destination    varchar(255),
+    amount         INT                     not null,
+    currency       varchar(255)            not null,
+    FOREIGN KEY (account_number) REFERENCES account (id) ON DELETE CASCADE
 );

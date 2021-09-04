@@ -21,10 +21,6 @@
                                 <a class="nav-link" href="${pageContext.request.contextPath}/wallet">
                                     <fmt:message key="home_nav"/></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">
-                                    <fmt:message key="cart_nav"/></a>
-                            </li>
                         </c:otherwise>
                     </c:choose>
                 </ul>

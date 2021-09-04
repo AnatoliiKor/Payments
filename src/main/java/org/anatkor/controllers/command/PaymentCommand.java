@@ -37,20 +37,31 @@ class PaymentCommand implements Command {
             ) {
                 Account account = accountService.findById(Long.parseLong(req.getParameter("account_id")));
                 long receiver = Long.parseLong(req.getParameter("receiver"));
-                int amount = (int) (100*Double.parseDouble(req.getParameter("amount")));
+                int amount = (int) (100 * Double.parseDouble(req.getParameter("amount")));
                 String destination = req.getParameter("destination");
                 Payment payment = new Payment();
                 payment.setAccountNumber(account.getNumber());
                 payment.setAccountName(account.getAccountName());
                 payment.setReceiver(receiver);
                 if (destination != null) {
-                payment.setDestination(destination);
+                    payment.setDestination(destination);
                 } else {
                     payment.setDestination("");
                 }
                 payment.setAmount(amount);
                 payment.setCurrency(account.getCurrency());
                 session.setAttribute("payment", payment);
+            }
+
+            if ("confirm".equals(action)) {
+
+            }
+
+            if ("cancel".equals(action)) {
+                session.removeAttribute("payment");
+                return "redirect:wallet?message=canceled";
+            }
+
 //                req.setAttribute("payment", payment);
 //
 
@@ -83,7 +94,6 @@ class PaymentCommand implements Command {
 //        }
 //
 //        return "redirect:/wallet";
-            }
         }
         return "/jsp/make_payment.jsp";
     }

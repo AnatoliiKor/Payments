@@ -17,12 +17,12 @@
             ${payment.receiver}<br/>
             ${payment.destination}<br/>
             <form method="post" action="${pageContext.request.contextPath}/wallet/payment">
-                <input type="hidden" name="action" value="confirmed">
+                <input type="hidden" name="action" value="confirm">
                 <input class="btn btn-success mt-2" type="submit" value="<fmt:message key="confirm_payment"/>">
             </form>
 
             <form method="post" action="${pageContext.request.contextPath}/wallet/payment">
-                <input type="hidden" name="action" value="confirmed">
+                <input type="hidden" name="action" value="cancel">
                 <input class="btn btn-outline-warning mt-2" type="submit" value="<fmt:message key="cancel_payment"/>">
             </form>
 
