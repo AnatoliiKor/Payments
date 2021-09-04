@@ -19,17 +19,18 @@ public class ServletController extends HttpServlet{
 
     @Override
     public void init() {
+        commands.put("account", new AccountCommand());
+        commands.put("accounts", new AccountsCommand());
+        commands.put("admin", new AdminCommand());
+        commands.put("exception", new ExceptionCommand());
         commands.put("lang", new Language());
         commands.put("login", new LoginCommand());
         commands.put("logout", new LogoutCommand());
+        commands.put("payment", new PaymentCommand());
         commands.put("registration", new RegistrationCommand());
-        commands.put("admin", new AdminCommand());
         commands.put("wallet", new WalletCommand());
         commands.put("user", new UserCommand());
         commands.put("users", new UsersCommand());
-        commands.put("exception", new ExceptionCommand());
-        commands.put("account", new AccountCommand());
-        commands.put("accounts", new AccountsCommand());
     }
 
     @Override
@@ -49,10 +50,10 @@ public class ServletController extends HttpServlet{
         Command command = commands.getOrDefault(path, (r)->"/jsp/login.jsp");
         String urlPage = command.execute(req);
         if (urlPage.contains("redirect:")) {
-            log.debug("redirect to=" + urlPage.replaceAll("redirect:", ""));
+//            log.debug("redirect to=" + urlPage.replaceAll("redirect:", ""));
             resp.sendRedirect(urlPage.replaceAll("redirect:", "")); //replaceAll("redirect:", "/app")
         } else {
-            log.debug("forward to=" + urlPage);
+//            log.debug("forward to=" + urlPage);
             req.getRequestDispatcher(urlPage).forward(req, resp);
         }
     }

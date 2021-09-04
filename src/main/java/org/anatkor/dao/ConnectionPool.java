@@ -34,7 +34,7 @@ public final class ConnectionPool {
     public static Connection getConnection() {
         try {
             Connection connection = dataSource.getConnection();
-            log.debug("Was getting Connection from {}.",ConnectionPool.class);
+//            log.debug("Was getting Connection from {}.",ConnectionPool.class);
             return connection;
         } catch (SQLException e) {
             log.error("SQLException during get Connection from resource {}. {}",

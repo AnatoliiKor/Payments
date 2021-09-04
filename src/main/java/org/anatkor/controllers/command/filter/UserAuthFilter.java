@@ -21,8 +21,9 @@ public class UserAuthFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
         HttpSession session = req.getSession();
-        if (session.getAttribute("role") == null) {
-            req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
+        if (session.getAttribute("user_auth") == null) {
+            resp.sendRedirect("/login");
+            return;
         }
         chain.doFilter(request, response);
     }

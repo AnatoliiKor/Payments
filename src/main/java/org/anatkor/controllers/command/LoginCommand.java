@@ -19,6 +19,11 @@ class LoginCommand implements Command {
         String phone = req.getParameter("phone_number");
         String password = req.getParameter("password");
 
+        if (phone != null && password == null) {
+            req.setAttribute("message", req.getParameter("message"));
+            req.setAttribute("phone_number", req.getParameter("phone_number"));
+            return "/jsp/login.jsp";
+        }
         if ((phone == null || phone.isEmpty()) && (password == null || password.isEmpty())) {
             log.info("Not enough login data");
             return "/jsp/login.jsp";

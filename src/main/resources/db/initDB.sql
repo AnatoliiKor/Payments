@@ -1,81 +1,61 @@
-DROP TABLE IF EXISTS cart;
 DROP TABLE IF EXISTS user_role;
-DROP TABLE IF EXISTS cart_item;
-DROP TABLE IF EXISTS bike;
 DROP TABLE IF EXISTS usr;
+DROP TABLE IF EXISTS credit_card;
 DROP SEQUENCE IF EXISTS usr_id_seq;
-DROP SEQUENCE IF EXISTS cart_id_seq;
-DROP SEQUENCE IF EXISTS cart_item_id_seq;
 DROP SEQUENCE IF EXISTS account_id_seq;
 
 CREATE SEQUENCE usr_id_seq START WITH 1;
-CREATE SEQUENCE cart_id_seq START WITH 1;
-CREATE SEQUENCE cart_id_id_seq START WITH 1;
 CREATE SEQUENCE card_id_seq START WITH 1000000000000000;
 
-DROP TABLE credit_card;
-
-CREATE TABLE credit_card
+create table usr
 (
-    id      BIGINT PRIMARY KEY DEFAULT nextval('card_id_seq'),
-    account_id bigint
-    constraint credit_card_account_id_fkey not null
-    references account
-    on delete cascade
+    id           bigint    default nextval('usr_id_seq'::regclass) not null
+        constraint usr_pkey
+            primary key,
+    last_name    varchar(255)                                      not null,
+    name         varchar(255)                                      not null,
+    middle_name  varchar(255),
+    password     varchar(255)                                      not null,
+    email        varchar(255)                                      not null
+        constraint usr_email_key
+            unique,
+    phone_number bigint
+        constraint usr_phone_number_key
+            unique,
+    registered   timestamp default now()                           not null,
+    active       boolean   default true                            not null
 );
-CREATE TABLE usr
+
+create table user_role
 (
-  id               BIGINT PRIMARY KEY DEFAULT nextval('usr_id_seq'),
-  username         VARCHAR(255)                 NOT NULL,
-  email            VARCHAR(255)                 NOT NULL,
-  password         VARCHAR(255)                 NOT NULL,
-  registered       TIMESTAMP DEFAULT now() NOT NULL,
-  active           BOOL DEFAULT TRUE       NOT NULL
+    user_id bigint not null,
+    role    varchar(255) not null
 );
-CREATE UNIQUE INDEX user_unique_email_idx ON usr (email);
 
-ALTER TABLE usr ADD CONSTRAINT U_unique UNIQUE (username);
-
-CREATE TABLE user_role
+create table account
 (
-  user_id BIGINT NOT NULL,
-  role    VARCHAR,
---   CONSTRAINT user_roles_idx UNIQUE (user_id, role),
-  FOREIGN KEY (user_id) REFERENCES usr (id) ON UPDATE CASCADE
+    id           bigint    default nextval('account_id_seq'::regclass) not null
+        constraint account_pkey
+            primary key,
+    number       bigint                                                not null
+        constraint account_number_key
+            unique,
+    balance      bigint                                                not null,
+    account_name varchar(255)                                          not null,
+    currency     varchar(255)                                          not null,
+    registered   timestamp default now()                               not null,
+    active       boolean   default false                               not null,
+    user_id      bigint,
+    action       integer
 );
 
-CREATE TABLE car (
-  id          INTEGER PRIMARY KEY DEFAULT nextval('car_id_seq'),
-  date_receiving   TIMESTAMP NOT NULL,
-  brand            VARCHAR   NOT NULL,
-  model            VARCHAR   NOT NULL,
-  engine_type      VARCHAR   NOT NULL,
-  engine_volume    DECIMAL   NOT NULL,
-  fuel_consumption DECIMAL   NOT NULL,
-  price             DECIMAL   NOT NULL,
-  horse_power      INT       NOT NULL,
-  cargo_space      INT       NOT NULL,
-  seats            INT       NOT NULL,
-  length           INT       NOT NULL,
-  width            INT       NOT NULL,
-  height           INT       NOT NULL,
-  clearance        INT       NOT NULL
-);
-
-
-CREATE TABLE status (
-  id           INTEGER PRIMARY KEY DEFAULT nextval('status_id_seq'),
-  status_index INTEGER   NOT NULL,
-  staus_time   TIMESTAMP NOT NULL
-);
-
-CREATE TABLE orders (
-  id          INTEGER PRIMARY KEY DEFAULT nextval('order_id_seq'),
-  amount      INT       NOT NULL,
-  user_id     INTEGER   NOT NULL,
-  car_id      INTEGER   NOT NULL,
-  status_id   INTEGER   NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
-  FOREIGN KEY (car_id) REFERENCES car (id) ON DELETE CASCADE,
-  FOREIGN KEY (status_id) REFERENCES status (id) ON DELETE CASCADE
+create table credit_card
+(
+    card_id    bigint default nextval('card_id_seq'::regclass) not null
+        constraint credit_card_pkey
+            primary key,
+    account_id bigint                                          not null
+        constraint credit_card_account_id_fkey
+            references account
+            on delete cascade
 );

@@ -26,8 +26,7 @@ class RegistrationCommand implements Command {
             long phoneNumber = Long.parseLong("38" + req.getParameter("phone_number"));
             try {
                 if (userService.addUser(lastName, name, middleName, password, email, phoneNumber)) {
-                    req.setAttribute("message", "registered");
-                    return "/login";
+                    return "redirect:/login?message=registered&phone_number=" + req.getParameter("phone_number");
                 }
                 req.setAttribute("warn", "not_registered");
                 return "/jsp/registration.jsp";
