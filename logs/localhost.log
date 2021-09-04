@@ -1,155 +1,61 @@
-2021-09-03 14:19:18,655 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:19:22,072 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-09-03 14:19:22,073 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
-2021-09-03 14:19:22,258 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:19:22,277 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
-2021-09-03 14:19:22,578 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:19:24,397 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-09-03 14:19:24,398 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:19:24,403 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/accounts_list.jsp
-2021-09-03 14:19:24,692 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:19:37,069 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:19:37,076 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/account.jsp
-2021-09-03 14:19:37,338 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:19:44,781 [http-nio-8081-exec-3] INFO  org.anatkor.controllers.command.AccountCommand- request to refill account id=31 with amount=4500
-2021-09-03 14:19:44,781 [http-nio-8081-exec-3] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:19:44,786 [http-nio-8081-exec-3] INFO  org.anatkor.dao.AccountDao- Account (id=31) is replenished with 4500
-2021-09-03 14:19:44,786 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- redirect to=account?message=balance_refilled&id=31
-2021-09-03 14:19:44,790 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:19:44,791 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/account.jsp
-2021-09-03 14:19:44,903 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:19:48,948 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-09-03 14:19:48,949 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
-2021-09-03 14:19:48,952 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-09-03 14:19:48,953 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:19:49,063 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:19:51,332 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.LoginCommand- Client '383333333333' is logged in
-2021-09-03 14:19:51,333 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
-2021-09-03 14:19:51,336 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:19:51,338 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
-2021-09-03 14:19:51,447 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:19:54,617 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 13
-2021-09-03 14:19:54,617 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:19:54,618 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/accounts_list.jsp
-2021-09-03 14:19:54,727 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:19:56,734 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:19:56,735 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/account.jsp
-2021-09-03 14:19:56,843 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:01,022 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.AccountCommand- request to refill account id=35 with amount=30000
-2021-09-03 14:20:01,022 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:01,023 [http-nio-8081-exec-6] INFO  org.anatkor.dao.AccountDao- Account (id=35) is replenished with 30000
-2021-09-03 14:20:01,023 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- redirect to=account?message=balance_refilled&id=35
-2021-09-03 14:20:01,026 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:01,027 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/account.jsp
-2021-09-03 14:20:01,141 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:09,430 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:09,431 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
-2021-09-03 14:20:09,545 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:17,697 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.AccountCommand- request for a new account by user id=13
-2021-09-03 14:20:17,697 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:17,707 [http-nio-8081-exec-2] INFO  org.anatkor.dao.AccountDao- Account 10000000023 is added to DB
-2021-09-03 14:20:17,709 [http-nio-8081-exec-2] INFO  org.anatkor.dao.AccountDao- Credit card is added to account id=45
-2021-09-03 14:20:17,710 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet/accounts?message=account_opened&user_id=13
-2021-09-03 14:20:17,713 [http-nio-8081-exec-3] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 13
-2021-09-03 14:20:17,714 [http-nio-8081-exec-3] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:17,715 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/accounts_list.jsp
-2021-09-03 14:20:17,871 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:20,405 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.LogoutCommand- User 383333333333 is Logged out
-2021-09-03 14:20:20,405 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
-2021-09-03 14:20:20,408 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-09-03 14:20:20,409 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:20,520 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:23,180 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-09-03 14:20:23,180 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
-2021-09-03 14:20:23,185 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:23,186 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
-2021-09-03 14:20:23,409 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:25,000 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:25,003 [http-nio-8081-exec-1] INFO  org.anatkor.dao.AccountDao- Status of account with id=31 is updated to false
-2021-09-03 14:20:25,003 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- redirect to=admin?message=updated
-2021-09-03 14:20:25,006 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:25,007 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
-2021-09-03 14:20:25,115 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:26,160 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:26,163 [http-nio-8081-exec-4] INFO  org.anatkor.dao.AccountDao- Status of account with id=45 is updated to true
-2021-09-03 14:20:26,163 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- redirect to=admin?message=updated
-2021-09-03 14:20:26,166 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:26,167 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
-2021-09-03 14:20:26,274 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:26,808 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:26,809 [http-nio-8081-exec-7] INFO  org.anatkor.dao.AccountDao- Status of account with id=40 is updated to true
-2021-09-03 14:20:26,810 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- redirect to=admin?message=updated
-2021-09-03 14:20:26,813 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:26,813 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
-2021-09-03 14:20:26,918 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:27,932 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin/admin?message=updated
-2021-09-03 14:20:27,935 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:27,936 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
-2021-09-03 14:20:28,053 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:29,085 [http-nio-8081-exec-3] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:29,088 [http-nio-8081-exec-3] INFO  org.anatkor.dao.AccountDao- Status of account with id=42 is updated to true
-2021-09-03 14:20:29,088 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- redirect to=admin?message=updated
-2021-09-03 14:20:29,092 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:29,093 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
-2021-09-03 14:20:29,200 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:29,748 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:29,751 [http-nio-8081-exec-6] INFO  org.anatkor.dao.AccountDao- Status of account with id=41 is updated to true
-2021-09-03 14:20:29,751 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- redirect to=admin?message=updated
-2021-09-03 14:20:29,754 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:29,755 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
-2021-09-03 14:20:29,866 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:30,877 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:30,878 [http-nio-8081-exec-10] INFO  org.anatkor.dao.AccountDao- Status of account with id=43 is updated to true
-2021-09-03 14:20:30,878 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- redirect to=admin?message=updated
-2021-09-03 14:20:30,881 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:30,882 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
-2021-09-03 14:20:30,988 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:20:31,577 [http-nio-8081-exec-3] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:31,578 [http-nio-8081-exec-3] INFO  org.anatkor.dao.AccountDao- Status of account with id=44 is updated to true
-2021-09-03 14:20:31,578 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- redirect to=admin?message=updated
-2021-09-03 14:20:31,581 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:20:31,581 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
-2021-09-03 14:20:31,689 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:37,727 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
-2021-09-03 14:24:37,738 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-09-03 14:24:37,739 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:38,042 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:40,921 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:24:40,938 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
-2021-09-03 14:24:40,939 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
-2021-09-03 14:24:40,942 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:24:40,947 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
-2021-09-03 14:24:41,173 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:42,644 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
-2021-09-03 14:24:42,644 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:24:42,647 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/accounts_list.jsp
-2021-09-03 14:24:42,866 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:44,439 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:24:44,441 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/account.jsp
-2021-09-03 14:24:44,648 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:49,376 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.AccountCommand- request to refill account id=22 with amount=300000
-2021-09-03 14:24:49,376 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:24:49,379 [http-nio-8081-exec-11] INFO  org.anatkor.dao.AccountDao- Account (id=22) is replenished with 300000
-2021-09-03 14:24:49,379 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- redirect to=account?message=balance_refilled&id=22
-2021-09-03 14:24:49,382 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:24:49,383 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/account.jsp
-2021-09-03 14:24:49,495 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:52,260 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
-2021-09-03 14:24:52,260 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
-2021-09-03 14:24:52,263 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
-2021-09-03 14:24:52,263 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:52,369 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:55,613 [http-nio-8081-exec-13] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:24:55,616 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
-2021-09-03 14:24:55,616 [http-nio-8081-exec-13] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
-2021-09-03 14:24:55,620 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:24:55,621 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
-2021-09-03 14:24:55,828 [http-nio-8081-exec-14] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:58,237 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
-2021-09-03 14:24:58,237 [http-nio-8081-exec-11] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:24:58,241 [http-nio-8081-exec-11] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/users_list.jsp
-2021-09-03 14:24:58,436 [http-nio-8081-exec-15] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
-2021-09-03 14:24:59,864 [http-nio-8081-exec-3] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested by ADMIN
-2021-09-03 14:24:59,864 [http-nio-8081-exec-3] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
-2021-09-03 14:24:59,866 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/accounts_list.jsp
-2021-09-03 14:24:59,978 [http-nio-8081-exec-12] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:37:38,465 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:37:43,049 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:37:43,067 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-03 14:37:43,067 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/wallet
+2021-09-03 14:37:43,071 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:37:43,078 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-09-03 14:37:43,395 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:37:44,658 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-09-03 14:37:44,658 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:37:44,661 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/accounts_list.jsp
+2021-09-03 14:37:44,958 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:37:48,830 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:37:48,833 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/account.jsp
+2021-09-03 14:37:49,103 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:37:54,792 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:37:54,793 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/index.jsp
+2021-09-03 14:37:54,914 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:37:55,734 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-09-03 14:37:55,734 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:37:55,736 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/accounts_list.jsp
+2021-09-03 14:37:55,859 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:37:57,215 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:37:57,217 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/account.jsp
+2021-09-03 14:37:57,335 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:38:01,467 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.AccountCommand- request to refill account id=27 with amount=5600
+2021-09-03 14:38:01,467 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:38:01,471 [http-nio-8081-exec-9] INFO  org.anatkor.dao.AccountDao- Account (id=27) is replenished with 5600
+2021-09-03 14:38:01,471 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- redirect to=account?message=balance_refilled&id=27
+2021-09-03 14:38:01,475 [http-nio-8081-exec-10] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:38:01,476 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/account.jsp
+2021-09-03 14:38:01,596 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:38:07,268 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:38:07,271 [http-nio-8081-exec-2] INFO  org.anatkor.dao.AccountDao- Action flag of account with id=27 is updated to 2
+2021-09-03 14:38:07,271 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- redirect to=account?message=request_sent&id=27
+2021-09-03 14:38:07,275 [http-nio-8081-exec-3] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:38:07,275 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/account.jsp
+2021-09-03 14:38:07,392 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:38:10,764 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-09-03 14:38:10,765 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/login
+2021-09-03 14:38:10,768 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-03 14:38:10,769 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:38:10,875 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:38:12,546 [http-nio-8081-exec-8] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:38:12,548 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-03 14:38:12,548 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletController- redirect to=/admin
+2021-09-03 14:38:12,553 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:38:12,554 [http-nio-8081-exec-9] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-09-03 14:38:12,784 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:38:15,484 [http-nio-8081-exec-1] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:38:15,487 [http-nio-8081-exec-1] INFO  org.anatkor.dao.AccountDao- Status of account with id=27 is updated to false
+2021-09-03 14:38:15,487 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletController- redirect to=admin?message=updated
+2021-09-03 14:38:15,491 [http-nio-8081-exec-2] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:38:15,491 [http-nio-8081-exec-2] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-09-03 14:38:15,599 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:38:16,921 [http-nio-8081-exec-4] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:38:16,922 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/admin.jsp
+2021-09-03 14:38:17,026 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
+2021-09-03 14:38:18,128 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.UsersCommand- users list requested
+2021-09-03 14:38:18,129 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.ConnectionPool- Was getting Connection from class org.anatkor.dao.ConnectionPool.
+2021-09-03 14:38:18,133 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/users_list.jsp
+2021-09-03 14:38:18,350 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletController- forward to=/jsp/login.jsp
