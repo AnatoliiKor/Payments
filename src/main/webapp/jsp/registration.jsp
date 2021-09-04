@@ -31,7 +31,6 @@
             <br/>
 
             <input class="mt-3" type="email" name="email" value="email@c.com"
-<%--                    "<c:if test="${email!=null}">${email}</c:if>" required--%>
             >
                 <label style="margin: 0 3px;"><fmt:message key="email"/></label>
             <br/>
@@ -40,7 +39,8 @@
                 <label style="margin: 0 3px;"><fmt:message key="password"/></label>
             <br/>
 
-            <input class="button mt-3" type="submit" value="<fmt:message key="registration"/>">
+            <input class="btn btn-outline-primary mt-3" type="submit" value="<fmt:message key="registration"/>">
+
         </form>
         <br/>
 

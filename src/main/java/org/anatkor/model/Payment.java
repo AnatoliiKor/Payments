@@ -7,10 +7,11 @@ import java.time.format.DateTimeFormatter;
 
 public class Payment {
     private long id;
-    private long sourceAccount;
-    private long billAccount;
+    private long accountNumber;
+    private String accountName;
+    private long receiver;
     private LocalDateTime registered;
-    private String paymentDestination;
+    private String destination;
     private int amount;
     private Currency currency;
 
@@ -22,21 +23,6 @@ public class Payment {
         this.id = id;
     }
 
-    public long getSourceAccount() {
-        return sourceAccount;
-    }
-
-    public void setSourceAccount(long sourceAccount) {
-        this.sourceAccount = sourceAccount;
-    }
-
-    public long getBillAccount() {
-        return billAccount;
-    }
-
-    public void setBillAccount(long billAccount) {
-        this.billAccount = billAccount;
-    }
 
     public LocalDateTime getRegistered() {
         return registered;
@@ -46,13 +32,6 @@ public class Payment {
         this.registered = registered;
     }
 
-    public String getPaymentDestination() {
-        return paymentDestination;
-    }
-
-    public void setPaymentDestination(String paymentDestination) {
-        this.paymentDestination = paymentDestination;
-    }
 
     public int getAmount() {
         return amount;
@@ -70,6 +49,37 @@ public class Payment {
         this.currency = currency;
     }
 
+    public long getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getAccountName() {
+        return accountName;
+    }
+
+    public void setAccountName(String accountName) {
+        this.accountName = accountName;
+    }
+
+    public void setAccountNumber(long account) {
+        this.accountNumber = account;
+    }
+
+    public long getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(long receiver) {
+        this.receiver = receiver;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
 
     public String getFormatedDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm");

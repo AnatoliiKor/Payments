@@ -7,25 +7,33 @@
 </head>
 <body>
 <div class="container mt-3">
-    <h1><fmt:message key="make_payment"/></h1><br/>
+    <c:choose>
+        <c:when test="${not empty payment}">
+            <h1><fmt:message key="confirm_payment"/></h1><br/>
+            ${payment.accountNumber}<br/>
+            ${payment.accountName}<br/>
+            ${payment.amount/100}<br/>
+            ${payment.currency}<br/>
+            ${payment.receiver}<br/>
+            ${payment.destination}<br/>
+            <form method="post" action="${pageContext.request.contextPath}/wallet/payment">
+                <input type="hidden" name="action" value="confirmed">
+                <input class="btn btn-success mt-2" type="submit" value="<fmt:message key="confirm_payment"/>">
+            </form>
 
-    <form method="post" action="${pageContext.request.contextPath}/wallet/payment">
-        <input type="hidden" name="action" value="prepare">
+            <form method="post" action="${pageContext.request.contextPath}/wallet/payment">
+                <input type="hidden" name="action" value="confirmed">
+                <input class="btn btn-outline-warning mt-2" type="submit" value="<fmt:message key="cancel_payment"/>">
+            </form>
 
-        UA<input class="m-2" max="99999999999" min="10000000000" name="recipient_account" required
-                 type="number" value="<c:if test="${recipient_account!=null}">${recipient_account}</c:if>">
-        <label> <fmt:message key="recipient_account"/> </label>
-        <br/>
+        </c:when>
+        <c:otherwise>
+            <h1><fmt:message key="make_payment"/></h1><br/>
+            <%@include file="payment/payment_form.jsp"%>
+        </c:otherwise>
+    </c:choose>
 
-        <%@include file="payment/account_select.jsp"%>
 
-
-        <input class="m-2" type="number" step=".01" min="0.01" name="payment_amount"
-               value="i<c:if test="${payment_amount!=null}">${payment_amount}</c:if>" required>
-        <label> <fmt:message key="payment_amount"/> </label>
-        <br/>
-        <input class="button mt-3" type="submit" value="<fmt:message key="make_payment"/>">
-    </form>
     <br/>
 
     <%@include file="parts/messages.jsp" %>
