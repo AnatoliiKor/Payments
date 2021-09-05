@@ -1,0 +1,8 @@
+2021-08-19 15:07:42,370 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-19 15:07:42,384 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-19 15:07:42,614 [http-nio-8081-exec-34] DEBUG org.anatkor.dao.UserDao- SQLException during Add null processing class org.anatkor.dao.Utils. ERROR: column "username" of relation "usr" does not exist
+  Position: 18
+2021-08-19 15:08:06,364 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-19 15:08:06,365 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-19 15:08:06,408 [http-nio-8081-exec-35] DEBUG org.anatkor.dao.UserDao- SQLException during Add null processing class org.anatkor.dao.Utils. ERROR: column "username" of relation "usr" does not exist
+  Position: 18

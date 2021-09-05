@@ -1,0 +1,4 @@
+2021-08-18 20:57:01,565 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.servlets.LoginServlet- User servlet called
+2021-08-18 20:57:01,574 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection try
+2021-08-18 20:57:01,579 [http-nio-8081-exec-7] DEBUG org.anatkor.dao.Utils- connection created succesfully
+2021-08-18 20:57:01,849 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.servlets.AdminServlet- Admin servlet called

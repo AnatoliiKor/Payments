@@ -1,0 +1,19 @@
+2021-08-20 14:32:21,660 [http-nio-8081-exec-5] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-20 14:32:30,099 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 14:32:37,506 [http-nio-8081-exec-6] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-20 14:32:39,520 [http-nio-8081-exec-2] DEBUG org.anatkor.servlets.UserServlet- User servlet called
+2021-08-20 14:33:32,747 [http-nio-8081-exec-2] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
+2021-08-20 14:33:37,502 [http-nio-8081-exec-3] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 14:33:37,547 [http-nio-8081-exec-10] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 14:33:40,262 [http-nio-8081-exec-9] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-20 14:33:42,087 [http-nio-8081-exec-5] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 14:33:44,334 [http-nio-8081-exec-7] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 14:33:44,912 [http-nio-8081-exec-4] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 14:33:45,499 [http-nio-8081-exec-8] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 14:33:46,378 [http-nio-8081-exec-6] DEBUG org.anatkor.dao.UserDao- SQLException during Query SELECT * FROM usr; processing from class org.anatkor.dao.Utils.
+2021-08-20 15:01:56,086 [http-nio-8081-exec-3] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
+2021-08-20 15:02:32,254 [http-nio-8081-exec-3] INFO  org.anatkor.servlets.LogoutServlet- User Петро Logout
+2021-08-20 15:02:51,731 [http-nio-8081-exec-4] INFO  org.anatkor.servlets.LoginServlet- User servlet called
+2021-08-20 15:03:27,635 [http-nio-8081-exec-1] INFO  org.anatkor.servlets.BikesListServlet- Bike servlet called
+2021-08-20 15:03:29,832 [http-nio-8081-exec-3] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
+2021-08-20 15:12:10,203 [http-nio-8081-exec-2] INFO  org.anatkor.servlets.LoginServlet- User servlet called
