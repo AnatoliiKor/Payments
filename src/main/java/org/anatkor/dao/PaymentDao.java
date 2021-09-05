@@ -1,12 +1,14 @@
 package org.anatkor.dao;
 
+import org.anatkor.model.Account;
 import org.anatkor.model.Payment;
+import org.anatkor.model.enums.Currency;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PaymentDao {
     private static final String ADD_PAYMENT =
@@ -55,5 +57,81 @@ public class PaymentDao {
             Utils.close(con);
         }
         return false;
+    }
+
+    public List<Payment> findAllPaymentsByUserId(Long id) {
+        List<Payment> payments = new ArrayList<>();
+        Connection con = null;
+        Statement statement = null;
+        ResultSet rs = null;
+        String sql = "SELECT p.id, account_number, p.account_name, receiver, p.registered, destination, amount, p.currency FROM account INNER JOIN payment p on account.account_name = p.account_name WHERE user_id=" + id;
+        try {
+            con = ConnectionPool.getConnection();
+            statement = con.createStatement();
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                Payment payment = new Payment();
+                payment.setId(rs.getLong("id"));
+                payment.setAccountNumber(rs.getLong("account_number"));
+                payment.setAccountName(rs.getString("account_name"));
+                payment.setReceiver(rs.getLong("receiver"));
+                payment.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
+                if (rs.getString("destination") != null) {
+                    payment.setDestination(rs.getString("destination"));
+                }
+                payment.setAmount(rs.getInt("amount"));
+                payment.setCurrency(Currency.valueOf(rs.getString("currency")));
+                payments.add(payment);
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.", sql, Utils.class, e);
+        } finally {
+            Utils.close(rs);
+            Utils.close(statement);
+            Utils.close(con);
+        }
+        return payments;
+    }
+
+    public List<Payment> findAllPaymentsByUserIdSorted(Long id, String sortBy, String order ) {
+        List<Payment> payments = new ArrayList<>();
+        Connection con = null;
+        Statement statement = null;
+        ResultSet rs = null;
+
+        String sqlId = "";
+        String sql;
+        if (id>0) {
+            sqlId = " WHERE user_id=" + id;
+        }
+        sql = "SELECT p.id, account_number, p.account_name, receiver, p.registered, destination, amount, p.currency FROM account INNER JOIN payment p on account.account_name = p.account_name" + sqlId + " ORDER BY " + sortBy + " " + order;
+
+        try {
+            con = ConnectionPool.getConnection();
+//        String FIND_BY_USER_ID_SORTED = "SELECT p.id, account_number, p.account_name, receiver, p.registered, destination, amount, p.currency FROM account INNER JOIN payment p on account.account_name = p.account_name WHERE user_id=? ORDER BY ? ?";
+            statement = con.createStatement();
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                Payment payment = new Payment();
+                payment.setId(rs.getLong("id"));
+                payment.setAccountNumber(rs.getLong("account_number"));
+                payment.setAccountName(rs.getString("account_name"));
+                payment.setReceiver(rs.getLong("receiver"));
+                payment.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
+                if (rs.getString("destination") != null) {
+                    payment.setDestination(rs.getString("destination"));
+                }
+                payment.setAmount(rs.getInt("amount"));
+                payment.setCurrency(Currency.valueOf(rs.getString("currency")));
+                payments.add(payment);
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.", sql, Utils.class, e);
+        } finally {
+            Utils.close(rs);
+            Utils.close(statement);
+            Utils.close(con);
+        }
+        return payments;
     }
 }

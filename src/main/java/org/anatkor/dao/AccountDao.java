@@ -87,13 +87,13 @@ public class AccountDao {
         Statement statement = null;
         ResultSet rs = null;
         String sqlId = "";
-        String sql;
+        if (id>0) {
+            sqlId = " WHERE user_id=" + id;
+        }
+        String sql = "SELECT * FROM account" + sqlId + " ORDER BY " + sortBy + " " + order;
+
         try {
             con = ConnectionPool.getConnection();
-            if (id>0) {
-                sqlId = " WHERE user_id=" + id;
-            }
-            sql = "SELECT * FROM account" + sqlId + " ORDER BY " + sortBy + " " + order;
             statement = con.createStatement();
             rs = statement.executeQuery(sql);
             while (rs.next()) {

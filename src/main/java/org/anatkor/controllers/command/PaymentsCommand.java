@@ -40,15 +40,14 @@ class PaymentsCommand implements Command {
         } else if (session.getAttribute("sort_by") != null) {
             sortBy = (String) session.getAttribute("sort_by");
         } else {
-            sortBy = "balance";
+            sortBy = "registered";
         }
-
         if (role == Role.ADMIN && req.getParameter("user_id") == null) {
-            log.info("account list requested by ADMIN");
+            log.info("payments list requested by ADMIN");
             user_id = -1L;
         } else {
             user_id = Long.parseLong(req.getParameter("user_id"));
-            log.info("account list requested for user with id= {}", user_id);
+            log.info("payments list requested for user with id= {}", user_id);
         }
 
         String page = req.getParameter("pg");
@@ -58,13 +57,14 @@ class PaymentsCommand implements Command {
             req.setAttribute("pg", Integer.parseInt(page));
         }
 
-//        List<Payment> payments = paymentService.findAllAccountsByUserIdSorted(user_id, sortBy, order);
-//        int pgMax = 1 + payments.size()/5;
-//        req.setAttribute("pg_max", pgMax);
-//        req.setAttribute("user_id", user_id);
-//        req.setAttribute("payments", payments);
-//        req.setAttribute("sort_by", sortBy);
-//        req.setAttribute("order", order);
+        List<Payment> payments = paymentService.findAllAccountsByUserIdSorted(user_id, sortBy, order);
+//        List<Payment> payments = paymentService.findAllAccountsByUserId(user_id);
+        int pgMax = 1 + payments.size()/5;
+        req.setAttribute("pg_max", pgMax);
+        req.setAttribute("user_id", user_id);
+        req.setAttribute("payments", payments);
+        req.setAttribute("sort_by", sortBy);
+        req.setAttribute("order", order);
         return "/jsp/payments_list.jsp";
     }
 }

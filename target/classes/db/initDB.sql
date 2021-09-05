@@ -43,7 +43,9 @@ create table account
     number       bigint                                                not null
         constraint account_number_key
             unique,
-    balance      bigint                                                not null,
+    balance      bigint                                                not null
+        constraint account_balance_check
+            check (balance >= 0),
     account_name varchar(255)                                          not null,
     currency     varchar(255)                                          not null,
     registered   timestamp default now()                               not null,
@@ -74,5 +76,5 @@ create table payment
     destination    varchar(255),
     amount         INT                     not null,
     currency       varchar(255)            not null,
-    FOREIGN KEY (account_number) REFERENCES account (id) ON DELETE CASCADE
+    FOREIGN KEY (account_number) REFERENCES account (number) ON DELETE CASCADE
 );
