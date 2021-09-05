@@ -1,6 +1,5 @@
 package org.anatkor.dao;
 
-import org.anatkor.model.Account;
 import org.anatkor.model.Payment;
 import org.anatkor.model.enums.Currency;
 import org.apache.logging.log4j.LogManager;
@@ -59,22 +58,24 @@ public class PaymentDao {
         return false;
     }
 
-    public List<Payment> findAllPaymentsByUserIdSorted(Long id, String sortBy, String order ) {
+    public List<Payment> findAllPaymentsByUserIdSorted(Long id, String sortBy, String order) {
         List<Payment> payments = new ArrayList<>();
         Connection con = null;
         Statement statement = null;
         ResultSet rs = null;
         String sqlId = "";
         String sql;
-        if (id>0) {
+        if (id > 0) {
             sqlId = " WHERE user_id=" + id;
         }
-        sql = "SELECT p.id, account_number, p.account_name, receiver, p.registered, destination, amount, p.currency FROM account INNER JOIN payment p on account.account_name = p.account_name" + sqlId + " ORDER BY " + sortBy + " " + order;
+        sql = "SELECT p.id, account_number, p.account_name, receiver, p.registered, destination, amount, p.currency " +
+                "FROM account INNER JOIN payment p on account.account_name = p.account_name" + sqlId + " " +
+                "ORDER BY " + sortBy + " " + order;
 
         return getPaymentsSorted(payments, con, statement, rs, sql);
     }
 
-    public List<Payment> findAllPaymentsByAccountNumberSorted(Long number, String sortBy, String order ) {
+    public List<Payment> findAllPaymentsByAccountNumberSorted(Long number, String sortBy, String order) {
         List<Payment> payments = new ArrayList<>();
         Connection con = null;
         Statement statement = null;

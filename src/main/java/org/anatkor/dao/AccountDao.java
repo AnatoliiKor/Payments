@@ -97,16 +97,7 @@ public class AccountDao {
             statement = con.createStatement();
             rs = statement.executeQuery(sql);
             while (rs.next()) {
-                Account account = new Account();
-                account.setId(rs.getLong("id"));
-                account.setNumber(rs.getLong("number"));
-                account.setBalance(rs.getLong("balance"));
-                account.setAccountName(rs.getString("account_name"));
-                account.setCurrency(Currency.valueOf(rs.getString("currency")));
-                account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
-                account.setActive(rs.getBoolean("active"));
-                account.setUserId(rs.getLong("user_id"));
-                accounts.add(account);
+                accounts.add(getAccountFromResultSet(rs));
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.", FIND_ACCOUNTS_BY_USER_ID_SORTED, Utils.class, e);
@@ -130,14 +121,7 @@ public class AccountDao {
             statement = con.createStatement();
             rs = statement.executeQuery(sql);
             while (rs.next()) {
-                Account account = new Account();
-                account.setId(rs.getLong("id"));
-                account.setNumber(rs.getLong("number"));
-                account.setBalance(rs.getLong("balance"));
-                account.setAccountName(rs.getString("account_name"));
-                account.setCurrency(Currency.valueOf(rs.getString("currency")));
-                account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
-                account.setActive(rs.getBoolean("active"));
+                Account account = getAccountFromResultSet(rs);
                 account.setCardNumber(rs.getLong("card_id"));
                 accounts.add(account);
             }
@@ -162,16 +146,7 @@ public class AccountDao {
             preparedStatement.setLong(k, id);
             rs = preparedStatement.executeQuery();
             if (rs.next()) {
-                Account account = new Account();
-                account.setId(rs.getLong("id"));
-                account.setNumber(rs.getLong("number"));
-                account.setBalance(rs.getLong("balance"));
-                account.setAccountName(rs.getString("account_name"));
-                account.setCurrency(Currency.valueOf(rs.getString("currency")));
-                account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
-                account.setActive(rs.getBoolean("active"));
-                account.setAction(rs.getInt("action"));
-                account.setUserId(rs.getLong("user_id"));
+                Account account = getAccountFromResultSet(rs);
                 account.setCardNumber(rs.getLong("card_id"));
                 return account;
             }
@@ -195,16 +170,7 @@ public class AccountDao {
             rs = statement.executeQuery(FIND_ALL_ACCOUNTS_TO_DO);
             List<Account> accounts = new ArrayList<>();
             while (rs.next()) {
-                Account account = new Account();
-                account.setId(rs.getLong("id"));
-                account.setNumber(rs.getLong("number"));
-                account.setBalance(rs.getLong("balance"));
-                account.setAccountName(rs.getString("account_name"));
-                account.setCurrency(Currency.valueOf(rs.getString("currency")));
-                account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
-                account.setActive(rs.getBoolean("active"));
-                account.setAction(rs.getInt("action"));
-                accounts.add(account);
+                accounts.add(getAccountFromResultSet(rs));
             }
             return accounts;
         } catch (SQLException e) {
@@ -284,5 +250,20 @@ public class AccountDao {
             Utils.close(con);
         }
         return false;
+    }
+
+
+    private Account getAccountFromResultSet(ResultSet rs) throws SQLException {
+        Account account = new Account();
+        account.setId(rs.getLong("id"));
+        account.setNumber(rs.getLong("number"));
+        account.setBalance(rs.getLong("balance"));
+        account.setAccountName(rs.getString("account_name"));
+        account.setCurrency(Currency.valueOf(rs.getString("currency")));
+        account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
+        account.setActive(rs.getBoolean("active"));
+        account.setAction(rs.getInt("action"));
+        account.setUserId(rs.getLong("user_id"));
+        return account;
     }
 }

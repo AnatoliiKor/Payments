@@ -2,6 +2,8 @@ package org.anatkor.model;
 
 import org.anatkor.model.enums.Currency;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -127,5 +129,29 @@ public class Account {
         char delimiter = ' ';
         return number.replaceAll(".{4}(?!$)", "$0" + delimiter);
     }
+
+
+    private Account getAccountFromResultSet(ResultSet rs) throws SQLException {
+        Account account = new Account();
+        account.setId(rs.getLong("id"));
+        account.setNumber(rs.getLong("number"));
+        account.setBalance(rs.getLong("balance"));
+        account.setAccountName(rs.getString("account_name"));
+        account.setCurrency(Currency.valueOf(rs.getString("currency")));
+        account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
+        account.setActive(rs.getBoolean("active"));
+        account.setAction(rs.getInt("action"));
+        account.setUserId(rs.getLong("user_id"));
+        account.setCardNumber(rs.getLong("card_id"));
+        return account;
+    }
+
+
+
+
+
+
+
+
 
 }
