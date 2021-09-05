@@ -13,11 +13,12 @@ public class PaymentService {
         return paymentDao.makePayment(payment);
     }
 
-    public List<Payment> findAllAccountsByUserIdSorted(long user_id, String sortBy, String order) {
+    public List<Payment> findAllPaymentsByUserIdSorted(long user_id, String sortBy, String order) {
         return paymentDao.findAllPaymentsByUserIdSorted(user_id, sortBy, order);
     }
 
-    public List<Payment> findAllAccountsByUserId(long user_id) {
-        return paymentDao.findAllPaymentsByUserId(user_id);
+    public List<Payment> findAllPaymentsByAccountNumberSorted(long account_number, String sortBy, String order) {
+        return paymentDao.findAllPaymentsByAccountNumberSorted(account_number, sortBy, order);
     }
+
 }

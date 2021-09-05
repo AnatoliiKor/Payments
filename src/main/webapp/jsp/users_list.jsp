@@ -28,9 +28,9 @@
     <tbody>
     <c:choose>
     <c:when test="${not empty users}">
-        <c:forEach var="user" items="${users}" varStatus="position" begin="${5 * (pg - 1)}" end="${5 * (pg - 1) + 4}">
+        <c:forEach var="user" items="${users}" varStatus="position" begin="${10 * (pg - 1)}" end="${10 * (pg - 1) + 9}">
             <tr>
-                <td scope="row" ><c:out value="${5 * (pg - 1) + position.count}"/>
+                <td scope="row" ><c:out value="${10 * (pg - 1) + position.count}"/>
                 </td>
                 <td>${user.lastName}</td>
                 <td>${user.name}

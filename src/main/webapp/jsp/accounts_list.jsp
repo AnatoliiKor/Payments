@@ -22,7 +22,6 @@
             <th><fmt:message key="account_name"/></th>
             <th><fmt:message key="currency"/></th>
             <th><fmt:message key="is_active"/></th>
-            <%--            <th><fmt:message key="opened"/></th>--%>
         </tr>
         </thead>
 
@@ -30,9 +29,9 @@
         <c:choose>
             <c:when test="${not empty accounts}">
                 <c:forEach var="account" items="${accounts}"
-                    varStatus="position" begin="${5 * (pg - 1)}" end="${5 * (pg - 1) + 4}">
+                    varStatus="position" begin="${10 * (pg - 1)}" end="${10 * (pg - 1) + 9}">
                     <tr >
-                        <td scope="row" ><c:out value="${5 * (pg - 1) + position.count}"/>
+                        <td scope="row" ><c:out value="${10 * (pg - 1) + position.count}"/>
                         </td>
                         <td <c:if test="${sort_by.equals('number')}">class="text-info fw-bold"</c:if>>UA${account.number}</td>
                         <td <c:if test="${sort_by.equals('balance')}">class="text-info fw-bold"</c:if>>${account.balance/100}</td>
@@ -41,8 +40,11 @@
                         <td <c:if test="${sort_by.equals('active')}">class="text-info fw-bold"</c:if>><input
                                 type="checkbox" ${account.active?'checked':""} disabled></td>
                         <td>
-                            <a href="/wallet/account?id=${account.id}"><fmt:message
-                                    key="${'ADMIN'.equals(role)?'edit':'refill_balance'}"/></a>
+                            <a href="/wallet/payments?account_number=${account.number}"><fmt:message key="payments"/></a>
+                        </td>
+
+                        <td>
+                            <a href="/wallet/account?id=${account.id}"><fmt:message key="${'ADMIN'.equals(role)?'edit':'refill_balance'}"/></a>
                         </td>
                     </tr>
                 </c:forEach>

@@ -21,7 +21,8 @@ class PaymentsCommand implements Command {
         String sortBy;
         String order;
         long user_id;
-        long account_id;
+        long account_number;
+        List<Payment> payments;
         HttpSession session = req.getSession();
         Role role = Role.valueOf((String) session.getAttribute("role"));
 
@@ -34,20 +35,13 @@ class PaymentsCommand implements Command {
             order = "DESC";
         }
 
-        if (req.getParameter("sort_by") != null) {
-            sortBy = req.getParameter("sort_by");
-            session.setAttribute("sort_by", sortBy);
-        } else if (session.getAttribute("sort_by") != null) {
-            sortBy = (String) session.getAttribute("sort_by");
+        if (req.getParameter("payment_sort_by") != null) {
+            sortBy = req.getParameter("payment_sort_by");
+            session.setAttribute("payment_sort_by", sortBy);
+        } else if (session.getAttribute("payment_sort_by") != null) {
+            sortBy = (String) session.getAttribute("payment_sort_by");
         } else {
             sortBy = "registered";
-        }
-        if (role == Role.ADMIN && req.getParameter("user_id") == null) {
-            log.info("payments list requested by ADMIN");
-            user_id = -1L;
-        } else {
-            user_id = Long.parseLong(req.getParameter("user_id"));
-            log.info("payments list requested for user with id= {}", user_id);
         }
 
         String page = req.getParameter("pg");
@@ -56,14 +50,26 @@ class PaymentsCommand implements Command {
         } else {
             req.setAttribute("pg", Integer.parseInt(page));
         }
-
-        List<Payment> payments = paymentService.findAllAccountsByUserIdSorted(user_id, sortBy, order);
-//        List<Payment> payments = paymentService.findAllAccountsByUserId(user_id);
-        int pgMax = 1 + payments.size()/5;
+        if (req.getParameter("account_number") != null) {
+            account_number = Long.parseLong(req.getParameter("account_number"));
+            log.info("payments list requested for account" + account_number);
+            payments = paymentService.findAllPaymentsByAccountNumberSorted(account_number, sortBy, order);
+            req.setAttribute("account_number", account_number);
+        } else {
+            if (role == Role.ADMIN && req.getParameter("user_id") == null) {
+                log.info("payments list requested by ADMIN");
+                user_id = -1L;
+            } else {
+                user_id = Long.parseLong(req.getParameter("user_id"));
+                log.info("payments list requested for user with id= {}", user_id);
+            }
+            payments = paymentService.findAllPaymentsByUserIdSorted(user_id, sortBy, order);
+            req.setAttribute("user_id", user_id);
+        }
+        int pgMax = 1 + payments.size()/10;
         req.setAttribute("pg_max", pgMax);
-        req.setAttribute("user_id", user_id);
         req.setAttribute("payments", payments);
-        req.setAttribute("sort_by", sortBy);
+        req.setAttribute("payment_sort_by", sortBy);
         req.setAttribute("order", order);
         return "/jsp/payments_list.jsp";
     }

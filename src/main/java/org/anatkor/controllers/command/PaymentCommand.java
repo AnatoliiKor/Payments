@@ -46,7 +46,7 @@ class PaymentCommand implements Command {
                     return "redirect:wallet";
                 }
                 String destination = req.getParameter("destination");
-                if (amount/100 > account.getBalance()) {
+                if (amount > account.getBalance()) {
                     return "redirect:wallet/payment?warn=not_enough&receiver=" +
                             receiver + "&amount=" + amount;
                 }

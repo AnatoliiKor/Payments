@@ -11,7 +11,7 @@
 
     <%@include file="parts/messages.jsp" %>
 
-
+    <h2><fmt:message key="account"/></h2>
     <div class="row">
         <div class="col">
             <c:if test="${not empty account}">
@@ -26,7 +26,7 @@
 
             <%@include file="account/blocking.jsp" %>
 
-            <div><a class="btn btn-outline-success mt-4" href="wallet/payments"><fmt:message key="payments"/></a></div>
+            <div><a class="btn btn-outline-success mt-4" href="wallet/payments?account_number=${account.number}"><fmt:message key="payments"/></a></div>
         </div>
     </div>
 </div>

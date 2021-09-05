@@ -59,46 +59,11 @@ public class PaymentDao {
         return false;
     }
 
-    public List<Payment> findAllPaymentsByUserId(Long id) {
-        List<Payment> payments = new ArrayList<>();
-        Connection con = null;
-        Statement statement = null;
-        ResultSet rs = null;
-        String sql = "SELECT p.id, account_number, p.account_name, receiver, p.registered, destination, amount, p.currency FROM account INNER JOIN payment p on account.account_name = p.account_name WHERE user_id=" + id;
-        try {
-            con = ConnectionPool.getConnection();
-            statement = con.createStatement();
-            rs = statement.executeQuery(sql);
-            while (rs.next()) {
-                Payment payment = new Payment();
-                payment.setId(rs.getLong("id"));
-                payment.setAccountNumber(rs.getLong("account_number"));
-                payment.setAccountName(rs.getString("account_name"));
-                payment.setReceiver(rs.getLong("receiver"));
-                payment.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
-                if (rs.getString("destination") != null) {
-                    payment.setDestination(rs.getString("destination"));
-                }
-                payment.setAmount(rs.getInt("amount"));
-                payment.setCurrency(Currency.valueOf(rs.getString("currency")));
-                payments.add(payment);
-            }
-        } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", sql, Utils.class, e);
-        } finally {
-            Utils.close(rs);
-            Utils.close(statement);
-            Utils.close(con);
-        }
-        return payments;
-    }
-
     public List<Payment> findAllPaymentsByUserIdSorted(Long id, String sortBy, String order ) {
         List<Payment> payments = new ArrayList<>();
         Connection con = null;
         Statement statement = null;
         ResultSet rs = null;
-
         String sqlId = "";
         String sql;
         if (id>0) {
@@ -106,9 +71,21 @@ public class PaymentDao {
         }
         sql = "SELECT p.id, account_number, p.account_name, receiver, p.registered, destination, amount, p.currency FROM account INNER JOIN payment p on account.account_name = p.account_name" + sqlId + " ORDER BY " + sortBy + " " + order;
 
+        return getPaymentsSorted(payments, con, statement, rs, sql);
+    }
+
+    public List<Payment> findAllPaymentsByAccountNumberSorted(Long number, String sortBy, String order ) {
+        List<Payment> payments = new ArrayList<>();
+        Connection con = null;
+        Statement statement = null;
+        ResultSet rs = null;
+        String sql = "SELECT * FROM payment WHERE account_number=" + number + " ORDER BY " + sortBy + " " + order;
+        return getPaymentsSorted(payments, con, statement, rs, sql);
+    }
+
+    private List<Payment> getPaymentsSorted(List<Payment> payments, Connection con, Statement statement, ResultSet rs, String sql) {
         try {
             con = ConnectionPool.getConnection();
-//        String FIND_BY_USER_ID_SORTED = "SELECT p.id, account_number, p.account_name, receiver, p.registered, destination, amount, p.currency FROM account INNER JOIN payment p on account.account_name = p.account_name WHERE user_id=? ORDER BY ? ?";
             statement = con.createStatement();
             rs = statement.executeQuery(sql);
             while (rs.next()) {

@@ -1,4 +1,4 @@
-<%@include file="parts/header.jsp"%>
+<%@include file="parts/header.jsp" %>
 <%@include file="parts/navbar.jsp" %>
 
 <html>
@@ -80,9 +80,10 @@
                     </td>
 
                 </tr>
-                <tr><a href="${pageContext.request.contextPath}/wallet/accounts?user_id=${user.id}"><fmt:message
+                <tr><a class="btn btn-outline-primary m-2" href="${pageContext.request.contextPath}/wallet/accounts?user_id=${user.id}"><fmt:message
                         key="accounts"/></tr>
-                <tr><a class="btn btn-outline-primary mx-5" href="/bikes"><fmt:message key="my_payments"/></a></tr>
+                <tr><a class="btn btn-outline-success m-2" href="${pageContext.request.contextPath}/wallet/payments?user_id=${user.id}"><fmt:message
+                        key="payments"/></a></tr>
             </c:if>
             </tbody>
         </table>
