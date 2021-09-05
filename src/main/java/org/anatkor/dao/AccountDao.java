@@ -11,10 +11,12 @@ import java.util.List;
 
 public class AccountDao {
     private static final String FIND_MAX_ACCOUNT_NUMBER = "SELECT MAX(number) FROM account";
-    private static final String ADD_ACCOUNT = "INSERT INTO account (number, balance, account_name, currency, user_id, action) VALUES (?,0,?,?,?,1);";
+    private static final String ADD_ACCOUNT =
+            "INSERT INTO account (number, balance, account_name, currency, user_id, action) VALUES (?,0,?,?,?,1);";
     private static final String FIND_ACCOUNTS_BY_USER_ID_SORTED = "SELECT * FROM account WHERE user_id=? ORDER BY ? ?";
     private static final String FIND_ACCOUNT_BY_ID = "SELECT * FROM account WHERE id=?";
-    private static final String FIND_ACCOUNT_WITH_CARD_BY_ID = "SELECT * FROM account LEFT JOIN credit_card cc on account.id = cc.account_id where account.id=?";
+    private static final String FIND_ACCOUNT_WITH_CARD_BY_ID =
+            "SELECT * FROM account LEFT JOIN credit_card cc on account.id = cc.account_id where account.id=?";
     private static final String FIND_ALL_ACCOUNTS_TO_DO = "SELECT * FROM account WHERE action>0";
     private static final String UPDATE_ACCOUNT_ACTIVE_BY_ID = "UPDATE account SET active=?, action=0 WHERE id=?";
     private static final String UPDATE_ACCOUNT_BALANCE_BY_ID = "UPDATE account SET balance=balance+? WHERE id=?";

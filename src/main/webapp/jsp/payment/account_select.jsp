@@ -3,7 +3,7 @@
         <c:when test="${not empty accounts}">
             <c:forEach var="account" items="${accounts}">
                 <option value="${account.id}">
-                        ${account.balance} ${account.currency} - ${account.accountName}
+                        ${account.balance/100} ${account.currency} - ${account.accountName}
                 </option>
             </c:forEach>
         </c:when>

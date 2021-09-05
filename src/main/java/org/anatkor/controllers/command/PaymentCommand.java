@@ -2,6 +2,7 @@ package org.anatkor.controllers.command;
 
 import org.anatkor.model.Account;
 import org.anatkor.model.Payment;
+import org.anatkor.model.User;
 import org.anatkor.services.AccountService;
 import org.anatkor.services.PaymentService;
 import org.apache.logging.log4j.LogManager;
@@ -20,15 +21,19 @@ class PaymentCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {
-        if (req.getParameter("user_id") != null) {
-            long userId = Long.parseLong(req.getParameter("user_id"));
-            List<Account> accounts = accountService.findAllAccountsByUserId(userId);
-            req.setAttribute("accounts", accounts);
-        }
 
         String action = req.getParameter("action");
         HttpSession session = req.getSession();
-
+        if (action == null) {
+            User user = (User) session.getAttribute("user_auth");
+            long userId = user.getId();
+            List<Account> accounts = accountService.findAllAccountsByUserId(userId);
+            req.setAttribute("accounts", accounts);
+            if (req.getParameter("receiver") != null && req.getParameter("amount") != null) {
+                req.setAttribute("receiver", req.getParameter("receiver"));
+                req.setAttribute("amount", req.getParameter("amount"));
+            }
+        }
         if (action != null) {
             if ("prepare".equals(action)
                     && req.getParameter("account_id") != null
@@ -38,7 +43,14 @@ class PaymentCommand implements Command {
                 Account account = accountService.findById(Long.parseLong(req.getParameter("account_id")));
                 long receiver = Long.parseLong(req.getParameter("receiver"));
                 int amount = (int) (100 * Double.parseDouble(req.getParameter("amount")));
+                if (amount <= 0) {
+                    return "redirect:wallet";
+                }
                 String destination = req.getParameter("destination");
+                if (amount/100 > account.getBalance()) {
+                    return "redirect:wallet/payment?warn=not_enough&receiver=" +
+                            receiver + "&amount=" + amount;
+                }
                 Payment payment = new Payment();
                 payment.setAccountNumber(account.getNumber());
                 payment.setAccountName(account.getAccountName());
@@ -46,15 +58,24 @@ class PaymentCommand implements Command {
                 if (destination != null) {
                     payment.setDestination(destination);
                 } else {
-                    payment.setDestination("");
+                    payment.setDestination("-");
                 }
                 payment.setAmount(amount);
                 payment.setCurrency(account.getCurrency());
                 session.setAttribute("payment", payment);
+
             }
 
             if ("confirm".equals(action)) {
-
+                Payment payment = (Payment) session.getAttribute("payment");
+                if (payment != null && paymentService.makePayment(payment)) {
+                    session.removeAttribute("payment");
+//                    return "redirect:wallet/payments?message=payment_success";
+                    return "redirect:wallet?message=payment_success";
+                } else {
+                    session.removeAttribute("payment");
+                    return "redirect:wallet?warn=payment_fail";
+                }
             }
 
             if ("cancel".equals(action)) {
@@ -65,7 +86,7 @@ class PaymentCommand implements Command {
 //                req.setAttribute("payment", payment);
 //
 
-//                paymentService.preparePayment(account, )
+//
 //                Long user_id = (Long) session.getAttribute("user_auth_id");
 //                log.info("request for a new account by user id={}", user_id);
 //                String accountName = req.getParameter("account_name");

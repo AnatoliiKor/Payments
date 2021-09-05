@@ -19,7 +19,6 @@
             <label style="margin: 0 3px;"> <fmt:message key="name"/> </label>
             <br/>
 
-
             <input class="mt-3" type="text" name="middle_name" value="<c:if test="${middle_name!=null}">${middle_name}</c:if>">
             <label style="margin: 0 3px;"> <fmt:message key="middle_name"/> </label>
             <br/>

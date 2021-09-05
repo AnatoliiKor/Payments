@@ -1,0 +1,7 @@
+2021-09-04 20:39:56,796 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-04 20:44:09,359 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-04 20:44:11,808 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-04 20:46:37,945 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-04 20:46:40,593 [http-nio-8081-exec-20] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-04 20:49:10,028 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-04 20:49:12,798 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in

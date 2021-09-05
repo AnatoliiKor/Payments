@@ -55,7 +55,7 @@ public final class ConnectionPool {
         cpds.setPassword(PASSWORD);
         cpds.setMinPoolSize(5);
         cpds.setAcquireIncrement(5);
-        cpds.setMaxPoolSize(5); //20
+        cpds.setMaxPoolSize(30);
         return cpds;
     }
 }
