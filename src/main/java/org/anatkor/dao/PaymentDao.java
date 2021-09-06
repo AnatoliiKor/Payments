@@ -68,10 +68,8 @@ public class PaymentDao {
         if (id > 0) {
             sqlId = " WHERE user_id=" + id;
         }
-        sql = "SELECT p.id, account_number, p.account_name, receiver, p.registered, destination, amount, p.currency " +
-                "FROM account INNER JOIN payment p on account.account_name = p.account_name" + sqlId + " " +
+        sql = "SELECT p.id, account_number, p.account_name, receiver, p.registered, destination, amount, p.currency FROM payment p INNER JOIN account ON account_number=number" + sqlId + " " +
                 "ORDER BY " + sortBy + " " + order;
-
         return getPaymentsSorted(payments, con, statement, rs, sql);
     }
 
