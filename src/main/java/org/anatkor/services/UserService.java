@@ -35,6 +35,10 @@ public class UserService {
         return userDao.findUserById(id);
     }
 
+    public User findUserFullNameByAccounNumber(Long accountNumber) throws DBException {
+        return userDao.findUserFullNameByAccountNumber(accountNumber);
+    }
+
     public boolean updateUserStatus(User user) {
         return userDao.updateUserStatus(user);
     }

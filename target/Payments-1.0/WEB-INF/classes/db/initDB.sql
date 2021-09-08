@@ -50,9 +50,11 @@ create table account
     currency     varchar(255)                                          not null,
     registered   timestamp default now()                               not null,
     active       boolean   default false                               not null,
-    user_id      bigint,
+    user_id      bigint
+        constraint account_user_id_fkey
+            references usr
+            on delete restrict,
     action       integer
---     , FOREIGN KEY (user_id) REFERENCES usr (id) ON DELETE CASCADE
 );
 
 create table credit_card

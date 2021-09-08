@@ -5,6 +5,14 @@
         <td>UA${payment.receiver}</td>
     </tr>
     <tr>
+        <td><fmt:message key="receiver"/></td>
+        <td>
+            <c:if test="${not empty receiver_full_name}">
+                ${receiver_full_name.lastName} ${receiver_full_name.name} ${not empty receiver_full_name.middleName ? receiver_full_name.middleName : ''}
+            </c:if>
+        </td>
+    </tr>
+    <tr>
         <td><fmt:message key="payment_amount"/></td>
         <td>${payment.amount/100}</td>
     </tr>

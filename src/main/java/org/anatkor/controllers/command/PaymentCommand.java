@@ -5,6 +5,7 @@ import org.anatkor.model.Payment;
 import org.anatkor.model.User;
 import org.anatkor.services.AccountService;
 import org.anatkor.services.PaymentService;
+import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,6 +17,7 @@ class PaymentCommand implements Command {
     private static final Logger log = LogManager.getLogger(PaymentCommand.class);
     private PaymentService paymentService = new PaymentService();
     private AccountService accountService = new AccountService();
+    private UserService userService = new UserService();
 
     @Override
     public String execute(HttpServletRequest req) {
@@ -50,6 +52,9 @@ class PaymentCommand implements Command {
                     return "redirect:wallet/payment?warn=not_enough&receiver=" +
                             receiver + "&amount=" + amount;
                 }
+/*TODO null user*/
+//                User receiverFullName = userService.findUserFullNameByAccounNumber(account.getNumber());
+                session.setAttribute("receiver_full_name", userService.findUserFullNameByAccounNumber(receiver));
                 Payment payment = new Payment();
                 payment.setAccountNumber(account.getNumber());
                 payment.setAccountName(account.getAccountName());
@@ -68,7 +73,6 @@ class PaymentCommand implements Command {
                 Payment payment = (Payment) session.getAttribute("payment");
                 if (payment != null && paymentService.makePayment(payment)) {
                     session.removeAttribute("payment");
-//                    return "redirect:wallet/payments?message=payment_success";
                     return "redirect:payments?message=payment_success&user_id=" + userId;
                 } else {
                     session.removeAttribute("payment");
@@ -78,6 +82,7 @@ class PaymentCommand implements Command {
 
             if ("cancel".equals(action)) {
                 session.removeAttribute("payment");
+                session.removeAttribute("receiver_full_name");
                 return "redirect:wallet?message=canceled";
             }
         }

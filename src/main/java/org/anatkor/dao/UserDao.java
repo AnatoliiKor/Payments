@@ -22,6 +22,8 @@ public class UserDao {
     private static final String ADD_USER_AND_ROLE = "INSERT INTO usr (username, email, password)  VALUES (?,?,?); INSERT INTO user_role(user_id, role) VALUES ((SELECT id FROM usr WHERE login ='?'), 'USER')";
     private static final String FIND_ALL_USERS_AND_ROLES = "SELECT * From usr LEFT JOIN user_role ON usr.id = user_role.user_id;";
     private static final String FIND_USER_BY_ID = "SELECT * FROM usr WHERE id=?";
+    private static final String FIND_USER_FULL_NANE_BY_ACCONT_NUMBER = "SELECT last_name, usr.name, middle_name FROM usr INNER JOIN account ON account.user_id=usr.id WHERE number = ?";
+
 
     final static Logger log = LogManager.getLogger(UserDao.class);
 
@@ -166,6 +168,39 @@ public class UserDao {
             Utils.close(prepStatement);
             Utils.close(con);
         }
+    }
+
+    public User findUserFullNameByAccountNumber(Long accountNumber) {
+        Connection con = null;
+        PreparedStatement prepStatement = null;
+        ResultSet rs = null;
+        try {
+            con = ConnectionPool.getConnection();
+            prepStatement = con.prepareStatement(FIND_USER_FULL_NANE_BY_ACCONT_NUMBER);
+            int k = 1;
+            prepStatement.setLong(k, accountNumber);
+            rs = prepStatement.executeQuery();
+            if (rs.next()) {
+                String lastName = rs.getString("last_name");
+                String name = rs.getString("name");
+                String middleName = rs.getString("middle_name");
+                return new User.UserBuilder()
+                        .withLastName(lastName)
+                        .withName(name)
+                        .withMiddleName(middleName)
+                        .build();
+            } else {
+                log.info("User with account " + accountNumber + " is not found");
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.",
+                    FIND_USER_FULL_NANE_BY_ACCONT_NUMBER, Utils.class, e);
+        } finally {
+            Utils.close(rs);
+            Utils.close(prepStatement);
+            Utils.close(con);
+        }
+        return null;
     }
 
     private Role findRoleByUserId(Connection con, Long user_id) throws SQLException {
