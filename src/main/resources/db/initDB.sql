@@ -70,13 +70,25 @@ create table credit_card
 
 create table payment
 (
-    id             BIGINT                  NOT NULL PRIMARY KEY DEFAULT nextval('payment_id_seq'),
-    account_number BIGINT                  not null,
-    account_name   varchar(255)            not null,
-    receiver       BIGINT                  not null,
-    registered     timestamp default now() not null,
+    id             BIGINT       NOT NULL PRIMARY KEY DEFAULT nextval('payment_id_seq'),
+    account_number BIGINT       not null,
+    account_name   varchar(255) not null,
+    receiver       BIGINT       not null,
+    registered     timestamp                         default now() not null,
     destination    varchar(255),
-    amount         INT                     not null,
-    currency       varchar(255)            not null,
+    amount         INT          not null,
+    currency       varchar(255) not null,
     FOREIGN KEY (account_number) REFERENCES account (number) ON DELETE CASCADE
+);
+
+create table transaction
+(
+    id           BIGINT       NOT NULL PRIMARY KEY DEFAULT nextval('payment_id_seq'),
+    payer        BIGINT       not null,
+    receiver     BIGINT       not null,
+    registered   timestamp                         default now() not null,
+    destination  varchar(255),
+    amount       INT          not null,
+    currency     varchar(255) not null,
+    FOREIGN KEY (payer) REFERENCES account (number)
 );

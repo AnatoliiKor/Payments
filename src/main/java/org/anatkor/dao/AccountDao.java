@@ -22,6 +22,7 @@ public class AccountDao {
     private static final String UPDATE_ACCOUNT_BALANCE_BY_ID = "UPDATE account SET balance=balance+? WHERE id=?";
     private static final String UPDATE_ACCOUNT_ACTION_BY_ID = "UPDATE account SET action=? WHERE id=?";
     private static final String ADD_CREDIT_CARD_ACCOUNT = "INSERT INTO credit_card(account_id) VALUES (?)";
+    private static final String UPDATE_ACCOUNT_BALANCE = "UPDATE account SET balance=balance+? WHERE number=?";
 
 
     final static Logger log = LogManager.getLogger(AccountDao.class);
@@ -265,5 +266,22 @@ public class AccountDao {
         account.setAction(rs.getInt("action"));
         account.setUserId(rs.getLong("user_id"));
         return account;
+    }
+
+    public boolean updateBalance(Connection con, Long account_number, int amount) throws SQLException {
+        PreparedStatement prepStatement = null;
+        try {
+            prepStatement = con.prepareStatement(UPDATE_ACCOUNT_BALANCE);
+            int k = 1;
+            prepStatement.setInt(k++, amount);
+            prepStatement.setLong(k, account_number);
+            if (prepStatement.executeUpdate() > 0) {
+                log.info("Account {} is updated with {}", account_number, amount);
+                return true;
+            }
+        } finally {
+            Utils.close(prepStatement);
+        }
+        return false;
     }
 }
