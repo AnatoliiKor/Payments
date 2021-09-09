@@ -1,0 +1,4 @@
+2021-09-09 23:35:47,798 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-09 23:42:03,737 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-09 23:44:51,595 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-09 23:46:44,980 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9

@@ -6,6 +6,7 @@ DROP SEQUENCE IF EXISTS account_id_seq;
 DROP SEQUENCE IF EXISTS payment_id_seq;
 
 CREATE SEQUENCE usr_id_seq START WITH 1;
+CREATE SEQUENCE transaction_id_seq START WITH 30;
 CREATE SEQUENCE payment_id_seq START WITH 1;
 CREATE SEQUENCE card_id_seq START WITH 1000000000000000;
 
@@ -70,13 +71,26 @@ create table credit_card
 
 create table payment
 (
-    id             BIGINT                  NOT NULL PRIMARY KEY DEFAULT nextval('payment_id_seq'),
-    account_number BIGINT                  not null,
-    account_name   varchar(255)            not null,
-    receiver       BIGINT                  not null,
-    registered     timestamp default now() not null,
+    id             BIGINT       NOT NULL PRIMARY KEY DEFAULT nextval('payment_id_seq'),
+    account_number BIGINT       not null,
+    account_name   varchar(255) not null,
+    receiver       BIGINT       not null,
+    registered     timestamp                         default now() not null,
     destination    varchar(255),
-    amount         INT                     not null,
-    currency       varchar(255)            not null,
+    amount         INT          not null,
+    currency       varchar(255) not null,
     FOREIGN KEY (account_number) REFERENCES account (number) ON DELETE CASCADE
+);
+
+create table transaction
+(
+    id           BIGINT       NOT NULL PRIMARY KEY DEFAULT nextval('transaction_id_seq'),
+    payer        BIGINT       not null,
+    receiver     BIGINT       not null,
+    registered   timestamp                         default now() not null,
+    destination  varchar(255),
+    amount       INT          not null,
+    currency     varchar(255) not null,
+    FOREIGN KEY (payer) REFERENCES account (number),
+    FOREIGN KEY (receiver) REFERENCES account (number)
 );

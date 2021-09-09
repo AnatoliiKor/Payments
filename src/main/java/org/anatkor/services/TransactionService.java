@@ -1,8 +1,6 @@
 package org.anatkor.services;
 
-import org.anatkor.dao.PaymentDao;
 import org.anatkor.dao.TransactionDao;
-import org.anatkor.model.Payment;
 import org.anatkor.model.Transaction;
 
 import java.util.List;
@@ -14,12 +12,12 @@ public class TransactionService {
         return transactionDao.makeTransaction(transaction);
     }
 
-//    public List<Payment> findAllPaymentsByUserIdSorted(long user_id, String sortBy, String order) {
-//        return paymentDao.findAllPaymentsByUserIdSorted(user_id, sortBy, order);
-//    }
-//
-//    public List<Payment> findAllPaymentsByAccountNumberSorted(long account_number, String sortBy, String order) {
-//        return paymentDao.findAllPaymentsByAccountNumberSorted(account_number, sortBy, order);
-//    }
+    public List<Transaction> findAllTransactionsByUserIdSorted(long user_id, String sortBy, String order, String accountType) {
+        return transactionDao.findAllTransactionsByUserIdSorted(user_id, sortBy, order, accountType);
+    }
+
+    public List<Transaction> findAllTransactionsByAccountNumberSorted(long account_number, String sortBy, String order, String accountType) {
+        return transactionDao.findAllTransactionsByAccountNumberSorted(account_number, sortBy, order, accountType);
+    }
 
 }

@@ -170,7 +170,7 @@ public class UserDao {
         }
     }
 
-    public User findUserFullNameByAccountNumber(Long accountNumber) {
+    public String findUserFullNameByAccountNumber(Long accountNumber) {
         Connection con = null;
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
@@ -181,14 +181,8 @@ public class UserDao {
             prepStatement.setLong(k, accountNumber);
             rs = prepStatement.executeQuery();
             if (rs.next()) {
-                String lastName = rs.getString("last_name");
-                String name = rs.getString("name");
-                String middleName = rs.getString("middle_name");
-                return new User.UserBuilder()
-                        .withLastName(lastName)
-                        .withName(name)
-                        .withMiddleName(middleName)
-                        .build();
+                String fullName = rs.getString("last_name") + " " + rs.getString("name") + " " + rs.getString("middle_name");
+                return fullName.trim();
             } else {
                 log.info("User with account " + accountNumber + " is not found");
             }

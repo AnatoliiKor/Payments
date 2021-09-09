@@ -1,5 +1,6 @@
 package org.anatkor.dao;
 
+import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
 import org.anatkor.model.enums.Currency;
 import org.apache.logging.log4j.LogManager;
@@ -17,6 +18,8 @@ public class AccountDao {
     private static final String FIND_ACCOUNT_BY_ID = "SELECT * FROM account WHERE id=?";
     private static final String FIND_ACCOUNT_WITH_CARD_BY_ID =
             "SELECT * FROM account LEFT JOIN credit_card cc on account.id = cc.account_id where account.id=?";
+    private static final String FIND_ACCOUNT_WITH_CARD_BY_NUMBER =
+            "SELECT * FROM account LEFT JOIN credit_card cc on account.id = cc.account_id where account.number=?";
     private static final String FIND_ALL_ACCOUNTS_TO_DO = "SELECT * FROM account WHERE action>0";
     private static final String UPDATE_ACCOUNT_ACTIVE_BY_ID = "UPDATE account SET active=?, action=0 WHERE id=?";
     private static final String UPDATE_ACCOUNT_BALANCE_BY_ID = "UPDATE account SET balance=balance+? WHERE id=?";
@@ -153,6 +156,34 @@ public class AccountDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.", FIND_ACCOUNT_BY_ID, Utils.class, e);
+        } finally {
+            Utils.close(rs);
+            Utils.close(preparedStatement);
+            Utils.close(con);
+        }
+        return null;
+    }
+
+    public Account findByNumber(Long number) {
+        Connection con = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet rs = null;
+        try {
+            con = ConnectionPool.getConnection();
+            preparedStatement = con.prepareStatement(FIND_ACCOUNT_WITH_CARD_BY_NUMBER);
+            int k = 1;
+            preparedStatement.setLong(k, number);
+            rs = preparedStatement.executeQuery();
+            if (rs.next()) {
+                Account account = getAccountFromResultSet(rs);
+                account.setCardNumber(rs.getLong("card_id"));
+                return account;
+            } else {
+                log.info("Account {} not found", number);
+                throw new DBException("account not found");
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.", FIND_ACCOUNT_WITH_CARD_BY_NUMBER, Utils.class, e);
         } finally {
             Utils.close(rs);
             Utils.close(preparedStatement);

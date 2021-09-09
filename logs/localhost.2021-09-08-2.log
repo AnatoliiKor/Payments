@@ -1,0 +1,17 @@
+2021-09-08 13:16:44,302 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-08 13:16:44,302 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-08 13:17:53,490 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.PaymentDao- Account 10000000001 is updated, wait for commit
+2021-09-08 13:17:53,494 [http-nio-8081-exec-9] INFO  org.anatkor.dao.PaymentDao- Payment from 10000000001 to 10000000005, amount 1600 is added to DB
+2021-09-08 13:17:53,498 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 9
+2021-09-08 13:24:28,816 [http-nio-8081-exec-1] INFO  org.anatkor.controllers.command.UserCommand- User 382222222222 profile called
+2021-09-08 13:27:17,513 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-08 13:27:20,421 [http-nio-8081-exec-3] INFO  org.anatkor.controllers.command.LoginCommand- Client '389999999999' is logged in
+2021-09-08 13:27:40,924 [http-nio-8081-exec-9] DEBUG org.anatkor.dao.PaymentDao- Account 10000000024 is updated, wait for commit
+2021-09-08 13:27:40,928 [http-nio-8081-exec-9] INFO  org.anatkor.dao.PaymentDao- Payment from 10000000024 to 10000000003, amount 300 is added to DB
+2021-09-08 13:27:40,933 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-08 13:28:05,152 [http-nio-8081-exec-4] INFO  org.anatkor.dao.UserDao- User with account 11111111111 is not found
+2021-09-08 13:30:16,369 [http-nio-8081-exec-11] INFO  org.anatkor.dao.UserDao- User with account 11111111111 is not found
+2021-09-08 13:32:34,100 [http-nio-8081-exec-14] INFO  org.anatkor.dao.UserDao- User with account 11111111111 is not found
+2021-09-08 13:35:20,189 [http-nio-8081-exec-12] DEBUG org.anatkor.dao.PaymentDao- Account 10000000024 is updated, wait for commit
+2021-09-08 13:35:20,192 [http-nio-8081-exec-12] INFO  org.anatkor.dao.PaymentDao- Payment from 10000000024 to 10000000003, amount 300 is added to DB
+2021-09-08 13:35:20,195 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42

@@ -35,7 +35,7 @@ public class UserService {
         return userDao.findUserById(id);
     }
 
-    public User findUserFullNameByAccounNumber(Long accountNumber) throws DBException {
+    public String findUserFullNameByAccounNumber(Long accountNumber) throws DBException {
         return userDao.findUserFullNameByAccountNumber(accountNumber);
     }
 

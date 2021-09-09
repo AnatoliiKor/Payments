@@ -1,10 +1,14 @@
 package org.anatkor.controllers.command;
 
+import org.anatkor.dao.TransactionDao;
+import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
 import org.anatkor.model.Payment;
+import org.anatkor.model.Transaction;
 import org.anatkor.model.User;
+import org.anatkor.model.enums.Currency;
 import org.anatkor.services.AccountService;
-import org.anatkor.services.PaymentService;
+import org.anatkor.services.TransactionService;
 import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,9 +19,10 @@ import java.util.List;
 
 class PaymentCommand implements Command {
     private static final Logger log = LogManager.getLogger(PaymentCommand.class);
-    private PaymentService paymentService = new PaymentService();
+    private TransactionService transactionService = new TransactionService();
     private AccountService accountService = new AccountService();
     private UserService userService = new UserService();
+
 
     @Override
     public String execute(HttpServletRequest req) {
@@ -42,36 +47,47 @@ class PaymentCommand implements Command {
                     && req.getParameter("amount") != null
             ) {
                 Account account = accountService.findById(Long.parseLong(req.getParameter("account_id")));
+                if (account == null) {
+                    return "redirect:payment";
+                }
                 long receiver = Long.parseLong(req.getParameter("receiver"));
+                String destination = req.getParameter("destination");
                 int amount = (int) (100 * Double.parseDouble(req.getParameter("amount")));
                 if (amount <= 0) {
                     return "redirect:wallet";
                 }
-                String destination = req.getParameter("destination");
                 if (amount > account.getBalance()) {
                     return "redirect:wallet/payment?warn=not_enough&receiver=" +
                             receiver + "&amount=" + amount;
                 }
-/*TODO null user*/
-//                User receiverFullName = userService.findUserFullNameByAccounNumber(account.getNumber());
-                session.setAttribute("receiver_full_name", userService.findUserFullNameByAccounNumber(receiver));
+                Currency currency;
+                try {
+                    currency  = accountService.findCurrencyByAccountNumber(receiver);
+                } catch (DBException e) {
+                    return "redirect:wallet/payment?warn=account_not_found";
+                }
+                if (!account.getCurrency().equals(currency)) {
+                    return "redirect:wallet/payment?warn=not_currency&message=" + currency.name() + "&receiver=" +
+                            receiver + "&amount=" + amount;
+                }
                 Payment payment = new Payment();
-                payment.setAccountNumber(account.getNumber());
-                payment.setAccountName(account.getAccountName());
+                payment.setPayer(account.getNumber());
                 payment.setReceiver(receiver);
+                payment.setPayerAccountName(account.getAccountName());
+                payment.setReceiverFullName(userService.findUserFullNameByAccounNumber(receiver));
                 if (destination != null) {
                     payment.setDestination(destination);
                 } else {
                     payment.setDestination("-");
                 }
                 payment.setAmount(amount);
-                payment.setCurrency(account.getCurrency());
+                payment.setCurrency(currency);
                 session.setAttribute("payment", payment);
             }
 
             if ("confirm".equals(action)) {
-                Payment payment = (Payment) session.getAttribute("payment");
-                if (payment != null && paymentService.makePayment(payment)) {
+                Transaction payment = (Payment) session.getAttribute("payment");
+                if (payment != null && transactionService.makeTransaction(payment)) {
                     session.removeAttribute("payment");
                     return "redirect:payments?message=payment_success&user_id=" + userId;
                 } else {

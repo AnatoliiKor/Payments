@@ -7,9 +7,7 @@
     <tr>
         <td><fmt:message key="receiver"/></td>
         <td>
-            <c:if test="${not empty receiver_full_name}">
-                ${receiver_full_name.lastName} ${receiver_full_name.name} ${not empty receiver_full_name.middleName ? receiver_full_name.middleName : ''}
-            </c:if>
+                ${payment.receiverFullName}
         </td>
     </tr>
     <tr>
@@ -22,11 +20,11 @@
     </tr>
     <tr>
         <td><fmt:message key="account_number"/></td>
-        <td>UA${payment.accountNumber}</td>
+        <td>UA${payment.payer}</td>
     </tr>
     <tr>
         <td><fmt:message key="account_name"/></td>
-        <td>${payment.accountName}</td>
+        <td>${payment.payerAccountName}</td>
     </tr>
     <tr>
         <td><fmt:message key="payment_destination"/></td>

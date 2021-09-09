@@ -2,9 +2,11 @@
     <c:choose>
         <c:when test="${not empty accounts}">
             <c:forEach var="account" items="${accounts}">
+                <c:if test="${account.active}">
                 <option value="${account.id}">
-                        ${account.balance/100} ${account.currency} - ${account.accountName}
+                        ${account.balance/100} ${account.currency} - ${account.accountName} (UA${account.number})
                 </option>
+                </c:if>
             </c:forEach>
         </c:when>
         <c:otherwise>

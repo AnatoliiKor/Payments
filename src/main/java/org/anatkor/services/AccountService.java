@@ -1,8 +1,10 @@
 package org.anatkor.services;
 
 import org.anatkor.dao.AccountDao;
+import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
 import org.anatkor.model.enums.Currency;
+
 import java.util.List;
 
 public class AccountService {
@@ -19,8 +21,8 @@ public class AccountService {
     }
 
     public List<Account> findAllAccountsByUserIdSorted(Long user_id, String sortBy, String order) {
-            return accountDao.findAllAccountsByUserIdSorted(user_id, sortBy, order);
-        }
+        return accountDao.findAllAccountsByUserIdSorted(user_id, sortBy, order);
+    }
 
     public List<Account> findAllAccountsByUserId(Long user_id) {
         return accountDao.findAllAccountsByUserId(user_id);
@@ -30,6 +32,10 @@ public class AccountService {
         return accountDao.findById(id);
     }
 
+    public Currency findCurrencyByAccountNumber(long accountNumber) throws DBException {
+            return accountDao.findByNumber(accountNumber).getCurrency();
+        }
+
     public List<Account> findAllAccountsToDo() {
         return accountDao.findAllAccountsToDo();
     }
@@ -38,39 +44,11 @@ public class AccountService {
         return accountDao.updateAccountActiveById(account_id, accountActive);
     }
 
-    public boolean updateAccountActionById(Long account_id,int accountAction) {
+    public boolean updateAccountActionById(Long account_id, int accountAction) {
         return accountDao.updateAccountActionById(account_id, accountAction);
     }
 
     public boolean updateAccountBalanceById(Long account_id, int amount) {
         return accountDao.updateAccountBalanceById(account_id, amount);
     }
-
-//    public List<Bike> findAll(String sortBy, String order) {
-//        return bikeDao.findAll(sortBy, order);
-//    }
-//
-//
-//    public boolean newBike(Long id, String name, String brand, String category, String colour, String description, int price)
-//            throws DBException {
-//        Bike bike = new Bike.Builder()
-//                .withId(id)
-//                .withName(name)
-//                .withBrand(brand)
-//                .withCategory(category)
-//                .withColour(colour)
-//                .withDescription(description)
-//                .withPrice(price)
-//                .withRegistrationDateTime(LocalDateTime.now())
-//                .build();
-//        return bikeDao.newBike(bike);
-//    }
-//
-//    public Bike findBikeById(Long bikeId) {
-//        return bikeDao.findBikeById(bikeId);
-//    }
-//
-//    public boolean deleteBike(Long id) throws DBException {
-//        return bikeDao.deleteBike(id);
-//    }
 }
