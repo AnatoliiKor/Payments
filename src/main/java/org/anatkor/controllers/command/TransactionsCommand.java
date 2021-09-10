@@ -51,6 +51,7 @@ class TransactionsCommand implements Command {
         } else {
             req.setAttribute("pg", Integer.parseInt(page));
         }
+
         if (req.getParameter("account_number") != null) {
             accountNumber = Long.parseLong(req.getParameter("account_number"));
             log.info("payments list requested for account" + accountNumber);
@@ -59,20 +60,19 @@ class TransactionsCommand implements Command {
         } else {
             if (role == Role.ADMIN && req.getParameter("user_id") == null) {
                 log.info("transactions list requested by ADMIN");
-                user_id = -1L;
+                transactions = transactionService.findAllTransactionsSorted(sortBy, order);
             } else {
                 user_id = Long.parseLong(req.getParameter("user_id"));
                 log.info("transactions list requested for user with id= {}", user_id);
+                transactions = transactionService.findAllTransactionsByUserIdSorted(user_id, sortBy, order, accountType);
+                req.setAttribute("user_id", user_id);
             }
-            transactions = transactionService.findAllTransactionsByUserIdSorted(user_id, sortBy, order, accountType);
-            req.setAttribute("user_id", user_id);
+            int pgMax = 1 + transactions.size() / 10;
+            req.setAttribute("pg_max", pgMax);
+            req.setAttribute("transactions", transactions);
+            req.setAttribute("transaction_sort_by", sortBy);
+            req.setAttribute("order", order);
         }
-        int pgMax = 1 + transactions.size()/10;
-        req.setAttribute("pg_max", pgMax);
-        req.setAttribute("transactions", transactions);
-        req.setAttribute("transaction_sort_by", sortBy);
-        req.setAttribute("order", order);
-//        return "/jsp/payments_list.jsp";
         return "/jsp/transactions_list.jsp";
     }
 }

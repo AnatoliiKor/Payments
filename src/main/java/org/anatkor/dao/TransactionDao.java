@@ -81,6 +81,14 @@ public class TransactionDao {
         return getTransactionsSorted(con, statement, rs, sql);
     }
 
+    public List<Transaction> findAllTransactionsSorted(String sortBy, String order) {
+        Connection con = null;
+        Statement statement = null;
+        ResultSet rs = null;
+        String sql = "SELECT * FROM transaction ORDER BY " + sortBy + " " + order;
+        return getTransactionsSorted(con, statement, rs, sql);
+    }
+
     private List<Transaction> getTransactionsSorted(Connection con, Statement statement, ResultSet rs, String sql) {
         List<Transaction> transactions = new ArrayList<>();
         try {

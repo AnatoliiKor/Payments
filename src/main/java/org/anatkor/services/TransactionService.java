@@ -20,4 +20,9 @@ public class TransactionService {
         return transactionDao.findAllTransactionsByAccountNumberSorted(account_number, sortBy, order, accountType);
     }
 
+    public List<Transaction> findAllTransactionsSorted(String sortBy, String order) {
+        return transactionDao.findAllTransactionsSorted(sortBy, order);
+    }
+
+
 }
