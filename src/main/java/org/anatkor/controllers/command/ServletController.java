@@ -29,6 +29,7 @@ public class ServletController extends HttpServlet{
         commands.put("payment", new PaymentCommand());
         commands.put("payments", new PaymentsCommand());
         commands.put("registration", new RegistrationCommand());
+//        commands.put("transaction", new TransactionCommand());
         commands.put("transactions", new TransactionsCommand());
         commands.put("wallet", new WalletCommand());
         commands.put("user", new UserCommand());

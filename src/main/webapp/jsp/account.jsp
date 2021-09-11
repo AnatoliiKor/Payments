@@ -26,7 +26,8 @@
 
             <%@include file="account/blocking.jsp" %>
 
-            <div><a class="btn btn-outline-success mt-4" href="wallet/payments?account_number=${account.number}"><fmt:message key="payments"/></a></div>
+            <div><a class="btn btn-outline-success mt-4" href="wallet/transactions?account_number=${account.number}&account_type=payer"><fmt:message key="payments"/></a></div>
+            <div><a class="btn btn-outline-success mt-4" href="wallet/transactions?account_number=${account.number}&account_type=receiver"><fmt:message key="inflows"/></a></div>
         </div>
     </div>
 </div>

@@ -44,10 +44,10 @@
                         <td <c:if test="${sort_by.equals('active')}">class="text-info fw-bold"</c:if>><input
                                 class="form-check-input" type="checkbox" ${account.active?'checked':""} disabled></td>
                         <td>
-                            <a href="/wallet/transactions?account_number=${account.number}&account_type=payer"><fmt:message key="my_payments"/></a>
+                            <a href="/wallet/transactions?account_number=${account.number}&account_type=payer"><fmt:message key="payments"/></a>
                         </td>
                         <td>
-                            <a href="/wallet/transactions?account_number=${account.number}&account_type=receiver"><fmt:message key="my_inflows"/></a>
+                            <a href="/wallet/transactions?account_number=${account.number}&account_type=receiver"><fmt:message key="inflows"/></a>
                         </td>
 
                         <td>

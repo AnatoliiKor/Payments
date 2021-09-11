@@ -22,7 +22,7 @@ class TransactionsCommand implements Command {
         String accountType;
         long user_id;
         long accountNumber;
-        List<Transaction> transactions;
+        List<Transaction> transactions = null;
         HttpSession session = req.getSession();
         Role role = Role.valueOf((String) session.getAttribute("role"));
 
@@ -57,16 +57,21 @@ class TransactionsCommand implements Command {
             log.info("payments list requested for account" + accountNumber);
             transactions = transactionService.findAllTransactionsByAccountNumberSorted(accountNumber, sortBy, order, accountType);
             req.setAttribute("account_number", accountNumber);
-        } else {
-            if (role == Role.ADMIN && req.getParameter("user_id") == null) {
-                log.info("transactions list requested by ADMIN");
-                transactions = transactionService.findAllTransactionsSorted(sortBy, order);
-            } else {
-                user_id = Long.parseLong(req.getParameter("user_id"));
-                log.info("transactions list requested for user with id= {}", user_id);
-                transactions = transactionService.findAllTransactionsByUserIdSorted(user_id, sortBy, order, accountType);
-                req.setAttribute("user_id", user_id);
-            }
+        }
+
+        if (req.getParameter("user_id") != null) {
+            user_id = Long.parseLong(req.getParameter("user_id"));
+            log.info("transactions list requested for user with id= {}", user_id);
+            transactions = transactionService.findAllTransactionsByUserIdSorted(user_id, sortBy, order, accountType);
+            req.setAttribute("user_id", user_id);
+        }
+
+        if (role == Role.ADMIN && req.getParameter("user_id") == null) {
+            log.info("transactions list requested by ADMIN");
+            transactions = transactionService.findAllTransactionsSorted(sortBy, order);
+        }
+
+        if (transactions != null) {
             int pgMax = 1 + transactions.size() / 10;
             req.setAttribute("pg_max", pgMax);
             req.setAttribute("transactions", transactions);
@@ -77,3 +82,4 @@ class TransactionsCommand implements Command {
         return "/jsp/transactions_list.jsp";
     }
 }
+

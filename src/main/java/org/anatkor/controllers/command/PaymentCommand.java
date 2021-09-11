@@ -89,7 +89,7 @@ class PaymentCommand implements Command {
                 Transaction payment = (Payment) session.getAttribute("payment");
                 if (payment != null && transactionService.makeTransaction(payment)) {
                     session.removeAttribute("payment");
-                    return "redirect:payments?message=payment_success&user_id=" + userId;
+                    return "redirect:transactions?message=payment_success&account_type=payer&user_id=" + userId;
                 } else {
                     session.removeAttribute("payment");
                     return "redirect:wallet?warn=payment_fail";
