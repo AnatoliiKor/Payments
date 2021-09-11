@@ -139,6 +139,32 @@ public class AccountDao {
         return accounts;
     }
 
+    public List<Long> findAllAccountNumbersByUserId(Long id) {
+        List<Long> numbers = new ArrayList<>();
+        Connection con = null;
+        Statement statement = null;
+        ResultSet rs = null;
+        String sql = "SELECT number FROM account WHERE user_id=" + id;
+        try {
+            con = ConnectionPool.getConnection();
+            statement = con.createStatement();
+            rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                long number = rs.getLong("number");
+                numbers.add(number);
+            }
+        } catch (SQLException e) {
+            log.debug("SQLException during Query {} processing from {}.", sql, Utils.class, e);
+        } finally {
+            Utils.close(rs);
+            Utils.close(statement);
+            Utils.close(con);
+        }
+        return numbers;
+    }
+
+
+
     public Account findById(Long id) {
         Connection con = null;
         PreparedStatement preparedStatement = null;

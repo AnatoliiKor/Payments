@@ -11,7 +11,17 @@
 
     <%@include file="parts/messages.jsp" %>
 
+
+<c:choose>
+<c:when test="${not empty accounts}">
+
     <%@include file="account/sort.jsp" %>
+
+    <ul class="pagination">
+        <li class="page-item ${pg == 1 ? 'disabled' : ''}"><a class="page-link" href="${pageContext.request.contextPath}/wallet/accounts?pg=${pg-1}&user_id=${user_id}&sort_by=${sort_by}&order=${order}"><fmt:message key="previous_main"/></a></li>
+        <li class="page-item active"><a class="page-link">${pg}</a></li>
+        <li class="page-item ${pg == pg_max? 'disabled' : ''}"><a class="page-link" href="${pageContext.request.contextPath}/wallet//accounts?pg=${pg+1}&user_id=${user_id}&sort_by=${sort_by}&order=${order}"><fmt:message key="next_main"/></a></li>
+    </ul>
 
     <table class="table table-striped auto__table table-condensed text-center">
         <thead>
@@ -30,8 +40,6 @@
         </thead>
 
         <tbody>
-        <c:choose>
-            <c:when test="${not empty accounts}">
                 <c:forEach var="account" items="${accounts}"
                     varStatus="position" begin="${10 * (pg - 1)}" end="${10 * (pg - 1) + 9}">
                     <tr >
@@ -44,14 +52,14 @@
                         <td <c:if test="${sort_by.equals('active')}">class="text-info fw-bold"</c:if>><input
                                 class="form-check-input" type="checkbox" ${account.active?'checked':""} disabled></td>
                         <td>
-                            <a href="/wallet/transactions?account_number=${account.number}&account_type=payer"><fmt:message key="payments"/></a>
+                            <a href="${pageContext.request.contextPath}/wallet/transactions?account_number=${account.number}&account_type=payer"><fmt:message key="payments"/></a>
                         </td>
                         <td>
-                            <a href="/wallet/transactions?account_number=${account.number}&account_type=receiver"><fmt:message key="inflows"/></a>
+                            <a href="${pageContext.request.contextPath}/wallet/transactions?account_number=${account.number}&account_type=receiver"><fmt:message key="inflows"/></a>
                         </td>
 
                         <td>
-                            <a href="/wallet/account?id=${account.id}"><fmt:message key="${'ADMIN'.equals(role)?'edit':'refill_balance'}"/></a>
+                            <a href="${pageContext.request.contextPath}/wallet/account?id=${account.id}"><fmt:message key="${'ADMIN'.equals(role)?'edit':'refill_balance'}"/></a>
                         </td>
                     </tr>
                 </c:forEach>
@@ -62,12 +70,6 @@
         </c:choose>
         </tbody>
     </table>
-
-    <ul class="pagination">
-        <li class="page-item ${pg == 1 ? 'disabled' : ''}"><a class="page-link" href="/accounts?pg=${pg-1}&user_id=${user_id}"><fmt:message key="previous_main"/></a></li>
-        <li class="page-item active"><a class="page-link">${pg}</a></li>
-        <li class="page-item ${pg == pg_max? 'disabled' : ''}"><a class="page-link" href="/accounts?pg=${pg+1}&user_id=${user_id}"><fmt:message key="next_main"/></a></li>
-    </ul>
 
     <c:if test="${'CLIENT'.equals(role)}">
     <br/>

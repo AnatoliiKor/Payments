@@ -9,6 +9,7 @@ import java.util.List;
 public class UserService {
 
     private UserDao userDao = new UserDao();
+    private AccountService accountService = new AccountService();
 
     public List<User> findAll() {
         return userDao.findAll();
@@ -28,7 +29,9 @@ public class UserService {
     }
 
     public User findUserByPhoneAndPassword(Long phoneNumber, String password) throws DBException {
-        return userDao.findUserByPhoneAndPassword(phoneNumber, password);
+        User user = userDao.findUserByPhoneAndPassword(phoneNumber, password);
+        user.setAccountNumbers(accountService.findAllAccountNumbersByUserId(user.getId()));
+        return user;
     }
 
     public User findUserById(Long id) throws DBException {

@@ -18,7 +18,7 @@ public class User {
     private LocalDateTime registered;
     private boolean active;
     private Role role;
-    private List<Account> accounts;
+    private List<Long> accountNumbers;
 
     public User() {
     }
@@ -80,8 +80,8 @@ public class User {
             return this;
         }
 
-        public UserBuilder withAccounts(List<Account> accounts){
-            newUser.accounts = accounts;
+        public UserBuilder withAccounts(List<Long> accountNumbers){
+            newUser.accountNumbers = accountNumbers;
             return this;
         }
 
@@ -175,12 +175,12 @@ public class User {
         this.role = role;
     }
 
-    public List<Account> getAccounts() {
-        return accounts;
+    public List<Long> getAccountNumbers() {
+        return accountNumbers;
     }
 
-    public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
+    public void setAccountNumbers(List<Long> accountNumbers) {
+        this.accountNumbers = accountNumbers;
     }
 
     public String getFormatedDate() {

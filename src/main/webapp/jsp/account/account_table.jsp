@@ -26,7 +26,7 @@
     </tr>
     <tr>
         <td><fmt:message key="user"/></td>
-        <td><a href="${pageContext.request.contextPath}/user?id=${account.userId}"><fmt:message
+        <td><a href="${pageContext.request.contextPath}/wallet/user?id=${account.userId}"><fmt:message
                 key="profile_nav"/></a></td>
     </tr>
     <tr>

@@ -24,20 +24,13 @@ class AccountsCommand implements Command {
 
         if (req.getParameter("order") != null) {
             order = req.getParameter("order");
-            session.setAttribute("order", order);
-        } else if (session.getAttribute("order") != null) {
-            order = (String) session.getAttribute("order");
         } else {
-            order = "DESC";
+            order = "ASC";
         }
-
         if (req.getParameter("sort_by") != null) {
             sortBy = req.getParameter("sort_by");
-            session.setAttribute("sort_by", sortBy);
-        } else if (session.getAttribute("sort_by") != null) {
-            sortBy = (String) session.getAttribute("sort_by");
         } else {
-            sortBy = "balance";
+            sortBy = "number";
         }
 
         if (role == Role.ADMIN && req.getParameter("user_id") == null) {

@@ -82,7 +82,7 @@
                 </tr>
                 <tr><a class="btn btn-outline-primary m-2" href="${pageContext.request.contextPath}/wallet/accounts?user_id=${user.id}"><fmt:message
                         key="accounts"/></tr>
-                <tr><a class="btn btn-outline-success m-2" href="${pageContext.request.contextPath}/wallet/payments?user_id=${user.id}"><fmt:message
+                <tr><a class="btn btn-outline-success m-2" href="${pageContext.request.contextPath}/wallet/transactions?user_id=${user.id}&account_type=payer"><fmt:message
                         key="payments"/></a></tr>
             </c:if>
             </tbody>

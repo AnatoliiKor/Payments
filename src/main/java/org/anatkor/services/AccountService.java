@@ -28,6 +28,10 @@ public class AccountService {
         return accountDao.findAllAccountsByUserId(user_id);
     }
 
+    public List<Long> findAllAccountNumbersByUserId(Long user_id) {
+        return accountDao.findAllAccountNumbersByUserId(user_id);
+    }
+
     public Account findById(Long id) {
         return accountDao.findById(id);
     }

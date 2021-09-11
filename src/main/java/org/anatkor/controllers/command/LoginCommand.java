@@ -3,16 +3,19 @@ package org.anatkor.controllers.command;
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.enums.Role;
 import org.anatkor.model.User;
+import org.anatkor.services.AccountService;
 import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 class LoginCommand implements Command {
     private static final Logger log = LogManager.getLogger(LoginCommand.class);
     private UserService userService = new UserService();
+    private AccountService accountService = new AccountService();
 
     @Override
     public String execute(HttpServletRequest req) {
@@ -40,6 +43,8 @@ class LoginCommand implements Command {
                     return "redirect:/admin";
                 } else {
                     log.info("Client '{}' is logged in", phoneNumber);
+                    List<Long> accountNumbers = accountService.findAllAccountNumbersByUserId(user.getId());
+                    session.setAttribute("account_numbers", accountNumbers);
                     return "redirect:/wallet";
                 }
             } catch (DBException e) {
