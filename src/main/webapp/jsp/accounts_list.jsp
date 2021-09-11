@@ -22,6 +22,10 @@
             <th><fmt:message key="account_name"/></th>
             <th><fmt:message key="currency"/></th>
             <th><fmt:message key="is_active"/></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
         </tr>
         </thead>
 
@@ -38,9 +42,12 @@
                         <td <c:if test="${sort_by.equals('account_name')}">class="text-info fw-bold"</c:if>>${account.accountName}</td>
                         <td <c:if test="${sort_by.equals('currency')}">class="text-info fw-bold"</c:if>>${account.currency}</td>
                         <td <c:if test="${sort_by.equals('active')}">class="text-info fw-bold"</c:if>><input
-                                type="checkbox" ${account.active?'checked':""} disabled></td>
+                                class="form-check-input" type="checkbox" ${account.active?'checked':""} disabled></td>
                         <td>
-                            <a href="/wallet/payments?account_number=${account.number}"><fmt:message key="payments"/></a>
+                            <a href="/wallet/transactions?account_number=${account.number}&account_type=payer"><fmt:message key="my_payments"/></a>
+                        </td>
+                        <td>
+                            <a href="/wallet/transactions?account_number=${account.number}&account_type=receiver"><fmt:message key="my_inflows"/></a>
                         </td>
 
                         <td>

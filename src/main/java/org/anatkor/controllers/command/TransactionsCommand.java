@@ -72,6 +72,7 @@ class TransactionsCommand implements Command {
             req.setAttribute("transactions", transactions);
             req.setAttribute("transaction_sort_by", sortBy);
             req.setAttribute("order", order);
+            req.setAttribute("account_type", accountType);
         }
         return "/jsp/transactions_list.jsp";
     }

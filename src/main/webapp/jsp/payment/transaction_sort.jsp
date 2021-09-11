@@ -1,13 +1,18 @@
 <form method="get" action="/wallet/transactions">
-    <input type="hidden" name="account_type" value="payer"/>
-    <c:choose>
-        <c:when test="${not empty account_number}">
-            <input type="hidden" name="account_number" value="${account_number}"/>
-        </c:when>
-        <c:otherwise>
-            <input type="hidden" name="user_id" value="${user_id}"/>
-        </c:otherwise>
-    </c:choose>
+    <input type="hidden" name="account_type" value="${account_type}"/>
+    <c:if test="${not empty account_number}"><input type="hidden" name="account_number" value="${account_number}"/></c:if>
+    <c:if test="${not empty user_id}"><input type="hidden" name="user_id" value="${user_id}"/></c:if>
+
+<%--    --%>
+<%--    --%>
+<%--    <c:choose>--%>
+<%--        <c:when test="${not empty account_number}">--%>
+<%--            <input type="hidden" name="account_number" value="${account_number}"/>--%>
+<%--        </c:when>--%>
+<%--        <c:otherwise>--%>
+<%--            <input type="hidden" name="user_id" value="${user_id}"/>--%>
+<%--        </c:otherwise>--%>
+<%--    </c:choose>--%>
 
     <div>
         <th><fmt:message key="sort_by"/></th>

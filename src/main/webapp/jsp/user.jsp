@@ -55,7 +55,7 @@
                 <tr>
                     <td><fmt:message key="is_active"/></td>
                     <td>
-                        <input type="checkbox" name="status" value="TRUE" ${user.active?'checked':""} disabled>
+                        <input class="form-check-input" type="checkbox" name="status" value="TRUE" ${user.active?'checked':""} disabled>
 
                         <div class="text-info fw-bold"><fmt:message
                                 key="${user.active?'is_active':'blocked'}"/></div>

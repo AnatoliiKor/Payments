@@ -1,0 +1,334 @@
+2021-09-10 15:15:50,324 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 15:15:52,533 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 15:15:59,520 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 15:17:25,397 [http-nio-8081-exec-6] INFO  org.anatkor.dao.AccountDao- Account 10000000001 is updated with -35000
+2021-09-10 15:17:25,398 [http-nio-8081-exec-6] INFO  org.anatkor.dao.TransactionDao- Amount 35000 is deducted from the account 10000000001
+2021-09-10 15:17:25,398 [http-nio-8081-exec-6] INFO  org.anatkor.dao.AccountDao- Account 10000000026 is updated with 35000
+2021-09-10 15:17:25,399 [http-nio-8081-exec-6] INFO  org.anatkor.dao.TransactionDao- Account 10000000026 is refilled with amount 35000
+2021-09-10 15:17:25,402 [http-nio-8081-exec-6] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000001 to 10000000026, amount 35000 is added to DB
+2021-09-10 15:17:25,406 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 9
+2021-09-10 15:17:32,991 [http-nio-8081-exec-1] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 15:19:58,363 [http-nio-8081-exec-7] INFO  org.anatkor.dao.AccountDao- Account 10000000028 is updated with -35000
+2021-09-10 15:19:58,364 [http-nio-8081-exec-7] INFO  org.anatkor.dao.TransactionDao- Amount 35000 is deducted from the account 10000000028
+2021-09-10 15:19:58,364 [http-nio-8081-exec-7] INFO  org.anatkor.dao.AccountDao- Account 10000000029 is updated with 35000
+2021-09-10 15:19:58,364 [http-nio-8081-exec-7] INFO  org.anatkor.dao.TransactionDao- Account 10000000029 is refilled with amount 35000
+2021-09-10 15:19:58,366 [http-nio-8081-exec-7] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000028 to 10000000029, amount 35000 is added to DB
+2021-09-10 15:19:58,370 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 9
+2021-09-10 15:20:02,223 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 15:50:59,711 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 15:51:01,881 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 15:51:04,721 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 15:52:22,894 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 15:57:38,406 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:56:56,494 [http-nio-8081-exec-1] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 16:56:59,105 [http-nio-8081-exec-3] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 16:57:00,338 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:57:02,725 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:57:03,445 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:57:03,909 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:57:04,556 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:57:05,021 [http-nio-8081-exec-1] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:57:41,886 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:57:42,485 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:57:42,968 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:57:43,465 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:57:43,902 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:58:02,643 [http-nio-8081-exec-1] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:58:23,649 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:58:37,461 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:58:37,946 [http-nio-8081-exec-1] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:58:38,465 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 16:58:38,958 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:07:41,795 [http-nio-8081-exec-3] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 9
+2021-09-10 17:07:55,777 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for account10000000008
+2021-09-10 17:15:00,105 [http-nio-8081-exec-1] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:15:02,507 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 17:15:03,934 [http-nio-8081-exec-6] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:15:06,837 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:15:07,697 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:15:16,731 [http-nio-8081-exec-1] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:15:28,915 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-09-10 17:15:28,918 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:15:30,966 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-10 17:15:35,621 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested by ADMIN
+2021-09-10 17:17:23,391 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-09-10 17:17:23,396 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:17:25,565 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 17:18:06,600 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-09-10 17:18:06,603 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:18:09,133 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 17:18:12,437 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-09-10 17:18:12,441 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:18:14,396 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-10 17:18:15,822 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:20:51,421 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-09-10 17:20:51,424 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:20:57,203 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.LoginCommand- Client '389999999999' is logged in
+2021-09-10 17:22:19,243 [http-nio-8081-exec-14] INFO  org.anatkor.dao.AccountDao- Account 10000000025 is updated with -20000
+2021-09-10 17:22:19,244 [http-nio-8081-exec-14] INFO  org.anatkor.dao.TransactionDao- Amount 20000 is deducted from the account 10000000025
+2021-09-10 17:22:19,245 [http-nio-8081-exec-14] INFO  org.anatkor.dao.AccountDao- Account 10000000004 is updated with 20000
+2021-09-10 17:22:19,245 [http-nio-8081-exec-14] INFO  org.anatkor.dao.TransactionDao- Account 10000000004 is refilled with amount 20000
+2021-09-10 17:22:19,248 [http-nio-8081-exec-14] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000025 to 10000000004, amount 20000 is added to DB
+2021-09-10 17:22:19,251 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-10 17:22:27,353 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 42
+2021-09-10 17:22:37,393 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.AccountCommand- request to refill account id=49 with amount=500000
+2021-09-10 17:22:37,394 [http-nio-8081-exec-14] INFO  org.anatkor.dao.AccountDao- Account (id=49) is replenished with 500000
+2021-09-10 17:23:28,269 [http-nio-8081-exec-18] INFO  org.anatkor.dao.AccountDao- Account 10000000027 is updated with -35000
+2021-09-10 17:23:28,270 [http-nio-8081-exec-18] INFO  org.anatkor.dao.TransactionDao- Amount 35000 is deducted from the account 10000000027
+2021-09-10 17:23:28,270 [http-nio-8081-exec-18] INFO  org.anatkor.dao.AccountDao- Account 10000000013 is updated with 35000
+2021-09-10 17:23:28,270 [http-nio-8081-exec-18] INFO  org.anatkor.dao.TransactionDao- Account 10000000013 is refilled with amount 35000
+2021-09-10 17:23:28,273 [http-nio-8081-exec-18] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000027 to 10000000013, amount 35000 is added to DB
+2021-09-10 17:23:28,276 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-10 17:24:24,358 [http-nio-8081-exec-14] INFO  org.anatkor.dao.AccountDao- Account 10000000015 not found
+2021-09-10 17:24:47,247 [http-nio-8081-exec-12] INFO  org.anatkor.dao.AccountDao- Account 10000000015 not found
+2021-09-10 17:25:21,193 [http-nio-8081-exec-20] INFO  org.anatkor.dao.AccountDao- Account 10000000027 is updated with -31500
+2021-09-10 17:25:21,193 [http-nio-8081-exec-20] INFO  org.anatkor.dao.TransactionDao- Amount 31500 is deducted from the account 10000000027
+2021-09-10 17:25:21,194 [http-nio-8081-exec-20] INFO  org.anatkor.dao.AccountDao- Account 10000000012 is updated with 31500
+2021-09-10 17:25:21,194 [http-nio-8081-exec-20] INFO  org.anatkor.dao.TransactionDao- Account 10000000012 is refilled with amount 31500
+2021-09-10 17:25:21,198 [http-nio-8081-exec-20] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000027 to 10000000012, amount 31500 is added to DB
+2021-09-10 17:25:21,201 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-10 17:25:26,934 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.LogoutCommand- User 389999999999 is Logged out
+2021-09-10 17:25:26,937 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:25:30,943 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LoginCommand- Client '383333333333' is logged in
+2021-09-10 17:25:53,440 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 13
+2021-09-10 17:26:02,617 [http-nio-8081-exec-20] INFO  org.anatkor.controllers.command.AccountCommand- request to refill account id=36 with amount=1000000
+2021-09-10 17:26:02,620 [http-nio-8081-exec-20] INFO  org.anatkor.dao.AccountDao- Account (id=36) is replenished with 1000000
+2021-09-10 17:27:59,773 [http-nio-8081-exec-17] INFO  org.anatkor.dao.AccountDao- Account 10000000013 is updated with -3829
+2021-09-10 17:27:59,774 [http-nio-8081-exec-17] INFO  org.anatkor.dao.TransactionDao- Amount 3829 is deducted from the account 10000000013
+2021-09-10 17:27:59,774 [http-nio-8081-exec-17] INFO  org.anatkor.dao.AccountDao- Account 10000000018 is updated with 3829
+2021-09-10 17:27:59,774 [http-nio-8081-exec-17] INFO  org.anatkor.dao.TransactionDao- Account 10000000018 is refilled with amount 3829
+2021-09-10 17:27:59,777 [http-nio-8081-exec-17] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000013 to 10000000018, amount 3829 is added to DB
+2021-09-10 17:27:59,780 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 13
+2021-09-10 17:28:11,249 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LogoutCommand- User 383333333333 is Logged out
+2021-09-10 17:28:11,253 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:28:13,297 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-10 17:28:14,873 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:28:31,022 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-09-10 17:28:31,025 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:28:34,535 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.LoginCommand- Client '384444444444' is logged in
+2021-09-10 17:48:16,828 [http-nio-8081-exec-11] INFO  org.anatkor.dao.AccountDao- Account 10000000007 is updated with -30
+2021-09-10 17:48:16,828 [http-nio-8081-exec-11] INFO  org.anatkor.dao.TransactionDao- Amount 30 is deducted from the account 10000000007
+2021-09-10 17:48:16,829 [http-nio-8081-exec-11] INFO  org.anatkor.dao.AccountDao- Account 10000000010 is updated with 30
+2021-09-10 17:48:16,829 [http-nio-8081-exec-11] INFO  org.anatkor.dao.TransactionDao- Account 10000000010 is refilled with amount 30
+2021-09-10 17:48:16,832 [http-nio-8081-exec-11] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000007 to 10000000010, amount 30 is added to DB
+2021-09-10 17:48:16,834 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 14
+2021-09-10 17:48:19,917 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.UserCommand- User 384444444444 profile called
+2021-09-10 17:48:24,822 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 14
+2021-09-10 17:48:33,657 [http-nio-8081-exec-20] INFO  org.anatkor.controllers.command.AccountCommand- request to refill account id=29 with amount=820000
+2021-09-10 17:48:33,658 [http-nio-8081-exec-20] INFO  org.anatkor.dao.AccountDao- Account (id=29) is replenished with 820000
+2021-09-10 17:49:09,166 [http-nio-8081-exec-15] INFO  org.anatkor.dao.AccountDao- Account 10000000007 is updated with -30000
+2021-09-10 17:49:09,166 [http-nio-8081-exec-15] INFO  org.anatkor.dao.TransactionDao- Amount 30000 is deducted from the account 10000000007
+2021-09-10 17:49:09,167 [http-nio-8081-exec-15] INFO  org.anatkor.dao.AccountDao- Account 10000000010 is updated with 30000
+2021-09-10 17:49:09,167 [http-nio-8081-exec-15] INFO  org.anatkor.dao.TransactionDao- Account 10000000010 is refilled with amount 30000
+2021-09-10 17:49:09,169 [http-nio-8081-exec-15] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000007 to 10000000010, amount 30000 is added to DB
+2021-09-10 17:49:09,172 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 14
+2021-09-10 17:49:13,208 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.LogoutCommand- User 384444444444 is Logged out
+2021-09-10 17:49:13,211 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:49:15,275 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-10 17:49:23,364 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:49:32,318 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-09-10 17:49:32,321 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:49:37,822 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LoginCommand- Client '385555555555' is logged in
+2021-09-10 17:49:45,388 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LogoutCommand- User 385555555555 is Logged out
+2021-09-10 17:49:45,391 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:49:48,326 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 17:50:30,198 [http-nio-8081-exec-19] INFO  org.anatkor.dao.AccountDao- Account 10000000028 is updated with -5000
+2021-09-10 17:50:30,198 [http-nio-8081-exec-19] INFO  org.anatkor.dao.TransactionDao- Amount 5000 is deducted from the account 10000000028
+2021-09-10 17:50:30,198 [http-nio-8081-exec-19] INFO  org.anatkor.dao.AccountDao- Account 10000000010 is updated with 5000
+2021-09-10 17:50:30,198 [http-nio-8081-exec-19] INFO  org.anatkor.dao.TransactionDao- Account 10000000010 is refilled with amount 5000
+2021-09-10 17:50:30,199 [http-nio-8081-exec-19] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000028 to 10000000010, amount 5000 is added to DB
+2021-09-10 17:50:30,202 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 9
+2021-09-10 17:50:32,853 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-09-10 17:50:32,855 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:50:35,616 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-10 17:50:37,371 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:52:53,386 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-09-10 17:52:53,390 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:52:55,875 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 17:52:56,951 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:53:57,620 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:53:58,352 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:53:59,836 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:54:00,444 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:54:01,092 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:54:01,645 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:54:02,292 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:54:02,836 [http-nio-8081-exec-20] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:54:03,905 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:54:04,364 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:54:04,828 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:54:05,249 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:55:55,446 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:57:19,781 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 17:58:29,014 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-09-10 17:58:29,017 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 17:58:31,102 [http-nio-8081-exec-11] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-10 17:58:32,374 [http-nio-8081-exec-20] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:59:22,390 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:59:23,724 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:59:25,408 [http-nio-8081-exec-20] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:59:26,355 [http-nio-8081-exec-19] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:59:28,121 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:59:29,428 [http-nio-8081-exec-14] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 17:59:30,441 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:16:06,577 [http-nio-8081-exec-18] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 18:16:09,389 [http-nio-8081-exec-15] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-10 18:16:10,904 [http-nio-8081-exec-16] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:16:12,747 [http-nio-8081-exec-17] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:16:14,079 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:16:24,872 [http-nio-8081-exec-13] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:17:08,894 [http-nio-8081-exec-12] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-09-10 18:17:08,897 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 18:17:11,732 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 18:17:14,901 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 18:18:20,219 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-09-10 18:18:20,223 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 18:18:23,068 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.LoginCommand- Client '389999999999' is logged in
+2021-09-10 18:18:24,394 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:18:58,712 [http-nio-8081-exec-24] INFO  org.anatkor.dao.AccountDao- Account 10000000027 is updated with -15000
+2021-09-10 18:18:58,712 [http-nio-8081-exec-24] INFO  org.anatkor.dao.TransactionDao- Amount 15000 is deducted from the account 10000000027
+2021-09-10 18:18:58,712 [http-nio-8081-exec-24] INFO  org.anatkor.dao.AccountDao- Account 10000000001 is updated with 15000
+2021-09-10 18:18:58,713 [http-nio-8081-exec-24] INFO  org.anatkor.dao.TransactionDao- Account 10000000001 is refilled with amount 15000
+2021-09-10 18:18:58,716 [http-nio-8081-exec-24] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000027 to 10000000001, amount 15000 is added to DB
+2021-09-10 18:18:58,719 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-10 18:19:27,565 [http-nio-8081-exec-28] INFO  org.anatkor.dao.AccountDao- Account 10000000026 is updated with -3050
+2021-09-10 18:19:27,565 [http-nio-8081-exec-28] INFO  org.anatkor.dao.TransactionDao- Amount 3050 is deducted from the account 10000000026
+2021-09-10 18:19:27,566 [http-nio-8081-exec-28] INFO  org.anatkor.dao.AccountDao- Account 10000000001 is updated with 3050
+2021-09-10 18:19:27,566 [http-nio-8081-exec-28] INFO  org.anatkor.dao.TransactionDao- Account 10000000001 is refilled with amount 3050
+2021-09-10 18:19:27,567 [http-nio-8081-exec-28] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000026 to 10000000001, amount 3050 is added to DB
+2021-09-10 18:19:27,570 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-10 18:19:30,634 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:19:45,308 [http-nio-8081-exec-22] INFO  org.anatkor.dao.AccountDao- Account 10000000027 is updated with -16000
+2021-09-10 18:19:45,309 [http-nio-8081-exec-22] INFO  org.anatkor.dao.TransactionDao- Amount 16000 is deducted from the account 10000000027
+2021-09-10 18:19:45,309 [http-nio-8081-exec-22] INFO  org.anatkor.dao.AccountDao- Account 10000000001 is updated with 16000
+2021-09-10 18:19:45,309 [http-nio-8081-exec-22] INFO  org.anatkor.dao.TransactionDao- Account 10000000001 is refilled with amount 16000
+2021-09-10 18:19:45,310 [http-nio-8081-exec-22] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000027 to 10000000001, amount 16000 is added to DB
+2021-09-10 18:19:45,313 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-10 18:19:58,622 [http-nio-8081-exec-22] INFO  org.anatkor.dao.AccountDao- Account 10000000026 is updated with -30000
+2021-09-10 18:19:58,622 [http-nio-8081-exec-22] INFO  org.anatkor.dao.TransactionDao- Amount 30000 is deducted from the account 10000000026
+2021-09-10 18:19:58,622 [http-nio-8081-exec-22] INFO  org.anatkor.dao.AccountDao- Account 10000000001 is updated with 30000
+2021-09-10 18:19:58,622 [http-nio-8081-exec-22] INFO  org.anatkor.dao.TransactionDao- Account 10000000001 is refilled with amount 30000
+2021-09-10 18:19:58,623 [http-nio-8081-exec-22] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000026 to 10000000001, amount 30000 is added to DB
+2021-09-10 18:19:58,626 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-10 18:20:10,867 [http-nio-8081-exec-22] INFO  org.anatkor.dao.AccountDao- Account 10000000027 is updated with -86000
+2021-09-10 18:20:10,867 [http-nio-8081-exec-22] INFO  org.anatkor.dao.TransactionDao- Amount 86000 is deducted from the account 10000000027
+2021-09-10 18:20:10,867 [http-nio-8081-exec-22] INFO  org.anatkor.dao.AccountDao- Account 10000000001 is updated with 86000
+2021-09-10 18:20:10,867 [http-nio-8081-exec-22] INFO  org.anatkor.dao.TransactionDao- Account 10000000001 is refilled with amount 86000
+2021-09-10 18:20:10,870 [http-nio-8081-exec-22] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000027 to 10000000001, amount 86000 is added to DB
+2021-09-10 18:20:10,872 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-10 18:20:15,100 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 42
+2021-09-10 18:20:18,488 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:20:37,484 [http-nio-8081-exec-21] INFO  org.anatkor.dao.AccountDao- Account 10000000027 is updated with -50000
+2021-09-10 18:20:37,484 [http-nio-8081-exec-21] INFO  org.anatkor.dao.TransactionDao- Amount 50000 is deducted from the account 10000000027
+2021-09-10 18:20:37,484 [http-nio-8081-exec-21] INFO  org.anatkor.dao.AccountDao- Account 10000000001 is updated with 50000
+2021-09-10 18:20:37,485 [http-nio-8081-exec-21] INFO  org.anatkor.dao.TransactionDao- Account 10000000001 is refilled with amount 50000
+2021-09-10 18:20:37,487 [http-nio-8081-exec-21] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000027 to 10000000001, amount 50000 is added to DB
+2021-09-10 18:20:37,489 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-10 18:21:04,560 [http-nio-8081-exec-25] INFO  org.anatkor.dao.AccountDao- Account 10000000027 is updated with -120000
+2021-09-10 18:21:04,561 [http-nio-8081-exec-25] INFO  org.anatkor.dao.TransactionDao- Amount 120000 is deducted from the account 10000000027
+2021-09-10 18:21:04,561 [http-nio-8081-exec-25] INFO  org.anatkor.dao.AccountDao- Account 10000000001 is updated with 120000
+2021-09-10 18:21:04,561 [http-nio-8081-exec-25] INFO  org.anatkor.dao.TransactionDao- Account 10000000001 is refilled with amount 120000
+2021-09-10 18:21:04,561 [http-nio-8081-exec-25] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000027 to 10000000001, amount 120000 is added to DB
+2021-09-10 18:21:04,564 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.PaymentsCommand- payments list requested for user with id= 42
+2021-09-10 18:21:07,944 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:26:04,268 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:27:24,404 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:27:25,611 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:27:31,876 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:27:35,225 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:28:24,678 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:28:30,407 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:28:43,069 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.AccountsCommand- account list requested for user with id= 42
+2021-09-10 18:30:05,042 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:31:37,671 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:31:38,919 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:31:42,181 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:31:43,457 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:31:44,882 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:31:51,798 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:31:53,515 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:31:54,749 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:31:55,813 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:32:01,917 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:32:03,307 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:32:04,770 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:32:06,324 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:43:50,129 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:43:51,488 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:43:55,221 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-10 18:44:01,459 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.LogoutCommand- User 389999999999 is Logged out
+2021-09-10 18:44:01,462 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 18:44:06,342 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-10 18:44:07,777 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:44:08,878 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:44:14,082 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:44:15,205 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:46:25,479 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:46:37,847 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:50:23,162 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:50:26,399 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:50:27,510 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:52:05,192 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:52:59,249 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-09-10 18:52:59,253 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 18:53:02,259 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 18:53:04,003 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 18:53:08,678 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 18:53:32,090 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 18:53:55,451 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 18:54:37,387 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-09-10 18:54:37,390 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 18:54:39,892 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-10 18:54:41,272 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:54:42,510 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 18:54:45,254 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested by ADMIN
+2021-09-10 19:17:28,361 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-09-10 19:17:28,365 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-10 19:17:31,168 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-10 19:17:34,737 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:17:39,917 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:18:00,772 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:21:16,072 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:22:03,266 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:22:34,164 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:25:40,551 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:25:43,492 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:25:48,618 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:26:15,204 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:26:52,528 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:26:55,017 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:26:57,616 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:26:59,936 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:27:03,882 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:27:47,349 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:28:30,571 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:29:23,050 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:29:49,345 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:31:48,099 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:32:09,803 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:32:13,914 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:32:16,448 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:32:19,212 [http-nio-8081-exec-29] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:32:29,789 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:32:32,221 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:32:48,024 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:33:24,789 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:33:27,919 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:33:30,516 [http-nio-8081-exec-27] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:33:33,207 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:33:33,340 [http-nio-8081-exec-23] DEBUG org.anatkor.dao.TransactionDao- SQLException during Query SELECT t.id, payer, receiver, t.registered, destination, amount, t.currency FROM transaction t INNER JOIN account ON payer=number WHERE user_id=9 ORDER BY account_number DESC processing from class org.anatkor.dao.Utils.
+2021-09-10 19:33:36,980 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:33:39,408 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:33:44,516 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:33:44,520 [http-nio-8081-exec-25] DEBUG org.anatkor.dao.TransactionDao- SQLException during Query SELECT t.id, payer, receiver, t.registered, destination, amount, t.currency FROM transaction t INNER JOIN account ON payer=number WHERE user_id=9 ORDER BY account_number DESC processing from class org.anatkor.dao.Utils.
+2021-09-10 19:34:12,968 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:34:17,156 [http-nio-8081-exec-24] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:34:20,317 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:34:22,889 [http-nio-8081-exec-25] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:34:29,690 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:34:32,389 [http-nio-8081-exec-23] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:34:36,242 [http-nio-8081-exec-28] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:34:40,706 [http-nio-8081-exec-22] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:34:43,460 [http-nio-8081-exec-26] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:34:44,037 [http-nio-8081-exec-30] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-10 19:34:44,789 [http-nio-8081-exec-21] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9

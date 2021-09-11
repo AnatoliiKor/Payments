@@ -11,7 +11,7 @@
 
     <%@include file="parts/messages.jsp" %>
 
-    <%@include file="payment/payment_sort.jsp" %>
+    <%@include file="payment/transaction_sort.jsp" %>
 
     <c:choose>
     <c:when test="${not empty payments}">

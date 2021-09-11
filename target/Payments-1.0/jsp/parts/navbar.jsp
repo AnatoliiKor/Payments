@@ -14,7 +14,7 @@
                             <a class="btn btn-outline-primary mx-1" href="/admin"><fmt:message key="admin_nav"/></a>
                             <a class="btn btn-outline-primary mx-1" href="/admin/users"><fmt:message key="users_list"/></a>
                             <a class="btn btn-outline-primary mx-1" href="/admin/accounts"><fmt:message key="accounts"/></a>
-                            <a class="btn btn-outline-primary mx-1" href="/admin/payments"><fmt:message key="payments"/></a>
+                            <a class="btn btn-outline-primary mx-1" href="/admin/transactions"><fmt:message key="payments"/></a>
                         </c:when>
                         <c:otherwise>
                             <li class="nav-item">
