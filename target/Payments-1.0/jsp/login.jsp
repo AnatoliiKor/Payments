@@ -30,6 +30,8 @@
                 <a class="btn btn-outline-secondary" href="/logout" role="button"><fmt:message key="logout"/>
                 </a>
             </c:when>
+
+
             <c:otherwise>
                 <h1><fmt:message key="login_in"/></h1><br/>
                 <form method="post" action="${pageContext.request.contextPath}/login">

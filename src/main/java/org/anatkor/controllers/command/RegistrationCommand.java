@@ -13,7 +13,6 @@ class RegistrationCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {
-        /*TODO if all req.getParameter !=null???? validation*/
         String lastName = req.getParameter("last_name");
         String name = req.getParameter("name");
         String middleName = req.getParameter("middle_name");
