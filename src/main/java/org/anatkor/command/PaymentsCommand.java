@@ -1,10 +1,7 @@
-package org.anatkor.controllers.command;
+package org.anatkor.command;
 
-import org.anatkor.model.Account;
 import org.anatkor.model.Payment;
-import org.anatkor.model.Transaction;
 import org.anatkor.model.enums.Role;
-import org.anatkor.services.AccountService;
 import org.anatkor.services.TransactionService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

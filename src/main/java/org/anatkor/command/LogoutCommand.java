@@ -1,4 +1,4 @@
-package org.anatkor.controllers.command;
+package org.anatkor.command;
 
 import org.anatkor.model.User;
 import org.apache.logging.log4j.LogManager;

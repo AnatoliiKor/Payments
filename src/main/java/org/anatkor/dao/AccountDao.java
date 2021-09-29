@@ -97,6 +97,7 @@ public class AccountDao {
 
         try {
             con = ConnectionPool.getConnection();
+            assert con != null;
             statement = con.createStatement();
             rs = statement.executeQuery(sql);
             while (rs.next()) {

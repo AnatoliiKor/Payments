@@ -20,8 +20,8 @@ public class AccountService {
         return accountDao.newAccount(account);
     }
 
-    public List<Account> findAllAccountsByUserIdSorted(Long user_id, String sortBy, String order) {
-        return accountDao.findAllAccountsByUserIdSorted(user_id, sortBy, order);
+    public List<Account> findAllAccountsByUserIdSorted(Long userId, String sortBy, String order) {
+        return accountDao.findAllAccountsByUserIdSorted(userId, sortBy, order);
     }
 
     public List<Account> findAllAccountsByUserId(Long user_id) {

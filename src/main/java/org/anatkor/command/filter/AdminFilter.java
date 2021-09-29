@@ -1,4 +1,4 @@
-package org.anatkor.controllers.command.filter;
+package org.anatkor.command.filter;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,7 +16,7 @@ public class AdminFilter implements Filter {
     final static Logger log = LogManager.getLogger(AdminFilter.class);
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
     }
 
     @Override

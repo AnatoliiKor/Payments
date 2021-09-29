@@ -1,4 +1,4 @@
-package org.anatkor.controllers.command.filter;
+package org.anatkor.command.filter;
 
 import org.anatkor.model.User;
 import org.anatkor.model.enums.Role;
@@ -15,7 +15,7 @@ import java.util.List;
 public class UserAuthFilter implements Filter {
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
     }
 
     @Override

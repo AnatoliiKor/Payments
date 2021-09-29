@@ -1,6 +1,5 @@
-package org.anatkor.controllers.command;
+package org.anatkor.command;
 
-import org.anatkor.dao.TransactionDao;
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
 import org.anatkor.model.Payment;
