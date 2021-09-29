@@ -1,9 +1,0 @@
-2021-09-02 20:32:58,955 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletMain- forward to=/jsp/login.jsp
-2021-09-02 20:33:00,611 [http-nio-8081-exec-5] DEBUG org.anatkor.controllers.command.ServletMain- redirect to=/
-2021-09-02 20:33:00,733 [http-nio-8081-exec-7] DEBUG org.anatkor.controllers.command.ServletMain- forward to=/jsp/login.jsp
-2021-09-02 20:33:01,078 [http-nio-8081-exec-8] DEBUG org.anatkor.controllers.command.ServletMain- redirect to=/
-2021-09-02 20:33:01,198 [http-nio-8081-exec-10] DEBUG org.anatkor.controllers.command.ServletMain- forward to=/jsp/login.jsp
-2021-09-02 20:33:01,486 [http-nio-8081-exec-1] DEBUG org.anatkor.controllers.command.ServletMain- redirect to=/
-2021-09-02 20:33:01,603 [http-nio-8081-exec-3] DEBUG org.anatkor.controllers.command.ServletMain- forward to=/jsp/login.jsp
-2021-09-02 20:33:01,869 [http-nio-8081-exec-4] DEBUG org.anatkor.controllers.command.ServletMain- redirect to=/
-2021-09-02 20:33:01,986 [http-nio-8081-exec-6] DEBUG org.anatkor.controllers.command.ServletMain- forward to=/jsp/login.jsp

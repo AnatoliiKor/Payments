@@ -37,8 +37,8 @@ public class AccountService {
     }
 
     public Currency findCurrencyByAccountNumber(long accountNumber) throws DBException {
-            return accountDao.findByNumber(accountNumber).getCurrency();
-        }
+        return accountDao.findByNumber(accountNumber).getCurrency();
+    }
 
     public List<Account> findAllAccountsToDo() {
         return accountDao.findAllAccountsToDo();

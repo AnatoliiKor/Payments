@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet("/")
-public class ServletMain extends HttpServlet{
+public class ServletMain extends HttpServlet {
     private Map<String, Command> commands = new HashMap<>();
     private static final Logger log = LogManager.getLogger(ServletMain.class);
 
@@ -50,7 +50,7 @@ public class ServletMain extends HttpServlet{
 
         String path = req.getRequestURI();
         path = path.replaceAll(".*(/wallet)?(/admin)?/", "");
-        Command command = commands.getOrDefault(path, (r)->"/jsp/login.jsp");
+        Command command = commands.getOrDefault(path, (r) -> "/jsp/login.jsp");
         String urlPage = command.execute(req);
         if (urlPage.contains("redirect:")) {
 //            log.debug("redirect to=" + urlPage.replaceAll("redirect:", ""));

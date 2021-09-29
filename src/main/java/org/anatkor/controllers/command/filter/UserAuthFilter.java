@@ -45,7 +45,7 @@ public class UserAuthFilter implements Filter {
                 Long account_number = Long.parseLong(req.getParameter("account_number"));
                 List<Long> userAuthAccountNumbers = userAuth.getAccountNumbers();
                 boolean permission = false;
-                for (long number: userAuthAccountNumbers) {
+                for (long number : userAuthAccountNumbers) {
                     if (number == account_number) {
                         permission = true;
                     }

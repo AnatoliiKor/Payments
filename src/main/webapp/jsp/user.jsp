@@ -55,7 +55,8 @@
                 <tr>
                     <td><fmt:message key="is_active"/></td>
                     <td>
-                        <input class="form-check-input" type="checkbox" name="status" value="TRUE" ${user.active?'checked':""} disabled>
+                        <input class="form-check-input" type="checkbox" name="status"
+                               value="TRUE" ${user.active?'checked':""} disabled>
 
                         <div class="text-info fw-bold"><fmt:message
                                 key="${user.active?'is_active':'blocked'}"/></div>
@@ -80,9 +81,11 @@
                     </td>
 
                 </tr>
-                <tr><a class="btn btn-outline-primary m-2" href="${pageContext.request.contextPath}/wallet/accounts?user_id=${user.id}"><fmt:message
+                <tr><a class="btn btn-outline-primary m-2"
+                       href="${pageContext.request.contextPath}/wallet/accounts?user_id=${user.id}"><fmt:message
                         key="accounts"/></tr>
-                <tr><a class="btn btn-outline-success m-2" href="${pageContext.request.contextPath}/wallet/transactions?user_id=${user.id}&account_type=payer"><fmt:message
+                <tr><a class="btn btn-outline-success m-2"
+                       href="${pageContext.request.contextPath}/wallet/transactions?user_id=${user.id}&account_type=payer"><fmt:message
                         key="payments"/></a></tr>
             </c:if>
             </tbody>

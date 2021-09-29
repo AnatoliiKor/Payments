@@ -1,6 +1,6 @@
 package org.anatkor.model;
 
-public class Payment extends Transaction{
+public class Payment extends Transaction {
 
     private String receiverFullName;
     private String payerAccountName;

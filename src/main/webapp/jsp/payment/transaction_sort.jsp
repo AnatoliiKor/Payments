@@ -1,6 +1,7 @@
 <form method="get" action="/wallet/transactions">
     <input type="hidden" name="account_type" value="${account_type}"/>
-    <c:if test="${not empty account_number}"><input type="hidden" name="account_number" value="${account_number}"/></c:if>
+    <c:if test="${not empty account_number}"><input type="hidden" name="account_number"
+                                                    value="${account_number}"/></c:if>
     <c:if test="${not empty user_id}"><input type="hidden" name="user_id" value="${user_id}"/></c:if>
 
     <div>

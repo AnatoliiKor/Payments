@@ -1,8 +1,0 @@
-2021-08-20 17:11:52,705 [http-nio-8081-exec-13] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:21:36,636 [http-nio-8081-exec-12] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-20 17:22:28,589 [http-nio-8081-exec-15] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:22:28,636 [http-nio-8081-exec-18] DEBUG org.anatkor.servlets.AdminServlet- Admin servlet called
-2021-08-20 17:22:47,671 [http-nio-8081-exec-11] INFO  org.anatkor.servlets.LogoutServlet- User Петро Logout
-2021-08-20 17:22:50,329 [http-nio-8081-exec-12] INFO  org.anatkor.servlets.LoginServlet- User servlet called
-2021-08-20 17:24:13,937 [http-nio-8081-exec-17] INFO  org.anatkor.servlets.LogoutServlet- User Semen Logout
-2021-08-20 17:24:17,326 [http-nio-8081-exec-12] INFO  org.anatkor.servlets.LoginServlet- User servlet called

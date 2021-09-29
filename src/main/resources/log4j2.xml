@@ -3,7 +3,7 @@
 
     <Properties>
         <Property name="logdir">/JAVA/Servlets/Payments/logs</Property>
-<!--   To avoid double logging of exceptions to the servlet context, you must use %ex{none} in your PatternLayout as shown in the example. The exception will be omitted from the message text but it is passed to the servlet context as the actual Throwable object.     -->
+        <!--   To avoid double logging of exceptions to the servlet context, you must use %ex{none} in your PatternLayout as shown in the example. The exception will be omitted from the message text but it is passed to the servlet context as the actual Throwable object.     -->
         <Property name="layout">%d [%t] %-5p %c- %m%n%ex{none}</Property>
     </Properties>
 
@@ -19,8 +19,8 @@
                      filePattern="${logdir}/localhost.%d{yyyy-MM-dd}-%i.log">
             <PatternLayout pattern="${layout}"/>
             <Policies>
-<!--                <TimeBasedTriggeringPolicy/>-->
-                <OnStartupTriggeringPolicy />
+                <!--                <TimeBasedTriggeringPolicy/>-->
+                <OnStartupTriggeringPolicy/>
                 <SizeBasedTriggeringPolicy size="1 MB"/>
             </Policies>
             <DefaultRolloverStrategy max="10"/>
@@ -31,8 +31,8 @@
     <Loggers>
 
         <Root level="error">
-            <AppenderRef ref="Console" />
-            <AppenderRef ref="LOCALHOST" />
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="LOCALHOST"/>
         </Root>
 
         <Logger name="org.anatkor"

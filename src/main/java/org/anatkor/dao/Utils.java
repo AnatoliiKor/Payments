@@ -12,7 +12,7 @@ import java.sql.*;
 import java.util.Properties;
 
 public class Utils {
-//    static private final String driver = "org.postgresql.Driver";
+    //    static private final String driver = "org.postgresql.Driver";
     private static final Logger log = LogManager.getLogger(Utils.class);
 
 //    public static Connection getConnection() {

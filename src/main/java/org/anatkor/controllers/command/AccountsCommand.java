@@ -49,7 +49,7 @@ class AccountsCommand implements Command {
         }
 
         List<Account> accounts = accountService.findAllAccountsByUserIdSorted(user_id, sortBy, order);
-        int pgMax = 1 + accounts.size()/10;
+        int pgMax = 1 + accounts.size() / 10;
         req.setAttribute("pg_max", pgMax);
         req.setAttribute("user_id", user_id);
         req.setAttribute("accounts", accounts);

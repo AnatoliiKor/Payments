@@ -30,62 +30,62 @@ public class User {
             newUser = new User();
         }
 
-        public UserBuilder withId(Long id){
+        public UserBuilder withId(Long id) {
             newUser.id = id;
             return this;
         }
 
-        public UserBuilder withLastName(String lastName){
+        public UserBuilder withLastName(String lastName) {
             newUser.lastName = lastName;
             return this;
         }
 
-        public UserBuilder withName(String name){
+        public UserBuilder withName(String name) {
             newUser.name = name;
             return this;
         }
 
-        public UserBuilder withMiddleName(String middleName){
+        public UserBuilder withMiddleName(String middleName) {
             newUser.middleName = middleName;
             return this;
         }
 
-        public UserBuilder withPassword(String password){
+        public UserBuilder withPassword(String password) {
             newUser.password = password;
             return this;
         }
 
-        public UserBuilder withPhoneNumber(long phoneNumber){
+        public UserBuilder withPhoneNumber(long phoneNumber) {
             newUser.phoneNumber = phoneNumber;
             return this;
         }
 
-        public UserBuilder withEmail(String email){
+        public UserBuilder withEmail(String email) {
             newUser.email = email;
             return this;
         }
 
-        public UserBuilder withRegistrationDateTime(LocalDateTime registrationDateTime){
+        public UserBuilder withRegistrationDateTime(LocalDateTime registrationDateTime) {
             newUser.registered = registrationDateTime;
             return this;
         }
 
-        public UserBuilder withActive(Boolean active){
+        public UserBuilder withActive(Boolean active) {
             newUser.active = active;
             return this;
         }
 
-        public UserBuilder withRole(Role role){
+        public UserBuilder withRole(Role role) {
             newUser.role = role;
             return this;
         }
 
-        public UserBuilder withAccounts(List<Long> accountNumbers){
+        public UserBuilder withAccounts(List<Long> accountNumbers) {
             newUser.accountNumbers = accountNumbers;
             return this;
         }
 
-        public User build(){
+        public User build() {
             return newUser;
         }
 

@@ -12,9 +12,12 @@
                     <c:choose>
                         <c:when test="${role.equals('ADMIN')}">
                             <a class="btn btn-outline-primary mx-1" href="/admin"><fmt:message key="admin_nav"/></a>
-                            <a class="btn btn-outline-primary mx-1" href="/admin/users"><fmt:message key="users_list"/></a>
-                            <a class="btn btn-outline-primary mx-1" href="/admin/accounts"><fmt:message key="accounts"/></a>
-                            <a class="btn btn-outline-primary mx-1" href="/admin/transactions"><fmt:message key="payments"/></a>
+                            <a class="btn btn-outline-primary mx-1" href="/admin/users"><fmt:message
+                                    key="users_list"/></a>
+                            <a class="btn btn-outline-primary mx-1" href="/admin/accounts"><fmt:message
+                                    key="accounts"/></a>
+                            <a class="btn btn-outline-primary mx-1" href="/admin/transactions"><fmt:message
+                                    key="payments"/></a>
                         </c:when>
                         <c:otherwise>
                             <li class="nav-item">
@@ -26,16 +29,19 @@
                 </ul>
             </c:if>
 
-            <a class="btn btn-outline-primary " href="${pageContext.request.contextPath}/lang?language=uk" role="button">
+            <a class="btn btn-outline-primary " href="${pageContext.request.contextPath}/lang?language=uk"
+               role="button">
                 <fmt:message key="uk_button"/></a>
-            <a class="btn btn-outline-warning mx-1" href="${pageContext.request.contextPath}/lang?language=en" role="button">
+            <a class="btn btn-outline-warning mx-1" href="${pageContext.request.contextPath}/lang?language=en"
+               role="button">
                 <fmt:message key="en_button"/></a>
 
 
             <c:choose>
                 <c:when test="${not empty user_auth}">
-                    <a class="btn btn-outline-secondary mx-2" href="${pageContext.request.contextPath}/wallet/user" role="button">
-                            <fmt:message key="profile_nav"/>
+                    <a class="btn btn-outline-secondary mx-2" href="${pageContext.request.contextPath}/wallet/user"
+                       role="button">
+                        <fmt:message key="profile_nav"/>
                     </a>
                     <a class="btn btn-outline-secondary" href="/logout" role="button">
                             ${user_auth.lastName}.<fmt:message key="logout"/>

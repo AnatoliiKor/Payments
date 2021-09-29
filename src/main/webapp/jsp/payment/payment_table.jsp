@@ -7,7 +7,7 @@
     <tr>
         <td><fmt:message key="receiver"/></td>
         <td>
-                ${payment.receiverFullName}
+            ${payment.receiverFullName}
         </td>
     </tr>
     <tr>

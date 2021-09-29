@@ -1,4 +1,4 @@
-<%@include file="parts/header.jsp"%>
+<%@include file="parts/header.jsp" %>
 <%@include file="parts/navbar.jsp" %>
 
 <html>
@@ -69,7 +69,8 @@
             </c:when>
             <c:otherwise>
                 <h4>
-                    <div class="text-success fw-bold mt-5"><fmt:message key="no_accounts"/> <fmt:message key="to_do"/></div>
+                    <div class="text-success fw-bold mt-5"><fmt:message key="no_accounts"/> <fmt:message
+                            key="to_do"/></div>
                 </h4>
             </c:otherwise>
             </c:choose>

@@ -22,7 +22,7 @@ class UsersCommand implements Command {
             req.setAttribute("pg", Integer.parseInt(page));
         }
         List<User> users = userService.findAll();
-        int pgMax = 1 + users.size()/10;
+        int pgMax = 1 + users.size() / 10;
         req.setAttribute("pg_max", pgMax);
         req.setAttribute("users", users);
         return "/jsp/users_list.jsp";

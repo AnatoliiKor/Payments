@@ -18,10 +18,10 @@ public class Account {
     private boolean active;
     private Long userId;
     /*
-    * if 0 - nothing to do
-    * if 1 - unblock request
-    * if 2 - block request
-    * */
+     * if 0 - nothing to do
+     * if 1 - unblock request
+     * if 2 - block request
+     * */
     private int action;
     private long cardNumber;
     private List<Payment> payment;

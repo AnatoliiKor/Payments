@@ -62,7 +62,7 @@ class PaymentCommand implements Command {
                 }
                 Currency currency;
                 try {
-                    currency  = accountService.findCurrencyByAccountNumber(receiver);
+                    currency = accountService.findCurrencyByAccountNumber(receiver);
                 } catch (DBException e) {
                     return "redirect:wallet/payment?warn=account_not_found";
                 }

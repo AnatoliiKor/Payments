@@ -45,7 +45,7 @@ public class AccountDao {
             rs = statement.executeQuery(FIND_MAX_ACCOUNT_NUMBER);
             if (rs.next()) {
                 long number = rs.getLong("max");
-                rs=null;
+                rs = null;
                 number++;
                 prepStatement = con.prepareStatement(ADD_ACCOUNT, Statement.RETURN_GENERATED_KEYS);
                 int k = 1;
@@ -59,7 +59,7 @@ public class AccountDao {
                     if (rs.next()) {
                         generatedId = rs.getLong(1);
                         account.setId(generatedId);
-                        prepStatement=null;
+                        prepStatement = null;
                         prepStatement = con.prepareStatement(ADD_CREDIT_CARD_ACCOUNT);
                         prepStatement.setLong(1, generatedId);
                         result = (1 == prepStatement.executeUpdate());
@@ -76,8 +76,7 @@ public class AccountDao {
             } catch (SQLException throwables) {
                 log.debug("SQLException during rollback Add account processing {}. {}", Utils.class, throwables.getMessage());
             }
-        }
-        finally {
+        } finally {
             Utils.close(rs);
             Utils.close(prepStatement);
             Utils.close(con);
@@ -91,7 +90,7 @@ public class AccountDao {
         Statement statement = null;
         ResultSet rs = null;
         String sqlId = "";
-        if (id>0) {
+        if (id > 0) {
             sqlId = " WHERE user_id=" + id;
         }
         String sql = "SELECT * FROM account" + sqlId + " ORDER BY " + sortBy + " " + order;
@@ -164,7 +163,6 @@ public class AccountDao {
     }
 
 
-
     public Account findById(Long id) {
         Connection con = null;
         PreparedStatement preparedStatement = null;
@@ -220,7 +218,7 @@ public class AccountDao {
 
     public List<Account> findAllAccountsToDo() {
         Connection con = null;
-        Statement statement=null;
+        Statement statement = null;
         ResultSet rs = null;
         try {
             con = ConnectionPool.getConnection();

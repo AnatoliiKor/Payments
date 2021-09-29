@@ -17,10 +17,10 @@ public class MessagesFilter implements Filter {
                          FilterChain chain) throws IOException, ServletException {
 
         HttpServletRequest req = (HttpServletRequest) request;
-        if (req.getParameter("message")!=null) {
+        if (req.getParameter("message") != null) {
             req.setAttribute("message", req.getParameter("message"));
         }
-        if (req.getParameter("warn")!=null) {
+        if (req.getParameter("warn") != null) {
             req.setAttribute("warn", req.getParameter("warn"));
         }
         chain.doFilter(req, response);

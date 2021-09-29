@@ -1,3 +1,0 @@
-2021-08-19 14:23:38,920 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.servlets.BikesListServlet- Bike servlet called
-2021-08-19 14:23:38,930 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection try
-2021-08-19 14:23:38,934 [http-nio-8081-exec-5] DEBUG org.anatkor.dao.Utils- connection created succesfully
