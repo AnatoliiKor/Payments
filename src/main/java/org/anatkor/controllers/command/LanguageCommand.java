@@ -8,8 +8,8 @@ import javax.servlet.http.HttpSession;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-class Language implements Command {
-    private static final Logger log = LogManager.getLogger(Language.class);
+class LanguageCommand implements Command {
+    private static final Logger log = LogManager.getLogger(LanguageCommand.class);
 
     @Override
     public String execute(HttpServletRequest request) {

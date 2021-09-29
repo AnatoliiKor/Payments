@@ -31,17 +31,23 @@ class AccountCommand implements Command {
 
             if ("refill".equals(action)) {
                 Long account_id = Long.parseLong(req.getParameter("id_to_do"));
-                int amount = (int) (100*Double.parseDouble(req.getParameter("amount")));
-                log.info("request to refill account id={} with amount={}", account_id, amount);
-                if (amount>0 && accountService.updateAccountBalanceById(account_id, amount)) {
-                    return "redirect:account?message=balance_refilled&id=" + account_id;
-                } else return "redirect:account?warn=balance_not_refilled&id=" + account_id;
+                try {
+                    int amount = (int) (100 * Double.parseDouble(req.getParameter("amount")));
+                    log.info("request to refill account id={} with amount={}", account_id, amount);
+                    if (amount > 0 && accountService.updateAccountBalanceById(account_id, amount)) {
+                        return "redirect:account?message=balance_refilled&id=" + account_id;
+                    } else return "redirect:account?warn=balance_not_refilled&id=" + account_id;
+                } catch (NumberFormatException e) {
+                    log.debug("Wrong amount format {}", e.getMessage());
+                }
+
+
             }
 
             if ("active".equals(action)) {
                 Boolean accountActive = Boolean.parseBoolean(req.getParameter("is_active"));
                 Long account_id = Long.parseLong(req.getParameter("id_to_do"));
-                if (accountService.updateAccountActiveById (account_id, accountActive)) {
+                if (accountService.updateAccountActiveById(account_id, accountActive)) {
                     return "redirect:admin?message=updated";
                 } else return "redirect:admin?warn=not_updated";
             }
@@ -49,7 +55,7 @@ class AccountCommand implements Command {
             if ("action".equals(action)) {
                 int accountAction = Integer.parseInt(req.getParameter("to_do"));
                 Long account_id = Long.parseLong(req.getParameter("id_to_do"));
-                if (accountService.updateAccountActionById (account_id, accountAction)) {
+                if (accountService.updateAccountActionById(account_id, accountAction)) {
                     return "redirect:account?message=request_sent&id=" + account_id;
                 } else return "redirect:account?warn=request_not_sent&id=" + account_id;
             }

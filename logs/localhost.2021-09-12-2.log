@@ -1,0 +1,17 @@
+2021-09-16 18:03:46,413 [http-nio-8081-exec-1] INFO  org.anatkor.controllers.command.LoginCommand- Admin '381111111111' is logged in
+2021-09-16 18:03:51,256 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.LogoutCommand- User 381111111111 is Logged out
+2021-09-16 18:03:51,261 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-16 18:03:53,523 [http-nio-8081-exec-7] INFO  org.anatkor.controllers.command.LoginCommand- Client '382222222222' is logged in
+2021-09-16 18:03:56,013 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-16 18:04:01,790 [http-nio-8081-exec-3] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 9
+2021-09-16 18:04:37,746 [http-nio-8081-exec-9] INFO  org.anatkor.controllers.command.LogoutCommand- User 382222222222 is Logged out
+2021-09-16 18:04:37,749 [http-nio-8081-exec-10] INFO  org.anatkor.controllers.command.LoginCommand- Not enough login data
+2021-09-16 18:04:41,246 [http-nio-8081-exec-2] INFO  org.anatkor.controllers.command.LoginCommand- Client '389999999999' is logged in
+2021-09-16 18:04:42,646 [http-nio-8081-exec-5] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-16 18:04:46,160 [http-nio-8081-exec-8] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42
+2021-09-16 18:05:27,613 [http-nio-8081-exec-3] INFO  org.anatkor.dao.AccountDao- Account 10000000032 is updated with -45600
+2021-09-16 18:05:27,613 [http-nio-8081-exec-3] INFO  org.anatkor.dao.TransactionDao- Amount 45600 is deducted from the account 10000000032
+2021-09-16 18:05:27,614 [http-nio-8081-exec-3] INFO  org.anatkor.dao.AccountDao- Account 10000000003 is updated with 45600
+2021-09-16 18:05:27,614 [http-nio-8081-exec-3] INFO  org.anatkor.dao.TransactionDao- Account 10000000003 is refilled with amount 45600
+2021-09-16 18:05:27,618 [http-nio-8081-exec-3] INFO  org.anatkor.dao.TransactionDao- Transaction from 10000000032 to 10000000003, amount 45600 is added to DB
+2021-09-16 18:05:27,622 [http-nio-8081-exec-4] INFO  org.anatkor.controllers.command.TransactionsCommand- transactions list requested for user with id= 42

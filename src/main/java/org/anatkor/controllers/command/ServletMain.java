@@ -13,9 +13,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet("/")
-public class ServletController extends HttpServlet{
+public class ServletMain extends HttpServlet{
     private Map<String, Command> commands = new HashMap<>();
-    private static final Logger log = LogManager.getLogger(ServletController.class);
+    private static final Logger log = LogManager.getLogger(ServletMain.class);
 
     @Override
     public void init() {
@@ -23,7 +23,7 @@ public class ServletController extends HttpServlet{
         commands.put("accounts", new AccountsCommand());
         commands.put("admin", new AdminCommand());
         commands.put("exception", new ExceptionCommand());
-        commands.put("lang", new Language());
+        commands.put("lang", new LanguageCommand());
         commands.put("login", new LoginCommand());
         commands.put("logout", new LogoutCommand());
         commands.put("payment", new PaymentCommand());
