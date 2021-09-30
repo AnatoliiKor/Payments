@@ -46,7 +46,7 @@
                     </td>
 
                     <td>
-                        <form method="post" action="${pageContext.request.contextPath}/admin/account">
+                        <form method="post" action="${pageContext.request.contextPath}/admin/active_account">
                             <input type="hidden" name="id_to_do" value="${account.id}"/>
                             <input type="hidden" name="action" value="active"/>
 

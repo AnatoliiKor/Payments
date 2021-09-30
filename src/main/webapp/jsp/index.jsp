@@ -33,9 +33,8 @@
                 </button>
                 <div class="collapse collapse-horizontal" id="collapseNewAccount">
                     <div class="card card-body" style="width: 300px;">
-                        <form method="post" action="${pageContext.request.contextPath}/wallet/account">
+                        <form method="post" action="${pageContext.request.contextPath}/wallet/new_account">
                             <fmt:message key="account_name"/>
-                            <input type="hidden" name="action" value="new">
                             <input type="text" name="account_name" required>
                             <br/>
                             <div class="m-1"><fmt:message key="currency"/>

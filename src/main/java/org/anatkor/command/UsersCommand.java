@@ -1,5 +1,6 @@
 package org.anatkor.command;
 
+import org.anatkor.constants.Constant;
 import org.anatkor.model.User;
 import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
@@ -15,11 +16,11 @@ class UsersCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         log.info("users list requested");
-        String page = req.getParameter("pg");
+        String page = req.getParameter(Constant.PAGE);
         if (page == null || page.equals("")) {
-            req.setAttribute("pg", 1);
+            req.setAttribute(Constant.PAGE, 1);
         } else {
-            req.setAttribute("pg", Integer.parseInt(page));
+            req.setAttribute(Constant.PAGE, Integer.parseInt(page));
         }
         List<User> users = userService.findAll();
         int pgMax = 1 + users.size() / 10;

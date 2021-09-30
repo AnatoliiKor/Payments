@@ -11,9 +11,8 @@
             </c:if>
 
             <c:if test="${account.active}">
-                <form method="post" action="${pageContext.request.contextPath}/wallet/account">
+                <form method="post" action="${pageContext.request.contextPath}/wallet/refill_account">
                     <fmt:message key="amount"/>
-                    <input type="hidden" name="action" value="refill">
                     <input type="hidden" name="id_to_do" value="${account.id}"/>
                     <input type="number" step=".01" min="0.01" name="amount" required>
                         ${account.currency}

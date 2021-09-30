@@ -10,7 +10,7 @@
         <c:if test="${account.action==0 && 'CLIENT'.equals(role)}">
             <div class="text-info fw-bold">${account.accountName} - <fmt:message
                     key="${account.active?'is_active':'blocked'}"/></div>
-            <form method="post" action="${pageContext.request.contextPath}/wallet/account">
+            <form method="post" action="${pageContext.request.contextPath}/wallet/active_account">
                 <input type="hidden" name="id_to_do" value="${account.id}"/>
                 <input type="hidden" name="action" value="action"/>
                 <c:if test="${account.active}">
@@ -30,18 +30,18 @@
         <c:if test="${'ADMIN'.equals(role)}">
             <div class="text-info fw-bold">${account.accountName} - <fmt:message
                     key="${account.active?'is_active':'blocked'}"/></div>
-            <form method="post" action="${pageContext.request.contextPath}/admin/account">
+            <form method="post" action="${pageContext.request.contextPath}/admin/active_account">
                 <input type="hidden" name="id_to_do" value="${account.id}"/>
                 <input type="hidden" name="action" value="active"/>
                 <c:choose>
                     <c:when test="${account.active}">
-                        <input type="hidden" name="status" value="false"/>
+                        <input type="hidden" name="is_active" value="false"/>
                         <button class="btn btn-outline-success mt-2"
                                 type="submit"><fmt:message key="block"/>
                         </button>
                     </c:when>
                     <c:otherwise>
-                        <input type="hidden" name="status" value="true"/>
+                        <input type="hidden" name="is_active" value="true"/>
                         <button class="btn btn-outline-success mt-2"
                                 type="submit"><fmt:message key="unblock"/>
                         </button>

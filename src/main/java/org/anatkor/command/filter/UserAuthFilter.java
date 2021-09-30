@@ -1,8 +1,8 @@
 package org.anatkor.command.filter;
 
+import org.anatkor.constants.Constant;
 import org.anatkor.model.User;
 import org.anatkor.model.enums.Role;
-
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -26,37 +26,40 @@ public class UserAuthFilter implements Filter {
         HttpServletResponse resp = (HttpServletResponse) response;
         HttpSession session = req.getSession();
 
-        if (session.getAttribute("user_auth") == null) {
+        if (session.getAttribute(Constant.USER_AUTH) == null) {
             resp.sendRedirect("/login");
             return;
         }
 
-        if (session.getAttribute("user_auth") != null) {
-            User userAuth = (User) session.getAttribute("user_auth");
+        if (session.getAttribute(Constant.USER_AUTH) != null) {
+            User userAuth = (User) session.getAttribute(Constant.USER_AUTH);
             Role role = userAuth.getRole();
-            if (req.getParameter("user_id") != null) {
-                Long user_id = Long.parseLong(req.getParameter("user_id"));
+            if (req.getParameter(Constant.USER_ID) != null) {
+                long user_id = Long.parseLong(req.getParameter(Constant.USER_ID));
                 if (userAuth.getId() != user_id && role != Role.ADMIN) {
                     resp.sendRedirect("/login");
                     return;
                 }
             }
-            if (req.getParameter("account_number") != null && role != Role.ADMIN) {
-                Long account_number = Long.parseLong(req.getParameter("account_number"));
-                List<Long> userAuthAccountNumbers = userAuth.getAccountNumbers();
-                boolean permission = false;
-                for (long number : userAuthAccountNumbers) {
-                    if (number == account_number) {
-                        permission = true;
-                    }
-                }
-                if (!permission) {
+            if (req.getParameter(Constant.ACCOUNT_NUMBER) != null && role != Role.ADMIN) {
+                if (!checkIsUserAccount(req, userAuth)) {
                     resp.sendRedirect("/login");
                     return;
                 }
             }
         }
         chain.doFilter(request, response);
+    }
+
+    private boolean checkIsUserAccount(HttpServletRequest req, User userAuth) {
+        long account_number = Long.parseLong(req.getParameter(Constant.ACCOUNT_NUMBER));
+        List<Long> userAuthAccountNumbers = userAuth.getAccountNumbers();
+        for (long number : userAuthAccountNumbers) {
+            if (number == account_number) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

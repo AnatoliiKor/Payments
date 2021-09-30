@@ -1,5 +1,6 @@
 package org.anatkor.command;
 
+import org.anatkor.constants.Constant;
 import org.anatkor.model.Account;
 import org.anatkor.model.enums.Role;
 import org.anatkor.services.AccountService;
@@ -10,7 +11,6 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 class AccountsCommand implements Command {
-    private static final Logger log = LogManager.getLogger(AccountsCommand.class);
     private final AccountService accountService = new AccountService();
 
     @Override
@@ -27,30 +27,28 @@ class AccountsCommand implements Command {
         HttpSession session = req.getSession();
         Role role = Role.valueOf((String) session.getAttribute("role"));
         long user_id;
-        if (role == Role.ADMIN && req.getParameter("user_id") == null) {
-            log.info("account list requested by ADMIN");
+        if (role == Role.ADMIN && req.getParameter(Constant.USER_ID) == null) {
             user_id = -1L;
         } else {
-            user_id = Long.parseLong(req.getParameter("user_id"));
-            log.info("account list requested for user with id= {}", user_id);
+            user_id = Long.parseLong(req.getParameter(Constant.USER_ID));
         }
         return user_id;
     }
 
     private String getRequestParamSort(HttpServletRequest req) {
         String sortBy;
-        if (req.getParameter("sort_by") != null) {
-            sortBy = req.getParameter("sort_by");
+        if (req.getParameter(Constant.SORT_BY) != null) {
+            sortBy = req.getParameter(Constant.SORT_BY);
         } else {
-            sortBy = "number";
+            sortBy = Constant.NUMBER;
         }
         return sortBy;
     }
 
     private String getRequestParamOrder(HttpServletRequest req) {
         String order;
-        if (req.getParameter("order") != null) {
-            order = req.getParameter("order");
+        if (req.getParameter(Constant.ORDER) != null) {
+            order = req.getParameter(Constant.ORDER);
         } else {
             order = "ASC";
         }
@@ -58,18 +56,18 @@ class AccountsCommand implements Command {
     }
 
     private HttpServletRequest fillRequest(HttpServletRequest req, String sortBy, String order, long user_id, List<Account> accounts) {
-        String page = req.getParameter("pg");
+        String page = req.getParameter(Constant.PAGE);
         if (page == null || page.equals("")) {
-            req.setAttribute("pg", 1);
+            req.setAttribute(Constant.PAGE, 1);
         } else {
-            req.setAttribute("pg", Integer.parseInt(page));
+            req.setAttribute(Constant.PAGE, Integer.parseInt(page));
         }
         int pgMax = 1 + accounts.size() / 10;
         req.setAttribute("pg_max", pgMax);
-        req.setAttribute("user_id", user_id);
-        req.setAttribute("accounts", accounts);
-        req.setAttribute("sort_by", sortBy);
-        req.setAttribute("order", order);
+        req.setAttribute(Constant.USER_ID, user_id);
+        req.setAttribute(Constant.ACCOUNTS, accounts);
+        req.setAttribute(Constant.SORT_BY, sortBy);
+        req.setAttribute(Constant.ORDER, order);
         return req;
     }
 }

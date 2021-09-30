@@ -18,9 +18,9 @@ import java.util.List;
 
 class PaymentCommand implements Command {
     private static final Logger log = LogManager.getLogger(PaymentCommand.class);
-    private TransactionService transactionService = new TransactionService();
-    private AccountService accountService = new AccountService();
-    private UserService userService = new UserService();
+    private final TransactionService transactionService = new TransactionService();
+    private final AccountService accountService = new AccountService();
+    private final UserService userService = new UserService();
 
 
     @Override

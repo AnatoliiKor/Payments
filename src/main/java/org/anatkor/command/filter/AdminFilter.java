@@ -1,5 +1,6 @@
 package org.anatkor.command.filter;
 
+import org.anatkor.constants.Constant;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,7 +28,7 @@ public class AdminFilter implements Filter {
         HttpSession session = req.getSession();
         if (!"ADMIN".equals(session.getAttribute("role"))) {
             log.warn("Attempt of unauthorized access to the Admin by {}", session.getAttribute("user_auth"));
-            req.setAttribute("warn", "admin_forbidden");
+            req.setAttribute(Constant.WARN, "admin_forbidden");
             req.getRequestDispatcher("/login").forward(req, resp);
             return;
         }
