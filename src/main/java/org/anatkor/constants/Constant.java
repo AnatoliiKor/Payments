@@ -22,5 +22,9 @@ public class Constant {
     public static final String ACCOUNTS = "accounts";
     public static final String CURRENCY = "currency";
     public static final String PAGE = "page";
+    public static final String PAYMENT = "payment";
+    public static final String AMOUNT = "amount";
+    public static final String PAYER = "payer";
+    public static final String RECEIVER = "receiver";
 
 }

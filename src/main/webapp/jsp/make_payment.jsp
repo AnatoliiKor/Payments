@@ -13,13 +13,11 @@
 
             <%@include file="payment/payment_table.jsp" %>
 
-            <form method="post" action="${pageContext.request.contextPath}/wallet/payment">
-                <input type="hidden" name="action" value="confirm">
+            <form method="post" action="${pageContext.request.contextPath}/wallet/confirm_payment">
                 <input class="btn btn-success mt-2" type="submit" value="<fmt:message key="confirm_payment"/>">
             </form>
 
-            <form method="post" action="${pageContext.request.contextPath}/wallet/payment">
-                <input type="hidden" name="action" value="cancel">
+            <form method="post" action="${pageContext.request.contextPath}/wallet/cancel_payment">
                 <input class="btn btn-outline-warning mt-2" type="submit" value="<fmt:message key="cancel_payment"/>">
             </form>
 

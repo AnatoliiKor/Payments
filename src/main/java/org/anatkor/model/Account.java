@@ -1,9 +1,7 @@
 package org.anatkor.model;
 
 import org.anatkor.model.enums.Currency;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import org.anatkor.utils.Util;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -119,8 +117,7 @@ public class Account {
     }
 
     public String getFormatedDate() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm");
-        return this.registered.format(formatter);
+        return Util.getFormattedDate(registered);
     }
 
     public String getCardNumberSpaces() {

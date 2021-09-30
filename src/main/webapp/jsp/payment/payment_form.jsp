@@ -1,4 +1,4 @@
-<form method="post" action="${pageContext.request.contextPath}/wallet/payment">
+<form method="post" action="${pageContext.request.contextPath}/wallet/prepare_payment">
 
     <input type="hidden" name="action" value="prepare">
     UA<input class="m-2" type="tel" name="receiver" pattern="[0-9]{11}" minlength="11" maxlength="11"

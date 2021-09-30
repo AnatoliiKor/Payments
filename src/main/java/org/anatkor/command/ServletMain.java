@@ -30,8 +30,10 @@ public class ServletMain extends HttpServlet {
         commands.put("login", new LoginCommand());
         commands.put("logout", new LogoutCommand());
         commands.put("payment", new PaymentCommand());
+        commands.put("prepare_payment", new PreparePaymentCommand());
+        commands.put("confirm_payment", new ConfirmPaymentCommand());
+        commands.put("cancel_payment", new CancelPaymentCommand());
         commands.put("registration", new RegistrationCommand());
-//        commands.put("transaction", new TransactionCommand());
         commands.put("transactions", new TransactionsCommand());
         commands.put("wallet", new WalletCommand());
         commands.put("user", new UserCommand());

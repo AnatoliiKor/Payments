@@ -1,6 +1,7 @@
 package org.anatkor.model;
 
 import org.anatkor.model.enums.Role;
+import org.anatkor.utils.Util;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -184,10 +185,7 @@ public class User {
     }
 
     public String getFormatedDate() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm");
-        return this.registered.format(formatter);
+        return Util.getFormattedDate(registered);
     }
-
-
 }
 
