@@ -29,15 +29,14 @@
                     <th><fmt:message key="receiver_account"/></th>
                     <th><fmt:message key="date"/></th>
                     <th><fmt:message key="payment_destination"/></th>
-                        <%--            <th></th>--%>
                 </tr>
                 </thead>
 
                 <tbody>
                 <c:forEach var="transaction" items="${transactions}"
-                           varStatus="position" begin="${10 * (pg - 1)}" end="${10 * (pg - 1) + 9}">
+                           varStatus="position" begin="${10 * (page - 1)}" end="${10 * (page - 1) + 9}">
                     <tr>
-                        <td scope="row"><c:out value="${10 * (pg - 1) + position.count}"/>
+                        <td scope="row"><c:out value="${10 * (page - 1) + position.count}"/>
                         </td>
                         <td <c:if test="${sort_by.equals('payer')}">class="text-info fw-bold"</c:if>>
                             UA${transaction.payer}</td>
@@ -50,8 +49,6 @@
                         <td
                                 <c:if test="${sort_by.equals('registered')}">class="text-info fw-bold"</c:if>>${transaction.getFormatedDate()}</td>
                         <td>${transaction.destination}</td>
-                            <%--                        <td><a href="${pageContext.request.contextPath}/transaction_details?type=${account_type}&transaction_id=${transaction.id}"><fmt:message--%>
-                            <%--                                key="details"/></a></td>--%>
                     </tr>
                 </c:forEach>
                 </tbody>

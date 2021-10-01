@@ -3,6 +3,7 @@ package org.anatkor.command;
 import org.anatkor.constants.Constant;
 import org.anatkor.model.User;
 import org.anatkor.services.UserService;
+import org.anatkor.utils.Util;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,12 +17,7 @@ class UsersCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         log.info("users list requested");
-        String page = req.getParameter(Constant.PAGE);
-        if (page == null || page.equals("")) {
-            req.setAttribute(Constant.PAGE, 1);
-        } else {
-            req.setAttribute(Constant.PAGE, Integer.parseInt(page));
-        }
+        Util.requestGetAndSetPage(req);
         List<User> users = userService.findAll();
         int pgMax = 1 + users.size() / 10;
         req.setAttribute("pg_max", pgMax);

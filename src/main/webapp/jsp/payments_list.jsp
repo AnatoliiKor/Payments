@@ -31,9 +31,9 @@
 
                 <tbody>
                 <c:forEach var="payment" items="${payments}"
-                           varStatus="position" begin="${10 * (pg - 1)}" end="${10 * (pg - 1) + 9}">
+                           varStatus="position" begin="${10 * (page - 1)}" end="${10 * (page - 1) + 9}">
                     <tr>
-                        <td scope="row"><c:out value="${10 * (pg - 1) + position.count}"/>
+                        <td scope="row"><c:out value="${10 * (page - 1) + position.count}"/>
                         </td>
                         <td <c:if test="${payment_sort_by.equals('account_number')}">class="text-info fw-bold"</c:if>>
                             UA${payment.accountNumber}</td>
@@ -61,22 +61,22 @@
 
     <ul class="pagination my-3">
         <c:if test="${not empty user_id}">
-            <li class="page-item ${pg == 1 ? 'disabled' : ''}"><a class="page-link"
-                                                                  href="/payments?pg=${pg-1}&user_id=${user_id}"><fmt:message
+            <li class="page-item ${page == 1 ? 'disabled' : ''}"><a class="page-link"
+                                                                  href="/payments?page=${page-1}&user_id=${user_id}"><fmt:message
                     key="previous_main"/></a></li>
-            <li class="page-item active"><a class="page-link">${pg}</a></li>
-            <li class="page-item ${pg == pg_max? 'disabled' : ''}"><a class="page-link"
-                                                                      href="/payments?pg=${pg+1}&user_id=${user_id}"><fmt:message
+            <li class="page-item active"><a class="page-link">${page}</a></li>
+            <li class="page-item ${page == pg_max? 'disabled' : ''}"><a class="page-link"
+                                                                      href="/payments?page=${page+1}&user_id=${user_id}"><fmt:message
                     key="next_main"/></a></li>
         </c:if>
 
         <c:if test="${not empty account_number}">
-            <li class="page-item ${pg == 1 ? 'disabled' : ''}"><a class="page-link"
-                                                                  href="/payments?pg=${pg-1}&account_number=${account_number}"><fmt:message
+            <li class="page-item ${page == 1 ? 'disabled' : ''}"><a class="page-link"
+                                                                  href="/payments?page=${pg-1}&account_number=${account_number}"><fmt:message
                     key="previous_main"/></a></li>
-            <li class="page-item active"><a class="page-link">${pg}</a></li>
-            <li class="page-item ${pg == pg_max? 'disabled' : ''}"><a class="page-link"
-                                                                      href="/payments?pg=${pg+1}&account_number=${account_number}"><fmt:message
+            <li class="page-item active"><a class="page-link">${page}</a></li>
+            <li class="page-item ${page == pg_max? 'disabled' : ''}"><a class="page-link"
+                                                                      href="/payments?page=${pg+1}&account_number=${account_number}"><fmt:message
                     key="next_main"/></a></li>
         </c:if>
 

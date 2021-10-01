@@ -4,8 +4,7 @@ import org.anatkor.constants.Constant;
 import org.anatkor.model.Account;
 import org.anatkor.model.enums.Role;
 import org.anatkor.services.AccountService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.anatkor.utils.Util;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -16,8 +15,8 @@ class AccountsCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         long userId = getRequestParamUserId(req);
-        String order = getRequestParamOrder(req);
-        String sortBy = getRequestParamSort(req);
+        String order = Util.getRequestParamOrderOrDefault(req, "ASC");
+        String sortBy = Util.getRequestParamSortOrDefault(req, Constant.NUMBER);
         List<Account> accounts = accountService.findAllAccountsByUserIdSorted(userId, sortBy, order);
         fillRequest(req, sortBy, order, userId, accounts);
         return "/jsp/accounts_list.jsp";
@@ -35,33 +34,8 @@ class AccountsCommand implements Command {
         return user_id;
     }
 
-    private String getRequestParamSort(HttpServletRequest req) {
-        String sortBy;
-        if (req.getParameter(Constant.SORT_BY) != null) {
-            sortBy = req.getParameter(Constant.SORT_BY);
-        } else {
-            sortBy = Constant.NUMBER;
-        }
-        return sortBy;
-    }
-
-    private String getRequestParamOrder(HttpServletRequest req) {
-        String order;
-        if (req.getParameter(Constant.ORDER) != null) {
-            order = req.getParameter(Constant.ORDER);
-        } else {
-            order = "ASC";
-        }
-        return order;
-    }
-
     private HttpServletRequest fillRequest(HttpServletRequest req, String sortBy, String order, long user_id, List<Account> accounts) {
-        String page = req.getParameter(Constant.PAGE);
-        if (page == null || page.equals("")) {
-            req.setAttribute(Constant.PAGE, 1);
-        } else {
-            req.setAttribute(Constant.PAGE, Integer.parseInt(page));
-        }
+        Util.requestGetAndSetPage(req);
         int pgMax = 1 + accounts.size() / 10;
         req.setAttribute("pg_max", pgMax);
         req.setAttribute(Constant.USER_ID, user_id);

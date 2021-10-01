@@ -26,5 +26,6 @@ public class Constant {
     public static final String AMOUNT = "amount";
     public static final String PAYER = "payer";
     public static final String RECEIVER = "receiver";
+    public static final String REGISTERED = "registered";
 
 }

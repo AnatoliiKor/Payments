@@ -1,13 +1,12 @@
 package org.anatkor.dao;
 
-import org.anatkor.constants.Constant;
 import org.anatkor.constants.Query;
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.enums.Role;
 import org.anatkor.model.User;
+import org.anatkor.utils.UtilDAO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -31,11 +30,11 @@ public class UserDao {
                 users.add(user);
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ALL_USERS, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ALL_USERS, UserDao.class, e);
         } finally {
-            Utils.close(rs);
-            Utils.close(stm);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(stm);
+            UtilDAO.close(con);
         }
         return users;
     }
@@ -57,12 +56,12 @@ public class UserDao {
                 throw new DBException("user_not_found");
             }
         } catch (SQLException e) {
-            log.info("SQLException during Query {} processing from {}.", Query.FIND_USER_BY_ID, Utils.class, e);
+            log.info("SQLException during Query {} processing from {}.", Query.FIND_USER_BY_ID, UserDao.class, e);
             throw new DBException("user_not_found");
         } finally {
-            Utils.close(rs);
-            Utils.close(prepStatement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(prepStatement);
+            UtilDAO.close(con);
         }
     }
 
@@ -92,12 +91,12 @@ public class UserDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.",
-                    Query.FIND_USER_BY_PHONE_NUMBER, Utils.class, e);
+                    Query.FIND_USER_BY_PHONE_NUMBER, UserDao.class, e);
             throw new DBException("user_not_found");
         } finally {
-            Utils.close(rs);
-            Utils.close(prepStatement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(prepStatement);
+            UtilDAO.close(con);
         }
     }
 
@@ -119,11 +118,11 @@ public class UserDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.",
-                    Query.FIND_USER_FULL_NANE_BY_ACCONT_NUMBER, Utils.class, e);
+                    Query.FIND_USER_FULL_NANE_BY_ACCONT_NUMBER, UserDao.class, e);
         } finally {
-            Utils.close(rs);
-            Utils.close(prepStatement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(prepStatement);
+            UtilDAO.close(con);
         }
         return null;
     }
@@ -140,8 +139,8 @@ public class UserDao {
                 return Role.valueOf(rs.getString("role"));
             }
         } finally {
-            Utils.close(rs);
-            Utils.close(prepStatement);
+            UtilDAO.close(rs);
+            UtilDAO.close(prepStatement);
         }
         return null;
     }
@@ -176,7 +175,7 @@ public class UserDao {
         } catch (SQLException e) {
             String exeption = e.getMessage();
             log.debug("SQLException during Add user with phone {} processing {}. {}",
-                    user.getPhoneNumber(), Utils.class, e.getMessage());
+                    user.getPhoneNumber(), UserDao.class, e.getMessage());
             if (exeption.contains("mail")) {
                 throw new DBException("registration_email_exist");
             } else if (exeption.contains("phone")) {
@@ -199,16 +198,16 @@ public class UserDao {
                 con.rollback();
             } catch (SQLException throwables) {
                 log.debug("SQLException during rollback add user_id={} processing {}. {}",
-                        user.getId(), Utils.class, throwables.getMessage());
+                        user.getId(), UserDao.class, throwables.getMessage());
                 throw new DBException("not_registered");
             }
             log.debug("SQLException during Add user_id={} processing {}. {}",
-                    user.getId(), Utils.class, e.getMessage());
+                    user.getId(), UserDao.class, e.getMessage());
             throw new DBException("not_registered");
         } finally {
-            Utils.close(rs);
-            Utils.close(prepStatement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(prepStatement);
+            UtilDAO.close(con);
         }
     }
 
@@ -227,10 +226,10 @@ public class UserDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during update status of user with phone {} processing {}. {}",
-                    user.getPhoneNumber(), Utils.class, e.getMessage());
+                    user.getPhoneNumber(), UserDao.class, e.getMessage());
         } finally {
-            Utils.close(prepStatement);
-            Utils.close(con);
+            UtilDAO.close(prepStatement);
+            UtilDAO.close(con);
         }
         return false;
     }

@@ -1,8 +1,10 @@
 package org.anatkor.command;
 
+import org.anatkor.constants.Constant;
 import org.anatkor.model.Transaction;
 import org.anatkor.model.enums.Role;
 import org.anatkor.services.TransactionService;
+import org.anatkor.utils.Util;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,62 +18,49 @@ class TransactionsCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest req) {
-        String sortBy;
-        String order;
         String accountType;
-        long user_id;
-        long accountNumber;
-        List<Transaction> transactions = null;
         HttpSession session = req.getSession();
         Role role = Role.valueOf((String) session.getAttribute("role"));
         accountType = req.getParameter("account_type");
-
-        if (req.getParameter("order") != null) {
-            order = req.getParameter("order");
-        } else {
-            order = "DESC";
-        }
-        if (req.getParameter("sort_by") != null) {
-            sortBy = req.getParameter("sort_by");
-        } else {
-            sortBy = "registered";
-        }
-
-        String page = req.getParameter("pg");
-        if (page == null || page.equals("")) {
-            req.setAttribute("pg", 1);
-        } else {
-            req.setAttribute("pg", Integer.parseInt(page));
-        }
-
-        if (req.getParameter("account_number") != null) {
-            accountNumber = Long.parseLong(req.getParameter("account_number"));
-            log.info("payments list requested for account" + accountNumber);
-            transactions = transactionService.findAllTransactionsByAccountNumberSorted(accountNumber, sortBy, order, accountType);
-            req.setAttribute("account_number", accountNumber);
-        }
-
-        if (req.getParameter("user_id") != null) {
-            user_id = Long.parseLong(req.getParameter("user_id"));
-            log.info("transactions list requested for user with id= {}", user_id);
-            transactions = transactionService.findAllTransactionsByUserIdSorted(user_id, sortBy, order, accountType);
-            req.setAttribute("user_id", user_id);
-        }
-
-        if (role == Role.ADMIN && req.getParameter("user_id") == null && req.getParameter("account_number") == null) {
-            log.info("transactions list requested by ADMIN");
-            transactions = transactionService.findAllTransactionsSorted(sortBy, order);
-        }
-
+        String order = Util.getRequestParamOrderOrDefault(req, "DESC");
+        String sortBy = Util.getRequestParamSortOrDefault(req, Constant.REGISTERED);
+        Util.requestGetAndSetPage(req);
+        List<Transaction> transactions = getTransactions(req, accountType, role, order, sortBy);
         if (transactions != null) {
-            int pgMax = 1 + transactions.size() / 10;
-            req.setAttribute("pg_max", pgMax);
-            req.setAttribute("transactions", transactions);
-            req.setAttribute("account_type", accountType);
-            req.setAttribute("order", order);
-            req.setAttribute("sort_by", sortBy);
+            fillRequest(req, accountType, order, sortBy, transactions);
         }
         return "/jsp/transactions_list.jsp";
+    }
+
+    private List<Transaction> getTransactions(HttpServletRequest req, String accountType, Role role, String order, String sortBy) {
+        long accountNumber;
+        long user_id;
+        List<Transaction> transactions = null;
+        if (req.getParameter(Constant.ACCOUNT_NUMBER) != null) {
+            accountNumber = Long.parseLong(req.getParameter(Constant.ACCOUNT_NUMBER));
+            transactions = transactionService.findAllTransactionsByAccountNumberSorted(accountNumber, sortBy, order, accountType);
+            req.setAttribute(Constant.ACCOUNT_NUMBER, accountNumber);
+        }
+
+        if (req.getParameter(Constant.USER_ID) != null) {
+            user_id = Long.parseLong(req.getParameter(Constant.USER_ID));
+            transactions = transactionService.findAllTransactionsByUserIdSorted(user_id, sortBy, order, accountType);
+            req.setAttribute(Constant.USER_ID, user_id);
+        }
+
+        if (role == Role.ADMIN && req.getParameter(Constant.USER_ID) == null && req.getParameter(Constant.ACCOUNT_NUMBER) == null) {
+            transactions = transactionService.findAllTransactionsSorted(sortBy, order);
+        }
+        return transactions;
+    }
+
+    private void fillRequest(HttpServletRequest req, String accountType, String order, String sortBy, List<Transaction> transactions) {
+        int pgMax = 1 + transactions.size() / 10;
+        req.setAttribute("pg_max", pgMax);
+        req.setAttribute("transactions", transactions);
+        req.setAttribute("account_type", accountType);
+        req.setAttribute(Constant.ORDER, order);
+        req.setAttribute(Constant.SORT_BY, sortBy);
     }
 }
 

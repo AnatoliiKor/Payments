@@ -18,7 +18,7 @@ class RegistrationCommand implements Command {
         if (user != null) {
             try {
                 if (userService.addUser(user)) {
-                    return "redirect:/login?message=registered&phone_number=" + user.getPhoneNumber();
+                    return "redirect:/login?message=registered_mes";
                 }
                 req.setAttribute(Constant.WARN, "not_registered");
                 return "/jsp/registration.jsp";

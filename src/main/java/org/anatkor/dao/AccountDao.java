@@ -4,9 +4,9 @@ import org.anatkor.constants.Query;
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
 import org.anatkor.model.enums.Currency;
+import org.anatkor.utils.UtilDAO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,16 +54,16 @@ public class AccountDao {
                 }
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Add account processing {}. {}", Utils.class, e.getMessage());
+            log.debug("SQLException during Add account processing {}. {}", AccountDao.class, e.getMessage());
             try {
                 con.rollback();
             } catch (SQLException throwables) {
-                log.debug("SQLException during rollback Add account processing {}. {}", Utils.class, throwables.getMessage());
+                log.debug("SQLException during rollback Add account processing {}. {}", AccountDao.class, throwables.getMessage());
             }
         } finally {
-            Utils.close(rs);
-            Utils.close(prepStatement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(prepStatement);
+            UtilDAO.close(con);
         }
         return false;
     }
@@ -88,11 +88,11 @@ public class AccountDao {
                 accounts.add(getAccountFromResultSet(rs));
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNTS_BY_USER_ID_SORTED, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNTS_BY_USER_ID_SORTED, AccountDao.class, e);
         } finally {
-            Utils.close(rs);
-            Utils.close(statement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(statement);
+            UtilDAO.close(con);
         }
         return accounts;
     }
@@ -114,11 +114,11 @@ public class AccountDao {
                 accounts.add(account);
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNTS_BY_USER_ID_SORTED, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNTS_BY_USER_ID_SORTED, AccountDao.class, e);
         } finally {
-            Utils.close(rs);
-            Utils.close(statement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(statement);
+            UtilDAO.close(con);
         }
         return accounts;
     }
@@ -138,11 +138,11 @@ public class AccountDao {
                 numbers.add(number);
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", sql, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", sql, AccountDao.class, e);
         } finally {
-            Utils.close(rs);
-            Utils.close(statement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(statement);
+            UtilDAO.close(con);
         }
         return numbers;
     }
@@ -164,11 +164,11 @@ public class AccountDao {
                 return account;
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNT_BY_ID, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNT_BY_ID, AccountDao.class, e);
         } finally {
-            Utils.close(rs);
-            Utils.close(preparedStatement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(preparedStatement);
+            UtilDAO.close(con);
         }
         return null;
     }
@@ -192,11 +192,11 @@ public class AccountDao {
                 throw new DBException("account not found");
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNT_WITH_CARD_BY_NUMBER, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNT_WITH_CARD_BY_NUMBER, AccountDao.class, e);
         } finally {
-            Utils.close(rs);
-            Utils.close(preparedStatement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(preparedStatement);
+            UtilDAO.close(con);
         }
         return null;
     }
@@ -215,11 +215,11 @@ public class AccountDao {
             }
             return accounts;
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ALL_ACCOUNTS_TO_DO, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ALL_ACCOUNTS_TO_DO, AccountDao.class, e);
         } finally {
-            Utils.close(rs);
-            Utils.close(statement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(statement);
+            UtilDAO.close(con);
         }
         return null;
     }
@@ -239,10 +239,10 @@ public class AccountDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}. {}",
-                    Query.UPDATE_ACCOUNT_BALANCE_BY_ID, Utils.class, e.getMessage());
+                    Query.UPDATE_ACCOUNT_BALANCE_BY_ID, AccountDao.class, e.getMessage());
         } finally {
-            Utils.close(preparedStatement);
-            Utils.close(con);
+            UtilDAO.close(preparedStatement);
+            UtilDAO.close(con);
         }
         return false;
     }
@@ -262,10 +262,10 @@ public class AccountDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}. {}",
-                    Query.UPDATE_ACCOUNT_ACTIVE_BY_ID, Utils.class, e.getMessage());
+                    Query.UPDATE_ACCOUNT_ACTIVE_BY_ID, AccountDao.class, e.getMessage());
         } finally {
-            Utils.close(preparedStatement);
-            Utils.close(con);
+            UtilDAO.close(preparedStatement);
+            UtilDAO.close(con);
         }
         return false;
     }
@@ -285,10 +285,10 @@ public class AccountDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}. {}",
-                    Query.UPDATE_ACCOUNT_ACTION_BY_ID, Utils.class, e.getMessage());
+                    Query.UPDATE_ACCOUNT_ACTION_BY_ID, AccountDao.class, e.getMessage());
         } finally {
-            Utils.close(preparedStatement);
-            Utils.close(con);
+            UtilDAO.close(preparedStatement);
+            UtilDAO.close(con);
         }
         return false;
     }
@@ -320,7 +320,7 @@ public class AccountDao {
                 return true;
             }
         } finally {
-            Utils.close(prepStatement);
+            UtilDAO.close(prepStatement);
         }
         return false;
     }

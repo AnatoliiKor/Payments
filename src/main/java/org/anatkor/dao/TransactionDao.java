@@ -3,6 +3,7 @@ package org.anatkor.dao;
 import org.anatkor.constants.Query;
 import org.anatkor.model.Transaction;
 import org.anatkor.model.enums.Currency;
+import org.anatkor.utils.UtilDAO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -45,15 +46,15 @@ public class TransactionDao {
                 return true;
             }
         } catch (SQLException e) {
-            log.debug("SQLException during {} processing {}. {}", Query.ADD_TRANSACTION, Utils.class, e.getMessage());
+            log.debug("SQLException during {} processing {}. {}", Query.ADD_TRANSACTION, UserDao.class, e.getMessage());
             try {
                 con.rollback();
             } catch (SQLException throwables) {
-                log.debug("SQLException during rollback {}. {}", Utils.class, throwables.getMessage());
+                log.debug("SQLException during rollback {}. {}", UserDao.class, throwables.getMessage());
             }
         } finally {
-            Utils.close(preparedStatement);
-            Utils.close(con);
+            UtilDAO.close(preparedStatement);
+            UtilDAO.close(con);
         }
         return false;
     }
@@ -108,11 +109,11 @@ public class TransactionDao {
                 transactions.add(transaction);
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", sql, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", sql, UserDao.class, e);
         } finally {
-            Utils.close(rs);
-            Utils.close(statement);
-            Utils.close(con);
+            UtilDAO.close(rs);
+            UtilDAO.close(statement);
+            UtilDAO.close(con);
         }
         return transactions;
     }
