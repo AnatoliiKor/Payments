@@ -1,5 +1,7 @@
 package org.anatkor.dao;
 
+import org.anatkor.constants.Constant;
+import org.anatkor.constants.Query;
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.enums.Role;
 import org.anatkor.model.User;
@@ -12,18 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDao {
-    private static final String FIND_ALL_USERS = "SELECT * FROM usr;";
-    private static final String ADD_USER = "INSERT INTO usr (last_name, name, middle_name, password, email, phone_number) VALUES (?,?,?,?,?,?)";
-    private static final String UPDATE_USER_STATUS = "UPDATE usr SET active=? WHERE id=?";
-    private static final String ADD_USER_ROLE = "INSERT INTO user_role VALUES (?,?)";
-    private static final String FIND_USER_BY_PHONE_NUMBER = "SELECT * FROM usr WHERE phone_number=?";
-    private static final String FIND_USER_BY_PHONE_NUMBER_AND_PASSWORD = "SELECT * FROM usr WHERE phone_number=? AND password=?;";
-    private static final String FIND_ROLE_BY_USERID = "SELECT * FROM user_role WHERE user_id=?";
-    private static final String ADD_USER_AND_ROLE = "INSERT INTO usr (username, email, password)  VALUES (?,?,?); INSERT INTO user_role(user_id, role) VALUES ((SELECT id FROM usr WHERE login ='?'), 'USER')";
-    private static final String FIND_ALL_USERS_AND_ROLES = "SELECT * From usr LEFT JOIN user_role ON usr.id = user_role.user_id;";
-    private static final String FIND_USER_BY_ID = "SELECT * FROM usr WHERE id=?";
-    private static final String FIND_USER_FULL_NANE_BY_ACCONT_NUMBER = "SELECT last_name, usr.name, middle_name FROM usr INNER JOIN account ON account.user_id=usr.id WHERE number = ?";
-
 
     final static Logger log = LogManager.getLogger(UserDao.class);
 
@@ -35,34 +25,13 @@ public class UserDao {
         try {
             con = ConnectionPool.getConnection();
             stm = con.createStatement();
-            rs = stm.executeQuery(FIND_ALL_USERS);
+            rs = stm.executeQuery(Query.FIND_ALL_USERS);
             while (rs.next()) {
-                long id = rs.getLong("id");
-                String lastName = rs.getString("last_name");
-                String name = rs.getString("name");
-                String middleName = rs.getString("middle_name");
-                String password = rs.getString("password");
-                String email = rs.getString("email");
-                long phoneNumber = rs.getLong("phone_number");
-                LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
-                boolean active = rs.getBoolean("active");
-                Role role = findRoleByUserId(con, id);
-                User user = new User.UserBuilder()
-                        .withId(id)
-                        .withLastName(lastName)
-                        .withName(name)
-                        .withMiddleName(middleName)
-                        .withPassword(password)
-                        .withEmail(email)
-                        .withPhoneNumber(phoneNumber)
-                        .withRegistrationDateTime(registrationDateTime)
-                        .withActive(active)
-                        .withRole(role)
-                        .build();
+                User user = getUserFromResSet(con, rs);
                 users.add(user);
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", FIND_ALL_USERS, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ALL_USERS, Utils.class, e);
         } finally {
             Utils.close(rs);
             Utils.close(stm);
@@ -77,38 +46,18 @@ public class UserDao {
         ResultSet rs = null;
         try {
             con = ConnectionPool.getConnection();
-            prepStatement = con.prepareStatement(FIND_USER_BY_ID);
+            prepStatement = con.prepareStatement(Query.FIND_USER_BY_ID);
             int k = 1;
             prepStatement.setLong(k, userId);
             rs = prepStatement.executeQuery();
             if (rs.next()) {
-                long id = rs.getLong("id");
-                String lastName = rs.getString("last_name");
-                String name = rs.getString("name");
-                String middleName = rs.getString("middle_name");
-                String password = rs.getString("password");
-                String email = rs.getString("email");
-                long phoneNumber = rs.getLong("phone_number");
-                LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
-                boolean active = rs.getBoolean("active");
-                Role role = findRoleByUserId(con, id);
-                return new User.UserBuilder()
-                        .withId(id)
-                        .withLastName(lastName)
-                        .withName(name)
-                        .withMiddleName(middleName)
-                        .withPassword(password)
-                        .withEmail(email)
-                        .withPhoneNumber(phoneNumber)
-                        .withRegistrationDateTime(registrationDateTime)
-                        .withActive(active)
-                        .withRole(role)
-                        .build();
+                User user = getUserFromResSet(con, rs);
+                return user;
             } else {
                 throw new DBException("user_not_found");
             }
         } catch (SQLException e) {
-            log.info("SQLException during Query {} processing from {}.", FIND_USER_BY_ID, Utils.class, e);
+            log.info("SQLException during Query {} processing from {}.", Query.FIND_USER_BY_ID, Utils.class, e);
             throw new DBException("user_not_found");
         } finally {
             Utils.close(rs);
@@ -123,45 +72,27 @@ public class UserDao {
         ResultSet rs = null;
         try {
             con = ConnectionPool.getConnection();
-            prepStatement = con.prepareStatement(FIND_USER_BY_PHONE_NUMBER_AND_PASSWORD);
+            prepStatement = con.prepareStatement(Query.FIND_USER_BY_PHONE_NUMBER_AND_PASSWORD);
             int k = 1;
             prepStatement.setLong(k++, phoneNumber);
             prepStatement.setString(k, password);
             rs = prepStatement.executeQuery();
             if (rs.next()) {
-                Long id = rs.getLong("id");
-                String lastName = rs.getString("last_name");
-                String name = rs.getString("name");
-                String middleName = rs.getString("middle_name");
-                password = rs.getString("password");
-                String email = rs.getString("email");
-                phoneNumber = rs.getLong("phone_number");
-                LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
-                boolean active = rs.getBoolean("active");
-                if (!active) {
-                    log.info("Attempt to log in. User with phone number \"+" + phoneNumber + "\" is not active.");
+                User user = getUserFromResSet(con, rs);
+                if (!user.isActive()) {
+                    log.info("Attempt to log in. User with phone number \"+" + user.getPhoneNumber() + "\" is not active.");
                     throw new DBException("user_not_active");
                 }
-                Role role = findRoleByUserId(con, id);
-                return new User.UserBuilder()
-                        .withId(id)
-                        .withLastName(lastName)
-                        .withName(name)
-                        .withMiddleName(middleName)
-                        .withPassword(password)
-                        .withEmail(email)
-                        .withPhoneNumber(phoneNumber)
-                        .withRegistrationDateTime(registrationDateTime)
-                        .withActive(active)
-                        .withRole(role)
-                        .build();
+                return user;
+
+
             } else {
                 log.info("User with phone number \"+" + phoneNumber + "\" is not found");
                 throw new DBException("user_not_found_check");
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.",
-                    FIND_USER_BY_PHONE_NUMBER, Utils.class, e);
+                    Query.FIND_USER_BY_PHONE_NUMBER, Utils.class, e);
             throw new DBException("user_not_found");
         } finally {
             Utils.close(rs);
@@ -176,7 +107,7 @@ public class UserDao {
         ResultSet rs = null;
         try {
             con = ConnectionPool.getConnection();
-            prepStatement = con.prepareStatement(FIND_USER_FULL_NANE_BY_ACCONT_NUMBER);
+            prepStatement = con.prepareStatement(Query.FIND_USER_FULL_NANE_BY_ACCONT_NUMBER);
             int k = 1;
             prepStatement.setLong(k, accountNumber);
             rs = prepStatement.executeQuery();
@@ -188,7 +119,7 @@ public class UserDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}.",
-                    FIND_USER_FULL_NANE_BY_ACCONT_NUMBER, Utils.class, e);
+                    Query.FIND_USER_FULL_NANE_BY_ACCONT_NUMBER, Utils.class, e);
         } finally {
             Utils.close(rs);
             Utils.close(prepStatement);
@@ -201,7 +132,7 @@ public class UserDao {
         PreparedStatement prepStatement = null;
         ResultSet rs = null;
         try {
-            prepStatement = con.prepareStatement(FIND_ROLE_BY_USERID);
+            prepStatement = con.prepareStatement(Query.FIND_ROLE_BY_USERID);
             int k = 1;
             prepStatement.setLong(k, user_id);
             rs = prepStatement.executeQuery();
@@ -217,7 +148,6 @@ public class UserDao {
 
 
     public boolean addUser(User user) throws DBException {
-//        Add bike with order look video 2:29
         boolean result;
         Connection con;
         PreparedStatement prepStatement;
@@ -227,7 +157,7 @@ public class UserDao {
             con = ConnectionPool.getConnection();
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
-            prepStatement = con.prepareStatement(ADD_USER, Statement.RETURN_GENERATED_KEYS);
+            prepStatement = con.prepareStatement(Query.ADD_USER, Statement.RETURN_GENERATED_KEYS);
             int k = 1;
             prepStatement.setString(k++, user.getLastName());
             prepStatement.setString(k++, user.getName());
@@ -257,7 +187,7 @@ public class UserDao {
         }
         try {
             prepStatement = null;
-            prepStatement = con.prepareStatement(ADD_USER_ROLE);
+            prepStatement = con.prepareStatement(Query.ADD_USER_ROLE);
             prepStatement.setLong(1, generatedId);
             prepStatement.setString(2, "CLIENT");
             result = (1 == prepStatement.executeUpdate());
@@ -287,7 +217,7 @@ public class UserDao {
         PreparedStatement prepStatement = null;
         try {
             con = ConnectionPool.getConnection();
-            prepStatement = con.prepareStatement(UPDATE_USER_STATUS);
+            prepStatement = con.prepareStatement(Query.UPDATE_USER_STATUS);
             int k = 1;
             prepStatement.setBoolean(k++, user.isActive());
             prepStatement.setLong(k, user.getId());
@@ -303,5 +233,30 @@ public class UserDao {
             Utils.close(con);
         }
         return false;
+    }
+
+    private User getUserFromResSet(Connection con, ResultSet rs) throws SQLException {
+        long id = rs.getLong("id");
+        String lastName = rs.getString("last_name");
+        String name = rs.getString("name");
+        String middleName = rs.getString("middle_name");
+        String password = rs.getString("password");
+        String email = rs.getString("email");
+        long phoneNumber = rs.getLong("phone_number");
+        LocalDateTime registrationDateTime = rs.getTimestamp("registered").toLocalDateTime();
+        boolean active = rs.getBoolean("active");
+        Role role = findRoleByUserId(con, id);
+        return new User.UserBuilder()
+                .withId(id)
+                .withLastName(lastName)
+                .withName(name)
+                .withMiddleName(middleName)
+                .withPassword(password)
+                .withEmail(email)
+                .withPhoneNumber(phoneNumber)
+                .withRegistrationDateTime(registrationDateTime)
+                .withActive(active)
+                .withRole(role)
+                .build();
     }
 }

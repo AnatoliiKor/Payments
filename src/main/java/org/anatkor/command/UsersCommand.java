@@ -11,7 +11,7 @@ import java.util.List;
 
 class UsersCommand implements Command {
     private static final Logger log = LogManager.getLogger(UsersCommand.class);
-    private UserService userService = new UserService();
+    private final UserService userService = new UserService();
 
     @Override
     public String execute(HttpServletRequest req) {

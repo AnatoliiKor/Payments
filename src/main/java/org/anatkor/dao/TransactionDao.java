@@ -1,5 +1,6 @@
 package org.anatkor.dao;
 
+import org.anatkor.constants.Query;
 import org.anatkor.model.Transaction;
 import org.anatkor.model.enums.Currency;
 import org.apache.logging.log4j.LogManager;
@@ -10,8 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TransactionDao {
-    private static final String ADD_TRANSACTION =
-            "INSERT INTO transaction (payer, receiver, destination, amount, currency) VALUES(?,?,?,?,?)";
     final static Logger log = LogManager.getLogger(TransactionDao.class);
     private AccountDao accountDao = new AccountDao();
 
@@ -32,7 +31,7 @@ public class TransactionDao {
             } else {
                 throw new SQLException();
             }
-            preparedStatement = con.prepareStatement(ADD_TRANSACTION);
+            preparedStatement = con.prepareStatement(Query.ADD_TRANSACTION);
             int k = 1;
             preparedStatement.setLong(k++, transaction.getPayer());
             preparedStatement.setLong(k++, transaction.getReceiver());
@@ -46,7 +45,7 @@ public class TransactionDao {
                 return true;
             }
         } catch (SQLException e) {
-            log.debug("SQLException during {} processing {}. {}", ADD_TRANSACTION, Utils.class, e.getMessage());
+            log.debug("SQLException during {} processing {}. {}", Query.ADD_TRANSACTION, Utils.class, e.getMessage());
             try {
                 con.rollback();
             } catch (SQLException throwables) {

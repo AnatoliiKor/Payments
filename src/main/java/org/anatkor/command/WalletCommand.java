@@ -13,8 +13,8 @@ import java.util.List;
 
 class WalletCommand implements Command {
     private static final Logger log = LogManager.getLogger(WalletCommand.class);
-    private UserService userService = new UserService();
-    private AccountService accountService = new AccountService();
+    private final UserService userService = new UserService();
+    private final AccountService accountService = new AccountService();
 
     @Override
     public String execute(HttpServletRequest req) {

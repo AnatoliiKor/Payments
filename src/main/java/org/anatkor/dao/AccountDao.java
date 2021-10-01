@@ -1,5 +1,6 @@
 package org.anatkor.dao;
 
+import org.anatkor.constants.Query;
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
 import org.anatkor.model.enums.Currency;
@@ -11,23 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AccountDao {
-    private static final String FIND_MAX_ACCOUNT_NUMBER = "SELECT MAX(number) FROM account";
-    private static final String ADD_ACCOUNT =
-            "INSERT INTO account (number, balance, account_name, currency, user_id, action) VALUES (?,0,?,?,?,1);";
-    private static final String FIND_ACCOUNTS_BY_USER_ID_SORTED = "SELECT * FROM account WHERE user_id=? ORDER BY ? ?";
-    private static final String FIND_ACCOUNT_BY_ID = "SELECT * FROM account WHERE id=?";
-    private static final String FIND_ACCOUNT_WITH_CARD_BY_ID =
-            "SELECT * FROM account LEFT JOIN credit_card cc on account.id = cc.account_id where account.id=?";
-    private static final String FIND_ACCOUNT_WITH_CARD_BY_NUMBER =
-            "SELECT * FROM account LEFT JOIN credit_card cc on account.id = cc.account_id where account.number=?";
-    private static final String FIND_ALL_ACCOUNTS_TO_DO = "SELECT * FROM account WHERE action>0";
-    private static final String UPDATE_ACCOUNT_ACTIVE_BY_ID = "UPDATE account SET active=?, action=0 WHERE id=?";
-    private static final String UPDATE_ACCOUNT_BALANCE_BY_ID = "UPDATE account SET balance=balance+? WHERE id=?";
-    private static final String UPDATE_ACCOUNT_ACTION_BY_ID = "UPDATE account SET action=? WHERE id=?";
-    private static final String ADD_CREDIT_CARD_ACCOUNT = "INSERT INTO credit_card(account_id) VALUES (?)";
-    private static final String UPDATE_ACCOUNT_BALANCE = "UPDATE account SET balance=balance+? WHERE number=?";
-
-
     final static Logger log = LogManager.getLogger(AccountDao.class);
 
     public boolean newAccount(Account account) {
@@ -42,12 +26,12 @@ public class AccountDao {
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             statement = con.createStatement();
-            rs = statement.executeQuery(FIND_MAX_ACCOUNT_NUMBER);
+            rs = statement.executeQuery(Query.FIND_MAX_ACCOUNT_NUMBER);
             if (rs.next()) {
                 long number = rs.getLong("max");
                 rs = null;
                 number++;
-                prepStatement = con.prepareStatement(ADD_ACCOUNT, Statement.RETURN_GENERATED_KEYS);
+                prepStatement = con.prepareStatement(Query.ADD_ACCOUNT, Statement.RETURN_GENERATED_KEYS);
                 int k = 1;
                 prepStatement.setLong(k++, number);
                 prepStatement.setString(k++, account.getAccountName());
@@ -60,7 +44,7 @@ public class AccountDao {
                         generatedId = rs.getLong(1);
                         account.setId(generatedId);
                         prepStatement = null;
-                        prepStatement = con.prepareStatement(ADD_CREDIT_CARD_ACCOUNT);
+                        prepStatement = con.prepareStatement(Query.ADD_CREDIT_CARD_ACCOUNT);
                         prepStatement.setLong(1, generatedId);
                         result = (1 == prepStatement.executeUpdate());
                         con.commit();
@@ -104,7 +88,7 @@ public class AccountDao {
                 accounts.add(getAccountFromResultSet(rs));
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", FIND_ACCOUNTS_BY_USER_ID_SORTED, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNTS_BY_USER_ID_SORTED, Utils.class, e);
         } finally {
             Utils.close(rs);
             Utils.close(statement);
@@ -130,7 +114,7 @@ public class AccountDao {
                 accounts.add(account);
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", FIND_ACCOUNTS_BY_USER_ID_SORTED, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNTS_BY_USER_ID_SORTED, Utils.class, e);
         } finally {
             Utils.close(rs);
             Utils.close(statement);
@@ -170,7 +154,7 @@ public class AccountDao {
         ResultSet rs = null;
         try {
             con = ConnectionPool.getConnection();
-            preparedStatement = con.prepareStatement(FIND_ACCOUNT_WITH_CARD_BY_ID);
+            preparedStatement = con.prepareStatement(Query.FIND_ACCOUNT_WITH_CARD_BY_ID);
             int k = 1;
             preparedStatement.setLong(k, id);
             rs = preparedStatement.executeQuery();
@@ -180,7 +164,7 @@ public class AccountDao {
                 return account;
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", FIND_ACCOUNT_BY_ID, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNT_BY_ID, Utils.class, e);
         } finally {
             Utils.close(rs);
             Utils.close(preparedStatement);
@@ -195,7 +179,7 @@ public class AccountDao {
         ResultSet rs = null;
         try {
             con = ConnectionPool.getConnection();
-            preparedStatement = con.prepareStatement(FIND_ACCOUNT_WITH_CARD_BY_NUMBER);
+            preparedStatement = con.prepareStatement(Query.FIND_ACCOUNT_WITH_CARD_BY_NUMBER);
             int k = 1;
             preparedStatement.setLong(k, number);
             rs = preparedStatement.executeQuery();
@@ -208,7 +192,7 @@ public class AccountDao {
                 throw new DBException("account not found");
             }
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", FIND_ACCOUNT_WITH_CARD_BY_NUMBER, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ACCOUNT_WITH_CARD_BY_NUMBER, Utils.class, e);
         } finally {
             Utils.close(rs);
             Utils.close(preparedStatement);
@@ -224,14 +208,14 @@ public class AccountDao {
         try {
             con = ConnectionPool.getConnection();
             statement = con.createStatement();
-            rs = statement.executeQuery(FIND_ALL_ACCOUNTS_TO_DO);
+            rs = statement.executeQuery(Query.FIND_ALL_ACCOUNTS_TO_DO);
             List<Account> accounts = new ArrayList<>();
             while (rs.next()) {
                 accounts.add(getAccountFromResultSet(rs));
             }
             return accounts;
         } catch (SQLException e) {
-            log.debug("SQLException during Query {} processing from {}.", FIND_ALL_ACCOUNTS_TO_DO, Utils.class, e);
+            log.debug("SQLException during Query {} processing from {}.", Query.FIND_ALL_ACCOUNTS_TO_DO, Utils.class, e);
         } finally {
             Utils.close(rs);
             Utils.close(statement);
@@ -245,7 +229,7 @@ public class AccountDao {
         PreparedStatement preparedStatement = null;
         try {
             con = ConnectionPool.getConnection();
-            preparedStatement = con.prepareStatement(UPDATE_ACCOUNT_BALANCE_BY_ID);
+            preparedStatement = con.prepareStatement(Query.UPDATE_ACCOUNT_BALANCE_BY_ID);
             int k = 1;
             preparedStatement.setInt(k++, amount);
             preparedStatement.setLong(k, account_id);
@@ -255,7 +239,7 @@ public class AccountDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}. {}",
-                    UPDATE_ACCOUNT_BALANCE_BY_ID, Utils.class, e.getMessage());
+                    Query.UPDATE_ACCOUNT_BALANCE_BY_ID, Utils.class, e.getMessage());
         } finally {
             Utils.close(preparedStatement);
             Utils.close(con);
@@ -268,7 +252,7 @@ public class AccountDao {
         PreparedStatement preparedStatement = null;
         try {
             con = ConnectionPool.getConnection();
-            preparedStatement = con.prepareStatement(UPDATE_ACCOUNT_ACTIVE_BY_ID);
+            preparedStatement = con.prepareStatement(Query.UPDATE_ACCOUNT_ACTIVE_BY_ID);
             int k = 1;
             preparedStatement.setBoolean(k++, accountActive);
             preparedStatement.setLong(k, account_id);
@@ -278,7 +262,7 @@ public class AccountDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}. {}",
-                    UPDATE_ACCOUNT_ACTIVE_BY_ID, Utils.class, e.getMessage());
+                    Query.UPDATE_ACCOUNT_ACTIVE_BY_ID, Utils.class, e.getMessage());
         } finally {
             Utils.close(preparedStatement);
             Utils.close(con);
@@ -291,7 +275,7 @@ public class AccountDao {
         PreparedStatement preparedStatement = null;
         try {
             con = ConnectionPool.getConnection();
-            preparedStatement = con.prepareStatement(UPDATE_ACCOUNT_ACTION_BY_ID);
+            preparedStatement = con.prepareStatement(Query.UPDATE_ACCOUNT_ACTION_BY_ID);
             int k = 1;
             preparedStatement.setInt(k++, accountAction);
             preparedStatement.setLong(k, account_id);
@@ -301,7 +285,7 @@ public class AccountDao {
             }
         } catch (SQLException e) {
             log.debug("SQLException during Query {} processing from {}. {}",
-                    UPDATE_ACCOUNT_ACTION_BY_ID, Utils.class, e.getMessage());
+                    Query.UPDATE_ACCOUNT_ACTION_BY_ID, Utils.class, e.getMessage());
         } finally {
             Utils.close(preparedStatement);
             Utils.close(con);
@@ -327,7 +311,7 @@ public class AccountDao {
     public boolean updateBalance(Connection con, Long account_number, int amount) throws SQLException {
         PreparedStatement prepStatement = null;
         try {
-            prepStatement = con.prepareStatement(UPDATE_ACCOUNT_BALANCE);
+            prepStatement = con.prepareStatement(Query.UPDATE_ACCOUNT_BALANCE);
             int k = 1;
             prepStatement.setInt(k++, amount);
             prepStatement.setLong(k, account_number);

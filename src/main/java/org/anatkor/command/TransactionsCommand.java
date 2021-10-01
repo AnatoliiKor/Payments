@@ -12,7 +12,7 @@ import java.util.List;
 
 class TransactionsCommand implements Command {
     private static final Logger log = LogManager.getLogger(TransactionsCommand.class);
-    private TransactionService transactionService = new TransactionService();
+    private final TransactionService transactionService = new TransactionService();
 
     @Override
     public String execute(HttpServletRequest req) {

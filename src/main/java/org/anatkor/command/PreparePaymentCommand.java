@@ -6,13 +6,14 @@ import org.anatkor.model.Account;
 import org.anatkor.model.Payment;
 import org.anatkor.model.enums.Currency;
 import org.anatkor.services.AccountService;
+import org.anatkor.services.TransactionService;
 import org.anatkor.services.UserService;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 class PreparePaymentCommand implements Command {
     private final AccountService accountService = new AccountService();
-    private final UserService userService = new UserService();
+    private final TransactionService transactionService = new TransactionService();
 
     @Override
     public String execute(HttpServletRequest req) {
@@ -45,25 +46,10 @@ class PreparePaymentCommand implements Command {
                 return "redirect:wallet/payment?warn=not_currency&message=" + currency.name() + "&receiver=" +
                         receiver + "&amount=" + amount;
             }
-            Payment payment = getPayment(account, receiver, destination, amount, currency);
-            session.setAttribute("payment", payment);
+            session.setAttribute("payment", transactionService.getPayment(account, receiver, destination, amount, currency));
         }
         return "/jsp/make_payment.jsp";
     }
 
-    private Payment getPayment(Account account, long receiver, String destination, int amount, Currency currency) {
-        Payment payment = new Payment();
-        payment.setPayer(account.getNumber());
-        payment.setReceiver(receiver);
-        payment.setPayerAccountName(account.getAccountName());
-        payment.setReceiverFullName(userService.findUserFullNameByAccounNumber(receiver));
-        if (destination != null) {
-            payment.setDestination(destination);
-        } else {
-            payment.setDestination("-");
-        }
-        payment.setAmount(amount);
-        payment.setCurrency(currency);
-        return payment;
-    }
+
 }
