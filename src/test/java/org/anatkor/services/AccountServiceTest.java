@@ -11,10 +11,6 @@ public class AccountServiceTest {
     private final AccountService accountService = new AccountService();
 
     @Test
-    public void findAllAccountsByUserIdSorted() {
-    }
-
-    @Test
     public void findAllAccountsByUserId() {
         List<Account> accounts = accountService.findAllAccountsByUserId(42L);
         assertEquals(6, accounts.size());
@@ -28,22 +24,5 @@ public class AccountServiceTest {
     @Test
     public void findById() {
         assertNotNull(accountService.findById(48L));
-    }
-
-    @Test
-    public void findAllAccountsToDo() {
-
-    }
-
-    @Test
-    public void updateAccountActiveById() {
-    }
-
-    @Test
-    public void updateAccountActionById() {
-    }
-
-    @Test
-    public void updateAccountBalanceById() {
     }
 }
