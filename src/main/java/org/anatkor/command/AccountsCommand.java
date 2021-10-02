@@ -15,8 +15,8 @@ class AccountsCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         long userId = getRequestParamUserId(req);
-        String order = Util.getRequestParamOrderOrDefault(req, "ASC");
-        String sortBy = Util.getRequestParamSortOrDefault(req, Constant.NUMBER);
+        String order = Util.getRequestParamOrDefault(req, Constant.ORDER, Constant.ASC);
+        String sortBy = Util.getRequestParamOrDefault(req, Constant.SORT_BY, Constant.NUMBER);
         List<Account> accounts = accountService.findAllAccountsByUserIdSorted(userId, sortBy, order);
         fillRequest(req, sortBy, order, userId, accounts);
         return "/jsp/accounts_list.jsp";

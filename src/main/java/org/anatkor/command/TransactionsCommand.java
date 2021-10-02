@@ -7,7 +7,6 @@ import org.anatkor.services.TransactionService;
 import org.anatkor.utils.Util;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -22,8 +21,8 @@ class TransactionsCommand implements Command {
         HttpSession session = req.getSession();
         Role role = Role.valueOf((String) session.getAttribute("role"));
         accountType = req.getParameter("account_type");
-        String order = Util.getRequestParamOrderOrDefault(req, "DESC");
-        String sortBy = Util.getRequestParamSortOrDefault(req, Constant.REGISTERED);
+        String order = Util.getRequestParamOrDefault(req, Constant.ORDER, Constant.DESC);
+        String sortBy = Util.getRequestParamOrDefault(req, Constant.SORT_BY, Constant.REGISTERED);
         Util.requestGetAndSetPage(req);
         List<Transaction> transactions = getTransactions(req, accountType, role, order, sortBy);
         if (transactions != null) {
@@ -36,6 +35,7 @@ class TransactionsCommand implements Command {
         long accountNumber;
         long user_id;
         List<Transaction> transactions = null;
+
         if (req.getParameter(Constant.ACCOUNT_NUMBER) != null) {
             accountNumber = Long.parseLong(req.getParameter(Constant.ACCOUNT_NUMBER));
             transactions = transactionService.findAllTransactionsByAccountNumberSorted(accountNumber, sortBy, order, accountType);
@@ -57,7 +57,7 @@ class TransactionsCommand implements Command {
     private void fillRequest(HttpServletRequest req, String accountType, String order, String sortBy, List<Transaction> transactions) {
         int pgMax = 1 + transactions.size() / 10;
         req.setAttribute("pg_max", pgMax);
-        req.setAttribute("transactions", transactions);
+        req.setAttribute(Constant.TRANSACTIONS, transactions);
         req.setAttribute("account_type", accountType);
         req.setAttribute(Constant.ORDER, order);
         req.setAttribute(Constant.SORT_BY, sortBy);

@@ -19,13 +19,16 @@ public class Constant {
     public static final String ACCOUNT_NAME = "account_name";
     public static final String ACCOUNT_NUMBER = "account_number";
     public static final String ACCOUNT = "account";
+    public static final String ACCOUNT_ID = "account_id";
     public static final String ACCOUNTS = "accounts";
     public static final String CURRENCY = "currency";
     public static final String PAGE = "page";
     public static final String PAYMENT = "payment";
     public static final String AMOUNT = "amount";
-    public static final String PAYER = "payer";
     public static final String RECEIVER = "receiver";
     public static final String REGISTERED = "registered";
+    public static final String TRANSACTIONS = "transactions";
+    public static final String DESC = "DESC";
+    public static final String ASC = "ASC";
 
 }

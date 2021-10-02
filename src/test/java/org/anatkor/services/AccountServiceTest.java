@@ -31,11 +31,6 @@ public class AccountServiceTest {
     }
 
     @Test
-    public void findCurrencyByAccountNumber() {
-        assertNotNull(accountService.findCurrencyByAccountNumber(10000000026L));
-    }
-
-    @Test
     public void findAllAccountsToDo() {
 
     }

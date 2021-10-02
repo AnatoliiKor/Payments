@@ -13,18 +13,11 @@ public class Util {
         return registered.format(formatter);
     }
 
-    public static String getRequestParamSortOrDefault(HttpServletRequest req, String sortBy) {
-        if (req.getParameter(Constant.SORT_BY) != null) {
-            sortBy = req.getParameter(Constant.SORT_BY);
+    public static String getRequestParamOrDefault(HttpServletRequest req, String param, String def) {
+        if (req.getParameter(param) != null) {
+            def = req.getParameter(param);
         }
-        return sortBy;
-    }
-
-    public static String getRequestParamOrderOrDefault(HttpServletRequest req, String order) {
-        if (req.getParameter(Constant.ORDER) != null) {
-            order = req.getParameter(Constant.ORDER);
-        }
-        return order;
+        return def;
     }
 
     public static HttpServletRequest requestGetAndSetPage(HttpServletRequest req) {

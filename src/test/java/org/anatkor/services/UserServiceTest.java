@@ -26,6 +26,6 @@ public class UserServiceTest {
 
     @Test
     public void findUserFullNameByAccounNumber() {
-        assertNotNull(userService.findUserFullNameByAccounNumber(10000000026L));
+        assertNotNull(userService.findUserFullNameByAccountNumber(10000000026L));
     }
 }

@@ -17,7 +17,7 @@ class PaymentCommand implements Command {
         User user = (User) session.getAttribute(Constant.USER_AUTH);
         long userId = user.getId();
         List<Account> accounts = accountService.findAllAccountsByUserId(userId);
-        req.setAttribute("accounts", accounts);
+        req.setAttribute(Constant.ACCOUNTS, accounts);
         return "/jsp/make_payment.jsp";
     }
 }

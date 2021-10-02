@@ -21,6 +21,7 @@ public class Query {
     public static final String ADD_ACCOUNT =
             "INSERT INTO account (number, balance, account_name, currency, user_id, action) VALUES (?,0,?,?,?,1);";
     public static final String FIND_ACCOUNTS_BY_USER_ID_SORTED = "SELECT * FROM account WHERE user_id=? ORDER BY ? ?";
+    public static final String FIND_ACCOUNTS_SORTED = "SELECT * FROM account ORDER BY ? ?";
     public static final String FIND_ACCOUNT_BY_ID = "SELECT * FROM account WHERE id=?";
     public static final String FIND_ACCOUNT_WITH_CARD_BY_ID =
             "SELECT * FROM account LEFT JOIN credit_card cc on account.id = cc.account_id where account.id=?";

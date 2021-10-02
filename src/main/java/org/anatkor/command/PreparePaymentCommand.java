@@ -8,6 +8,8 @@ import org.anatkor.model.enums.Currency;
 import org.anatkor.services.AccountService;
 import org.anatkor.services.TransactionService;
 import org.anatkor.services.UserService;
+import org.anatkor.utils.Util;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -18,38 +20,25 @@ class PreparePaymentCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {
         HttpSession session = req.getSession();
-        if (req.getParameter("account_id") != null
+        if (req.getParameter(Constant.ACCOUNT_ID) != null
                 && req.getParameter(Constant.RECEIVER) != null
                 && req.getParameter(Constant.AMOUNT) != null
         ) {
-            Account account = accountService.findById(Long.parseLong(req.getParameter("account_id")));
-            long receiver = Long.parseLong(req.getParameter(Constant.RECEIVER));
-            String destination = req.getParameter("destination");
+            String redirect;
+            Account account = accountService.findById(Long.parseLong(req.getParameter(Constant.ACCOUNT_ID)));
             int amount = (int) (100 * Double.parseDouble(req.getParameter(Constant.AMOUNT)));
-            if (account == null) {
-                return "redirect:/payment";
+            redirect = transactionService.checkAccount(account, amount);
+            if (!"checked".equals(redirect)) {
+                return redirect;
             }
-            if (amount <= 0) {
-                return "redirect:wallet";
+            long receiver = Long.parseLong(req.getParameter(Constant.RECEIVER));
+            redirect = transactionService.checkReceiverForActiveAndCurrency(receiver, account.getCurrency());
+            if (!"checked".equals(redirect)) {
+                return redirect;
             }
-            if (amount > account.getBalance()) {
-                return "redirect:wallet/payment?warn=not_enough&receiver=" +
-                        receiver + "&amount=" + amount;
-            }
-            Currency currency;
-            try {
-                currency = accountService.findCurrencyByAccountNumber(receiver);
-            } catch (DBException e) {
-                return "redirect:wallet/payment?warn=account_not_found";
-            }
-            if (!account.getCurrency().equals(currency)) {
-                return "redirect:wallet/payment?warn=not_currency&message=" + currency.name() + "&receiver=" +
-                        receiver + "&amount=" + amount;
-            }
-            session.setAttribute("payment", transactionService.getPayment(account, receiver, destination, amount, currency));
+            String destination = Util.getRequestParamOrDefault(req, "destination", "-");
+            session.setAttribute("payment", transactionService.getPayment(account, receiver, destination, amount));
         }
         return "/jsp/make_payment.jsp";
     }
-
-
 }

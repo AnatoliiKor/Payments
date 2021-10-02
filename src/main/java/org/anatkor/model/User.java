@@ -4,7 +4,6 @@ import org.anatkor.model.enums.Role;
 import org.anatkor.utils.Util;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class User {

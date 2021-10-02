@@ -14,8 +14,7 @@ import java.util.ResourceBundle;
 
 public final class ConnectionPool {
     private static final Logger log = LogManager.getLogger(ConnectionPool.class);
-
-    private static DataSource dataSource;
+    private static final DataSource dataSource;
     private static final String DRIVER_NAME;
     private static final String URL;
     private static final String USER_NAME;
@@ -31,16 +30,8 @@ public final class ConnectionPool {
         dataSource = initDataSource();
     }
 
-    public static Connection getConnection() {
-        try {
-            Connection connection = dataSource.getConnection();
-            log.debug("Was getting Connection from {}.",ConnectionPool.class);
-            return connection;
-        } catch (SQLException e) {
-            log.error("SQLException during get Connection from resource {}. {}",
-                    new File("/database.properties").getAbsolutePath(), e);
-        }
-        return null;
+    public static Connection getConnection() throws SQLException {
+        return dataSource.getConnection();
     }
 
     private static DataSource initDataSource() {

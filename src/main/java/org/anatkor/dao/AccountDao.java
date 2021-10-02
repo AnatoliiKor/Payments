@@ -293,21 +293,6 @@ public class AccountDao {
         return false;
     }
 
-
-    private Account getAccountFromResultSet(ResultSet rs) throws SQLException {
-        Account account = new Account();
-        account.setId(rs.getLong("id"));
-        account.setNumber(rs.getLong("number"));
-        account.setBalance(rs.getLong("balance"));
-        account.setAccountName(rs.getString("account_name"));
-        account.setCurrency(Currency.valueOf(rs.getString("currency")));
-        account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
-        account.setActive(rs.getBoolean("active"));
-        account.setAction(rs.getInt("action"));
-        account.setUserId(rs.getLong("user_id"));
-        return account;
-    }
-
     public boolean updateBalance(Connection con, Long account_number, int amount) throws SQLException {
         PreparedStatement prepStatement = null;
         try {
@@ -323,5 +308,19 @@ public class AccountDao {
             UtilDAO.close(prepStatement);
         }
         return false;
+    }
+
+    private Account getAccountFromResultSet(ResultSet rs) throws SQLException {
+        Account account = new Account();
+        account.setId(rs.getLong("id"));
+        account.setNumber(rs.getLong("number"));
+        account.setBalance(rs.getLong("balance"));
+        account.setAccountName(rs.getString("account_name"));
+        account.setCurrency(Currency.valueOf(rs.getString("currency")));
+        account.setRegistered(rs.getTimestamp("registered").toLocalDateTime());
+        account.setActive(rs.getBoolean("active"));
+        account.setAction(rs.getInt("action"));
+        account.setUserId(rs.getLong("user_id"));
+        return account;
     }
 }

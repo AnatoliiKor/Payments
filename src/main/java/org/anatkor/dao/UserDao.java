@@ -83,8 +83,6 @@ public class UserDao {
                     throw new DBException("user_not_active");
                 }
                 return user;
-
-
             } else {
                 log.info("User with phone number \"+" + phoneNumber + "\" is not found");
                 throw new DBException("user_not_found_check");

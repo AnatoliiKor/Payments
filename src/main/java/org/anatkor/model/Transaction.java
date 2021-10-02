@@ -4,7 +4,6 @@ import org.anatkor.model.enums.Currency;
 import org.anatkor.utils.Util;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class Transaction {
     private long id;
