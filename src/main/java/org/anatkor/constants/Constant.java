@@ -30,5 +30,6 @@ public class Constant {
     public static final String TRANSACTIONS = "transactions";
     public static final String DESC = "DESC";
     public static final String ASC = "ASC";
+    public static final String CHECKED = "checked";
 
 }

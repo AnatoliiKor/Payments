@@ -28,16 +28,16 @@ class PreparePaymentCommand implements Command {
             Account account = accountService.findById(Long.parseLong(req.getParameter(Constant.ACCOUNT_ID)));
             int amount = (int) (100 * Double.parseDouble(req.getParameter(Constant.AMOUNT)));
             redirect = transactionService.checkAccount(account, amount);
-            if (!"checked".equals(redirect)) {
+            if (!Constant.CHECKED.equals(redirect)) {
                 return redirect;
             }
             long receiver = Long.parseLong(req.getParameter(Constant.RECEIVER));
             redirect = transactionService.checkReceiverForActiveAndCurrency(receiver, account.getCurrency());
-            if (!"checked".equals(redirect)) {
+            if (!Constant.CHECKED.equals(redirect)) {
                 return redirect;
             }
             String destination = Util.getRequestParamOrDefault(req, "destination", "-");
-            session.setAttribute("payment", transactionService.getPayment(account, receiver, destination, amount));
+            session.setAttribute(Constant.PAYMENT, transactionService.getPayment(account, receiver, destination, amount));
         }
         return "/jsp/make_payment.jsp";
     }

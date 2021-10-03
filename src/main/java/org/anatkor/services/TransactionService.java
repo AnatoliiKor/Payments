@@ -1,5 +1,6 @@
 package org.anatkor.services;
 
+import org.anatkor.constants.Constant;
 import org.anatkor.dao.TransactionDao;
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.Account;
@@ -49,7 +50,7 @@ public class TransactionService {
         if (amount > account.getBalance()) {
             return "redirect:wallet/payment?warn=not_enough";
         }
-        return "checked";
+        return Constant.CHECKED;
     }
 
     public String checkReceiverForActiveAndCurrency(long receiver, Currency currency) {
@@ -65,6 +66,6 @@ public class TransactionService {
         if (!account.isActive()) {
             return "redirect:wallet/payment?warn=account_blocked";
         }
-        return "checked";
+        return Constant.CHECKED;
     }
 }
