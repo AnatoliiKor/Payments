@@ -11,12 +11,12 @@
 
     <form method="post" action="${pageContext.request.contextPath}/registration">
 
-        <input class="mt-3" type="text" name="last_name" value="i<c:if test="${last_name!=null}">${last_name}</c:if>"
+        <input class="mt-3" type="text" name="last_name" value="<c:if test="${last_name!=null}">${last_name}</c:if>"
                required>
         <label style="margin: 0 3px;"> <fmt:message key="last_name"/> </label>
         <br/>
 
-        <input class="mt-3" type="text" name="name" value="i<c:if test="${name!=null}">${name}</c:if>" required>
+        <input class="mt-3" type="text" name="name" value="<c:if test="${name!=null}">${name}</c:if>" required>
         <label style="margin: 0 3px;"> <fmt:message key="name"/> </label>
         <br/>
 
@@ -31,8 +31,7 @@
         <label style="margin: 0 3px;"> <fmt:message key="phone_number"/> </label>
         <br/>
 
-        <input class="mt-3" type="email" name="email" value="email@c.com"
-        >
+        <input class="mt-3" type="text" name="email" value="@">
         <label style="margin: 0 3px;"><fmt:message key="email"/></label>
         <br/>
 

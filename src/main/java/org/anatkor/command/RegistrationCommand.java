@@ -6,6 +6,7 @@ import org.anatkor.model.User;
 import org.anatkor.services.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import javax.servlet.http.HttpServletRequest;
 
 class RegistrationCommand implements Command {
@@ -27,6 +28,8 @@ class RegistrationCommand implements Command {
                 log.info("User {} is not registered due to DBException {}", user.getPhoneNumber(), e.getMessage());
                 fillRequest(req, user);
             }
+        } else {
+            req.setAttribute(Constant.WARN, "not_registered_data");
         }
         return "/jsp/registration.jsp";
     }

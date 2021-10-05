@@ -9,6 +9,8 @@ import org.anatkor.services.AccountService;
 import org.anatkor.services.TransactionService;
 import org.anatkor.services.UserService;
 import org.anatkor.utils.Util;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -16,6 +18,7 @@ import javax.servlet.http.HttpSession;
 class PreparePaymentCommand implements Command {
     private final AccountService accountService = new AccountService();
     private final TransactionService transactionService = new TransactionService();
+    private static final Logger log = LogManager.getLogger(RefillAccountCommand.class);
 
     @Override
     public String execute(HttpServletRequest req) {
@@ -25,8 +28,16 @@ class PreparePaymentCommand implements Command {
                 && req.getParameter(Constant.AMOUNT) != null
         ) {
             String redirect;
-            Account account = accountService.findById(Long.parseLong(req.getParameter(Constant.ACCOUNT_ID)));
-            int amount = (int) (100 * Double.parseDouble(req.getParameter(Constant.AMOUNT)));
+            long accountNumber;
+            int amount;
+            try {
+                accountNumber = Long.parseLong(req.getParameter(Constant.ACCOUNT_ID));
+                amount = (int) (100 * Double.parseDouble(req.getParameter(Constant.AMOUNT)));
+            } catch (NumberFormatException e) {
+                log.debug("Wrong format {}", e.getMessage());
+                return "redirect:/payment?warn=not_data";
+            }
+            Account account = accountService.findById(accountNumber);
             redirect = transactionService.checkAccount(account, amount);
             if (!Constant.CHECKED.equals(redirect)) {
                 return redirect;

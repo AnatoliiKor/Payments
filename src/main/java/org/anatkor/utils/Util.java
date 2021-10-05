@@ -29,4 +29,9 @@ public class Util {
         }
         return req;
     }
+
+    public static boolean checkEmail (String email) {
+        return email != null && email.toUpperCase().matches("[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}");
+    }
+
 }

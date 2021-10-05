@@ -10,6 +10,7 @@
     <%@include file="account_select.jsp" %>
 
     <br/>
+
     <input class="my-2" type="number" step=".01" min="0.01" name="amount"
            <c:if test="${not empty amount}"> value="${amount/100}"</c:if> required>
     <label> <fmt:message key="payment_amount"/> </label>

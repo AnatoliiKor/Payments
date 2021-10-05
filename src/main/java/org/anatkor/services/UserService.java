@@ -4,6 +4,7 @@ import org.anatkor.constants.Constant;
 import org.anatkor.dao.UserDao;
 import org.anatkor.exceptions.DBException;
 import org.anatkor.model.User;
+import org.anatkor.utils.Util;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -48,12 +49,19 @@ public class UserService {
         }
         String password = req.getParameter(Constant.PASSWORD);
         String email = req.getParameter(Constant.EMAIL);
+        if (!Util.checkEmail(email)) {
+            return null;
+        }
         String phoneNumber = req.getParameter(Constant.PHONE_NUMBER);
+        long phone;
+        try {
+            phone = Long.parseLong("38" + phoneNumber);
+        } catch (NumberFormatException e) {
+            return null;
+        }
         if (lastName != null && !lastName.equals("")
                 && name != null && !name.equals("")
                 && password != null && !password.equals("")
-                && email != null && !email.equals("")
-                && phoneNumber != null && !phoneNumber.equals("")
         ) {
             return new User.UserBuilder()
                     .withLastName(lastName)
@@ -61,7 +69,7 @@ public class UserService {
                     .withMiddleName(middleName)
                     .withPassword(password)
                     .withEmail(email)
-                    .withPhoneNumber(Long.parseLong("38" + phoneNumber))
+                    .withPhoneNumber(phone)
                     .build();
         }
         return null;
