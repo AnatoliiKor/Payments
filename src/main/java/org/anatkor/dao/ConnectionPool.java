@@ -13,7 +13,6 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public final class ConnectionPool {
-    private static final Logger log = LogManager.getLogger(ConnectionPool.class);
     private static final DataSource dataSource;
     private static final String DRIVER_NAME;
     private static final String URL;

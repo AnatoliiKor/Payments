@@ -22,7 +22,7 @@
                                                                 href="${pageContext.request.contextPath}/wallet/accounts?page=${page-1}&user_id=${user_id}&sort_by=${sort_by}&order=${order}"><fmt:message
                 key="previous_main"/></a></li>
         <li class="page-item active"><a class="page-link">${page}</a></li>
-        <li class="page-item ${page == page_max? 'disabled' : ''}"><a class="page-link"
+        <li class="page-item ${page == pg_max? 'disabled' : ''}"><a class="page-link"
                                                                       href="${pageContext.request.contextPath}/wallet//accounts?page=${page+1}&user_id=${user_id}&sort_by=${sort_by}&order=${order}"><fmt:message
                 key="next_main"/></a></li>
     </ul>

@@ -30,9 +30,11 @@ class PreparePaymentCommand implements Command {
             String redirect;
             long accountNumber;
             int amount;
+            long receiver;
             try {
                 accountNumber = Long.parseLong(req.getParameter(Constant.ACCOUNT_ID));
                 amount = (int) (100 * Double.parseDouble(req.getParameter(Constant.AMOUNT)));
+                receiver = Long.parseLong(req.getParameter(Constant.RECEIVER));
             } catch (NumberFormatException e) {
                 log.debug("Wrong format {}", e.getMessage());
                 return "redirect:/payment?warn=not_data";
@@ -42,7 +44,6 @@ class PreparePaymentCommand implements Command {
             if (!Constant.CHECKED.equals(redirect)) {
                 return redirect;
             }
-            long receiver = Long.parseLong(req.getParameter(Constant.RECEIVER));
             redirect = transactionService.checkReceiverForActiveAndCurrency(receiver, account.getCurrency());
             if (!Constant.CHECKED.equals(redirect)) {
                 return redirect;

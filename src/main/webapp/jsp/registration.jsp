@@ -35,7 +35,7 @@
         <label style="margin: 0 3px;"><fmt:message key="email"/></label>
         <br/>
 
-        <input class="mt-3" type="password" name="password" value="1" required>
+        <input class="mt-3" type="password" name="password" required>
         <label style="margin: 0 3px;"><fmt:message key="password"/></label>
         <br/>
 

@@ -60,11 +60,11 @@ public class TransactionService {
         } catch (DBException e) {
             return "redirect:wallet/payment?warn=account_not_found";
         }
-        if (!account.getCurrency().equals(currency)) {
-            return "redirect:wallet/payment?warn=not_currency&message=" + currency.name();
-        }
         if (!account.isActive()) {
             return "redirect:wallet/payment?warn=account_blocked";
+        }
+        if (!account.getCurrency().equals(currency)) {
+            return "redirect:wallet/payment?warn=not_currency&message=" + account.getCurrency().name();
         }
         return Constant.CHECKED;
     }

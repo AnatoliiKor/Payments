@@ -18,7 +18,6 @@
                      filePattern="${logdir}/localhost.%d{yyyy-MM-dd}-%i.log">
             <PatternLayout pattern="${layout}"/>
             <Policies>
-                <!--                <TimeBasedTriggeringPolicy/>-->
                 <OnStartupTriggeringPolicy/>
                 <SizeBasedTriggeringPolicy size="1 MB"/>
             </Policies>
